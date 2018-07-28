@@ -1,0 +1,402 @@
+<!doctype html>
+<html  {$html_attrs}>
+  <head>asdfsfs
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      {$pagetitle}
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link REL="stylesheet" href="styles/default.css" type="text/css">
+    {BEGIN rtlCSS}
+      <link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+    {END rtlCSS}
+    {BEGIN styleCSSFiles}
+      <link REL="stylesheet" href="{$stylepath}" type="text/css">
+    {END styleCSSFiles}
+  </head>
+  <BODY class="{$stylename} function-view" {$bodyattrs}>
+    {BEGIN body}
+      {$header}
+      <style>
+        {$containerCss}
+      </style>
+      <DIV class="bs-top">
+        
+
+{BEGIN container_viewpage}
+<div {$viewpage_chiddenattr} data-pageid="{$pageid}" data-container="viewpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN viewheader}
+	<h2 {$viewheader_hiddenattr} data-pageid="{$pageid}" data-brick="viewheader" >{$pagetitlelabel modxdf_site_tmplvars view}</h2>
+
+{END viewheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_viewpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class=" form-horizontal  col-md-12 "> 
+
+
+<div {$viewfields_hiddenattr} data-pageid="{$pageid}" data-brick="viewfields" >
+	{BEGIN id_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_id} bs-viewform-group" data-fieldname="id">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_id}">
+			{$label modxdf_site_tmplvars id}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$id_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END id_fieldblock}
+	{BEGIN source_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_source} bs-viewform-group" data-fieldname="source">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_source}">
+			{$label modxdf_site_tmplvars source}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$source_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END source_fieldblock}
+	{BEGIN property_preprocess_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_property_preprocess} bs-viewform-group" data-fieldname="property_preprocess">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_property_preprocess}">
+			{$label modxdf_site_tmplvars property_preprocess}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$property_preprocess_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END property_preprocess_fieldblock}
+	{BEGIN type_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_type} bs-viewform-group" data-fieldname="type">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_type}">
+			{$label modxdf_site_tmplvars type}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$type_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END type_fieldblock}
+	{BEGIN name_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_name} bs-viewform-group" data-fieldname="name">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_name}">
+			{$label modxdf_site_tmplvars name}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$name_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END name_fieldblock}
+	{BEGIN caption_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_caption} bs-viewform-group" data-fieldname="caption">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_caption}">
+			{$label modxdf_site_tmplvars caption}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$caption_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END caption_fieldblock}
+	{BEGIN description_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_description} bs-viewform-group" data-fieldname="description">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_description}">
+			{$label modxdf_site_tmplvars description}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$description_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END description_fieldblock}
+	{BEGIN editor_type_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_editor_type} bs-viewform-group" data-fieldname="editor_type">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_editor_type}">
+			{$label modxdf_site_tmplvars editor_type}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$editor_type_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END editor_type_fieldblock}
+	{BEGIN category_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_category} bs-viewform-group" data-fieldname="category">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_category}">
+			{$label modxdf_site_tmplvars category}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$category_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END category_fieldblock}
+	{BEGIN locked_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_locked} bs-viewform-group" data-fieldname="locked">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_locked}">
+			{$label modxdf_site_tmplvars locked}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$locked_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END locked_fieldblock}
+	{BEGIN elements_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_elements} bs-viewform-group" data-fieldname="elements">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_elements}">
+			{$label modxdf_site_tmplvars elements}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$elements_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END elements_fieldblock}
+	{BEGIN rank_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_rank} bs-viewform-group" data-fieldname="rank">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_rank}">
+			{$label modxdf_site_tmplvars rank}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$rank_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END rank_fieldblock}
+	{BEGIN display_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_display} bs-viewform-group" data-fieldname="display">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_display}">
+			{$label modxdf_site_tmplvars display}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$display_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END display_fieldblock}
+	{BEGIN default_text_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_default_text} bs-viewform-group" data-fieldname="default_text">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_default_text}">
+			{$label modxdf_site_tmplvars default_text}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$default_text_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END default_text_fieldblock}
+	{BEGIN properties_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_properties} bs-viewform-group" data-fieldname="properties">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_properties}">
+			{$label modxdf_site_tmplvars properties}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$properties_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END properties_fieldblock}
+	{BEGIN input_properties_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_input_properties} bs-viewform-group" data-fieldname="input_properties">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_input_properties}">
+			{$label modxdf_site_tmplvars input_properties}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$input_properties_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END input_properties_fieldblock}
+	{BEGIN output_properties_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_output_properties} bs-viewform-group" data-fieldname="output_properties">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_output_properties}">
+			{$label modxdf_site_tmplvars output_properties}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$output_properties_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END output_properties_fieldblock}
+	{BEGIN static_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_static} bs-viewform-group" data-fieldname="static">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_static}">
+			{$label modxdf_site_tmplvars static}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$static_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END static_fieldblock}
+	{BEGIN static_file_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_static_file} bs-viewform-group" data-fieldname="static_file">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_static_file}">
+			{$label modxdf_site_tmplvars static_file}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$static_file_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END static_file_fieldblock}
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN viewbuttons}
+{BEGIN back_button}
+<button class="btn btn-primary" {$backbutton_attrs}>{mlang_message BACK_TO_LIST}</button>
+{END back_button}
+{BEGIN close_button}
+<button href="#" class="btn btn-primary" {$closebutton_attrs}>{mlang_message CLOSE_WINDOW}</button>
+{END close_button}
+{END viewbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+
+
+{BEGIN container_leftbuttons_1}
+<div {$leftbuttons_1_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons_1" class="  text-right col-md-3 "> 
+
+{BEGIN rightviewbuttons}
+<div class="btn-group" role="group">
+		{BEGIN prev_button}
+	<button class="btn btn-default {$prevbutton_class}" {$prevbutton_attrs}><span class="glyphicon glyphicon-chevron-left"></span></button>
+	{END prev_button}
+	{BEGIN next_button}
+	<button class="btn btn-default {$nextbutton_class}" {$nextbutton_attrs}><span class="glyphicon glyphicon-chevron-right"></span></button>
+	{END next_button}
+		{BEGIN view_menu_button}
+	<div class="btn-group dropup" role="group">
+		<button class="btn btn-default dropdown-toggle {$groupbutton_class}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+		<ul class="dropdown-menu dropdown-left">
+									{BEGIN edit_page_button}
+				<li><a href=# {$edit_page_button_attrs}>{mlang_message EDIT}</a></li>
+			{END edit_page_button}
+		</ul>
+	</div>
+	{END view_menu_button}
+</div>
+{END rightviewbuttons}
+
+
+
+</div>
+{END container_leftbuttons_1}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+      </div>
+      <DIV class="bs-middle ">
+        <DIV class="bs-topmiddle">
+          
+        </div>
+        <DIV class="bs-left" {$blockattr_left}>
+          
+        </div>
+        <DIV class="bs-center">
+          
+        </div>
+        <DIV class="bs-right">
+          
+        </div>
+      </div>
+      <DIV class="bs-bottom">
+        
+      </div>
+      {$footer}
+    {END body}
+  </body>
+</html>

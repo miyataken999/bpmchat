@@ -1,0 +1,342 @@
+<!doctype html>
+<html  {$html_attrs}>
+  <head>asdfsfs
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      {$pagetitle}
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link REL="stylesheet" href="styles/default.css" type="text/css">
+    {BEGIN rtlCSS}
+      <link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+    {END rtlCSS}
+    {BEGIN styleCSSFiles}
+      <link REL="stylesheet" href="{$stylepath}" type="text/css">
+    {END styleCSSFiles}
+  </head>
+  <BODY class="{$stylename} function-add" {$bodyattrs}>
+    {BEGIN body}
+      {$header}
+      <style>
+        {$containerCss}
+      </style>
+      <DIV class="bs-top">
+        
+
+{BEGIN container_editpage}
+<div {$editpage_chiddenattr} data-pageid="{$pageid}" data-container="editpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN addheader}
+	<h2 {$addheader_hiddenattr} data-pageid="{$pageid}" data-brick="addheader" >{$pagetitlelabel NOTIFICATION_QUEUE add}</h2>
+
+{END addheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+		<button class="btn btn-sm btn-default" {$backbutton_attrs}>{mlang_message BACK_TO_LIST}</button>
+{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>{mlang_message VIEW}</button>
+{END view_page_button}
+{BEGIN edit_page_button}
+	<button class="btn btn-sm btn-default" {$edit_page_button_attrs}>{mlang_message EDIT}</button>
+{END edit_page_button}
+</div>
+</div>
+
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+
+</div>
+{END container_editpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$addfields_hiddenattr} data-pageid="{$pageid}" data-brick="addfields" class="form-horizontal" role="form">
+			{BEGIN NOT_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_NOT_UID}" data-fieldname="NOT_UID" data-signal-error-for="NOT_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_NOT_UID}">
+		{BEGIN NOT_UID_label}{$label NOTIFICATION_QUEUE NOT_UID}{END NOT_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$NOT_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="NOT_UID">
+		<div class="text-muted" >
+		{$tooltip NOTIFICATION_QUEUE NOT_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END NOT_UID_fieldblock}
+
+			{BEGIN DEV_TYPE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_DEV_TYPE}" data-fieldname="DEV_TYPE" data-signal-error-for="DEV_TYPE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_DEV_TYPE}">
+		{BEGIN DEV_TYPE_label}{$label NOTIFICATION_QUEUE DEV_TYPE}{END DEV_TYPE_label}
+	</label>
+	<div class="col-md-6" >
+		{$DEV_TYPE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="DEV_TYPE">
+		<div class="text-muted" >
+		{$tooltip NOTIFICATION_QUEUE DEV_TYPE}
+		</div>
+	</div>
+</div>
+</div>
+{END DEV_TYPE_fieldblock}
+
+			{BEGIN DEV_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_DEV_UID}" data-fieldname="DEV_UID" data-signal-error-for="DEV_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_DEV_UID}">
+		{BEGIN DEV_UID_label}{$label NOTIFICATION_QUEUE DEV_UID}{END DEV_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$DEV_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="DEV_UID">
+		<div class="text-muted" >
+		{$tooltip NOTIFICATION_QUEUE DEV_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END DEV_UID_fieldblock}
+
+			{BEGIN NOT_MSG_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_NOT_MSG}" data-fieldname="NOT_MSG" data-signal-error-for="NOT_MSG{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_NOT_MSG}">
+		{BEGIN NOT_MSG_label}{$label NOTIFICATION_QUEUE NOT_MSG}{END NOT_MSG_label}
+	</label>
+	<div class="col-md-6" >
+		{$NOT_MSG_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="NOT_MSG">
+		<div class="text-muted" >
+		{$tooltip NOTIFICATION_QUEUE NOT_MSG}
+		</div>
+	</div>
+</div>
+</div>
+{END NOT_MSG_fieldblock}
+
+			{BEGIN NOT_DATA_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_NOT_DATA}" data-fieldname="NOT_DATA" data-signal-error-for="NOT_DATA{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_NOT_DATA}">
+		{BEGIN NOT_DATA_label}{$label NOTIFICATION_QUEUE NOT_DATA}{END NOT_DATA_label}
+	</label>
+	<div class="col-md-6" >
+		{$NOT_DATA_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="NOT_DATA">
+		<div class="text-muted" >
+		{$tooltip NOTIFICATION_QUEUE NOT_DATA}
+		</div>
+	</div>
+</div>
+</div>
+{END NOT_DATA_fieldblock}
+
+			{BEGIN NOT_STATUS_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_NOT_STATUS}" data-fieldname="NOT_STATUS" data-signal-error-for="NOT_STATUS{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_NOT_STATUS}">
+		{BEGIN NOT_STATUS_label}{$label NOTIFICATION_QUEUE NOT_STATUS}{END NOT_STATUS_label}
+	</label>
+	<div class="col-md-6" >
+		{$NOT_STATUS_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="NOT_STATUS">
+		<div class="text-muted" >
+		{$tooltip NOTIFICATION_QUEUE NOT_STATUS}
+		</div>
+	</div>
+</div>
+</div>
+{END NOT_STATUS_fieldblock}
+
+			{BEGIN NOT_SEND_DATE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_NOT_SEND_DATE}" data-fieldname="NOT_SEND_DATE" data-signal-error-for="NOT_SEND_DATE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_NOT_SEND_DATE}">
+		{BEGIN NOT_SEND_DATE_label}{$label NOTIFICATION_QUEUE NOT_SEND_DATE}{END NOT_SEND_DATE_label}
+	</label>
+	<div class="col-md-6" >
+		{$NOT_SEND_DATE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="NOT_SEND_DATE">
+		<div class="text-muted" >
+		{$tooltip NOTIFICATION_QUEUE NOT_SEND_DATE}
+		</div>
+	</div>
+</div>
+</div>
+{END NOT_SEND_DATE_fieldblock}
+
+			{BEGIN APP_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_APP_UID}" data-fieldname="APP_UID" data-signal-error-for="APP_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_APP_UID}">
+		{BEGIN APP_UID_label}{$label NOTIFICATION_QUEUE APP_UID}{END APP_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$APP_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="APP_UID">
+		<div class="text-muted" >
+		{$tooltip NOTIFICATION_QUEUE APP_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END APP_UID_fieldblock}
+
+			{BEGIN DEL_INDEX_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_DEL_INDEX}" data-fieldname="DEL_INDEX" data-signal-error-for="DEL_INDEX{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_DEL_INDEX}">
+		{BEGIN DEL_INDEX_label}{$label NOTIFICATION_QUEUE DEL_INDEX}{END DEL_INDEX_label}
+	</label>
+	<div class="col-md-6" >
+		{$DEL_INDEX_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="DEL_INDEX">
+		<div class="text-muted" >
+		{$tooltip NOTIFICATION_QUEUE DEL_INDEX}
+		</div>
+	</div>
+</div>
+</div>
+{END DEL_INDEX_fieldblock}
+
+
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN addbuttons}
+	{BEGIN save_button}
+	<button class="btn btn-primary" {$savebutton_attrs}>{mlang_message SAVE}</button>
+	{END save_button}
+	{BEGIN reset_button}
+	<button class="btn btn-default" id="resetButton{$id}">{mlang_message RESET}</button>
+	{END reset_button}
+	{BEGIN back_button}
+		<button class="btn btn-default" id="backButton{$id}">{mlang_message BACK_TO_LIST}</button>
+	{END back_button}
+	{BEGIN cancel_button}
+	<a href="#" class="btn btn-default" id="cancelButton{$id}">{mlang_message CANCEL}</a>
+	{END cancel_button}
+
+{END addbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+      </div>
+      <DIV class="bs-middle ">
+        <DIV class="bs-topmiddle">
+          
+        </div>
+        <DIV class="bs-left" {$blockattr_left}>
+          
+        </div>
+        <DIV class="bs-center">
+          
+        </div>
+        <DIV class="bs-right">
+          
+        </div>
+      </div>
+      <DIV class="bs-bottom">
+        
+      </div>
+      {$footer}
+    {END body}
+  </body>
+</html>

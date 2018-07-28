@@ -1,0 +1,212 @@
+<!doctype html>
+<html  {$html_attrs}>
+  <head>asdfsfs
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      {$pagetitle}
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link REL="stylesheet" href="styles/default.css" type="text/css">
+    {BEGIN rtlCSS}
+      <link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+    {END rtlCSS}
+    {BEGIN styleCSSFiles}
+      <link REL="stylesheet" href="{$stylepath}" type="text/css">
+    {END styleCSSFiles}
+  </head>
+  <BODY class="{$stylename} function-print" {$bodyattrs}>
+    {BEGIN body}
+      {$header}
+      <style>
+        {$containerCss}
+      </style>
+      <DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel TABLESPACES print}</h2>
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>{mlang_message PAGE1} <span class="rp-pageno">{$pageno}</span> {mlang_message PAGE2} <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="table table-bordered rp-maintable" {$printgrid_hiddenattr} data-pageid="{$pageid}" data-brick="printgrid" >
+	<thead>
+	{BEGIN grid_header}
+		<tr class="{$gridHeader_class}" >
+		{BEGIN record_header}
+			{BEGIN TABLESPACE_NAME_fieldheadercolumn}
+			<th class="{$TABLESPACE_NAME_class}" {$TABLESPACE_NAME_style}  data-field="TABLESPACE_NAME">
+				{$label TABLESPACES TABLESPACE_NAME}
+			</th>
+			{END TABLESPACE_NAME_fieldheadercolumn}
+			{BEGIN ENGINE_fieldheadercolumn}
+			<th class="{$ENGINE_class}" {$ENGINE_style}  data-field="ENGINE">
+				{$label TABLESPACES ENGINE}
+			</th>
+			{END ENGINE_fieldheadercolumn}
+			{BEGIN TABLESPACE_TYPE_fieldheadercolumn}
+			<th class="{$TABLESPACE_TYPE_class}" {$TABLESPACE_TYPE_style}  data-field="TABLESPACE_TYPE">
+				{$label TABLESPACES TABLESPACE_TYPE}
+			</th>
+			{END TABLESPACE_TYPE_fieldheadercolumn}
+			{BEGIN LOGFILE_GROUP_NAME_fieldheadercolumn}
+			<th class="{$LOGFILE_GROUP_NAME_class}" {$LOGFILE_GROUP_NAME_style}  data-field="LOGFILE_GROUP_NAME">
+				{$label TABLESPACES LOGFILE_GROUP_NAME}
+			</th>
+			{END LOGFILE_GROUP_NAME_fieldheadercolumn}
+			{BEGIN EXTENT_SIZE_fieldheadercolumn}
+			<th class="{$EXTENT_SIZE_class}" {$EXTENT_SIZE_style}  data-field="EXTENT_SIZE">
+				{$label TABLESPACES EXTENT_SIZE}
+			</th>
+			{END EXTENT_SIZE_fieldheadercolumn}
+			{BEGIN AUTOEXTEND_SIZE_fieldheadercolumn}
+			<th class="{$AUTOEXTEND_SIZE_class}" {$AUTOEXTEND_SIZE_style}  data-field="AUTOEXTEND_SIZE">
+				{$label TABLESPACES AUTOEXTEND_SIZE}
+			</th>
+			{END AUTOEXTEND_SIZE_fieldheadercolumn}
+			{BEGIN MAXIMUM_SIZE_fieldheadercolumn}
+			<th class="{$MAXIMUM_SIZE_class}" {$MAXIMUM_SIZE_style}  data-field="MAXIMUM_SIZE">
+				{$label TABLESPACES MAXIMUM_SIZE}
+			</th>
+			{END MAXIMUM_SIZE_fieldheadercolumn}
+			{BEGIN NODEGROUP_ID_fieldheadercolumn}
+			<th class="{$NODEGROUP_ID_class}" {$NODEGROUP_ID_style}  data-field="NODEGROUP_ID">
+				{$label TABLESPACES NODEGROUP_ID}
+			</th>
+			{END NODEGROUP_ID_fieldheadercolumn}
+			{BEGIN TABLESPACE_COMMENT_fieldheadercolumn}
+			<th class="{$TABLESPACE_COMMENT_class}" {$TABLESPACE_COMMENT_style}  data-field="TABLESPACE_COMMENT">
+				{$label TABLESPACES TABLESPACE_COMMENT}
+			</th>
+			{END TABLESPACE_COMMENT_fieldheadercolumn}
+			{BEGIN endrecordheader_block}
+			<th class="rnr-cs">&nbsp;</th>
+			{END endrecordheader_block}
+		{END record_header}
+		</tr>
+	{END grid_header}
+	</thead>
+	
+	<tbody>	
+	{BEGIN grid_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+			{BEGIN TABLESPACE_NAME_fieldcolumn}
+			<td  class="{$TABLESPACE_NAME_class}" {$TABLESPACE_NAME_style} {$recordattrs}>
+				{$TABLESPACE_NAME_value}
+			</td>
+			{END TABLESPACE_NAME_fieldcolumn}
+			{BEGIN ENGINE_fieldcolumn}
+			<td  class="{$ENGINE_class}" {$ENGINE_style} {$recordattrs}>
+				{$ENGINE_value}
+			</td>
+			{END ENGINE_fieldcolumn}
+			{BEGIN TABLESPACE_TYPE_fieldcolumn}
+			<td  class="{$TABLESPACE_TYPE_class}" {$TABLESPACE_TYPE_style} {$recordattrs}>
+				{$TABLESPACE_TYPE_value}
+			</td>
+			{END TABLESPACE_TYPE_fieldcolumn}
+			{BEGIN LOGFILE_GROUP_NAME_fieldcolumn}
+			<td  class="{$LOGFILE_GROUP_NAME_class}" {$LOGFILE_GROUP_NAME_style} {$recordattrs}>
+				{$LOGFILE_GROUP_NAME_value}
+			</td>
+			{END LOGFILE_GROUP_NAME_fieldcolumn}
+			{BEGIN EXTENT_SIZE_fieldcolumn}
+			<td  class="{$EXTENT_SIZE_class}" {$EXTENT_SIZE_style} {$recordattrs}>
+				{$EXTENT_SIZE_value}
+			</td>
+			{END EXTENT_SIZE_fieldcolumn}
+			{BEGIN AUTOEXTEND_SIZE_fieldcolumn}
+			<td  class="{$AUTOEXTEND_SIZE_class}" {$AUTOEXTEND_SIZE_style} {$recordattrs}>
+				{$AUTOEXTEND_SIZE_value}
+			</td>
+			{END AUTOEXTEND_SIZE_fieldcolumn}
+			{BEGIN MAXIMUM_SIZE_fieldcolumn}
+			<td  class="{$MAXIMUM_SIZE_class}" {$MAXIMUM_SIZE_style} {$recordattrs}>
+				{$MAXIMUM_SIZE_value}
+			</td>
+			{END MAXIMUM_SIZE_fieldcolumn}
+			{BEGIN NODEGROUP_ID_fieldcolumn}
+			<td  class="{$NODEGROUP_ID_class}" {$NODEGROUP_ID_style} {$recordattrs}>
+				{$NODEGROUP_ID_value}
+			</td>
+			{END NODEGROUP_ID_fieldcolumn}
+			{BEGIN TABLESPACE_COMMENT_fieldcolumn}
+			<td  class="{$TABLESPACE_COMMENT_class}" {$TABLESPACE_COMMENT_style} {$recordattrs}>
+				{$TABLESPACE_COMMENT_value}
+			</td>
+			{END TABLESPACE_COMMENT_fieldcolumn}
+			{BEGIN endrecord_block}
+			<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+			{END endrecord_block}
+		{END grid_record}
+		</tr>
+{END grid_row}
+	</tbody>
+
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+      </div>
+      <DIV class="bs-middle ">
+        <DIV class="bs-topmiddle">
+          
+        </div>
+        <DIV class="bs-left" {$blockattr_left}>
+          
+        </div>
+        <DIV class="bs-center">
+          
+        </div>
+        <DIV class="bs-right">
+          
+        </div>
+      </div>
+      <DIV class="bs-bottom">
+        
+      </div>
+      {$footer}
+    {END body}
+  </body>
+</html>

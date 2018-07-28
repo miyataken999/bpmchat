@@ -1,0 +1,1034 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-search" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_searchpage}
+<div {$searchpage_chiddenattr} data-pageid="{$pageid}" data-container="searchpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN searchheader}
+	<h2 {$bssearchheader_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchheader" >{$pagetitlelabel retblresults search}</h2>
+
+{END searchheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_searchpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$bssearchfields_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchfields" class="form-horizontal" role="form">
+<div class="container">
+	<div class="form-group">
+		<div class="col-md-12" >
+			&nbsp;
+		</div>
+	</div>
+</div>
+	{BEGIN Remarks_fieldblock}		
+	<div class="container {$fielddispclass_Remarks}" data-fieldname="Remarks">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label retblresults Remarks}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Remarks}
+			</div>
+			<div class="col-md-4" >
+				{$Remarks_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Remarks_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Remarks_fieldblock}
+	{BEGIN MLS_Number_fieldblock}		
+	<div class="container {$fielddispclass_MLS_Number}" data-fieldname="MLS_Number">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label retblresults MLS_Number}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_MLS_Number}
+			</div>
+			<div class="col-md-4" >
+				{$MLS_Number_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$MLS_Number_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END MLS_Number_fieldblock}
+	{BEGIN Price_fieldblock}		
+	<div class="container {$fielddispclass_Price}" data-fieldname="Price">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label retblresults Price}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Price}
+			</div>
+			<div class="col-md-4" >
+				{$Price_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Price_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Price_fieldblock}
+	{BEGIN sType_fieldblock}		
+	<div class="container {$fielddispclass_sType}" data-fieldname="sType">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label retblresults sType}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_sType}
+			</div>
+			<div class="col-md-4" >
+				{$sType_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$sType_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END sType_fieldblock}
+	{BEGIN Style_fieldblock}		
+	<div class="container {$fielddispclass_Style}" data-fieldname="Style">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label retblresults Style}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Style}
+			</div>
+			<div class="col-md-4" >
+				{$Style_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Style_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Style_fieldblock}
+	{BEGIN Bedrooms_fieldblock}		
+	<div class="container {$fielddispclass_Bedrooms}" data-fieldname="Bedrooms">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label retblresults Bedrooms}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Bedrooms}
+			</div>
+			<div class="col-md-4" >
+				{$Bedrooms_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Bedrooms_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Bedrooms_fieldblock}
+	{BEGIN Bathrooms_fieldblock}		
+	<div class="container {$fielddispclass_Bathrooms}" data-fieldname="Bathrooms">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label retblresults Bathrooms}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Bathrooms}
+			</div>
+			<div class="col-md-4" >
+				{$Bathrooms_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Bathrooms_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Bathrooms_fieldblock}
+	{BEGIN Year_fieldblock}		
+	<div class="container {$fielddispclass_Year}" data-fieldname="Year">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label retblresults Year}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Year}
+			</div>
+			<div class="col-md-4" >
+				{$Year_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Year_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Year_fieldblock}
+	{BEGIN Sq_Ft_fieldblock}		
+	<div class="container {$fielddispclass_Sq_Ft}" data-fieldname="Sq_Ft">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label retblresults Sq_Ft}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Sq_Ft}
+			</div>
+			<div class="col-md-4" >
+				{$Sq_Ft_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Sq_Ft_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Sq_Ft_fieldblock}
+	{BEGIN Garage_fieldblock}		
+	<div class="container {$fielddispclass_Garage}" data-fieldname="Garage">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label retblresults Garage}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Garage}
+			</div>
+			<div class="col-md-4" >
+				{$Garage_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Garage_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Garage_fieldblock}
+	{BEGIN House_Number_fieldblock}		
+	<div class="container {$fielddispclass_House_Number}" data-fieldname="House_Number">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label retblresults House_Number}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_House_Number}
+			</div>
+			<div class="col-md-4" >
+				{$House_Number_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$House_Number_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END House_Number_fieldblock}
+	{BEGIN Street_Name_fieldblock}		
+	<div class="container {$fielddispclass_Street_Name}" data-fieldname="Street_Name">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label retblresults Street_Name}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Street_Name}
+			</div>
+			<div class="col-md-4" >
+				{$Street_Name_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Street_Name_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Street_Name_fieldblock}
+	{BEGIN Apartment_Unit_fieldblock}		
+	<div class="container {$fielddispclass_Apartment_Unit}" data-fieldname="Apartment_Unit">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label retblresults Apartment_Unit}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Apartment_Unit}
+			</div>
+			<div class="col-md-4" >
+				{$Apartment_Unit_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Apartment_Unit_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Apartment_Unit_fieldblock}
+	{BEGIN City_fieldblock}		
+	<div class="container {$fielddispclass_City}" data-fieldname="City">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label retblresults City}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_City}
+			</div>
+			<div class="col-md-4" >
+				{$City_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$City_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END City_fieldblock}
+	{BEGIN State_fieldblock}		
+	<div class="container {$fielddispclass_State}" data-fieldname="State">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label retblresults State}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_State}
+			</div>
+			<div class="col-md-4" >
+				{$State_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$State_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END State_fieldblock}
+	{BEGIN Zip_fieldblock}		
+	<div class="container {$fielddispclass_Zip}" data-fieldname="Zip">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label retblresults Zip}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Zip}
+			</div>
+			<div class="col-md-4" >
+				{$Zip_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Zip_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Zip_fieldblock}
+	{BEGIN Country_fieldblock}		
+	<div class="container {$fielddispclass_Country}" data-fieldname="Country">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label retblresults Country}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Country}
+			</div>
+			<div class="col-md-4" >
+				{$Country_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Country_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Country_fieldblock}
+	{BEGIN Kitchen_fieldblock}		
+	<div class="container {$fielddispclass_Kitchen}" data-fieldname="Kitchen">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label retblresults Kitchen}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Kitchen}
+			</div>
+			<div class="col-md-4" >
+				{$Kitchen_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Kitchen_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Kitchen_fieldblock}
+	{BEGIN Living_Room_fieldblock}		
+	<div class="container {$fielddispclass_Living_Room}" data-fieldname="Living_Room">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label retblresults Living_Room}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Living_Room}
+			</div>
+			<div class="col-md-4" >
+				{$Living_Room_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Living_Room_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Living_Room_fieldblock}
+	{BEGIN Family_Room_fieldblock}		
+	<div class="container {$fielddispclass_Family_Room}" data-fieldname="Family_Room">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label retblresults Family_Room}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Family_Room}
+			</div>
+			<div class="col-md-4" >
+				{$Family_Room_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Family_Room_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Family_Room_fieldblock}
+	{BEGIN Rec_Room_fieldblock}		
+	<div class="container {$fielddispclass_Rec_Room}" data-fieldname="Rec_Room">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label retblresults Rec_Room}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Rec_Room}
+			</div>
+			<div class="col-md-4" >
+				{$Rec_Room_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Rec_Room_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Rec_Room_fieldblock}
+	{BEGIN Study_Room_fieldblock}		
+	<div class="container {$fielddispclass_Study_Room}" data-fieldname="Study_Room">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label retblresults Study_Room}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Study_Room}
+			</div>
+			<div class="col-md-4" >
+				{$Study_Room_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Study_Room_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Study_Room_fieldblock}
+	{BEGIN Sun_Room_fieldblock}		
+	<div class="container {$fielddispclass_Sun_Room}" data-fieldname="Sun_Room">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label retblresults Sun_Room}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Sun_Room}
+			</div>
+			<div class="col-md-4" >
+				{$Sun_Room_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Sun_Room_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Sun_Room_fieldblock}
+	{BEGIN Loft_fieldblock}		
+	<div class="container {$fielddispclass_Loft}" data-fieldname="Loft">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label retblresults Loft}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Loft}
+			</div>
+			<div class="col-md-4" >
+				{$Loft_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Loft_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Loft_fieldblock}
+	{BEGIN Dinning_Room_fieldblock}		
+	<div class="container {$fielddispclass_Dinning_Room}" data-fieldname="Dinning_Room">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label retblresults Dinning_Room}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Dinning_Room}
+			</div>
+			<div class="col-md-4" >
+				{$Dinning_Room_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Dinning_Room_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Dinning_Room_fieldblock}
+	{BEGIN Amusement_Room_fieldblock}		
+	<div class="container {$fielddispclass_Amusement_Room}" data-fieldname="Amusement_Room">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label retblresults Amusement_Room}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Amusement_Room}
+			</div>
+			<div class="col-md-4" >
+				{$Amusement_Room_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Amusement_Room_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Amusement_Room_fieldblock}
+	{BEGIN Foyer_fieldblock}		
+	<div class="container {$fielddispclass_Foyer}" data-fieldname="Foyer">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label retblresults Foyer}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Foyer}
+			</div>
+			<div class="col-md-4" >
+				{$Foyer_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Foyer_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Foyer_fieldblock}
+	{BEGIN Office_fieldblock}		
+	<div class="container {$fielddispclass_Office}" data-fieldname="Office">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label retblresults Office}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Office}
+			</div>
+			<div class="col-md-4" >
+				{$Office_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Office_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Office_fieldblock}
+	{BEGIN Den_fieldblock}		
+	<div class="container {$fielddispclass_Den}" data-fieldname="Den">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label retblresults Den}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Den}
+			</div>
+			<div class="col-md-4" >
+				{$Den_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Den_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Den_fieldblock}
+	{BEGIN Fireplaces_fieldblock}		
+	<div class="container {$fielddispclass_Fireplaces}" data-fieldname="Fireplaces">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label retblresults Fireplaces}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Fireplaces}
+			</div>
+			<div class="col-md-4" >
+				{$Fireplaces_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Fireplaces_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Fireplaces_fieldblock}
+	{BEGIN Acres_fieldblock}		
+	<div class="container {$fielddispclass_Acres}" data-fieldname="Acres">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label retblresults Acres}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Acres}
+			</div>
+			<div class="col-md-4" >
+				{$Acres_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Acres_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Acres_fieldblock}
+	{BEGIN Range_fieldblock}		
+	<div class="container {$fielddispclass_Range}" data-fieldname="Range">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label retblresults Range}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Range}
+			</div>
+			<div class="col-md-4" >
+				{$Range_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Range_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Range_fieldblock}
+	{BEGIN Cooktop_fieldblock}		
+	<div class="container {$fielddispclass_Cooktop}" data-fieldname="Cooktop">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label retblresults Cooktop}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Cooktop}
+			</div>
+			<div class="col-md-4" >
+				{$Cooktop_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Cooktop_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Cooktop_fieldblock}
+	{BEGIN Dishwasher_fieldblock}		
+	<div class="container {$fielddispclass_Dishwasher}" data-fieldname="Dishwasher">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label retblresults Dishwasher}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Dishwasher}
+			</div>
+			<div class="col-md-4" >
+				{$Dishwasher_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Dishwasher_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Dishwasher_fieldblock}
+	{BEGIN Disposal_fieldblock}		
+	<div class="container {$fielddispclass_Disposal}" data-fieldname="Disposal">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label retblresults Disposal}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Disposal}
+			</div>
+			<div class="col-md-4" >
+				{$Disposal_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Disposal_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Disposal_fieldblock}
+	{BEGIN Dryer_fieldblock}		
+	<div class="container {$fielddispclass_Dryer}" data-fieldname="Dryer">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label retblresults Dryer}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Dryer}
+			</div>
+			<div class="col-md-4" >
+				{$Dryer_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Dryer_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Dryer_fieldblock}
+	{BEGIN Exhaust_Fan_Hood_fieldblock}		
+	<div class="container {$fielddispclass_Exhaust_Fan_Hood}" data-fieldname="Exhaust_Fan_Hood">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label retblresults Exhaust_Fan_Hood}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Exhaust_Fan_Hood}
+			</div>
+			<div class="col-md-4" >
+				{$Exhaust_Fan_Hood_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Exhaust_Fan_Hood_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Exhaust_Fan_Hood_fieldblock}
+	{BEGIN Microwave_fieldblock}		
+	<div class="container {$fielddispclass_Microwave}" data-fieldname="Microwave">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label retblresults Microwave}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Microwave}
+			</div>
+			<div class="col-md-4" >
+				{$Microwave_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Microwave_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Microwave_fieldblock}
+	{BEGIN Refrigerator_fieldblock}		
+	<div class="container {$fielddispclass_Refrigerator}" data-fieldname="Refrigerator">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label retblresults Refrigerator}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Refrigerator}
+			</div>
+			<div class="col-md-4" >
+				{$Refrigerator_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Refrigerator_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Refrigerator_fieldblock}
+	{BEGIN Wall_Oven_fieldblock}		
+	<div class="container {$fielddispclass_Wall_Oven}" data-fieldname="Wall_Oven">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label retblresults Wall_Oven}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Wall_Oven}
+			</div>
+			<div class="col-md-4" >
+				{$Wall_Oven_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Wall_Oven_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Wall_Oven_fieldblock}
+	{BEGIN Water_Softener_fieldblock}		
+	<div class="container {$fielddispclass_Water_Softener}" data-fieldname="Water_Softener">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label retblresults Water_Softener}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Water_Softener}
+			</div>
+			<div class="col-md-4" >
+				{$Water_Softener_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Water_Softener_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Water_Softener_fieldblock}
+	{BEGIN Eat_In_Kitchen_fieldblock}		
+	<div class="container {$fielddispclass_Eat_In_Kitchen}" data-fieldname="Eat_In_Kitchen">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label retblresults Eat_In_Kitchen}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Eat_In_Kitchen}
+			</div>
+			<div class="col-md-4" >
+				{$Eat_In_Kitchen_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Eat_In_Kitchen_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Eat_In_Kitchen_fieldblock}
+	{BEGIN Kitchen_Dining_Room_fieldblock}		
+	<div class="container {$fielddispclass_Kitchen_Dining_Room}" data-fieldname="Kitchen_Dining_Room">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label retblresults Kitchen_Dining_Room}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Kitchen_Dining_Room}
+			</div>
+			<div class="col-md-4" >
+				{$Kitchen_Dining_Room_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Kitchen_Dining_Room_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Kitchen_Dining_Room_fieldblock}
+	{BEGIN Separate_Formal_Dining_Room_fieldblock}		
+	<div class="container {$fielddispclass_Separate_Formal_Dining_Room}" data-fieldname="Separate_Formal_Dining_Room">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label retblresults Separate_Formal_Dining_Room}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Separate_Formal_Dining_Room}
+			</div>
+			<div class="col-md-4" >
+				{$Separate_Formal_Dining_Room_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Separate_Formal_Dining_Room_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Separate_Formal_Dining_Room_fieldblock}
+	{BEGIN Basement_fieldblock}		
+	<div class="container {$fielddispclass_Basement}" data-fieldname="Basement">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label retblresults Basement}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Basement}
+			</div>
+			<div class="col-md-4" >
+				{$Basement_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Basement_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Basement_fieldblock}
+	{BEGIN Finished_Basement_fieldblock}		
+	<div class="container {$fielddispclass_Finished_Basement}" data-fieldname="Finished_Basement">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label retblresults Finished_Basement}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Finished_Basement}
+			</div>
+			<div class="col-md-4" >
+				{$Finished_Basement_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Finished_Basement_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Finished_Basement_fieldblock}
+	{BEGIN Drain_Tiled_fieldblock}		
+	<div class="container {$fielddispclass_Drain_Tiled}" data-fieldname="Drain_Tiled">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label retblresults Drain_Tiled}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Drain_Tiled}
+			</div>
+			<div class="col-md-4" >
+				{$Drain_Tiled_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Drain_Tiled_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Drain_Tiled_fieldblock}
+	{BEGIN Sum_Pump_fieldblock}		
+	<div class="container {$fielddispclass_Sum_Pump}" data-fieldname="Sum_Pump">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label retblresults Sum_Pump}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Sum_Pump}
+			</div>
+			<div class="col-md-4" >
+				{$Sum_Pump_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Sum_Pump_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Sum_Pump_fieldblock}
+	{BEGIN Walkout_fieldblock}		
+	<div class="container {$fielddispclass_Walkout}" data-fieldname="Walkout">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label retblresults Walkout}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Walkout}
+			</div>
+			<div class="col-md-4" >
+				{$Walkout_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Walkout_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Walkout_fieldblock}
+	{BEGIN Daylight_Lookout_Windows_fieldblock}		
+	<div class="container {$fielddispclass_Daylight_Lookout_Windows}" data-fieldname="Daylight_Lookout_Windows">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label retblresults Daylight_Lookout_Windows}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_Daylight_Lookout_Windows}
+			</div>
+			<div class="col-md-4" >
+				{$Daylight_Lookout_Windows_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$Daylight_Lookout_Windows_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END Daylight_Lookout_Windows_fieldblock}
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-4"> 
+
+{BEGIN searchbuttons}
+{BEGIN search_button}
+<button class="btn btn-primary" {$searchbutton_attrs}>検索</button>
+{END search_button} 
+{BEGIN reset_button}
+<button class="btn btn-default" {$resetbutton_attrs}>リセット</button>
+{END reset_button}
+{BEGIN back_button}
+<button class="btn btn-default" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{END searchbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

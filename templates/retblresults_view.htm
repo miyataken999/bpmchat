@@ -1,0 +1,1048 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-view" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        {BEGIN container_menu}<nav {$menu_chiddenattr} data-pageid="{$pageid}" data-container="menu" class="navbar navbar-default ">					
+
+
+
+{BEGIN container_hdr}
+<div {$hdr_chiddenattr} data-pageid="{$pageid}" data-container="hdr" class=" navbar-header   "> 
+
+{BEGIN logo_block}
+<a href="{$home_link}" {$logo_hiddenattr} data-pageid="{$pageid}" data-brick="logo" class="navbar-brand" >{$logo}</a>
+{END logo_block}
+
+
+{BEGIN collapse_block}
+<button {$bsnavbarcollapse_hiddenattr} data-pageid="{$pageid}" data-brick="bsnavbarcollapse" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target=".bs-navcontrolled">	
+	<span class="sr-only">Toggle navigation</span>	
+	<span class="icon-bar"></span>					
+</button>												
+
+{END collapse_block}
+
+
+
+</div>
+{END container_hdr}
+
+
+
+
+
+
+{BEGIN container_menu_1}<div {$menu_1_chiddenattr} data-pageid="{$pageid}" data-container="menu_1" class="bs-navform navbar-collapse bs-navcontrolled bs-hidden-xs" aria-expanded="false" >												   
+{BEGIN menu_block}
+{$menu main horizontal}
+
+{END menu_block}
+
+
+
+
+
+{BEGIN container_more}
+<div {$more_chiddenattr} data-pageid="{$pageid}" data-container="more" class=" navbar-right navbar-form   "> 
+
+{BEGIN security_block}
+<span {$loggedas_hiddenattr} data-pageid="{$pageid}" data-brick="loggedas" id="login_block{$id}" class="bs-navsection">
+	{BEGIN guestloginbutton}
+		<button class="btn btn-info" type="button" {$guestloginlink_attrs}>ログイン</button>
+	{END guestloginbutton}
+	{BEGIN loggedas_message} 
+		<span class="dropdown">
+			<button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon-user"></span>	{$username}</button>
+			<ul class="dropdown-menu">
+		{BEGIN logoutbutton}
+				<li><a href="#" {$logoutlink_attrs}>ログアウト</a></li>
+		{END logoutbutton}
+		
+		{BEGIN adminarea_link}
+				<li><a href="admin_rights_list.php" {$adminarealink_attrs}>管理エリア</a></li>
+		{END adminarea_link}
+
+
+	{BEGIN changepwd_link}
+				<li><a href="#" {$changepwdlink_attrs}>パスワード変更</a></li>
+	{END changepwd_link}
+			</ul>
+		</span>
+	{END loggedas_message}
+</span>
+{END security_block}
+
+
+
+</div>
+{END container_more}
+
+
+
+
+												</div>						{END container_menu_1}
+
+
+									</nav>{END container_menu}
+
+{BEGIN container_viewpage}
+<div {$viewpage_chiddenattr} data-pageid="{$pageid}" data-container="viewpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN viewheader}
+	<h2 {$viewheader_hiddenattr} data-pageid="{$pageid}" data-brick="viewheader" >{$pagetitlelabel retblresults view}</h2>
+
+{END viewheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_viewpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class=" form-horizontal  col-md-12 "> 
+
+
+<div {$viewfields_hiddenattr} data-pageid="{$pageid}" data-brick="viewfields" >
+	{BEGIN House_Number_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_House_Number} bs-viewform-group" data-fieldname="House_Number">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_House_Number}">
+			{$label retblresults House_Number}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$House_Number_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END House_Number_fieldblock}
+	{BEGIN Photo10_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_Photo10} bs-viewform-group" data-fieldname="Photo10">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_Photo10}">
+			{$label retblresults Photo10}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$Photo10_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END Photo10_fieldblock}
+	{BEGIN Photo3_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_Photo3} bs-viewform-group" data-fieldname="Photo3">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_Photo3}">
+			{$label retblresults Photo3}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$Photo3_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END Photo3_fieldblock}
+	{BEGIN Photo1_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_Photo1} bs-viewform-group" data-fieldname="Photo1">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_Photo1}">
+			{$label retblresults Photo1}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$Photo1_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END Photo1_fieldblock}
+	{BEGIN Photo2_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_Photo2} bs-viewform-group" data-fieldname="Photo2">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_Photo2}">
+			{$label retblresults Photo2}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$Photo2_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END Photo2_fieldblock}
+	{BEGIN Photo9_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_Photo9} bs-viewform-group" data-fieldname="Photo9">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_Photo9}">
+			{$label retblresults Photo9}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$Photo9_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END Photo9_fieldblock}
+	{BEGIN Photo8_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_Photo8} bs-viewform-group" data-fieldname="Photo8">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_Photo8}">
+			{$label retblresults Photo8}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$Photo8_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END Photo8_fieldblock}
+	{BEGIN Photo7_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_Photo7} bs-viewform-group" data-fieldname="Photo7">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_Photo7}">
+			{$label retblresults Photo7}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$Photo7_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END Photo7_fieldblock}
+	{BEGIN Photo6_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_Photo6} bs-viewform-group" data-fieldname="Photo6">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_Photo6}">
+			{$label retblresults Photo6}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$Photo6_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END Photo6_fieldblock}
+	{BEGIN Photo5_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_Photo5} bs-viewform-group" data-fieldname="Photo5">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_Photo5}">
+			{$label retblresults Photo5}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$Photo5_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END Photo5_fieldblock}
+	{BEGIN Photo4_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_Photo4} bs-viewform-group" data-fieldname="Photo4">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_Photo4}">
+			{$label retblresults Photo4}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$Photo4_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END Photo4_fieldblock}
+	{BEGIN Street_Name_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_Street_Name} bs-viewform-group" data-fieldname="Street_Name">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_Street_Name}">
+			{$label retblresults Street_Name}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$Street_Name_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END Street_Name_fieldblock}
+	{BEGIN Apartment_Unit_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_Apartment_Unit} bs-viewform-group" data-fieldname="Apartment_Unit">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_Apartment_Unit}">
+			{$label retblresults Apartment_Unit}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$Apartment_Unit_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END Apartment_Unit_fieldblock}
+	{BEGIN City_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_City} bs-viewform-group" data-fieldname="City">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_City}">
+			{$label retblresults City}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$City_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END City_fieldblock}
+	{BEGIN State_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_State} bs-viewform-group" data-fieldname="State">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_State}">
+			{$label retblresults State}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$State_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END State_fieldblock}
+	{BEGIN Zip_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_Zip} bs-viewform-group" data-fieldname="Zip">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_Zip}">
+			{$label retblresults Zip}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$Zip_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END Zip_fieldblock}
+	{BEGIN MLS_Number_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_MLS_Number} bs-viewform-group" data-fieldname="MLS_Number">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_MLS_Number}">
+			{$label retblresults MLS_Number}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$MLS_Number_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END MLS_Number_fieldblock}
+	{BEGIN Price_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_Price} bs-viewform-group" data-fieldname="Price">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_Price}">
+			{$label retblresults Price}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$Price_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END Price_fieldblock}
+	{BEGIN Remarks_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_Remarks} bs-viewform-group" data-fieldname="Remarks">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_Remarks}">
+			{$label retblresults Remarks}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$Remarks_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END Remarks_fieldblock}
+	{BEGIN sType_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_sType} bs-viewform-group" data-fieldname="sType">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_sType}">
+			{$label retblresults sType}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$sType_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END sType_fieldblock}
+	{BEGIN Foundation_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_Foundation} bs-viewform-group" data-fieldname="Foundation">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_Foundation}">
+			{$label retblresults Foundation}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$Foundation_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END Foundation_fieldblock}
+	{BEGIN Style_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_Style} bs-viewform-group" data-fieldname="Style">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_Style}">
+			{$label retblresults Style}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$Style_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END Style_fieldblock}
+	{BEGIN Sq_Ft_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_Sq_Ft} bs-viewform-group" data-fieldname="Sq_Ft">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_Sq_Ft}">
+			{$label retblresults Sq_Ft}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$Sq_Ft_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END Sq_Ft_fieldblock}
+	{BEGIN Bedrooms_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_Bedrooms} bs-viewform-group" data-fieldname="Bedrooms">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_Bedrooms}">
+			{$label retblresults Bedrooms}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$Bedrooms_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END Bedrooms_fieldblock}
+	{BEGIN Garage_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_Garage} bs-viewform-group" data-fieldname="Garage">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_Garage}">
+			{$label retblresults Garage}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$Garage_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END Garage_fieldblock}
+	{BEGIN Bathrooms_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_Bathrooms} bs-viewform-group" data-fieldname="Bathrooms">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_Bathrooms}">
+			{$label retblresults Bathrooms}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$Bathrooms_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END Bathrooms_fieldblock}
+	{BEGIN Acres_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_Acres} bs-viewform-group" data-fieldname="Acres">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_Acres}">
+			{$label retblresults Acres}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$Acres_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END Acres_fieldblock}
+	{BEGIN Year_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_Year} bs-viewform-group" data-fieldname="Year">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_Year}">
+			{$label retblresults Year}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$Year_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END Year_fieldblock}
+	{BEGIN Kitchen_Dimension1_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_Kitchen_Dimension1} bs-viewform-group" data-fieldname="Kitchen_Dimension1">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_Kitchen_Dimension1}">
+			{$label retblresults Kitchen_Dimension1}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$Kitchen_Dimension1_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END Kitchen_Dimension1_fieldblock}
+	{BEGIN Kitchen_Dimension2_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_Kitchen_Dimension2} bs-viewform-group" data-fieldname="Kitchen_Dimension2">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_Kitchen_Dimension2}">
+			{$label retblresults Kitchen_Dimension2}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$Kitchen_Dimension2_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END Kitchen_Dimension2_fieldblock}
+	{BEGIN Living_Room_Dimension1_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_Living_Room_Dimension1} bs-viewform-group" data-fieldname="Living_Room_Dimension1">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_Living_Room_Dimension1}">
+			{$label retblresults Living_Room_Dimension1}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$Living_Room_Dimension1_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END Living_Room_Dimension1_fieldblock}
+	{BEGIN Living_Room_Dimension2_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_Living_Room_Dimension2} bs-viewform-group" data-fieldname="Living_Room_Dimension2">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_Living_Room_Dimension2}">
+			{$label retblresults Living_Room_Dimension2}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$Living_Room_Dimension2_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END Living_Room_Dimension2_fieldblock}
+	{BEGIN Family_Room_Dimension1_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_Family_Room_Dimension1} bs-viewform-group" data-fieldname="Family_Room_Dimension1">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_Family_Room_Dimension1}">
+			{$label retblresults Family_Room_Dimension1}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$Family_Room_Dimension1_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END Family_Room_Dimension1_fieldblock}
+	{BEGIN Family_Room_Dimension2_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_Family_Room_Dimension2} bs-viewform-group" data-fieldname="Family_Room_Dimension2">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_Family_Room_Dimension2}">
+			{$label retblresults Family_Room_Dimension2}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$Family_Room_Dimension2_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END Family_Room_Dimension2_fieldblock}
+	{BEGIN Rec_Room_Dimension1_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_Rec_Room_Dimension1} bs-viewform-group" data-fieldname="Rec_Room_Dimension1">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_Rec_Room_Dimension1}">
+			{$label retblresults Rec_Room_Dimension1}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$Rec_Room_Dimension1_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END Rec_Room_Dimension1_fieldblock}
+	{BEGIN Rec_Room_Dimension2_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_Rec_Room_Dimension2} bs-viewform-group" data-fieldname="Rec_Room_Dimension2">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_Rec_Room_Dimension2}">
+			{$label retblresults Rec_Room_Dimension2}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$Rec_Room_Dimension2_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END Rec_Room_Dimension2_fieldblock}
+	{BEGIN Study_Room_Dimension1_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_Study_Room_Dimension1} bs-viewform-group" data-fieldname="Study_Room_Dimension1">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_Study_Room_Dimension1}">
+			{$label retblresults Study_Room_Dimension1}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$Study_Room_Dimension1_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END Study_Room_Dimension1_fieldblock}
+	{BEGIN Study_Room_Dimension2_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_Study_Room_Dimension2} bs-viewform-group" data-fieldname="Study_Room_Dimension2">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_Study_Room_Dimension2}">
+			{$label retblresults Study_Room_Dimension2}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$Study_Room_Dimension2_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END Study_Room_Dimension2_fieldblock}
+	{BEGIN Sun_Room_Dimension1_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_Sun_Room_Dimension1} bs-viewform-group" data-fieldname="Sun_Room_Dimension1">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_Sun_Room_Dimension1}">
+			{$label retblresults Sun_Room_Dimension1}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$Sun_Room_Dimension1_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END Sun_Room_Dimension1_fieldblock}
+	{BEGIN Sun_Room_Dimension2_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_Sun_Room_Dimension2} bs-viewform-group" data-fieldname="Sun_Room_Dimension2">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_Sun_Room_Dimension2}">
+			{$label retblresults Sun_Room_Dimension2}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$Sun_Room_Dimension2_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END Sun_Room_Dimension2_fieldblock}
+	{BEGIN Loft_Dimension1_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_Loft_Dimension1} bs-viewform-group" data-fieldname="Loft_Dimension1">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_Loft_Dimension1}">
+			{$label retblresults Loft_Dimension1}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$Loft_Dimension1_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END Loft_Dimension1_fieldblock}
+	{BEGIN Loft_Dimension2_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_Loft_Dimension2} bs-viewform-group" data-fieldname="Loft_Dimension2">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_Loft_Dimension2}">
+			{$label retblresults Loft_Dimension2}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$Loft_Dimension2_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END Loft_Dimension2_fieldblock}
+	{BEGIN Dinning_Room_Dimension1_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_Dinning_Room_Dimension1} bs-viewform-group" data-fieldname="Dinning_Room_Dimension1">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_Dinning_Room_Dimension1}">
+			{$label retblresults Dinning_Room_Dimension1}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$Dinning_Room_Dimension1_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END Dinning_Room_Dimension1_fieldblock}
+	{BEGIN Dinning_Room_Dimension2_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_Dinning_Room_Dimension2} bs-viewform-group" data-fieldname="Dinning_Room_Dimension2">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_Dinning_Room_Dimension2}">
+			{$label retblresults Dinning_Room_Dimension2}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$Dinning_Room_Dimension2_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END Dinning_Room_Dimension2_fieldblock}
+	{BEGIN Amusement_Room_Dimension1_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_Amusement_Room_Dimension1} bs-viewform-group" data-fieldname="Amusement_Room_Dimension1">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_Amusement_Room_Dimension1}">
+			{$label retblresults Amusement_Room_Dimension1}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$Amusement_Room_Dimension1_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END Amusement_Room_Dimension1_fieldblock}
+	{BEGIN Amusement_Room_Dimension2_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_Amusement_Room_Dimension2} bs-viewform-group" data-fieldname="Amusement_Room_Dimension2">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_Amusement_Room_Dimension2}">
+			{$label retblresults Amusement_Room_Dimension2}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$Amusement_Room_Dimension2_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END Amusement_Room_Dimension2_fieldblock}
+	{BEGIN Foyer_Dimension1_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_Foyer_Dimension1} bs-viewform-group" data-fieldname="Foyer_Dimension1">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_Foyer_Dimension1}">
+			{$label retblresults Foyer_Dimension1}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$Foyer_Dimension1_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END Foyer_Dimension1_fieldblock}
+	{BEGIN Foyer_Dimension2_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_Foyer_Dimension2} bs-viewform-group" data-fieldname="Foyer_Dimension2">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_Foyer_Dimension2}">
+			{$label retblresults Foyer_Dimension2}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$Foyer_Dimension2_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END Foyer_Dimension2_fieldblock}
+	{BEGIN Office_Dimension1_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_Office_Dimension1} bs-viewform-group" data-fieldname="Office_Dimension1">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_Office_Dimension1}">
+			{$label retblresults Office_Dimension1}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$Office_Dimension1_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END Office_Dimension1_fieldblock}
+	{BEGIN Office_Dimension2_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_Office_Dimension2} bs-viewform-group" data-fieldname="Office_Dimension2">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_Office_Dimension2}">
+			{$label retblresults Office_Dimension2}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$Office_Dimension2_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END Office_Dimension2_fieldblock}
+	{BEGIN Den_Dimension1_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_Den_Dimension1} bs-viewform-group" data-fieldname="Den_Dimension1">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_Den_Dimension1}">
+			{$label retblresults Den_Dimension1}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$Den_Dimension1_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END Den_Dimension1_fieldblock}
+	{BEGIN Den_Dimension2_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_Den_Dimension2} bs-viewform-group" data-fieldname="Den_Dimension2">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_Den_Dimension2}">
+			{$label retblresults Den_Dimension2}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$Den_Dimension2_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END Den_Dimension2_fieldblock}
+	{BEGIN FullBaths_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_FullBaths} bs-viewform-group" data-fieldname="FullBaths">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_FullBaths}">
+			{$label retblresults FullBaths}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$FullBaths_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END FullBaths_fieldblock}
+	{BEGIN Fireplaces_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_Fireplaces} bs-viewform-group" data-fieldname="Fireplaces">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_Fireplaces}">
+			{$label retblresults Fireplaces}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$Fireplaces_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END Fireplaces_fieldblock}
+	{BEGIN Cooling_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_Cooling} bs-viewform-group" data-fieldname="Cooling">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_Cooling}">
+			{$label retblresults Cooling}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$Cooling_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END Cooling_fieldblock}
+	{BEGIN Heating_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_Heating} bs-viewform-group" data-fieldname="Heating">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_Heating}">
+			{$label retblresults Heating}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$Heating_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END Heating_fieldblock}
+	{BEGIN Lot_Dimension1_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_Lot_Dimension1} bs-viewform-group" data-fieldname="Lot_Dimension1">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_Lot_Dimension1}">
+			{$label retblresults Lot_Dimension1}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$Lot_Dimension1_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END Lot_Dimension1_fieldblock}
+	{BEGIN Lot_Dimension2_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_Lot_Dimension2} bs-viewform-group" data-fieldname="Lot_Dimension2">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_Lot_Dimension2}">
+			{$label retblresults Lot_Dimension2}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$Lot_Dimension2_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END Lot_Dimension2_fieldblock}
+	{BEGIN Lot_Dimension3_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_Lot_Dimension3} bs-viewform-group" data-fieldname="Lot_Dimension3">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_Lot_Dimension3}">
+			{$label retblresults Lot_Dimension3}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$Lot_Dimension3_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END Lot_Dimension3_fieldblock}
+	{BEGIN Lot_Dimension4_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_Lot_Dimension4} bs-viewform-group" data-fieldname="Lot_Dimension4">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_Lot_Dimension4}">
+			{$label retblresults Lot_Dimension4}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$Lot_Dimension4_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END Lot_Dimension4_fieldblock}
+	{BEGIN Lot_Dimension5_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_Lot_Dimension5} bs-viewform-group" data-fieldname="Lot_Dimension5">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_Lot_Dimension5}">
+			{$label retblresults Lot_Dimension5}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$Lot_Dimension5_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END Lot_Dimension5_fieldblock}
+	{BEGIN Lot_Dimension6_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_Lot_Dimension6} bs-viewform-group" data-fieldname="Lot_Dimension6">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_Lot_Dimension6}">
+			{$label retblresults Lot_Dimension6}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$Lot_Dimension6_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END Lot_Dimension6_fieldblock}
+	{BEGIN Lot_Dimension7_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_Lot_Dimension7} bs-viewform-group" data-fieldname="Lot_Dimension7">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_Lot_Dimension7}">
+			{$label retblresults Lot_Dimension7}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$Lot_Dimension7_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END Lot_Dimension7_fieldblock}
+	{BEGIN Lot_Dimension8_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_Lot_Dimension8} bs-viewform-group" data-fieldname="Lot_Dimension8">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_Lot_Dimension8}">
+			{$label retblresults Lot_Dimension8}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$Lot_Dimension8_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END Lot_Dimension8_fieldblock}
+	{BEGIN Tax_Amount_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_Tax_Amount} bs-viewform-group" data-fieldname="Tax_Amount">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_Tax_Amount}">
+			{$label retblresults Tax_Amount}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$Tax_Amount_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END Tax_Amount_fieldblock}
+	{BEGIN Tax_Year_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_Tax_Year} bs-viewform-group" data-fieldname="Tax_Year">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_Tax_Year}">
+			{$label retblresults Tax_Year}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$Tax_Year_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END Tax_Year_fieldblock}
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN viewbuttons}
+{BEGIN back_button}
+<button class="btn btn-primary" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{BEGIN close_button}
+<button href="#" class="btn btn-primary" {$closebutton_attrs}>ウィンドウを閉じる</button>
+{END close_button}
+{END viewbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+
+
+{BEGIN container_leftbuttons_1}
+<div {$leftbuttons_1_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons_1" class="  text-right col-md-3 "> 
+
+{BEGIN rightviewbuttons}
+<div class="btn-group" role="group">
+		{BEGIN prev_button}
+	<button class="btn btn-default {$prevbutton_class}" {$prevbutton_attrs}><span class="glyphicon glyphicon-chevron-left"></span></button>
+	{END prev_button}
+	{BEGIN next_button}
+	<button class="btn btn-default {$nextbutton_class}" {$nextbutton_attrs}><span class="glyphicon glyphicon-chevron-right"></span></button>
+	{END next_button}
+		{BEGIN view_menu_button}
+	<div class="btn-group dropup" role="group">
+		<button class="btn btn-default dropdown-toggle {$groupbutton_class}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+		<ul class="dropdown-menu dropdown-left">
+									{BEGIN edit_page_button}
+				<li><a href=# {$edit_page_button_attrs}>編集</a></li>
+			{END edit_page_button}
+		</ul>
+	</div>
+	{END view_menu_button}
+</div>
+{END rightviewbuttons}
+
+
+
+</div>
+{END container_leftbuttons_1}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

@@ -1,0 +1,90 @@
+<div {$pageattrs}>
+
+{BEGIN container_column}
+<div class="rnr-c rnr-ch rnr-c-column">
+
+{BEGIN masterlist_title}
+<div  class="style1 rnr-bl rnr-b-masterlistheader {$brickclass_masterlistheader}"><a {$backtomasterlink_attrs} class="btn btn-link btn-xs">{mlang_message BACK_TO} {$backtomasterlink_caption}</a><span>{$pagetitlelabel ABE_REQUESTS masterlist}</span></div>
+{END masterlist_title}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_column}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+	<style>
+	.bs-gridcell[data-field=ABE_REQ_UID]:before {
+		content: "{$label ABE_REQUESTS ABE_REQ_UID}";
+	}
+	.bs-gridcell[data-field=ABE_UID]:before {
+		content: "{$label ABE_REQUESTS ABE_UID}";
+	}
+	.bs-gridcell[data-field=APP_UID]:before {
+		content: "{$label ABE_REQUESTS APP_UID}";
+	}
+	.bs-gridcell[data-field=DEL_INDEX]:before {
+		content: "{$label ABE_REQUESTS DEL_INDEX}";
+	}
+	.bs-gridcell[data-field=ABE_REQ_SENT_TO]:before {
+		content: "{$label ABE_REQUESTS ABE_REQ_SENT_TO}";
+	}
+	.bs-gridcell[data-field=ABE_REQ_SUBJECT]:before {
+		content: "{$label ABE_REQUESTS ABE_REQ_SUBJECT}";
+	}
+	.bs-gridcell[data-field=ABE_REQ_BODY]:before {
+		content: "{$label ABE_REQUESTS ABE_REQ_BODY}";
+	}
+	.bs-gridcell[data-field=ABE_REQ_DATE]:before {
+		content: "{$label ABE_REQUESTS ABE_REQ_DATE}";
+	}
+	.bs-gridcell[data-field=ABE_REQ_STATUS]:before {
+		content: "{$label ABE_REQUESTS ABE_REQ_STATUS}";
+	}
+	.bs-gridcell[data-field=ABE_REQ_ANSWERED]:before {
+		content: "{$label ABE_REQUESTS ABE_REQ_ANSWERED}";
+	}
+</style>
+<table {$masterlistgrid_hiddenattr} data-pageid="{$pageid}" data-brick="masterlistgrid" class="table rnr-b-mastergridfields rnr-gridtable bs-flexgrid" >
+		<thead>
+		<tr>
+			<th class="{$ABE_REQ_UID_class}">{$label ABE_REQUESTS ABE_REQ_UID}</th>
+			<th class="{$ABE_UID_class}">{$label ABE_REQUESTS ABE_UID}</th>
+			<th class="{$APP_UID_class}">{$label ABE_REQUESTS APP_UID}</th>
+			<th class="{$DEL_INDEX_class}">{$label ABE_REQUESTS DEL_INDEX}</th>
+			<th class="{$ABE_REQ_SENT_TO_class}">{$label ABE_REQUESTS ABE_REQ_SENT_TO}</th>
+			<th class="{$ABE_REQ_SUBJECT_class}">{$label ABE_REQUESTS ABE_REQ_SUBJECT}</th>
+			<th class="{$ABE_REQ_BODY_class}">{$label ABE_REQUESTS ABE_REQ_BODY}</th>
+			<th class="{$ABE_REQ_DATE_class}">{$label ABE_REQUESTS ABE_REQ_DATE}</th>
+			<th class="{$ABE_REQ_STATUS_class}">{$label ABE_REQUESTS ABE_REQ_STATUS}</th>
+			<th class="{$ABE_REQ_ANSWERED_class}">{$label ABE_REQUESTS ABE_REQ_ANSWERED}</th>
+		</tr>
+	</thead>
+	
+	<tbody>
+		<tr>
+			<td class="{$ABE_REQ_UID_class} bs-gridcell" data-field=ABE_REQ_UID>{$ABE_REQ_UID_mastervalue}</td>
+			<td class="{$ABE_UID_class} bs-gridcell" data-field=ABE_UID>{$ABE_UID_mastervalue}</td>
+			<td class="{$APP_UID_class} bs-gridcell" data-field=APP_UID>{$APP_UID_mastervalue}</td>
+			<td class="{$DEL_INDEX_class} bs-gridcell" data-field=DEL_INDEX>{$DEL_INDEX_mastervalue}</td>
+			<td class="{$ABE_REQ_SENT_TO_class} bs-gridcell" data-field=ABE_REQ_SENT_TO>{$ABE_REQ_SENT_TO_mastervalue}</td>
+			<td class="{$ABE_REQ_SUBJECT_class} bs-gridcell" data-field=ABE_REQ_SUBJECT>{$ABE_REQ_SUBJECT_mastervalue}</td>
+			<td class="{$ABE_REQ_BODY_class} bs-gridcell" data-field=ABE_REQ_BODY>{$ABE_REQ_BODY_mastervalue}</td>
+			<td class="{$ABE_REQ_DATE_class} bs-gridcell" data-field=ABE_REQ_DATE>{$ABE_REQ_DATE_mastervalue}</td>
+			<td class="{$ABE_REQ_STATUS_class} bs-gridcell" data-field=ABE_REQ_STATUS>{$ABE_REQ_STATUS_mastervalue}</td>
+			<td class="{$ABE_REQ_ANSWERED_class} bs-gridcell" data-field=ABE_REQ_ANSWERED>{$ABE_REQ_ANSWERED_mastervalue}</td>
+		</tr>
+	</tbody>
+
+</table> 
+
+
+
+
+{END container_mastergrid}
+
+</div>

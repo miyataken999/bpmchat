@@ -1,0 +1,1596 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-list" {$bodyattrs}>
+	{BEGIN body}
+<style>
+{$containerCss}
+</style>
+<div class="sidebar bs-fixed clearfix mCustomScrollbar" data-mcs-theme="minimal-dark" {$blockattr_left}>
+	<div class="sidebar-contents mCustomScrollBox mCS-minimal-dark mCSB_vertical mCSB_outside">
+		
+
+{BEGIN container_logo}
+<div {$logo_chiddenattr} data-pageid="{$pageid}" data-container="logo" class=" bs-sidebarlogo   "> 
+
+{BEGIN logo_block}
+<a href="{$home_link}" {$logo_hiddenattr} data-pageid="{$pageid}" data-brick="logo" class="navbar-brand" >{$logo}</a>
+{END logo_block}
+
+
+
+</div>
+{END container_logo}
+
+
+
+{BEGIN container_hdr}
+<div {$hdr_chiddenattr} data-pageid="{$pageid}" data-container="hdr" class=" navbar-default clearfix   "> 
+
+{BEGIN collapse_block}
+<button {$bsnavbarcollapse_hiddenattr} data-pageid="{$pageid}" data-brick="bsnavbarcollapse" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target=".bs-navcontrolled">	
+	<span class="sr-only">Toggle navigation</span>	
+	<span class="icon-bar"></span>					
+</button>												
+
+{END collapse_block}
+
+
+
+</div>
+{END container_hdr}
+
+{BEGIN container_sidemenu}<div {$sidemenu_chiddenattr} data-pageid="{$pageid}" data-container="sidemenu" class="bs-navform navbar-collapse sidebar-menu bs-hidden-xs bs-navcontrolled" aria-expanded="false" >												   
+{BEGIN menu_block}
+{$menu main}
+
+{END menu_block}
+
+												</div>						{END container_sidemenu}
+
+{BEGIN container_left}
+<div {$left_chiddenattr} data-pageid="{$pageid}" data-container="left" class=" sidebar-container   "> 
+
+{BEGIN searchPanel}
+<div {$searchpanel_hiddenattr} data-pageid="{$pageid}" data-brick="searchpanel" class="searchOptions panel panel-primary searchPanelContainer " {$srchOpt_attrs} >
+	<!-- Search panel content -->
+	
+	<div class="panel-heading">
+		<div class="btn-group" id="addSearchFieldButton{$id}">
+			<button id="showHideControlChooseMenu{$id}" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			{mlang_message SEARCH_IN}
+			<span class="caret"></span>
+			</button>
+		</div>
+
+		
+		<div class="btn-group searchpanel-options" id="searchPanelOptions{$id}">
+			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon glyphicon-option-vertical"></span>
+			</button>
+			<ul class="dropdown-menu dropdown-left">
+				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>{mlang_message SEARCH_SHOW_OPTIONS_BUTTON}</a></li>
+				<li role="separator" class="divider"></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>{mlang_message SEARCH_ALL_CONDITIONS}</label></a></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>{mlang_message SEARCH_ANY_CONDITIONS}</label></a></li>
+				<li role="separator" class="divider"></li>
+				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>{mlang_message HIDE}</a></li>
+			</ul>
+		</div>
+	
+		
+		</div>
+	<div class="panel-body controlsBlock" {$bottomSearchButt_attrs} >
+
+
+		
+		{BEGIN searchCtrlBlock}
+		<div class="srchPanelRow form-group" {$filterRow_attrs}>
+			<label>{$fLabel}</label>	{$delCtrlButt}
+				<span class="rnr-searchtype">{$searchtype}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
+		</div>
+		{END searchCtrlBlock}
+
+
+	</div>
+	
+	<div class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
+		<button class="btn btn-primary" id="searchButton{$id}" {$searchbutton_attrs}>{mlang_message SEARCH}</button>
+		<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs}>{mlang_message SHOW_ALL}</button>
+	</div>
+</div>
+
+
+{END searchPanel}
+
+
+
+
+</div>
+{END container_left}
+
+
+	</div>
+</div>	
+<div class="bs-wrapper">
+	<div class="bs-fixedheader" id="fixedheader{$id}">
+		{BEGIN container_menu}<nav {$menu_chiddenattr} data-pageid="{$pageid}" data-container="menu" class="navbar navbar-default bs-fullwidth-navbar">					
+
+
+
+{BEGIN container_bc}
+<div {$bc_chiddenattr} data-pageid="{$pageid}" data-container="bc" class=" navbar-form navbar-left   "> 
+
+{BEGIN breadcrumbs}
+<ol class="breadcrumb">
+<li ><a href="{$home_link}"><span class="glyphicon glyphicon-home"></span></a>{$crumb_dropdown}</li>
+{BEGIN crumb}
+  <li class="{$crumb_item_class}">
+{BEGIN crumb_title_link}
+	<a {$crumb_attrs}>{$crumb_title}</a>
+{END crumb_title_link}
+{BEGIN crumb_title_span}
+	<span {$crumb_attrs}>{$crumb_title}</span>
+{END crumb_title_span}	
+	{$crumb_dropdown}
+  </li>
+{END crumb}
+</ol>
+{END breadcrumbs}
+
+
+
+</div>
+{END container_bc}
+
+
+
+
+
+
+{BEGIN container_menu_1}<div {$menu_1_chiddenattr} data-pageid="{$pageid}" data-container="menu_1" class="bs-navform navbar-collapse bs-hidden-xs bs-navcontrolled" aria-expanded="false" >												   
+
+
+
+{BEGIN container_more}
+<div {$more_chiddenattr} data-pageid="{$pageid}" data-container="more" class=" navbar-right navbar-form   "> 
+
+{BEGIN more_list}
+<div {$morebutton_hiddenattr} data-pageid="{$pageid}" data-brick="morebutton" class="btn-group bs-navsection">
+	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		<span class="glyphicon glyphicon-cog"></span>
+		<span class="caret"></span>
+	</button>
+	<ul class="dropdown-menu">
+		
+				{BEGIN exportselected_link}
+		<li class="massButton{$id} disabled"><a href="#" {$exportselectedlink_attrs} {$exportselectedlink_span} >{mlang_message EXPORT_SELECTED}</a></li>
+		{END exportselected_link}
+		
+				{BEGIN deleteselected_link}
+		<li class="massButton{$id} disabled"><a href="#" {$deleteselectedlink_attrs} {$deleteselectedlink_span}>{mlang_message DELETE_SELECTED}</a></li>
+		{END deleteselected_link}
+		
+				<li role="separator" class="divider"></li>	
+
+				{BEGIN asearch_link}
+		<li><a href="modxdf_site_content_search.php" {$advsearchlink_attrs}>{mlang_message ADVANCED_SEARCH}</a></li>
+		{END asearch_link}
+
+				{BEGIN searchPanelTopButtons}
+		<li><a href=# id="showOptPanel{$id}">{mlang_message SHOW_SEARCH_PANEL}</a></li>
+		{END searchPanelTopButtons}	
+		
+				
+				<li role="separator" class="divider"></li>	
+		
+				
+				{BEGIN export_link}
+		<li><a target="_blank" href="modxdf_site_content_export.php"  {$exportlink_attrs}>{mlang_message EXPORT_RESULTS}</a></li>
+		{END export_link}
+
+				{BEGIN import_link}
+		<li><a href="modxdf_site_content_import.php?{$crosstable_attrs}"  {$importlink_attrs}>{mlang_message IMPORT}</a></li>
+		{END import_link}
+
+					<li role="separator" class="divider"></li>
+				{BEGIN EnglishLANGLINK}
+				<li><a href="#" data-lang="English" class="rnr-langlink">
+					{BEGIN EnglishLANGLINK_ACTIVE}<span class="glyphicon glyphicon-ok">&nbsp;</span>{END EnglishLANGLINK_ACTIVE}
+					English</a></li>
+				{END EnglishLANGLINK}
+				{BEGIN JapaneseLANGLINK}
+				<li><a href="#" data-lang="Japanese" class="rnr-langlink">
+					{BEGIN JapaneseLANGLINK_ACTIVE}<span class="glyphicon glyphicon-ok">&nbsp;</span>{END JapaneseLANGLINK_ACTIVE}
+					日本語</a></li>
+				{END JapaneseLANGLINK}
+		
+	</ul>  
+</div>
+
+{END more_list}
+
+
+{BEGIN security_block}
+<span {$loggedas_hiddenattr} data-pageid="{$pageid}" data-brick="loggedas" id="login_block{$id}" class="bs-navsection">
+	{BEGIN guestloginbutton}
+		<button class="btn btn-info" type="button" {$guestloginlink_attrs}>{mlang_message LOGIN}</button>
+	{END guestloginbutton}
+	{BEGIN loggedas_message} 
+		<span class="dropdown">
+			<button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon-user"></span>	{$username}</button>
+			<ul class="dropdown-menu">
+		{BEGIN logoutbutton}
+				<li><a href="#" {$logoutlink_attrs}>{mlang_message LOG_OUT}</a></li>
+		{END logoutbutton}
+		
+		{BEGIN adminarea_link}
+				<li><a href="admin_rights_list.php" {$adminarealink_attrs}>{mlang_message AA_ADMINAREA}</a></li>
+		{END adminarea_link}
+
+
+	{BEGIN changepwd_link}
+				<li><a href="#" {$changepwdlink_attrs}>{mlang_message CHANGE_PASSWORD}</a></li>
+	{END changepwd_link}
+			</ul>
+		</span>
+	{END loggedas_message}
+</span>
+{END security_block}
+
+
+
+</div>
+{END container_more}
+
+
+
+
+
+
+
+
+{BEGIN container_more_1}
+<div {$more_1_chiddenattr} data-pageid="{$pageid}" data-container="more_1" class=" navbar-right navbar-form   "> 
+
+{BEGIN searchform_block}
+<span {$search_hiddenattr} data-pageid="{$pageid}" data-brick="search" class="form-group">
+
+ <div  class="input-group">
+{BEGIN searchform_text}
+	<input type="search" class="form-control" {$searchfor_attrs} size="25">
+{END searchform_text}
+	<span class="input-group-btn">
+	{BEGIN searchform_showall}
+		<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="{mlang_message SHOW_ALL}">
+			<span class="glyphicon glyphicon-remove"></span>
+		</button>
+	{END searchform_showall}
+	{BEGIN searchform_search}
+	<button {$searchbutton_attrs} class="btn btn-primary" >
+		<span class="glyphicon glyphicon-search"></span>
+	</button>
+	{END searchform_search}
+	</span>
+</div>
+		
+</span>
+{END searchform_block}
+
+
+
+</div>
+{END container_more_1}
+
+
+
+
+												</div>						{END container_menu_1}
+
+
+									</nav>{END container_menu}
+	</div>	
+	<div class="container-fluid bs-underheader bs-fixedsidebarmain" id="underheader{$id}">
+		{$header}
+		<div class="bs-sidebar-screenbound">
+			
+
+
+
+{BEGIN container_messagerow}
+<div {$messagerow_chiddenattr} data-pageid="{$pageid}" data-container="messagerow" class="    "> 
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-12 "> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">{$message}</div>
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+</div>
+{END container_messagerow}
+
+
+
+{BEGIN container_gridcontrols}
+<div {$gridcontrols_chiddenattr} data-pageid="{$pageid}" data-container="gridcontrols" class=" bs-navcontrolled bs-hidden-xs   "> 
+
+
+
+
+{BEGIN container_add_delete}
+<div {$add_delete_chiddenattr} data-pageid="{$pageid}" data-container="add_delete" class=" bottom-margin  col-md-6 "> 
+
+{BEGIN newrecord_controls_block}
+		{BEGIN add_link}
+		<a {$add_hiddenattr} data-pageid="{$pageid}" data-brick="add" type="button" class="btn btn-primary" {$addlink_attrs}>{mlang_message ADD_NEW}</a>
+	{END add_link}
+
+	
+{END newrecord_controls_block}
+
+
+{BEGIN record_controls_block}
+<span {$recordcontrol_hiddenattr} data-pageid="{$pageid}" data-brick="recordcontrol">
+		{BEGIN deleteselected_link}
+	<button type="button" class="btn btn-default" {$deleteselectedlink_attrs} {$deleteselectedlink_span} disabled>{mlang_message DELETE}</button>
+	{END deleteselected_link}
+		</span>
+
+{END record_controls_block}
+
+
+
+</div>
+{END container_add_delete}
+
+
+
+
+
+
+
+
+{BEGIN container_gridinfo}
+<div {$gridinfo_chiddenattr} data-pageid="{$pageid}" data-container="gridinfo" class=" bottom-margin text-right col-md-6 "> 
+
+{BEGIN details_found}
+<span {$details_found_hiddenattr} data-pageid="{$pageid}" data-brick="details_found" class="form-inline form-inline-always">
+	{$records_indicator}
+	<span>
+	{BEGIN recordspp_block}
+			{$recsPerPage}
+	{END recordspp_block}
+	</span>
+</span>
+{END details_found}
+
+
+{BEGIN print_friendly}
+<span {$printpanel_hiddenattr} data-pageid="{$pageid}" data-brick="printpanel" class="bs-printpanel" id="printpanelblock{$id}">
+	<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" title="{mlang_message WR_PRINT_FRIENDLY}">
+		<span class="glyphicon glyphicon-print" ></span>
+		<span class="caret"></span>
+    </button>
+	<ul class="dropdown-menu pull-right" >
+		<li>
+			<div class="container-fluid" id="print_friendly_scope{$id}">
+				<div class="row">
+					<div class="col-md-4">{mlang_message PPANEL_SCOPE}</div>
+										{BEGIN print_friendly_all}
+					<div class="col-md-8">
+						<label for="printAll{$id}">
+							<input type="radio" id="printAll{$id}" data-href="modxdf_site_content_print.php?all=1&amp;{$crosstable_attrs}" name="printScope">
+							{mlang_message PPANEL_ALL_PAGES}
+						</label>
+					</div>
+					{END print_friendly_all}
+				</div>
+				<div class="row">
+					<div class="col-md-4">&nbsp;</div>
+					<div class="col-md-8">
+						<label for="printPage{$id}">
+							<input type="radio" id="printPage{$id}" data-href="modxdf_site_content_print.php?{$crosstable_attrs}" name="printScope" checked>
+							{mlang_message PPANEL_THIS_PAGE}
+						</label>
+					</div>
+				</div>
+								<div class="row">
+					<div class="col-md-4">&nbsp;</div>
+					<div class="col-md-8">
+						<label for="printSelection{$id}" style="color: gray;">
+							<input type="radio" id="printSelection{$id}" name="printScope" disabled="disabled">
+							{mlang_message PPANEL_SELECTED}
+						</label>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li class="divider" role="separator"></li>
+
+		
+				<li>	
+			<div class="rnr-printdetails">
+				<label for="printPerPage{$id}">
+											{mlang_message RECORDS_PP}:
+				</label>
+				<input type="number" id="printPerPage{$id}" value="{$print_recspp}" class="rnr-printrecspp">		
+			</div>
+		</li>
+		<li class="divider" role="separator"></li>
+		<li class="rnr-printbutton">				
+			<button type="button" class="btn btn-primary" id="print_friendly_button{$id}" >{mlang_message PPANEL_PRINT}</button>			
+		</li>
+	</ul>	
+</span>
+
+{END print_friendly}
+
+
+
+
+</div>
+{END container_gridinfo}
+
+
+
+
+
+
+
+</div>
+{END container_gridcontrols}
+
+
+		</div>
+		<div></div>
+		<div class="bs-sidebar-screenbound bs-minwidth">
+			
+
+{BEGIN container_center}
+<div {$center_chiddenattr} data-pageid="{$pageid}" data-container="center" class="    "> 
+
+
+
+
+{BEGIN container_grid}
+<div {$grid_chiddenattr} data-pageid="{$pageid}" data-container="grid" class="bs-grid    "> 
+
+{BEGIN grid_block}
+	<style>
+	.bs-gridcell[data-field=id]:before {
+		content: "{$label modxdf_site_content id}";
+	}
+	.bs-gridcell[data-field=type]:before {
+		content: "{$label modxdf_site_content type}";
+	}
+	.bs-gridcell[data-field=contentType]:before {
+		content: "{$label modxdf_site_content contentType}";
+	}
+	.bs-gridcell[data-field=pagetitle]:before {
+		content: "{$label modxdf_site_content pagetitle}";
+	}
+	.bs-gridcell[data-field=longtitle]:before {
+		content: "{$label modxdf_site_content longtitle}";
+	}
+	.bs-gridcell[data-field=description]:before {
+		content: "{$label modxdf_site_content description}";
+	}
+	.bs-gridcell[data-field=alias]:before {
+		content: "{$label modxdf_site_content alias}";
+	}
+	.bs-gridcell[data-field=link_attributes]:before {
+		content: "{$label modxdf_site_content link_attributes}";
+	}
+	.bs-gridcell[data-field=published]:before {
+		content: "{$label modxdf_site_content published}";
+	}
+	.bs-gridcell[data-field=pub_date]:before {
+		content: "{$label modxdf_site_content pub_date}";
+	}
+	.bs-gridcell[data-field=unpub_date]:before {
+		content: "{$label modxdf_site_content unpub_date}";
+	}
+	.bs-gridcell[data-field=parent]:before {
+		content: "{$label modxdf_site_content parent}";
+	}
+	.bs-gridcell[data-field=isfolder]:before {
+		content: "{$label modxdf_site_content isfolder}";
+	}
+	.bs-gridcell[data-field=introtext]:before {
+		content: "{$label modxdf_site_content introtext}";
+	}
+	.bs-gridcell[data-field=content]:before {
+		content: "{$label modxdf_site_content content}";
+	}
+	.bs-gridcell[data-field=richtext]:before {
+		content: "{$label modxdf_site_content richtext}";
+	}
+	.bs-gridcell[data-field=template]:before {
+		content: "{$label modxdf_site_content template}";
+	}
+	.bs-gridcell[data-field=menuindex]:before {
+		content: "{$label modxdf_site_content menuindex}";
+	}
+	.bs-gridcell[data-field=searchable]:before {
+		content: "{$label modxdf_site_content searchable}";
+	}
+	.bs-gridcell[data-field=cacheable]:before {
+		content: "{$label modxdf_site_content cacheable}";
+	}
+	.bs-gridcell[data-field=createdby]:before {
+		content: "{$label modxdf_site_content createdby}";
+	}
+	.bs-gridcell[data-field=createdon]:before {
+		content: "{$label modxdf_site_content createdon}";
+	}
+	.bs-gridcell[data-field=editedby]:before {
+		content: "{$label modxdf_site_content editedby}";
+	}
+	.bs-gridcell[data-field=editedon]:before {
+		content: "{$label modxdf_site_content editedon}";
+	}
+	.bs-gridcell[data-field=deleted]:before {
+		content: "{$label modxdf_site_content deleted}";
+	}
+	.bs-gridcell[data-field=deletedon]:before {
+		content: "{$label modxdf_site_content deletedon}";
+	}
+	.bs-gridcell[data-field=deletedby]:before {
+		content: "{$label modxdf_site_content deletedby}";
+	}
+	.bs-gridcell[data-field=publishedon]:before {
+		content: "{$label modxdf_site_content publishedon}";
+	}
+	.bs-gridcell[data-field=publishedby]:before {
+		content: "{$label modxdf_site_content publishedby}";
+	}
+	.bs-gridcell[data-field=menutitle]:before {
+		content: "{$label modxdf_site_content menutitle}";
+	}
+	.bs-gridcell[data-field=donthit]:before {
+		content: "{$label modxdf_site_content donthit}";
+	}
+	.bs-gridcell[data-field=privateweb]:before {
+		content: "{$label modxdf_site_content privateweb}";
+	}
+	.bs-gridcell[data-field=privatemgr]:before {
+		content: "{$label modxdf_site_content privatemgr}";
+	}
+	.bs-gridcell[data-field=content_dispo]:before {
+		content: "{$label modxdf_site_content content_dispo}";
+	}
+	.bs-gridcell[data-field=hidemenu]:before {
+		content: "{$label modxdf_site_content hidemenu}";
+	}
+	.bs-gridcell[data-field=class_key]:before {
+		content: "{$label modxdf_site_content class_key}";
+	}
+	.bs-gridcell[data-field=context_key]:before {
+		content: "{$label modxdf_site_content context_key}";
+	}
+	.bs-gridcell[data-field=content_type]:before {
+		content: "{$label modxdf_site_content content_type}";
+	}
+	.bs-gridcell[data-field=uri]:before {
+		content: "{$label modxdf_site_content uri}";
+	}
+	.bs-gridcell[data-field=uri_override]:before {
+		content: "{$label modxdf_site_content uri_override}";
+	}
+	.bs-gridcell[data-field=hide_children_in_tree]:before {
+		content: "{$label modxdf_site_content hide_children_in_tree}";
+	}
+	.bs-gridcell[data-field=show_in_tree]:before {
+		content: "{$label modxdf_site_content show_in_tree}";
+	}
+	.bs-gridcell[data-field=properties]:before {
+		content: "{$label modxdf_site_content properties}";
+	}
+</style>
+<table {$grid_hiddenattr} data-pageid="{$pageid}" data-brick="grid" class="table {$grid_classes} bs-flexgrid rnr-b-grid rnr-gridtable" cellpadding="0" >
+	<thead>
+										{BEGIN grid_header}
+								<tr class="rnr-toprow {$gridHeader_class}" >
+									{BEGIN record_header}
+									{BEGIN listIcons_column}
+									<th iEditCont="all">&nbsp;</th>
+									{END listIcons_column}	
+
+																		{BEGIN checkbox_column}
+									<th class="">
+										<input type="checkbox" {$checkboxheader_attrs}>
+									</th>
+									{END checkbox_column}
+
+																		
+									{BEGIN id_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$id_class}" data-field=id>
+									{BEGIN id_fieldheader}
+																				<span {$id_orderlinkattrs}>
+											{$label modxdf_site_content id}
+										</span>
+									{END id_fieldheader}
+									</th>
+									{END id_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN type_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$type_class}" data-field=type>
+									{BEGIN type_fieldheader}
+																				<span {$type_orderlinkattrs}>
+											{$label modxdf_site_content type}
+										</span>
+									{END type_fieldheader}
+									</th>
+									{END type_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN contentType_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$contentType_class}" data-field=contentType>
+									{BEGIN contentType_fieldheader}
+																				<span {$contentType_orderlinkattrs}>
+											{$label modxdf_site_content contentType}
+										</span>
+									{END contentType_fieldheader}
+									</th>
+									{END contentType_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN pagetitle_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$pagetitle_class}" data-field=pagetitle>
+									{BEGIN pagetitle_fieldheader}
+																				<span {$pagetitle_orderlinkattrs}>
+											{$label modxdf_site_content pagetitle}
+										</span>
+									{END pagetitle_fieldheader}
+									</th>
+									{END pagetitle_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN longtitle_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$longtitle_class}" data-field=longtitle>
+									{BEGIN longtitle_fieldheader}
+																				<span {$longtitle_orderlinkattrs}>
+											{$label modxdf_site_content longtitle}
+										</span>
+									{END longtitle_fieldheader}
+									</th>
+									{END longtitle_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN description_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$description_class}" data-field=description>
+									{BEGIN description_fieldheader}
+																				<span {$description_orderlinkattrs}>
+											{$label modxdf_site_content description}
+										</span>
+									{END description_fieldheader}
+									</th>
+									{END description_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN alias_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$alias_class}" data-field=alias>
+									{BEGIN alias_fieldheader}
+																				<span {$alias_orderlinkattrs}>
+											{$label modxdf_site_content alias}
+										</span>
+									{END alias_fieldheader}
+									</th>
+									{END alias_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN link_attributes_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$link_attributes_class}" data-field=link_attributes>
+									{BEGIN link_attributes_fieldheader}
+																				<span {$link_attributes_orderlinkattrs}>
+											{$label modxdf_site_content link_attributes}
+										</span>
+									{END link_attributes_fieldheader}
+									</th>
+									{END link_attributes_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN published_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$published_class}" data-field=published>
+									{BEGIN published_fieldheader}
+																				<span {$published_orderlinkattrs}>
+											{$label modxdf_site_content published}
+										</span>
+									{END published_fieldheader}
+									</th>
+									{END published_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN pub_date_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$pub_date_class}" data-field=pub_date>
+									{BEGIN pub_date_fieldheader}
+																				<span {$pub_date_orderlinkattrs}>
+											{$label modxdf_site_content pub_date}
+										</span>
+									{END pub_date_fieldheader}
+									</th>
+									{END pub_date_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN unpub_date_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$unpub_date_class}" data-field=unpub_date>
+									{BEGIN unpub_date_fieldheader}
+																				<span {$unpub_date_orderlinkattrs}>
+											{$label modxdf_site_content unpub_date}
+										</span>
+									{END unpub_date_fieldheader}
+									</th>
+									{END unpub_date_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN parent_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$parent_class}" data-field=parent>
+									{BEGIN parent_fieldheader}
+																				<span {$parent_orderlinkattrs}>
+											{$label modxdf_site_content parent}
+										</span>
+									{END parent_fieldheader}
+									</th>
+									{END parent_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN isfolder_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$isfolder_class}" data-field=isfolder>
+									{BEGIN isfolder_fieldheader}
+																				<span {$isfolder_orderlinkattrs}>
+											{$label modxdf_site_content isfolder}
+										</span>
+									{END isfolder_fieldheader}
+									</th>
+									{END isfolder_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN introtext_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$introtext_class}" data-field=introtext>
+									{BEGIN introtext_fieldheader}
+																				<span {$introtext_orderlinkattrs}>
+											{$label modxdf_site_content introtext}
+										</span>
+									{END introtext_fieldheader}
+									</th>
+									{END introtext_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN content_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$content_class}" data-field=content>
+									{BEGIN content_fieldheader}
+																				<span {$content_orderlinkattrs}>
+											{$label modxdf_site_content content}
+										</span>
+									{END content_fieldheader}
+									</th>
+									{END content_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN richtext_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$richtext_class}" data-field=richtext>
+									{BEGIN richtext_fieldheader}
+																				<span {$richtext_orderlinkattrs}>
+											{$label modxdf_site_content richtext}
+										</span>
+									{END richtext_fieldheader}
+									</th>
+									{END richtext_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN template_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$template_class}" data-field=template>
+									{BEGIN template_fieldheader}
+																				<span {$template_orderlinkattrs}>
+											{$label modxdf_site_content template}
+										</span>
+									{END template_fieldheader}
+									</th>
+									{END template_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN menuindex_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$menuindex_class}" data-field=menuindex>
+									{BEGIN menuindex_fieldheader}
+																				<span {$menuindex_orderlinkattrs}>
+											{$label modxdf_site_content menuindex}
+										</span>
+									{END menuindex_fieldheader}
+									</th>
+									{END menuindex_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN searchable_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$searchable_class}" data-field=searchable>
+									{BEGIN searchable_fieldheader}
+																				<span {$searchable_orderlinkattrs}>
+											{$label modxdf_site_content searchable}
+										</span>
+									{END searchable_fieldheader}
+									</th>
+									{END searchable_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN cacheable_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$cacheable_class}" data-field=cacheable>
+									{BEGIN cacheable_fieldheader}
+																				<span {$cacheable_orderlinkattrs}>
+											{$label modxdf_site_content cacheable}
+										</span>
+									{END cacheable_fieldheader}
+									</th>
+									{END cacheable_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN createdby_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$createdby_class}" data-field=createdby>
+									{BEGIN createdby_fieldheader}
+																				<span {$createdby_orderlinkattrs}>
+											{$label modxdf_site_content createdby}
+										</span>
+									{END createdby_fieldheader}
+									</th>
+									{END createdby_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN createdon_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$createdon_class}" data-field=createdon>
+									{BEGIN createdon_fieldheader}
+																				<span {$createdon_orderlinkattrs}>
+											{$label modxdf_site_content createdon}
+										</span>
+									{END createdon_fieldheader}
+									</th>
+									{END createdon_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN editedby_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$editedby_class}" data-field=editedby>
+									{BEGIN editedby_fieldheader}
+																				<span {$editedby_orderlinkattrs}>
+											{$label modxdf_site_content editedby}
+										</span>
+									{END editedby_fieldheader}
+									</th>
+									{END editedby_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN editedon_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$editedon_class}" data-field=editedon>
+									{BEGIN editedon_fieldheader}
+																				<span {$editedon_orderlinkattrs}>
+											{$label modxdf_site_content editedon}
+										</span>
+									{END editedon_fieldheader}
+									</th>
+									{END editedon_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN deleted_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$deleted_class}" data-field=deleted>
+									{BEGIN deleted_fieldheader}
+																				<span {$deleted_orderlinkattrs}>
+											{$label modxdf_site_content deleted}
+										</span>
+									{END deleted_fieldheader}
+									</th>
+									{END deleted_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN deletedon_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$deletedon_class}" data-field=deletedon>
+									{BEGIN deletedon_fieldheader}
+																				<span {$deletedon_orderlinkattrs}>
+											{$label modxdf_site_content deletedon}
+										</span>
+									{END deletedon_fieldheader}
+									</th>
+									{END deletedon_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN deletedby_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$deletedby_class}" data-field=deletedby>
+									{BEGIN deletedby_fieldheader}
+																				<span {$deletedby_orderlinkattrs}>
+											{$label modxdf_site_content deletedby}
+										</span>
+									{END deletedby_fieldheader}
+									</th>
+									{END deletedby_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN publishedon_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$publishedon_class}" data-field=publishedon>
+									{BEGIN publishedon_fieldheader}
+																				<span {$publishedon_orderlinkattrs}>
+											{$label modxdf_site_content publishedon}
+										</span>
+									{END publishedon_fieldheader}
+									</th>
+									{END publishedon_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN publishedby_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$publishedby_class}" data-field=publishedby>
+									{BEGIN publishedby_fieldheader}
+																				<span {$publishedby_orderlinkattrs}>
+											{$label modxdf_site_content publishedby}
+										</span>
+									{END publishedby_fieldheader}
+									</th>
+									{END publishedby_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN menutitle_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$menutitle_class}" data-field=menutitle>
+									{BEGIN menutitle_fieldheader}
+																				<span {$menutitle_orderlinkattrs}>
+											{$label modxdf_site_content menutitle}
+										</span>
+									{END menutitle_fieldheader}
+									</th>
+									{END menutitle_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN donthit_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$donthit_class}" data-field=donthit>
+									{BEGIN donthit_fieldheader}
+																				<span {$donthit_orderlinkattrs}>
+											{$label modxdf_site_content donthit}
+										</span>
+									{END donthit_fieldheader}
+									</th>
+									{END donthit_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN privateweb_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$privateweb_class}" data-field=privateweb>
+									{BEGIN privateweb_fieldheader}
+																				<span {$privateweb_orderlinkattrs}>
+											{$label modxdf_site_content privateweb}
+										</span>
+									{END privateweb_fieldheader}
+									</th>
+									{END privateweb_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN privatemgr_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$privatemgr_class}" data-field=privatemgr>
+									{BEGIN privatemgr_fieldheader}
+																				<span {$privatemgr_orderlinkattrs}>
+											{$label modxdf_site_content privatemgr}
+										</span>
+									{END privatemgr_fieldheader}
+									</th>
+									{END privatemgr_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN content_dispo_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$content_dispo_class}" data-field=content_dispo>
+									{BEGIN content_dispo_fieldheader}
+																				<span {$content_dispo_orderlinkattrs}>
+											{$label modxdf_site_content content_dispo}
+										</span>
+									{END content_dispo_fieldheader}
+									</th>
+									{END content_dispo_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN hidemenu_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$hidemenu_class}" data-field=hidemenu>
+									{BEGIN hidemenu_fieldheader}
+																				<span {$hidemenu_orderlinkattrs}>
+											{$label modxdf_site_content hidemenu}
+										</span>
+									{END hidemenu_fieldheader}
+									</th>
+									{END hidemenu_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN class_key_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$class_key_class}" data-field=class_key>
+									{BEGIN class_key_fieldheader}
+																				<span {$class_key_orderlinkattrs}>
+											{$label modxdf_site_content class_key}
+										</span>
+									{END class_key_fieldheader}
+									</th>
+									{END class_key_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN context_key_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$context_key_class}" data-field=context_key>
+									{BEGIN context_key_fieldheader}
+																				<span {$context_key_orderlinkattrs}>
+											{$label modxdf_site_content context_key}
+										</span>
+									{END context_key_fieldheader}
+									</th>
+									{END context_key_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN content_type_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$content_type_class}" data-field=content_type>
+									{BEGIN content_type_fieldheader}
+																				<span {$content_type_orderlinkattrs}>
+											{$label modxdf_site_content content_type}
+										</span>
+									{END content_type_fieldheader}
+									</th>
+									{END content_type_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN uri_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$uri_class}" data-field=uri>
+									{BEGIN uri_fieldheader}
+																				<span {$uri_orderlinkattrs}>
+											{$label modxdf_site_content uri}
+										</span>
+									{END uri_fieldheader}
+									</th>
+									{END uri_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN uri_override_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$uri_override_class}" data-field=uri_override>
+									{BEGIN uri_override_fieldheader}
+																				<span {$uri_override_orderlinkattrs}>
+											{$label modxdf_site_content uri_override}
+										</span>
+									{END uri_override_fieldheader}
+									</th>
+									{END uri_override_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN hide_children_in_tree_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$hide_children_in_tree_class}" data-field=hide_children_in_tree>
+									{BEGIN hide_children_in_tree_fieldheader}
+																				<span {$hide_children_in_tree_orderlinkattrs}>
+											{$label modxdf_site_content hide_children_in_tree}
+										</span>
+									{END hide_children_in_tree_fieldheader}
+									</th>
+									{END hide_children_in_tree_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN show_in_tree_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$show_in_tree_class}" data-field=show_in_tree>
+									{BEGIN show_in_tree_fieldheader}
+																				<span {$show_in_tree_orderlinkattrs}>
+											{$label modxdf_site_content show_in_tree}
+										</span>
+									{END show_in_tree_fieldheader}
+									</th>
+									{END show_in_tree_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN properties_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$properties_class}" data-field=properties>
+									{BEGIN properties_fieldheader}
+																				<span {$properties_orderlinkattrs}>
+											{$label modxdf_site_content properties}
+										</span>
+									{END properties_fieldheader}
+									</th>
+									{END properties_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN endrecordheader_block}
+									<th class="rnr-cs">&nbsp;</th>
+									
+									{END endrecordheader_block}
+									
+									{END record_header}
+									
+								</tr>
+								{END grid_header}
+
+	</thead>
+	<tbody>	
+		{BEGIN grid_row}
+<tr class="{$rowclass} bs-gridrow" {$rowattrs} {$rowstyle}>
+	{BEGIN grid_record}
+	{BEGIN listIcons_column}
+	<td class="bs-gridicons" iEditCont="all" {$rowstyle} {$recordattrs}>
+		{BEGIN edit_column}
+	{BEGIN edit_link}
+			<a class="glyphicon glyphicon-pencil" {$editlink_attrs} title="{mlang_message EDIT}"></a>
+	{END edit_link}
+	{END edit_column}
+
+	
+	
+		{BEGIN view_column}
+	{BEGIN view_link}
+			<a class="glyphicon glyphicon-search" {$viewlink_attrs} title="{mlang_message VIEW}"></a>
+	{END view_link}
+	{END view_column}
+	</td>	
+	{END listIcons_column}	
+
+		{BEGIN checkbox_column}
+	<td  iEditCont="checkBox" class="bs-gridcheckbox" {$rowstyle} {$recordattrs}>
+	{BEGIN checkbox}
+	<input type="checkbox" {$checkbox_attrs}>
+	{END checkbox}
+	</td>
+	{END checkbox_column}
+
+	
+
+	{BEGIN id_fieldcolumn}
+	<td class="bs-gridcell {$id_class}"  data-field=id {$rowstyle} {$recordattrs}>
+		{$id_value}
+	</td>
+{END id_fieldcolumn}
+
+
+	{BEGIN type_fieldcolumn}
+	<td class="bs-gridcell {$type_class}"  data-field=type {$rowstyle} {$recordattrs}>
+		{$type_value}
+	</td>
+{END type_fieldcolumn}
+
+
+	{BEGIN contentType_fieldcolumn}
+	<td class="bs-gridcell {$contentType_class}"  data-field=contentType {$rowstyle} {$recordattrs}>
+		{$contentType_value}
+	</td>
+{END contentType_fieldcolumn}
+
+
+	{BEGIN pagetitle_fieldcolumn}
+	<td class="bs-gridcell {$pagetitle_class}"  data-field=pagetitle {$rowstyle} {$recordattrs}>
+		{$pagetitle_value}
+	</td>
+{END pagetitle_fieldcolumn}
+
+
+	{BEGIN longtitle_fieldcolumn}
+	<td class="bs-gridcell {$longtitle_class}"  data-field=longtitle {$rowstyle} {$recordattrs}>
+		{$longtitle_value}
+	</td>
+{END longtitle_fieldcolumn}
+
+
+	{BEGIN description_fieldcolumn}
+	<td class="bs-gridcell {$description_class}"  data-field=description {$rowstyle} {$recordattrs}>
+		{$description_value}
+	</td>
+{END description_fieldcolumn}
+
+
+	{BEGIN alias_fieldcolumn}
+	<td class="bs-gridcell {$alias_class}"  data-field=alias {$rowstyle} {$recordattrs}>
+		{$alias_value}
+	</td>
+{END alias_fieldcolumn}
+
+
+	{BEGIN link_attributes_fieldcolumn}
+	<td class="bs-gridcell {$link_attributes_class}"  data-field=link_attributes {$rowstyle} {$recordattrs}>
+		{$link_attributes_value}
+	</td>
+{END link_attributes_fieldcolumn}
+
+
+	{BEGIN published_fieldcolumn}
+	<td class="bs-gridcell {$published_class}"  data-field=published {$rowstyle} {$recordattrs}>
+		{$published_value}
+	</td>
+{END published_fieldcolumn}
+
+
+	{BEGIN pub_date_fieldcolumn}
+	<td class="bs-gridcell {$pub_date_class}"  data-field=pub_date {$rowstyle} {$recordattrs}>
+		{$pub_date_value}
+	</td>
+{END pub_date_fieldcolumn}
+
+
+	{BEGIN unpub_date_fieldcolumn}
+	<td class="bs-gridcell {$unpub_date_class}"  data-field=unpub_date {$rowstyle} {$recordattrs}>
+		{$unpub_date_value}
+	</td>
+{END unpub_date_fieldcolumn}
+
+
+	{BEGIN parent_fieldcolumn}
+	<td class="bs-gridcell {$parent_class}"  data-field=parent {$rowstyle} {$recordattrs}>
+		{$parent_value}
+	</td>
+{END parent_fieldcolumn}
+
+
+	{BEGIN isfolder_fieldcolumn}
+	<td class="bs-gridcell {$isfolder_class}"  data-field=isfolder {$rowstyle} {$recordattrs}>
+		{$isfolder_value}
+	</td>
+{END isfolder_fieldcolumn}
+
+
+	{BEGIN introtext_fieldcolumn}
+	<td class="bs-gridcell {$introtext_class}"  data-field=introtext {$rowstyle} {$recordattrs}>
+		{$introtext_value}
+	</td>
+{END introtext_fieldcolumn}
+
+
+	{BEGIN content_fieldcolumn}
+	<td class="bs-gridcell {$content_class}"  data-field=content {$rowstyle} {$recordattrs}>
+		{$content_value}
+	</td>
+{END content_fieldcolumn}
+
+
+	{BEGIN richtext_fieldcolumn}
+	<td class="bs-gridcell {$richtext_class}"  data-field=richtext {$rowstyle} {$recordattrs}>
+		{$richtext_value}
+	</td>
+{END richtext_fieldcolumn}
+
+
+	{BEGIN template_fieldcolumn}
+	<td class="bs-gridcell {$template_class}"  data-field=template {$rowstyle} {$recordattrs}>
+		{$template_value}
+	</td>
+{END template_fieldcolumn}
+
+
+	{BEGIN menuindex_fieldcolumn}
+	<td class="bs-gridcell {$menuindex_class}"  data-field=menuindex {$rowstyle} {$recordattrs}>
+		{$menuindex_value}
+	</td>
+{END menuindex_fieldcolumn}
+
+
+	{BEGIN searchable_fieldcolumn}
+	<td class="bs-gridcell {$searchable_class}"  data-field=searchable {$rowstyle} {$recordattrs}>
+		{$searchable_value}
+	</td>
+{END searchable_fieldcolumn}
+
+
+	{BEGIN cacheable_fieldcolumn}
+	<td class="bs-gridcell {$cacheable_class}"  data-field=cacheable {$rowstyle} {$recordattrs}>
+		{$cacheable_value}
+	</td>
+{END cacheable_fieldcolumn}
+
+
+	{BEGIN createdby_fieldcolumn}
+	<td class="bs-gridcell {$createdby_class}"  data-field=createdby {$rowstyle} {$recordattrs}>
+		{$createdby_value}
+	</td>
+{END createdby_fieldcolumn}
+
+
+	{BEGIN createdon_fieldcolumn}
+	<td class="bs-gridcell {$createdon_class}"  data-field=createdon {$rowstyle} {$recordattrs}>
+		{$createdon_value}
+	</td>
+{END createdon_fieldcolumn}
+
+
+	{BEGIN editedby_fieldcolumn}
+	<td class="bs-gridcell {$editedby_class}"  data-field=editedby {$rowstyle} {$recordattrs}>
+		{$editedby_value}
+	</td>
+{END editedby_fieldcolumn}
+
+
+	{BEGIN editedon_fieldcolumn}
+	<td class="bs-gridcell {$editedon_class}"  data-field=editedon {$rowstyle} {$recordattrs}>
+		{$editedon_value}
+	</td>
+{END editedon_fieldcolumn}
+
+
+	{BEGIN deleted_fieldcolumn}
+	<td class="bs-gridcell {$deleted_class}"  data-field=deleted {$rowstyle} {$recordattrs}>
+		{$deleted_value}
+	</td>
+{END deleted_fieldcolumn}
+
+
+	{BEGIN deletedon_fieldcolumn}
+	<td class="bs-gridcell {$deletedon_class}"  data-field=deletedon {$rowstyle} {$recordattrs}>
+		{$deletedon_value}
+	</td>
+{END deletedon_fieldcolumn}
+
+
+	{BEGIN deletedby_fieldcolumn}
+	<td class="bs-gridcell {$deletedby_class}"  data-field=deletedby {$rowstyle} {$recordattrs}>
+		{$deletedby_value}
+	</td>
+{END deletedby_fieldcolumn}
+
+
+	{BEGIN publishedon_fieldcolumn}
+	<td class="bs-gridcell {$publishedon_class}"  data-field=publishedon {$rowstyle} {$recordattrs}>
+		{$publishedon_value}
+	</td>
+{END publishedon_fieldcolumn}
+
+
+	{BEGIN publishedby_fieldcolumn}
+	<td class="bs-gridcell {$publishedby_class}"  data-field=publishedby {$rowstyle} {$recordattrs}>
+		{$publishedby_value}
+	</td>
+{END publishedby_fieldcolumn}
+
+
+	{BEGIN menutitle_fieldcolumn}
+	<td class="bs-gridcell {$menutitle_class}"  data-field=menutitle {$rowstyle} {$recordattrs}>
+		{$menutitle_value}
+	</td>
+{END menutitle_fieldcolumn}
+
+
+	{BEGIN donthit_fieldcolumn}
+	<td class="bs-gridcell {$donthit_class}"  data-field=donthit {$rowstyle} {$recordattrs}>
+		{$donthit_value}
+	</td>
+{END donthit_fieldcolumn}
+
+
+	{BEGIN privateweb_fieldcolumn}
+	<td class="bs-gridcell {$privateweb_class}"  data-field=privateweb {$rowstyle} {$recordattrs}>
+		{$privateweb_value}
+	</td>
+{END privateweb_fieldcolumn}
+
+
+	{BEGIN privatemgr_fieldcolumn}
+	<td class="bs-gridcell {$privatemgr_class}"  data-field=privatemgr {$rowstyle} {$recordattrs}>
+		{$privatemgr_value}
+	</td>
+{END privatemgr_fieldcolumn}
+
+
+	{BEGIN content_dispo_fieldcolumn}
+	<td class="bs-gridcell {$content_dispo_class}"  data-field=content_dispo {$rowstyle} {$recordattrs}>
+		{$content_dispo_value}
+	</td>
+{END content_dispo_fieldcolumn}
+
+
+	{BEGIN hidemenu_fieldcolumn}
+	<td class="bs-gridcell {$hidemenu_class}"  data-field=hidemenu {$rowstyle} {$recordattrs}>
+		{$hidemenu_value}
+	</td>
+{END hidemenu_fieldcolumn}
+
+
+	{BEGIN class_key_fieldcolumn}
+	<td class="bs-gridcell {$class_key_class}"  data-field=class_key {$rowstyle} {$recordattrs}>
+		{$class_key_value}
+	</td>
+{END class_key_fieldcolumn}
+
+
+	{BEGIN context_key_fieldcolumn}
+	<td class="bs-gridcell {$context_key_class}"  data-field=context_key {$rowstyle} {$recordattrs}>
+		{$context_key_value}
+	</td>
+{END context_key_fieldcolumn}
+
+
+	{BEGIN content_type_fieldcolumn}
+	<td class="bs-gridcell {$content_type_class}"  data-field=content_type {$rowstyle} {$recordattrs}>
+		{$content_type_value}
+	</td>
+{END content_type_fieldcolumn}
+
+
+	{BEGIN uri_fieldcolumn}
+	<td class="bs-gridcell {$uri_class}"  data-field=uri {$rowstyle} {$recordattrs}>
+		{$uri_value}
+	</td>
+{END uri_fieldcolumn}
+
+
+	{BEGIN uri_override_fieldcolumn}
+	<td class="bs-gridcell {$uri_override_class}"  data-field=uri_override {$rowstyle} {$recordattrs}>
+		{$uri_override_value}
+	</td>
+{END uri_override_fieldcolumn}
+
+
+	{BEGIN hide_children_in_tree_fieldcolumn}
+	<td class="bs-gridcell {$hide_children_in_tree_class}"  data-field=hide_children_in_tree {$rowstyle} {$recordattrs}>
+		{$hide_children_in_tree_value}
+	</td>
+{END hide_children_in_tree_fieldcolumn}
+
+
+	{BEGIN show_in_tree_fieldcolumn}
+	<td class="bs-gridcell {$show_in_tree_class}"  data-field=show_in_tree {$rowstyle} {$recordattrs}>
+		{$show_in_tree_value}
+	</td>
+{END show_in_tree_fieldcolumn}
+
+
+	{BEGIN properties_fieldcolumn}
+	<td class="bs-gridcell {$properties_class}"  data-field=properties {$rowstyle} {$recordattrs}>
+		{$properties_value}
+	</td>
+{END properties_fieldcolumn}
+
+	{BEGIN endrecord_block}
+	<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+	{END endrecord_block}
+									
+	{END grid_record}
+
+</tr>
+{END grid_row}
+	</tbody>
+	<tfoot>
+										
+	</tfoot>
+</table>
+
+
+
+{END grid_block}
+
+
+
+</div>
+{END container_grid}
+
+
+
+
+
+
+</div>
+{END container_center}
+
+
+
+{BEGIN container_pagination}
+<div {$pagination_chiddenattr} data-pageid="{$pageid}" data-container="pagination" class="  text-center col-md-12 "> 
+
+{BEGIN pagination_block}
+<div {$pagination_hiddenattr} data-pageid="{$pageid}" data-brick="pagination">
+{$pagination}
+</div>
+{END pagination_block}
+
+
+
+</div>
+{END container_pagination}
+
+
+		</div>
+	</div>
+</div>
+	
+
+		{$footer}
+	{END body}
+	</body>
+</html>

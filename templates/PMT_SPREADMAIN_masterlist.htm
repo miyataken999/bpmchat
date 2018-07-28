@@ -1,0 +1,285 @@
+<div {$pageattrs}>
+
+{BEGIN container_column}
+<div class="rnr-c rnr-ch rnr-c-column">
+
+{BEGIN masterlist_title}
+<div  class="style1 rnr-bl rnr-b-masterlistheader {$brickclass_masterlistheader}"><a {$backtomasterlink_attrs} class="btn btn-link btn-xs">{mlang_message BACK_TO} {$backtomasterlink_caption}</a><span>{$pagetitlelabel PMT_SPREADMAIN masterlist}</span></div>
+{END masterlist_title}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_column}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+	<style>
+	.bs-gridcell[data-field=APP_UID]:before {
+		content: "{$label PMT_SPREADMAIN APP_UID}";
+	}
+	.bs-gridcell[data-field=APP_NUMBER]:before {
+		content: "{$label PMT_SPREADMAIN APP_NUMBER}";
+	}
+	.bs-gridcell[data-field=APP_STATUS]:before {
+		content: "{$label PMT_SPREADMAIN APP_STATUS}";
+	}
+	.bs-gridcell[data-field=ROW]:before {
+		content: "{$label PMT_SPREADMAIN ROW}";
+	}
+	.bs-gridcell[data-field=N1]:before {
+		content: "{$label PMT_SPREADMAIN N1}";
+	}
+	.bs-gridcell[data-field=P1]:before {
+		content: "{$label PMT_SPREADMAIN P1}";
+	}
+	.bs-gridcell[data-field=F25]:before {
+		content: "{$label PMT_SPREADMAIN F25}";
+	}
+	.bs-gridcell[data-field=K80]:before {
+		content: "{$label PMT_SPREADMAIN K80}";
+	}
+	.bs-gridcell[data-field=F26]:before {
+		content: "{$label PMT_SPREADMAIN F26}";
+	}
+	.bs-gridcell[data-field=E27]:before {
+		content: "{$label PMT_SPREADMAIN E27}";
+	}
+	.bs-gridcell[data-field=K27]:before {
+		content: "{$label PMT_SPREADMAIN K27}";
+	}
+	.bs-gridcell[data-field=K25]:before {
+		content: "{$label PMT_SPREADMAIN K25}";
+	}
+	.bs-gridcell[data-field=A30]:before {
+		content: "{$label PMT_SPREADMAIN A30}";
+	}
+	.bs-gridcell[data-field=A31]:before {
+		content: "{$label PMT_SPREADMAIN A31}";
+	}
+	.bs-gridcell[data-field=A32]:before {
+		content: "{$label PMT_SPREADMAIN A32}";
+	}
+	.bs-gridcell[data-field=D35]:before {
+		content: "{$label PMT_SPREADMAIN D35}";
+	}
+	.bs-gridcell[data-field=F35]:before {
+		content: "{$label PMT_SPREADMAIN F35}";
+	}
+	.bs-gridcell[data-field=M35]:before {
+		content: "{$label PMT_SPREADMAIN M35}";
+	}
+	.bs-gridcell[data-field=D36]:before {
+		content: "{$label PMT_SPREADMAIN D36}";
+	}
+	.bs-gridcell[data-field=F36]:before {
+		content: "{$label PMT_SPREADMAIN F36}";
+	}
+	.bs-gridcell[data-field=J36]:before {
+		content: "{$label PMT_SPREADMAIN J36}";
+	}
+	.bs-gridcell[data-field=D38]:before {
+		content: "{$label PMT_SPREADMAIN D38}";
+	}
+	.bs-gridcell[data-field=F38]:before {
+		content: "{$label PMT_SPREADMAIN F38}";
+	}
+	.bs-gridcell[data-field=D39]:before {
+		content: "{$label PMT_SPREADMAIN D39}";
+	}
+	.bs-gridcell[data-field=TIME]:before {
+		content: "{$label PMT_SPREADMAIN TIME}";
+	}
+	.bs-gridcell[data-field=MONTHLY_REPORT]:before {
+		content: "{$label PMT_SPREADMAIN MONTHLY_REPORT}";
+	}
+	.bs-gridcell[data-field=M39]:before {
+		content: "{$label PMT_SPREADMAIN M39}";
+	}
+	.bs-gridcell[data-field=D40]:before {
+		content: "{$label PMT_SPREADMAIN D40}";
+	}
+	.bs-gridcell[data-field=D41]:before {
+		content: "{$label PMT_SPREADMAIN D41}";
+	}
+	.bs-gridcell[data-field=D42]:before {
+		content: "{$label PMT_SPREADMAIN D42}";
+	}
+	.bs-gridcell[data-field=D43]:before {
+		content: "{$label PMT_SPREADMAIN D43}";
+	}
+	.bs-gridcell[data-field=M43]:before {
+		content: "{$label PMT_SPREADMAIN M43}";
+	}
+	.bs-gridcell[data-field=F43]:before {
+		content: "{$label PMT_SPREADMAIN F43}";
+	}
+	.bs-gridcell[data-field=D44]:before {
+		content: "{$label PMT_SPREADMAIN D44}";
+	}
+	.bs-gridcell[data-field=F44]:before {
+		content: "{$label PMT_SPREADMAIN F44}";
+	}
+	.bs-gridcell[data-field=D45]:before {
+		content: "{$label PMT_SPREADMAIN D45}";
+	}
+	.bs-gridcell[data-field=M45]:before {
+		content: "{$label PMT_SPREADMAIN M45}";
+	}
+	.bs-gridcell[data-field=D48]:before {
+		content: "{$label PMT_SPREADMAIN D48}";
+	}
+	.bs-gridcell[data-field=F48]:before {
+		content: "{$label PMT_SPREADMAIN F48}";
+	}
+	.bs-gridcell[data-field=D49]:before {
+		content: "{$label PMT_SPREADMAIN D49}";
+	}
+	.bs-gridcell[data-field=D51]:before {
+		content: "{$label PMT_SPREADMAIN D51}";
+	}
+	.bs-gridcell[data-field=D52]:before {
+		content: "{$label PMT_SPREADMAIN D52}";
+	}
+	.bs-gridcell[data-field=K50]:before {
+		content: "{$label PMT_SPREADMAIN K50}";
+	}
+	.bs-gridcell[data-field=P48]:before {
+		content: "{$label PMT_SPREADMAIN P48}";
+	}
+	.bs-gridcell[data-field=P49]:before {
+		content: "{$label PMT_SPREADMAIN P49}";
+	}
+	.bs-gridcell[data-field=P50]:before {
+		content: "{$label PMT_SPREADMAIN P50}";
+	}
+	.bs-gridcell[data-field=P51]:before {
+		content: "{$label PMT_SPREADMAIN P51}";
+	}
+	.bs-gridcell[data-field=P52]:before {
+		content: "{$label PMT_SPREADMAIN P52}";
+	}
+	.bs-gridcell[data-field=id]:before {
+		content: "{$label PMT_SPREADMAIN id}";
+	}
+</style>
+<table {$masterlistgrid_hiddenattr} data-pageid="{$pageid}" data-brick="masterlistgrid" class="table rnr-b-mastergridfields rnr-gridtable bs-flexgrid" >
+		<thead>
+		<tr>
+			<th class="{$APP_UID_class}">{$label PMT_SPREADMAIN APP_UID}</th>
+			<th class="{$APP_NUMBER_class}">{$label PMT_SPREADMAIN APP_NUMBER}</th>
+			<th class="{$APP_STATUS_class}">{$label PMT_SPREADMAIN APP_STATUS}</th>
+			<th class="{$ROW_class}">{$label PMT_SPREADMAIN ROW}</th>
+			<th class="{$N1_class}">{$label PMT_SPREADMAIN N1}</th>
+			<th class="{$P1_class}">{$label PMT_SPREADMAIN P1}</th>
+			<th class="{$F25_class}">{$label PMT_SPREADMAIN F25}</th>
+			<th class="{$K80_class}">{$label PMT_SPREADMAIN K80}</th>
+			<th class="{$F26_class}">{$label PMT_SPREADMAIN F26}</th>
+			<th class="{$E27_class}">{$label PMT_SPREADMAIN E27}</th>
+			<th class="{$K27_class}">{$label PMT_SPREADMAIN K27}</th>
+			<th class="{$K25_class}">{$label PMT_SPREADMAIN K25}</th>
+			<th class="{$A30_class}">{$label PMT_SPREADMAIN A30}</th>
+			<th class="{$A31_class}">{$label PMT_SPREADMAIN A31}</th>
+			<th class="{$A32_class}">{$label PMT_SPREADMAIN A32}</th>
+			<th class="{$D35_class}">{$label PMT_SPREADMAIN D35}</th>
+			<th class="{$F35_class}">{$label PMT_SPREADMAIN F35}</th>
+			<th class="{$M35_class}">{$label PMT_SPREADMAIN M35}</th>
+			<th class="{$D36_class}">{$label PMT_SPREADMAIN D36}</th>
+			<th class="{$F36_class}">{$label PMT_SPREADMAIN F36}</th>
+			<th class="{$J36_class}">{$label PMT_SPREADMAIN J36}</th>
+			<th class="{$D38_class}">{$label PMT_SPREADMAIN D38}</th>
+			<th class="{$F38_class}">{$label PMT_SPREADMAIN F38}</th>
+			<th class="{$D39_class}">{$label PMT_SPREADMAIN D39}</th>
+			<th class="{$TIME_class}">{$label PMT_SPREADMAIN TIME}</th>
+			<th class="{$MONTHLY_REPORT_class}">{$label PMT_SPREADMAIN MONTHLY_REPORT}</th>
+			<th class="{$M39_class}">{$label PMT_SPREADMAIN M39}</th>
+			<th class="{$D40_class}">{$label PMT_SPREADMAIN D40}</th>
+			<th class="{$D41_class}">{$label PMT_SPREADMAIN D41}</th>
+			<th class="{$D42_class}">{$label PMT_SPREADMAIN D42}</th>
+			<th class="{$D43_class}">{$label PMT_SPREADMAIN D43}</th>
+			<th class="{$M43_class}">{$label PMT_SPREADMAIN M43}</th>
+			<th class="{$F43_class}">{$label PMT_SPREADMAIN F43}</th>
+			<th class="{$D44_class}">{$label PMT_SPREADMAIN D44}</th>
+			<th class="{$F44_class}">{$label PMT_SPREADMAIN F44}</th>
+			<th class="{$D45_class}">{$label PMT_SPREADMAIN D45}</th>
+			<th class="{$M45_class}">{$label PMT_SPREADMAIN M45}</th>
+			<th class="{$D48_class}">{$label PMT_SPREADMAIN D48}</th>
+			<th class="{$F48_class}">{$label PMT_SPREADMAIN F48}</th>
+			<th class="{$D49_class}">{$label PMT_SPREADMAIN D49}</th>
+			<th class="{$D51_class}">{$label PMT_SPREADMAIN D51}</th>
+			<th class="{$D52_class}">{$label PMT_SPREADMAIN D52}</th>
+			<th class="{$K50_class}">{$label PMT_SPREADMAIN K50}</th>
+			<th class="{$P48_class}">{$label PMT_SPREADMAIN P48}</th>
+			<th class="{$P49_class}">{$label PMT_SPREADMAIN P49}</th>
+			<th class="{$P50_class}">{$label PMT_SPREADMAIN P50}</th>
+			<th class="{$P51_class}">{$label PMT_SPREADMAIN P51}</th>
+			<th class="{$P52_class}">{$label PMT_SPREADMAIN P52}</th>
+			<th class="{$id_class}">{$label PMT_SPREADMAIN id}</th>
+		</tr>
+	</thead>
+	
+	<tbody>
+		<tr>
+			<td class="{$APP_UID_class} bs-gridcell" data-field=APP_UID>{$APP_UID_mastervalue}</td>
+			<td class="{$APP_NUMBER_class} bs-gridcell" data-field=APP_NUMBER>{$APP_NUMBER_mastervalue}</td>
+			<td class="{$APP_STATUS_class} bs-gridcell" data-field=APP_STATUS>{$APP_STATUS_mastervalue}</td>
+			<td class="{$ROW_class} bs-gridcell" data-field=ROW>{$ROW_mastervalue}</td>
+			<td class="{$N1_class} bs-gridcell" data-field=N1>{$N1_mastervalue}</td>
+			<td class="{$P1_class} bs-gridcell" data-field=P1>{$P1_mastervalue}</td>
+			<td class="{$F25_class} bs-gridcell" data-field=F25>{$F25_mastervalue}</td>
+			<td class="{$K80_class} bs-gridcell" data-field=K80>{$K80_mastervalue}</td>
+			<td class="{$F26_class} bs-gridcell" data-field=F26>{$F26_mastervalue}</td>
+			<td class="{$E27_class} bs-gridcell" data-field=E27>{$E27_mastervalue}</td>
+			<td class="{$K27_class} bs-gridcell" data-field=K27>{$K27_mastervalue}</td>
+			<td class="{$K25_class} bs-gridcell" data-field=K25>{$K25_mastervalue}</td>
+			<td class="{$A30_class} bs-gridcell" data-field=A30>{$A30_mastervalue}</td>
+			<td class="{$A31_class} bs-gridcell" data-field=A31>{$A31_mastervalue}</td>
+			<td class="{$A32_class} bs-gridcell" data-field=A32>{$A32_mastervalue}</td>
+			<td class="{$D35_class} bs-gridcell" data-field=D35>{$D35_mastervalue}</td>
+			<td class="{$F35_class} bs-gridcell" data-field=F35>{$F35_mastervalue}</td>
+			<td class="{$M35_class} bs-gridcell" data-field=M35>{$M35_mastervalue}</td>
+			<td class="{$D36_class} bs-gridcell" data-field=D36>{$D36_mastervalue}</td>
+			<td class="{$F36_class} bs-gridcell" data-field=F36>{$F36_mastervalue}</td>
+			<td class="{$J36_class} bs-gridcell" data-field=J36>{$J36_mastervalue}</td>
+			<td class="{$D38_class} bs-gridcell" data-field=D38>{$D38_mastervalue}</td>
+			<td class="{$F38_class} bs-gridcell" data-field=F38>{$F38_mastervalue}</td>
+			<td class="{$D39_class} bs-gridcell" data-field=D39>{$D39_mastervalue}</td>
+			<td class="{$TIME_class} bs-gridcell" data-field=TIME>{$TIME_mastervalue}</td>
+			<td class="{$MONTHLY_REPORT_class} bs-gridcell" data-field=MONTHLY_REPORT>{$MONTHLY_REPORT_mastervalue}</td>
+			<td class="{$M39_class} bs-gridcell" data-field=M39>{$M39_mastervalue}</td>
+			<td class="{$D40_class} bs-gridcell" data-field=D40>{$D40_mastervalue}</td>
+			<td class="{$D41_class} bs-gridcell" data-field=D41>{$D41_mastervalue}</td>
+			<td class="{$D42_class} bs-gridcell" data-field=D42>{$D42_mastervalue}</td>
+			<td class="{$D43_class} bs-gridcell" data-field=D43>{$D43_mastervalue}</td>
+			<td class="{$M43_class} bs-gridcell" data-field=M43>{$M43_mastervalue}</td>
+			<td class="{$F43_class} bs-gridcell" data-field=F43>{$F43_mastervalue}</td>
+			<td class="{$D44_class} bs-gridcell" data-field=D44>{$D44_mastervalue}</td>
+			<td class="{$F44_class} bs-gridcell" data-field=F44>{$F44_mastervalue}</td>
+			<td class="{$D45_class} bs-gridcell" data-field=D45>{$D45_mastervalue}</td>
+			<td class="{$M45_class} bs-gridcell" data-field=M45>{$M45_mastervalue}</td>
+			<td class="{$D48_class} bs-gridcell" data-field=D48>{$D48_mastervalue}</td>
+			<td class="{$F48_class} bs-gridcell" data-field=F48>{$F48_mastervalue}</td>
+			<td class="{$D49_class} bs-gridcell" data-field=D49>{$D49_mastervalue}</td>
+			<td class="{$D51_class} bs-gridcell" data-field=D51>{$D51_mastervalue}</td>
+			<td class="{$D52_class} bs-gridcell" data-field=D52>{$D52_mastervalue}</td>
+			<td class="{$K50_class} bs-gridcell" data-field=K50>{$K50_mastervalue}</td>
+			<td class="{$P48_class} bs-gridcell" data-field=P48>{$P48_mastervalue}</td>
+			<td class="{$P49_class} bs-gridcell" data-field=P49>{$P49_mastervalue}</td>
+			<td class="{$P50_class} bs-gridcell" data-field=P50>{$P50_mastervalue}</td>
+			<td class="{$P51_class} bs-gridcell" data-field=P51>{$P51_mastervalue}</td>
+			<td class="{$P52_class} bs-gridcell" data-field=P52>{$P52_mastervalue}</td>
+			<td class="{$id_class} bs-gridcell" data-field=id>{$id_mastervalue}</td>
+		</tr>
+	</tbody>
+
+</table> 
+
+
+
+
+{END container_mastergrid}
+
+</div>

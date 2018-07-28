@@ -1,0 +1,174 @@
+<div {$pageattrs}>
+
+{BEGIN container_tabfields}<div {$tabfields_chiddenattr} data-pageid="{$pageid}" data-container="tabfields" class=" form-horizontal   "> 
+
+
+{BEGIN content_tabfieldblock}<div class="container">
+	<div class="form-group in-tab {$fielddispclass_content}" data-fieldname="content" data-signal-error-for="content{$id}" >
+		<LABEL class="col-md-1 control-label" for="{$labelfor_content}">
+              {BEGIN content_label}{$label modx_site_content_child content}{END content_label}
+		</label>
+		<DIV class="col-md-10">
+              {$content_editcontrol}
+		</div>
+		<DIV class="col-md-1 help-block" data-helpfor="content">
+              <div class="text-muted" >
+			{$tooltip modx_site_content_child content}
+			</div>
+		</div>
+	</div>
+</div>
+{END content_tabfieldblock}
+{BEGIN pagetitle_tabfieldblock}<div class="container">
+	<div class="form-group in-tab {$fielddispclass_pagetitle}" data-fieldname="pagetitle" data-signal-error-for="pagetitle{$id}" >
+		<label class="col-md-3 control-label" for="{$labelfor_pagetitle}">
+			{BEGIN pagetitle_label}{$label modx_site_content_child pagetitle}{END pagetitle_label}
+		</label>
+		<div class="col-md-6 " >
+			{$pagetitle_editcontrol}
+		</div>
+		<div class="col-md-3 help-block " data-helpfor="pagetitle">
+			<div class="text-muted" >
+			{$tooltip modx_site_content_child pagetitle}
+			</div>
+		</div>
+	</div>
+</div>
+{END pagetitle_tabfieldblock}
+{BEGIN longtitle_tabfieldblock}<div class="container">
+	<div class="form-group in-tab {$fielddispclass_longtitle}" data-fieldname="longtitle" data-signal-error-for="longtitle{$id}" >
+		<label class="col-md-3 control-label" for="{$labelfor_longtitle}">
+			{BEGIN longtitle_label}{$label modx_site_content_child longtitle}{END longtitle_label}
+		</label>
+		<div class="col-md-6 " >
+			{$longtitle_editcontrol}
+		</div>
+		<div class="col-md-3 help-block " data-helpfor="longtitle">
+			<div class="text-muted" >
+			{$tooltip modx_site_content_child longtitle}
+			</div>
+		</div>
+	</div>
+</div>
+{END longtitle_tabfieldblock}
+{BEGIN introtext_tabfieldblock}<div class="container">
+	<div class="form-group in-tab {$fielddispclass_introtext}" data-fieldname="introtext" data-signal-error-for="introtext{$id}" >
+		<label class="col-md-3 control-label" for="{$labelfor_introtext}">
+			{BEGIN introtext_label}{$label modx_site_content_child introtext}{END introtext_label}
+		</label>
+		<div class="col-md-6 " >
+			{$introtext_editcontrol}
+		</div>
+		<div class="col-md-3 help-block " data-helpfor="introtext">
+			<div class="text-muted" >
+			{$tooltip modx_site_content_child introtext}
+			</div>
+		</div>
+	</div>
+</div>
+{END introtext_tabfieldblock}
+{BEGIN menuindex_tabfieldblock}<div class="container">
+	<div class="form-group in-tab {$fielddispclass_menuindex}" data-fieldname="menuindex" data-signal-error-for="menuindex{$id}" >
+		<label class="col-md-3 control-label" for="{$labelfor_menuindex}">
+			{BEGIN menuindex_label}{$label modx_site_content_child menuindex}{END menuindex_label}
+		</label>
+		<div class="col-md-6 " >
+			{$menuindex_editcontrol}
+		</div>
+		<div class="col-md-3 help-block " data-helpfor="menuindex">
+			<div class="text-muted" >
+			{$tooltip modx_site_content_child menuindex}
+			</div>
+		</div>
+	</div>
+</div>
+{END menuindex_tabfieldblock}
+{BEGIN description_tabfieldblock}<div class="container">
+	<div class="form-group in-tab {$fielddispclass_description}" data-fieldname="description" data-signal-error-for="description{$id}" >
+		<label class="col-md-3 control-label" for="{$labelfor_description}">
+			{BEGIN description_label}{$label modx_site_content_child description}{END description_label}
+		</label>
+		<div class="col-md-6 " >
+			{$description_editcontrol}
+		</div>
+		<div class="col-md-3 help-block " data-helpfor="description">
+			<div class="text-muted" >
+			{$tooltip modx_site_content_child description}
+			</div>
+		</div>
+	</div>
+</div>
+{END description_tabfieldblock}
+{BEGIN template_tabfieldblock}<div class="container">
+	<div class="form-group in-tab {$fielddispclass_template}" data-fieldname="template" data-signal-error-for="template{$id}" >
+		<label class="col-md-3 control-label" for="{$labelfor_template}">
+			{BEGIN template_label}{$label modx_site_content_child template}{END template_label}
+		</label>
+		<div class="col-md-6 " >
+			{$template_editcontrol}
+		</div>
+		<div class="col-md-3 help-block " data-helpfor="template">
+			<div class="text-muted" >
+			{$tooltip modx_site_content_child template}
+			</div>
+		</div>
+	</div>
+</div>
+{END template_tabfieldblock}
+{BEGIN type_tabfieldblock}<div class="container">
+	<div class="form-group in-tab {$fielddispclass_type}" data-fieldname="type" data-signal-error-for="type{$id}" >
+		<label class="col-md-3 control-label" for="{$labelfor_type}">
+			{BEGIN type_label}{$label modx_site_content_child type}{END type_label}
+		</label>
+		<div class="col-md-6 " >
+			{$type_editcontrol}
+		</div>
+		<div class="col-md-3 help-block " data-helpfor="type">
+			<div class="text-muted" >
+			{$tooltip modx_site_content_child type}
+			</div>
+		</div>
+	</div>
+</div>
+{END type_tabfieldblock}
+{BEGIN contentType_tabfieldblock}<div class="container">
+	<div class="form-group in-tab {$fielddispclass_contentType}" data-fieldname="contentType" data-signal-error-for="contentType{$id}" >
+		<label class="col-md-3 control-label" for="{$labelfor_contentType}">
+			{BEGIN contentType_label}{$label modx_site_content_child contentType}{END contentType_label}
+		</label>
+		<div class="col-md-6 " >
+			{$contentType_editcontrol}
+		</div>
+		<div class="col-md-3 help-block " data-helpfor="contentType">
+			<div class="text-muted" >
+			{$tooltip modx_site_content_child contentType}
+			</div>
+		</div>
+	</div>
+</div>
+{END contentType_tabfieldblock}
+{BEGIN alias_tabfieldblock}<div class="container">
+	<div class="form-group in-tab {$fielddispclass_alias}" data-fieldname="alias" data-signal-error-for="alias{$id}" >
+		<label class="col-md-3 control-label" for="{$labelfor_alias}">
+			{BEGIN alias_label}{$label modx_site_content_child alias}{END alias_label}
+		</label>
+		<div class="col-md-6 " >
+			{$alias_editcontrol}
+		</div>
+		<div class="col-md-3 help-block " data-helpfor="alias">
+			<div class="text-muted" >
+			{$tooltip modx_site_content_child alias}
+			</div>
+		</div>
+	</div>
+</div>
+{END alias_tabfieldblock}
+
+
+
+
+
+</div>
+{END container_tabfields}
+
+</div>

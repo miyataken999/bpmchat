@@ -1,0 +1,431 @@
+<!doctype html>
+<html  {$html_attrs}>
+  <head>asdfsfs
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      {$pagetitle}
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link REL="stylesheet" href="styles/default.css" type="text/css">
+    {BEGIN rtlCSS}
+      <link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+    {END rtlCSS}
+    {BEGIN styleCSSFiles}
+      <link REL="stylesheet" href="{$stylepath}" type="text/css">
+    {END styleCSSFiles}
+  </head>
+  <BODY class="{$stylename} function-edit" {$bodyattrs}>
+    {BEGIN body}
+      {$header}
+      <style>
+        {$containerCss}
+      </style>
+      <DIV class="bs-top">
+        
+
+{BEGIN container_editpage}
+<div {$editpage_chiddenattr} data-pageid="{$pageid}" data-container="editpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN editheader}
+	<h2 {$editheader_hiddenattr} data-pageid="{$pageid}" data-brick="editheader" >{$pagetitlelabel wpfg_links edit}</h2>
+
+{END editheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+		<button class="btn btn-sm btn-default" {$backbutton_attrs}>{mlang_message BACK_TO_LIST}</button>
+{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>{mlang_message VIEW}</button>
+{END view_page_button}
+</div>
+</div>
+
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+
+</div>
+{END container_editpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$editfields_hiddenattr} data-pageid="{$pageid}" data-brick="editfields" class="form-horizontal" role="form">
+
+
+
+			{BEGIN link_url_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_link_url}" data-fieldname="link_url" data-signal-error-for="link_url{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_link_url}">
+		{BEGIN link_url_label}{$label wpfg_links link_url}{END link_url_label}
+	</label>
+	<div class="col-md-6" >
+		{$link_url_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="link_url">
+		<div class="text-muted" >
+		{$tooltip wpfg_links link_url}
+		</div>
+	</div>
+</div>
+</div>
+{END link_url_fieldblock}
+
+			{BEGIN link_name_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_link_name}" data-fieldname="link_name" data-signal-error-for="link_name{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_link_name}">
+		{BEGIN link_name_label}{$label wpfg_links link_name}{END link_name_label}
+	</label>
+	<div class="col-md-6" >
+		{$link_name_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="link_name">
+		<div class="text-muted" >
+		{$tooltip wpfg_links link_name}
+		</div>
+	</div>
+</div>
+</div>
+{END link_name_fieldblock}
+
+			{BEGIN link_image_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_link_image}" data-fieldname="link_image" data-signal-error-for="link_image{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_link_image}">
+		{BEGIN link_image_label}{$label wpfg_links link_image}{END link_image_label}
+	</label>
+	<div class="col-md-6" >
+		{$link_image_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="link_image">
+		<div class="text-muted" >
+		{$tooltip wpfg_links link_image}
+		</div>
+	</div>
+</div>
+</div>
+{END link_image_fieldblock}
+
+			{BEGIN link_target_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_link_target}" data-fieldname="link_target" data-signal-error-for="link_target{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_link_target}">
+		{BEGIN link_target_label}{$label wpfg_links link_target}{END link_target_label}
+	</label>
+	<div class="col-md-6" >
+		{$link_target_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="link_target">
+		<div class="text-muted" >
+		{$tooltip wpfg_links link_target}
+		</div>
+	</div>
+</div>
+</div>
+{END link_target_fieldblock}
+
+			{BEGIN link_description_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_link_description}" data-fieldname="link_description" data-signal-error-for="link_description{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_link_description}">
+		{BEGIN link_description_label}{$label wpfg_links link_description}{END link_description_label}
+	</label>
+	<div class="col-md-6" >
+		{$link_description_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="link_description">
+		<div class="text-muted" >
+		{$tooltip wpfg_links link_description}
+		</div>
+	</div>
+</div>
+</div>
+{END link_description_fieldblock}
+
+			{BEGIN link_visible_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_link_visible}" data-fieldname="link_visible" data-signal-error-for="link_visible{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_link_visible}">
+		{BEGIN link_visible_label}{$label wpfg_links link_visible}{END link_visible_label}
+	</label>
+	<div class="col-md-6" >
+		{$link_visible_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="link_visible">
+		<div class="text-muted" >
+		{$tooltip wpfg_links link_visible}
+		</div>
+	</div>
+</div>
+</div>
+{END link_visible_fieldblock}
+
+			{BEGIN link_owner_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_link_owner}" data-fieldname="link_owner" data-signal-error-for="link_owner{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_link_owner}">
+		{BEGIN link_owner_label}{$label wpfg_links link_owner}{END link_owner_label}
+	</label>
+	<div class="col-md-6" >
+		{$link_owner_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="link_owner">
+		<div class="text-muted" >
+		{$tooltip wpfg_links link_owner}
+		</div>
+	</div>
+</div>
+</div>
+{END link_owner_fieldblock}
+
+			{BEGIN link_rating_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_link_rating}" data-fieldname="link_rating" data-signal-error-for="link_rating{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_link_rating}">
+		{BEGIN link_rating_label}{$label wpfg_links link_rating}{END link_rating_label}
+	</label>
+	<div class="col-md-6" >
+		{$link_rating_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="link_rating">
+		<div class="text-muted" >
+		{$tooltip wpfg_links link_rating}
+		</div>
+	</div>
+</div>
+</div>
+{END link_rating_fieldblock}
+
+			{BEGIN link_updated_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_link_updated}" data-fieldname="link_updated" data-signal-error-for="link_updated{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_link_updated}">
+		{BEGIN link_updated_label}{$label wpfg_links link_updated}{END link_updated_label}
+	</label>
+	<div class="col-md-6" >
+		{$link_updated_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="link_updated">
+		<div class="text-muted" >
+		{$tooltip wpfg_links link_updated}
+		</div>
+	</div>
+</div>
+</div>
+{END link_updated_fieldblock}
+
+			{BEGIN link_rel_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_link_rel}" data-fieldname="link_rel" data-signal-error-for="link_rel{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_link_rel}">
+		{BEGIN link_rel_label}{$label wpfg_links link_rel}{END link_rel_label}
+	</label>
+	<div class="col-md-6" >
+		{$link_rel_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="link_rel">
+		<div class="text-muted" >
+		{$tooltip wpfg_links link_rel}
+		</div>
+	</div>
+</div>
+</div>
+{END link_rel_fieldblock}
+
+			{BEGIN link_notes_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_link_notes}" data-fieldname="link_notes" data-signal-error-for="link_notes{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_link_notes}">
+		{BEGIN link_notes_label}{$label wpfg_links link_notes}{END link_notes_label}
+	</label>
+	<div class="col-md-6" >
+		{$link_notes_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="link_notes">
+		<div class="text-muted" >
+		{$tooltip wpfg_links link_notes}
+		</div>
+	</div>
+</div>
+</div>
+{END link_notes_fieldblock}
+
+			{BEGIN link_rss_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_link_rss}" data-fieldname="link_rss" data-signal-error-for="link_rss{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_link_rss}">
+		{BEGIN link_rss_label}{$label wpfg_links link_rss}{END link_rss_label}
+	</label>
+	<div class="col-md-6" >
+		{$link_rss_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="link_rss">
+		<div class="text-muted" >
+		{$tooltip wpfg_links link_rss}
+		</div>
+	</div>
+</div>
+</div>
+{END link_rss_fieldblock}
+
+
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN editbuttons}
+	{BEGIN save_button}
+	<button class="btn btn-primary" {$savebutton_attrs}>{mlang_message SAVE}</button>
+	{END save_button}
+	{BEGIN back_button}
+		<button class="btn btn-default" {$backbutton_attrs}>{mlang_message BACK_TO_LIST}</button>
+	{END back_button}
+	{BEGIN close_button}
+	<a href="#" class="btn btn-default" {$closebutton_attrs}>{mlang_message CANCEL}</a>
+	{END close_button}
+
+{END editbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+
+
+{BEGIN container_leftbuttons_1}
+<div {$leftbuttons_1_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons_1" class="  text-right col-md-3 "> 
+
+{BEGIN righteditbuttons}
+<div class="btn-group" role="group">
+
+	{BEGIN prev_button}
+	<button class="btn btn-default {$prevbutton_class}" {$prevbutton_attrs}><span class="glyphicon glyphicon-chevron-left"></span></button>
+	{END prev_button}
+	{BEGIN next_button}
+	<button class="btn btn-default  {$nextbutton_class}" {$nextbutton_attrs}><span class="glyphicon glyphicon-chevron-right"></span></button>
+	{END next_button}
+	<div class="btn-group dropup" role="group">
+		<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+		<ul class="dropdown-menu dropdown-left">
+			{BEGIN reset_button}
+				<li><a href="#" {$resetbutton_attrs}>{mlang_message RESET}</a></li>
+			{END reset_button}
+			{BEGIN view_page_button}
+				<li><a href="#" {$view_page_button_attrs}>{mlang_message VIEW}</a></li>
+			{END view_page_button}
+		</ul>
+	</div>
+</div>
+{END righteditbuttons}
+
+
+
+</div>
+{END container_leftbuttons_1}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+      </div>
+      <DIV class="bs-middle ">
+        <DIV class="bs-topmiddle">
+          
+        </div>
+        <DIV class="bs-left" {$blockattr_left}>
+          
+        </div>
+        <DIV class="bs-center">
+          
+        </div>
+        <DIV class="bs-right">
+          
+        </div>
+      </div>
+      <DIV class="bs-bottom">
+        
+      </div>
+      {$footer}
+    {END body}
+  </body>
+</html>

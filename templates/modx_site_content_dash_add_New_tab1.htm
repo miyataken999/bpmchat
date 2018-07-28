@@ -1,0 +1,32 @@
+<div {$pageattrs}>
+
+{BEGIN container_tabfields}
+<div {$tabfields_chiddenattr} data-pageid="{$pageid}" data-container="tabfields" class=" form-horizontal   "> 
+
+
+{BEGIN unpub_date_tabfieldblock}
+<div class="container">
+	<div class="form-group in-tab {$fielddispclass_unpub_date}" data-fieldname="unpub_date" data-signal-error-for="unpub_date{$id}" >
+		<label class="col-md-3 control-label" for="{$labelfor_unpub_date}">
+			{BEGIN unpub_date_label}{$label modx_site_content_dash unpub_date}{END unpub_date_label}
+		</label>
+		<div class="col-md-6 " >
+			{$unpub_date_editcontrol}
+		</div>
+		<div class="col-md-3 help-block " data-helpfor="unpub_date">
+			<div class="text-muted" >
+			{$tooltip modx_site_content_dash unpub_date}
+			</div>
+		</div>
+	</div>
+</div>
+{END unpub_date_tabfieldblock}
+
+
+
+
+
+</div>
+{END container_tabfields}
+
+</div>

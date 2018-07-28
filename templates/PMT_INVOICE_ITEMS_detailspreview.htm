@@ -1,0 +1,85 @@
+<div {$pageattrs}>
+
+{BEGIN container_dcount}
+<div {$dcount_chiddenattr} data-pageid="{$pageid}" data-container="dcount" class="    "> 
+
+
+<span {$bsdetailspreviewcount_hiddenattr} data-pageid="{$pageid}" data-brick="bsdetailspreviewcount">{mlang_message DETAILS_FOUND}: <strong>{$row_count}</strong></span>
+
+
+
+
+
+</div>
+{END container_dcount}
+
+
+
+{BEGIN container_detailspreviewgrid}
+
+
+{BEGIN details_data}
+<table class="table striped">
+{BEGIN details_row_header}
+	<thead>
+		<tr class="{$gridHeader_class}" >
+			<th class="{$APP_UID_class}">{$label PMT_INVOICE_ITEMS APP_UID}</th>
+			<th class="{$A_class}">{$label PMT_INVOICE_ITEMS A}</th>
+			<th class="{$B_class}">{$label PMT_INVOICE_ITEMS B}</th>
+			<th class="{$C_class}">{$label PMT_INVOICE_ITEMS C}</th>
+			<th class="{$D_class}">{$label PMT_INVOICE_ITEMS D}</th>
+			<th class="{$E_class}">{$label PMT_INVOICE_ITEMS E}</th>
+			<th class="{$F_class}">{$label PMT_INVOICE_ITEMS F}</th>
+			<th class="{$G_class}">{$label PMT_INVOICE_ITEMS G}</th>
+			<th class="{$H_class}">{$label PMT_INVOICE_ITEMS H}</th>
+			<th class="{$I_class}">{$label PMT_INVOICE_ITEMS I}</th>
+			<th class="{$J_class}">{$label PMT_INVOICE_ITEMS J}</th>
+			<th class="{$K_class}">{$label PMT_INVOICE_ITEMS K}</th>
+			<th class="{$L_class}">{$label PMT_INVOICE_ITEMS L}</th>
+			<th class="{$M_class}">{$label PMT_INVOICE_ITEMS M}</th>
+			<th class="{$N_class}">{$label PMT_INVOICE_ITEMS N}</th>
+			<th class="{$O_class}">{$label PMT_INVOICE_ITEMS O}</th>
+			<th class="{$P_class}">{$label PMT_INVOICE_ITEMS P}</th>
+			<th class="{$Q_class}">{$label PMT_INVOICE_ITEMS Q}</th>
+			<th class="{$R_class}">{$label PMT_INVOICE_ITEMS R}</th>
+			<th class="{$S_class}">{$label PMT_INVOICE_ITEMS S}</th>
+			<th class="{$T_class}">{$label PMT_INVOICE_ITEMS T}</th>
+		</tr>
+	</thead>
+{END details_row_header}
+	<tbody>
+{BEGIN details_row}
+		<tr>
+			<td class="{$APP_UID_class}">{$APP_UID_value}</td>
+			<td class="{$A_class}">{$A_value}</td>
+			<td class="{$B_class}">{$B_value}</td>
+			<td class="{$C_class}">{$C_value}</td>
+			<td class="{$D_class}">{$D_value}</td>
+			<td class="{$E_class}">{$E_value}</td>
+			<td class="{$F_class}">{$F_value}</td>
+			<td class="{$G_class}">{$G_value}</td>
+			<td class="{$H_class}">{$H_value}</td>
+			<td class="{$I_class}">{$I_value}</td>
+			<td class="{$J_class}">{$J_value}</td>
+			<td class="{$K_class}">{$K_value}</td>
+			<td class="{$L_class}">{$L_value}</td>
+			<td class="{$M_class}">{$M_value}</td>
+			<td class="{$N_class}">{$N_value}</td>
+			<td class="{$O_class}">{$O_value}</td>
+			<td class="{$P_class}">{$P_value}</td>
+			<td class="{$Q_class}">{$Q_value}</td>
+			<td class="{$R_class}">{$R_value}</td>
+			<td class="{$S_class}">{$S_value}</td>
+			<td class="{$T_class}">{$T_value}</td>
+		</tr>
+{END details_row}	
+	</tbody>
+</table>
+
+{END details_data}
+
+
+
+{END container_detailspreviewgrid}
+
+</div>

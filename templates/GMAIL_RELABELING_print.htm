@@ -1,0 +1,202 @@
+<!doctype html>
+<html  {$html_attrs}>
+  <head>asdfsfs
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      {$pagetitle}
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link REL="stylesheet" href="styles/default.css" type="text/css">
+    {BEGIN rtlCSS}
+      <link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+    {END rtlCSS}
+    {BEGIN styleCSSFiles}
+      <link REL="stylesheet" href="{$stylepath}" type="text/css">
+    {END styleCSSFiles}
+  </head>
+  <BODY class="{$stylename} function-print" {$bodyattrs}>
+    {BEGIN body}
+      {$header}
+      <style>
+        {$containerCss}
+      </style>
+      <DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel GMAIL_RELABELING print}</h2>
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>{mlang_message PAGE1} <span class="rp-pageno">{$pageno}</span> {mlang_message PAGE2} <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="table table-bordered rp-maintable" {$printgrid_hiddenattr} data-pageid="{$pageid}" data-brick="printgrid" >
+	<thead>
+	{BEGIN grid_header}
+		<tr class="{$gridHeader_class}" >
+		{BEGIN record_header}
+			{BEGIN LABELING_UID_fieldheadercolumn}
+			<th class="{$LABELING_UID_class}" {$LABELING_UID_style}  data-field="LABELING_UID">
+				{$label GMAIL_RELABELING LABELING_UID}
+			</th>
+			{END LABELING_UID_fieldheadercolumn}
+			{BEGIN CREATE_DATE_fieldheadercolumn}
+			<th class="{$CREATE_DATE_class}" {$CREATE_DATE_style}  data-field="CREATE_DATE">
+				{$label GMAIL_RELABELING CREATE_DATE}
+			</th>
+			{END CREATE_DATE_fieldheadercolumn}
+			{BEGIN APP_UID_fieldheadercolumn}
+			<th class="{$APP_UID_class}" {$APP_UID_style}  data-field="APP_UID">
+				{$label GMAIL_RELABELING APP_UID}
+			</th>
+			{END APP_UID_fieldheadercolumn}
+			{BEGIN DEL_INDEX_fieldheadercolumn}
+			<th class="{$DEL_INDEX_class}" {$DEL_INDEX_style}  data-field="DEL_INDEX">
+				{$label GMAIL_RELABELING DEL_INDEX}
+			</th>
+			{END DEL_INDEX_fieldheadercolumn}
+			{BEGIN CURRENT_LAST_INDEX_fieldheadercolumn}
+			<th class="{$CURRENT_LAST_INDEX_class}" {$CURRENT_LAST_INDEX_style}  data-field="CURRENT_LAST_INDEX">
+				{$label GMAIL_RELABELING CURRENT_LAST_INDEX}
+			</th>
+			{END CURRENT_LAST_INDEX_fieldheadercolumn}
+			{BEGIN UNASSIGNED_fieldheadercolumn}
+			<th class="{$UNASSIGNED_class}" {$UNASSIGNED_style}  data-field="UNASSIGNED">
+				{$label GMAIL_RELABELING UNASSIGNED}
+			</th>
+			{END UNASSIGNED_fieldheadercolumn}
+			{BEGIN STATUS_fieldheadercolumn}
+			<th class="{$STATUS_class}" {$STATUS_style}  data-field="STATUS">
+				{$label GMAIL_RELABELING STATUS}
+			</th>
+			{END STATUS_fieldheadercolumn}
+			{BEGIN MSG_ERROR_fieldheadercolumn}
+			<th class="{$MSG_ERROR_class}" {$MSG_ERROR_style}  data-field="MSG_ERROR">
+				{$label GMAIL_RELABELING MSG_ERROR}
+			</th>
+			{END MSG_ERROR_fieldheadercolumn}
+			{BEGIN endrecordheader_block}
+			<th class="rnr-cs">&nbsp;</th>
+			{END endrecordheader_block}
+		{END record_header}
+		</tr>
+	{END grid_header}
+	</thead>
+	
+	<tbody>	
+	{BEGIN grid_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+			{BEGIN LABELING_UID_fieldcolumn}
+			<td  class="{$LABELING_UID_class}" {$LABELING_UID_style} {$recordattrs}>
+				{$LABELING_UID_value}
+			</td>
+			{END LABELING_UID_fieldcolumn}
+			{BEGIN CREATE_DATE_fieldcolumn}
+			<td  class="{$CREATE_DATE_class}" {$CREATE_DATE_style} {$recordattrs}>
+				{$CREATE_DATE_value}
+			</td>
+			{END CREATE_DATE_fieldcolumn}
+			{BEGIN APP_UID_fieldcolumn}
+			<td  class="{$APP_UID_class}" {$APP_UID_style} {$recordattrs}>
+				{$APP_UID_value}
+			</td>
+			{END APP_UID_fieldcolumn}
+			{BEGIN DEL_INDEX_fieldcolumn}
+			<td  class="{$DEL_INDEX_class}" {$DEL_INDEX_style} {$recordattrs}>
+				{$DEL_INDEX_value}
+			</td>
+			{END DEL_INDEX_fieldcolumn}
+			{BEGIN CURRENT_LAST_INDEX_fieldcolumn}
+			<td  class="{$CURRENT_LAST_INDEX_class}" {$CURRENT_LAST_INDEX_style} {$recordattrs}>
+				{$CURRENT_LAST_INDEX_value}
+			</td>
+			{END CURRENT_LAST_INDEX_fieldcolumn}
+			{BEGIN UNASSIGNED_fieldcolumn}
+			<td  class="{$UNASSIGNED_class}" {$UNASSIGNED_style} {$recordattrs}>
+				{$UNASSIGNED_value}
+			</td>
+			{END UNASSIGNED_fieldcolumn}
+			{BEGIN STATUS_fieldcolumn}
+			<td  class="{$STATUS_class}" {$STATUS_style} {$recordattrs}>
+				{$STATUS_value}
+			</td>
+			{END STATUS_fieldcolumn}
+			{BEGIN MSG_ERROR_fieldcolumn}
+			<td  class="{$MSG_ERROR_class}" {$MSG_ERROR_style} {$recordattrs}>
+				{$MSG_ERROR_value}
+			</td>
+			{END MSG_ERROR_fieldcolumn}
+			{BEGIN endrecord_block}
+			<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+			{END endrecord_block}
+		{END grid_record}
+		</tr>
+{END grid_row}
+	</tbody>
+
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+      </div>
+      <DIV class="bs-middle ">
+        <DIV class="bs-topmiddle">
+          
+        </div>
+        <DIV class="bs-left" {$blockattr_left}>
+          
+        </div>
+        <DIV class="bs-center">
+          
+        </div>
+        <DIV class="bs-right">
+          
+        </div>
+      </div>
+      <DIV class="bs-bottom">
+        
+      </div>
+      {$footer}
+    {END body}
+  </body>
+</html>

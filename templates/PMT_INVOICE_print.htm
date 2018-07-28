@@ -1,0 +1,316 @@
+<!doctype html>
+<html  {$html_attrs}>
+  <head>asdfsfs
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      {$pagetitle}
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link REL="stylesheet" href="styles/default.css" type="text/css">
+    {BEGIN rtlCSS}
+      <link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+    {END rtlCSS}
+    {BEGIN styleCSSFiles}
+      <link REL="stylesheet" href="{$stylepath}" type="text/css">
+    {END styleCSSFiles}
+  </head>
+  <BODY class="{$stylename} function-print" {$bodyattrs}>
+    {BEGIN body}
+      {$header}
+      <style>
+        {$containerCss}
+      </style>
+      <DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel PMT_INVOICE print}</h2>
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>{mlang_message PAGE1} <span class="rp-pageno">{$pageno}</span> {mlang_message PAGE2} <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="table table-bordered rp-maintable" {$printgrid_hiddenattr} data-pageid="{$pageid}" data-brick="printgrid" >
+	<thead>
+	{BEGIN grid_header}
+		<tr class="{$gridHeader_class}" >
+		{BEGIN record_header}
+			{BEGIN L50_fieldheadercolumn}
+			<th class="{$L50_class}" {$L50_style}  data-field="L50">
+				{$label PMT_INVOICE L50}
+			</th>
+			{END L50_fieldheadercolumn}
+			{BEGIN O48_fieldheadercolumn}
+			<th class="{$O48_class}" {$O48_style}  data-field="O48">
+				{$label PMT_INVOICE O48}
+			</th>
+			{END O48_fieldheadercolumn}
+			{BEGIN O49_fieldheadercolumn}
+			<th class="{$O49_class}" {$O49_style}  data-field="O49">
+				{$label PMT_INVOICE O49}
+			</th>
+			{END O49_fieldheadercolumn}
+			{BEGIN O50_fieldheadercolumn}
+			<th class="{$O50_class}" {$O50_style}  data-field="O50">
+				{$label PMT_INVOICE O50}
+			</th>
+			{END O50_fieldheadercolumn}
+			{BEGIN O51_fieldheadercolumn}
+			<th class="{$O51_class}" {$O51_style}  data-field="O51">
+				{$label PMT_INVOICE O51}
+			</th>
+			{END O51_fieldheadercolumn}
+			{BEGIN O52_fieldheadercolumn}
+			<th class="{$O52_class}" {$O52_style}  data-field="O52">
+				{$label PMT_INVOICE O52}
+			</th>
+			{END O52_fieldheadercolumn}
+			{BEGIN APP_UID_fieldheadercolumn}
+			<th class="{$APP_UID_class}" {$APP_UID_style}  data-field="APP_UID">
+				{$label PMT_INVOICE APP_UID}
+			</th>
+			{END APP_UID_fieldheadercolumn}
+			{BEGIN TOTAL_FEE_fieldheadercolumn}
+			<th class="{$TOTAL_FEE_class}" {$TOTAL_FEE_style}  data-field="TOTAL_FEE">
+				{$label PMT_INVOICE TOTAL_FEE}
+			</th>
+			{END TOTAL_FEE_fieldheadercolumn}
+			{BEGIN PAYMENT_DEADLINE_fieldheadercolumn}
+			<th class="{$PAYMENT_DEADLINE_class}" {$PAYMENT_DEADLINE_style}  data-field="PAYMENT_DEADLINE">
+				{$label PMT_INVOICE PAYMENT_DEADLINE}
+			</th>
+			{END PAYMENT_DEADLINE_fieldheadercolumn}
+			{BEGIN COMPANY_fieldheadercolumn}
+			<th class="{$COMPANY_class}" {$COMPANY_style}  data-field="COMPANY">
+				{$label PMT_INVOICE COMPANY}
+			</th>
+			{END COMPANY_fieldheadercolumn}
+			{BEGIN POSTAL_CODE_fieldheadercolumn}
+			<th class="{$POSTAL_CODE_class}" {$POSTAL_CODE_style}  data-field="POSTAL_CODE">
+				{$label PMT_INVOICE POSTAL_CODE}
+			</th>
+			{END POSTAL_CODE_fieldheadercolumn}
+			{BEGIN PREFECTURES_fieldheadercolumn}
+			<th class="{$PREFECTURES_class}" {$PREFECTURES_style}  data-field="PREFECTURES">
+				{$label PMT_INVOICE PREFECTURES}
+			</th>
+			{END PREFECTURES_fieldheadercolumn}
+			{BEGIN TOWNS_AND_VILLAGES_fieldheadercolumn}
+			<th class="{$TOWNS_AND_VILLAGES_class}" {$TOWNS_AND_VILLAGES_style}  data-field="TOWNS_AND_VILLAGES">
+				{$label PMT_INVOICE TOWNS_AND_VILLAGES}
+			</th>
+			{END TOWNS_AND_VILLAGES_fieldheadercolumn}
+			{BEGIN REMARKS_fieldheadercolumn}
+			<th class="{$REMARKS_class}" {$REMARKS_style}  data-field="REMARKS">
+				{$label PMT_INVOICE REMARKS}
+			</th>
+			{END REMARKS_fieldheadercolumn}
+			{BEGIN SUBTOTAL_fieldheadercolumn}
+			<th class="{$SUBTOTAL_class}" {$SUBTOTAL_style}  data-field="SUBTOTAL">
+				{$label PMT_INVOICE SUBTOTAL}
+			</th>
+			{END SUBTOTAL_fieldheadercolumn}
+			{BEGIN TAX_RATE_fieldheadercolumn}
+			<th class="{$TAX_RATE_class}" {$TAX_RATE_style}  data-field="TAX_RATE">
+				{$label PMT_INVOICE TAX_RATE}
+			</th>
+			{END TAX_RATE_fieldheadercolumn}
+			{BEGIN CONSUMPTION_TAX_fieldheadercolumn}
+			<th class="{$CONSUMPTION_TAX_class}" {$CONSUMPTION_TAX_style}  data-field="CONSUMPTION_TAX">
+				{$label PMT_INVOICE CONSUMPTION_TAX}
+			</th>
+			{END CONSUMPTION_TAX_fieldheadercolumn}
+			{BEGIN TOTAL_fieldheadercolumn}
+			<th class="{$TOTAL_class}" {$TOTAL_style}  data-field="TOTAL">
+				{$label PMT_INVOICE TOTAL}
+			</th>
+			{END TOTAL_fieldheadercolumn}
+			{BEGIN endrecordheader_block}
+			<th class="rnr-cs">&nbsp;</th>
+			{END endrecordheader_block}
+		{END record_header}
+		</tr>
+	{END grid_header}
+	</thead>
+	
+	<tbody>	
+	{BEGIN grid_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+			{BEGIN L50_fieldcolumn}
+			<td  class="{$L50_class}" {$L50_style} {$recordattrs}>
+				{$L50_value}
+			</td>
+			{END L50_fieldcolumn}
+			{BEGIN O48_fieldcolumn}
+			<td  class="{$O48_class}" {$O48_style} {$recordattrs}>
+				{$O48_value}
+			</td>
+			{END O48_fieldcolumn}
+			{BEGIN O49_fieldcolumn}
+			<td  class="{$O49_class}" {$O49_style} {$recordattrs}>
+				{$O49_value}
+			</td>
+			{END O49_fieldcolumn}
+			{BEGIN O50_fieldcolumn}
+			<td  class="{$O50_class}" {$O50_style} {$recordattrs}>
+				{$O50_value}
+			</td>
+			{END O50_fieldcolumn}
+			{BEGIN O51_fieldcolumn}
+			<td  class="{$O51_class}" {$O51_style} {$recordattrs}>
+				{$O51_value}
+			</td>
+			{END O51_fieldcolumn}
+			{BEGIN O52_fieldcolumn}
+			<td  class="{$O52_class}" {$O52_style} {$recordattrs}>
+				{$O52_value}
+			</td>
+			{END O52_fieldcolumn}
+			{BEGIN APP_UID_fieldcolumn}
+			<td  class="{$APP_UID_class}" {$APP_UID_style} {$recordattrs}>
+				{$APP_UID_value}
+			</td>
+			{END APP_UID_fieldcolumn}
+			{BEGIN TOTAL_FEE_fieldcolumn}
+			<td  class="{$TOTAL_FEE_class}" {$TOTAL_FEE_style} {$recordattrs}>
+				{$TOTAL_FEE_value}
+			</td>
+			{END TOTAL_FEE_fieldcolumn}
+			{BEGIN PAYMENT_DEADLINE_fieldcolumn}
+			<td  class="{$PAYMENT_DEADLINE_class}" {$PAYMENT_DEADLINE_style} {$recordattrs}>
+				{$PAYMENT_DEADLINE_value}
+			</td>
+			{END PAYMENT_DEADLINE_fieldcolumn}
+			{BEGIN COMPANY_fieldcolumn}
+			<td  class="{$COMPANY_class}" {$COMPANY_style} {$recordattrs}>
+				{$COMPANY_value}
+			</td>
+			{END COMPANY_fieldcolumn}
+			{BEGIN POSTAL_CODE_fieldcolumn}
+			<td  class="{$POSTAL_CODE_class}" {$POSTAL_CODE_style} {$recordattrs}>
+				{$POSTAL_CODE_value}
+			</td>
+			{END POSTAL_CODE_fieldcolumn}
+			{BEGIN PREFECTURES_fieldcolumn}
+			<td  class="{$PREFECTURES_class}" {$PREFECTURES_style} {$recordattrs}>
+				{$PREFECTURES_value}
+			</td>
+			{END PREFECTURES_fieldcolumn}
+			{BEGIN TOWNS_AND_VILLAGES_fieldcolumn}
+			<td  class="{$TOWNS_AND_VILLAGES_class}" {$TOWNS_AND_VILLAGES_style} {$recordattrs}>
+				{$TOWNS_AND_VILLAGES_value}
+			</td>
+			{END TOWNS_AND_VILLAGES_fieldcolumn}
+			{BEGIN REMARKS_fieldcolumn}
+			<td  class="{$REMARKS_class}" {$REMARKS_style} {$recordattrs}>
+				{$REMARKS_value}
+			</td>
+			{END REMARKS_fieldcolumn}
+			{BEGIN SUBTOTAL_fieldcolumn}
+			<td  class="{$SUBTOTAL_class}" {$SUBTOTAL_style} {$recordattrs}>
+				{$SUBTOTAL_value}
+			</td>
+			{END SUBTOTAL_fieldcolumn}
+			{BEGIN TAX_RATE_fieldcolumn}
+			<td  class="{$TAX_RATE_class}" {$TAX_RATE_style} {$recordattrs}>
+				{$TAX_RATE_value}
+			</td>
+			{END TAX_RATE_fieldcolumn}
+			{BEGIN CONSUMPTION_TAX_fieldcolumn}
+			<td  class="{$CONSUMPTION_TAX_class}" {$CONSUMPTION_TAX_style} {$recordattrs}>
+				{$CONSUMPTION_TAX_value}
+			</td>
+			{END CONSUMPTION_TAX_fieldcolumn}
+			{BEGIN TOTAL_fieldcolumn}
+			<td  class="{$TOTAL_class}" {$TOTAL_style} {$recordattrs}>
+				{$TOTAL_value}
+			</td>
+			{END TOTAL_fieldcolumn}
+			{BEGIN endrecord_block}
+			<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+			{END endrecord_block}
+		{END grid_record}
+		</tr>
+	{BEGIN details_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+			{BEGIN details_record}
+				<td colspan="19">
+					{BEGIN details_table}
+						{$details}
+					{END details_table}
+				</td>
+				{BEGIN endrecord_block}
+				<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+				{END endrecord_block}
+			{END details_record}
+		</tr>
+	{END details_row}
+{END grid_row}
+	</tbody>
+
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+      </div>
+      <DIV class="bs-middle ">
+        <DIV class="bs-topmiddle">
+          
+        </div>
+        <DIV class="bs-left" {$blockattr_left}>
+          
+        </div>
+        <DIV class="bs-center">
+          
+        </div>
+        <DIV class="bs-right">
+          
+        </div>
+      </div>
+      <DIV class="bs-bottom">
+        
+      </div>
+      {$footer}
+    {END body}
+  </body>
+</html>

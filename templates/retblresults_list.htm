@@ -1,0 +1,1480 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-list" {$bodyattrs}>
+	{BEGIN body}
+<style>
+{$containerCss}
+</style>
+<div class="sidebar bs-fixed clearfix mCustomScrollbar" data-mcs-theme="minimal-dark" {$blockattr_left}>
+	<div class="sidebar-contents mCustomScrollBox mCS-minimal-dark mCSB_vertical mCSB_outside">
+		
+
+{BEGIN container_logo}
+<div {$logo_chiddenattr} data-pageid="{$pageid}" data-container="logo" class=" bs-sidebarlogo   "> 
+
+{BEGIN logo_block}
+<a href="{$home_link}" {$logo_hiddenattr} data-pageid="{$pageid}" data-brick="logo" class="navbar-brand" >{$logo}</a>
+{END logo_block}
+
+
+
+</div>
+{END container_logo}
+
+
+
+{BEGIN container_hdr}
+<div {$hdr_chiddenattr} data-pageid="{$pageid}" data-container="hdr" class=" navbar-default clearfix   "> 
+
+{BEGIN collapse_block}
+<button {$bsnavbarcollapse_hiddenattr} data-pageid="{$pageid}" data-brick="bsnavbarcollapse" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target=".bs-navcontrolled">	
+	<span class="sr-only">Toggle navigation</span>	
+	<span class="icon-bar"></span>					
+</button>												
+
+{END collapse_block}
+
+
+
+</div>
+{END container_hdr}
+
+{BEGIN container_sidemenu}<div {$sidemenu_chiddenattr} data-pageid="{$pageid}" data-container="sidemenu" class="bs-navform navbar-collapse sidebar-menu bs-hidden-xs bs-navcontrolled" aria-expanded="false" >												   
+{BEGIN menu_block}
+{$menu main}
+
+{END menu_block}
+
+												</div>						{END container_sidemenu}
+
+{BEGIN container_left}
+<div {$left_chiddenattr} data-pageid="{$pageid}" data-container="left" class=" sidebar-container   "> 
+
+{BEGIN searchPanel}
+<div {$searchpanel_hiddenattr} data-pageid="{$pageid}" data-brick="searchpanel" class="searchOptions panel panel-primary searchPanelContainer " {$srchOpt_attrs} >
+	<!-- Search panel content -->
+	
+	<div class="panel-heading">
+		<div class="btn-group" id="addSearchFieldButton{$id}">
+			<button id="showHideControlChooseMenu{$id}" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			Search in
+			<span class="caret"></span>
+			</button>
+		</div>
+
+		
+		<div class="btn-group searchpanel-options" id="searchPanelOptions{$id}">
+			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon glyphicon-option-vertical"></span>
+			</button>
+			<ul class="dropdown-menu dropdown-left">
+				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>オプションの表示</a></li>
+				<li role="separator" class="divider"></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>all conditions</label></a></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>any condition</label></a></li>
+				<li role="separator" class="divider"></li>
+				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>隠す：</a></li>
+			</ul>
+		</div>
+	
+		
+		</div>
+	<div class="panel-body controlsBlock" {$bottomSearchButt_attrs} >
+
+
+		
+		{BEGIN searchCtrlBlock}
+		<div class="srchPanelRow form-group" {$filterRow_attrs}>
+			<label>{$fLabel}</label>	{$delCtrlButt}
+				<span class="rnr-searchtype">{$searchtype}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
+		</div>
+		{END searchCtrlBlock}
+
+
+	</div>
+	
+	<div class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
+		<button class="btn btn-primary" id="searchButton{$id}" {$searchbutton_attrs}>検索</button>
+		<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs}>全て表示</button>
+	</div>
+</div>
+
+
+{END searchPanel}
+
+
+{BEGIN filterPanel}
+<div {$filterpanel_hiddenattr} data-pageid="{$pageid}" data-brick="filterpanel">
+<button  type="button" class="bs-hidden-xs bs-navcontrolled btn btn-info bs-togglebutton bottom-margin collapsed" data-runner-toggle="collapse" data-target=".filterPanelContainer">	
+	<span class="glyphicon glyphicon-filter"><span> Filter	
+</button>
+<div  class="bs-hidden-xs filterPanelContainer  {$filterPanelStateClass}">
+
+
+	
+	
+
+
+
+	
+	
+	
+		
+{BEGIN filter_control_City}
+	<div class="panel panel-info filter-field filter-City-container">
+		<div class="panel-heading filter-expander">
+			<span class="filter-indicator glyphicon 
+							glyphicon-triangle-top
+			">
+			</span>
+						{$label retblresults City}
+			{BEGIN clearLink_City}
+			<a href="#" class="filter-clear filter-clear-City">解除</a>
+			{END clearLink_City}
+		</div>
+		<ul class="list-group">
+		{BEGIN filterCtrlBlock_City}
+		<li class="list-group-item filter-values filter-values-City {$collapsedClass_City} {$visibilityClass_City}">
+			{$City_filter}	
+		</li>
+		{END filterCtrlBlock_City}
+				{BEGIN filter_button_showmore_City}
+		<li class="list-group-item filter-show-more {$collapsedClass_City} {$showMoreBtnClass_City}">
+			<a class="filter-show-more-link filterShowMore_City" href="#">{$show_n_more_City}</a>
+		</li>
+		{END filter_button_showmore_City}
+		
+				
+			</ul>
+	</div>
+{END filter_control_City}
+</div>
+</div>
+{END filterPanel}
+
+
+
+</div>
+{END container_left}
+
+
+	</div>
+</div>	
+<div class="bs-wrapper">
+	<div class="bs-fixedheader" id="fixedheader{$id}">
+		{BEGIN container_menu}<nav {$menu_chiddenattr} data-pageid="{$pageid}" data-container="menu" class="navbar navbar-default bs-fullwidth-navbar">					
+
+
+
+{BEGIN container_bc}
+<div {$bc_chiddenattr} data-pageid="{$pageid}" data-container="bc" class=" navbar-form navbar-left   "> 
+
+{BEGIN breadcrumbs}
+<ol class="breadcrumb">
+<li ><a href="{$home_link}"><span class="glyphicon glyphicon-home"></span></a>{$crumb_dropdown}</li>
+{BEGIN crumb}
+  <li class="{$crumb_item_class}">
+{BEGIN crumb_title_link}
+	<a {$crumb_attrs}>{$crumb_title}</a>
+{END crumb_title_link}
+{BEGIN crumb_title_span}
+	<span {$crumb_attrs}>{$crumb_title}</span>
+{END crumb_title_span}	
+	{$crumb_dropdown}
+  </li>
+{END crumb}
+</ol>
+{END breadcrumbs}
+
+
+
+</div>
+{END container_bc}
+
+
+
+
+
+
+{BEGIN container_menu_1}<div {$menu_1_chiddenattr} data-pageid="{$pageid}" data-container="menu_1" class="bs-navform navbar-collapse bs-hidden-xs bs-navcontrolled" aria-expanded="false" >												   
+
+
+
+{BEGIN container_more}
+<div {$more_chiddenattr} data-pageid="{$pageid}" data-container="more" class=" navbar-right navbar-form   "> 
+
+{BEGIN more_list}
+<div {$morebutton_hiddenattr} data-pageid="{$pageid}" data-brick="morebutton" class="btn-group bs-navsection">
+	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		<span class="glyphicon glyphicon-cog"></span>
+		<span class="caret"></span>
+	</button>
+	<ul class="dropdown-menu">
+				{BEGIN editselected_link}
+		<li class="massButton{$id} disabled"><a href="#" {$editselectedlink_attrs} {$editselectedlink_span} >選択範囲を編集</a></li>
+		{END editselected_link}
+
+				
+				{BEGIN deleteselected_link}
+		<li class="massButton{$id} disabled"><a href="#" {$deleteselectedlink_attrs} {$deleteselectedlink_span}>選択対象の削除</a></li>
+		{END deleteselected_link}
+		
+				<li role="separator" class="divider"></li>	
+
+				{BEGIN asearch_link}
+		<li><a href="retblresults_search.php" {$advsearchlink_attrs}>詳細検索</a></li>
+		{END asearch_link}
+
+				{BEGIN searchPanelTopButtons}
+		<li><a href=# id="showOptPanel{$id}">Show search panel</a></li>
+		{END searchPanelTopButtons}	
+		
+				
+				
+				
+		
+		
+				
+	</ul>  
+</div>
+
+{END more_list}
+
+
+{BEGIN security_block}
+<span {$loggedas_hiddenattr} data-pageid="{$pageid}" data-brick="loggedas" id="login_block{$id}" class="bs-navsection">
+	{BEGIN guestloginbutton}
+		<button class="btn btn-info" type="button" {$guestloginlink_attrs}>ログイン</button>
+	{END guestloginbutton}
+	{BEGIN loggedas_message} 
+		<span class="dropdown">
+			<button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon-user"></span>	{$username}</button>
+			<ul class="dropdown-menu">
+		{BEGIN logoutbutton}
+				<li><a href="#" {$logoutlink_attrs}>ログアウト</a></li>
+		{END logoutbutton}
+		
+		{BEGIN adminarea_link}
+				<li><a href="admin_rights_list.php" {$adminarealink_attrs}>管理エリア</a></li>
+		{END adminarea_link}
+
+
+	{BEGIN changepwd_link}
+				<li><a href="#" {$changepwdlink_attrs}>パスワード変更</a></li>
+	{END changepwd_link}
+			</ul>
+		</span>
+	{END loggedas_message}
+</span>
+{END security_block}
+
+
+
+</div>
+{END container_more}
+
+
+
+
+
+
+
+
+{BEGIN container_more_1}
+<div {$more_1_chiddenattr} data-pageid="{$pageid}" data-container="more_1" class=" navbar-right navbar-form   "> 
+
+{BEGIN searchform_block}
+<span {$search_hiddenattr} data-pageid="{$pageid}" data-brick="search" class="form-group">
+
+	{$simpleSearchFieldCombo}
+	
+	{$simpleSearchTypeCombo}
+ <div  class="input-group">
+{BEGIN searchform_text}
+	<input type="search" class="form-control" {$searchfor_attrs} size="25">
+{END searchform_text}
+	<span class="input-group-btn">
+	{BEGIN searchform_showall}
+		<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="全て表示">
+			<span class="glyphicon glyphicon-remove"></span>
+		</button>
+	{END searchform_showall}
+	{BEGIN searchform_search}
+	<button {$searchbutton_attrs} class="btn btn-primary" >
+		<span class="glyphicon glyphicon-search"></span>
+	</button>
+	{END searchform_search}
+	</span>
+</div>
+		
+</span>
+{END searchform_block}
+
+
+
+</div>
+{END container_more_1}
+
+
+
+
+												</div>						{END container_menu_1}
+
+
+									</nav>{END container_menu}
+	</div>	
+	<div class="container-fluid bs-underheader bs-fixedsidebarmain" id="underheader{$id}">
+		{$header}
+		<div class="bs-sidebar-screenbound">
+			
+
+
+
+{BEGIN container_messagerow}
+<div {$messagerow_chiddenattr} data-pageid="{$pageid}" data-container="messagerow" class="    "> 
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-12 "> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">{$message}</div>
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+</div>
+{END container_messagerow}
+
+
+
+{BEGIN container_gridcontrols}
+<div {$gridcontrols_chiddenattr} data-pageid="{$pageid}" data-container="gridcontrols" class=" bs-navcontrolled bs-hidden-xs   "> 
+
+
+
+
+{BEGIN container_add_delete}
+<div {$add_delete_chiddenattr} data-pageid="{$pageid}" data-container="add_delete" class=" bottom-margin  col-md-6 "> 
+
+{BEGIN newrecord_controls_block}
+		{BEGIN add_link}
+		<a {$add_hiddenattr} data-pageid="{$pageid}" data-brick="add" type="button" class="btn btn-primary" {$addlink_attrs}>追加</a>
+	{END add_link}
+
+		{BEGIN inlineadd_link}
+		<button {$add_hiddenattr} data-pageid="{$pageid}" data-brick="add" type="button" class="btn btn-primary" {$inlineaddlink_attrs}>インライン追加</button>
+	{END inlineadd_link}
+
+{END newrecord_controls_block}
+
+
+{BEGIN record_controls_block}
+<span {$recordcontrol_hiddenattr} data-pageid="{$pageid}" data-brick="recordcontrol">
+		{BEGIN deleteselected_link}
+	<button type="button" class="btn btn-default" {$deleteselectedlink_attrs} {$deleteselectedlink_span} disabled>削除</button>
+	{END deleteselected_link}
+			{BEGIN saveall_link}
+		<button type="button" class="btn btn-primary" {$savealllink_attrs} {$savealllink_span}>全て保存</button>
+	{END saveall_link}
+	{BEGIN cancelall_link}
+		<button type="button" class="btn btn-default" {$cancelalllink_attrs} {$cancelalllink_span}>キャンセル</button>
+	{END cancelall_link}
+</span>
+
+{END record_controls_block}
+
+
+
+</div>
+{END container_add_delete}
+
+
+
+
+
+
+
+
+{BEGIN container_gridinfo}
+<div {$gridinfo_chiddenattr} data-pageid="{$pageid}" data-container="gridinfo" class=" bottom-margin text-right col-md-6 "> 
+
+{BEGIN details_found}
+<span {$details_found_hiddenattr} data-pageid="{$pageid}" data-brick="details_found" class="form-inline form-inline-always">
+	{$records_indicator}
+	<span>
+	{BEGIN recordspp_block}
+			{$recsPerPage}
+	{END recordspp_block}
+	</span>
+</span>
+{END details_found}
+
+
+{BEGIN print_friendly}
+<span {$printpanel_hiddenattr} data-pageid="{$pageid}" data-brick="printpanel" class="bs-printpanel" id="printpanelblock{$id}">
+	<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" title="印刷用ページ">
+		<span class="glyphicon glyphicon-print" ></span>
+		<span class="caret"></span>
+    </button>
+	<ul class="dropdown-menu pull-right" >
+		<li>
+			<div class="container-fluid" id="print_friendly_scope{$id}">
+				<div class="row">
+					<div class="col-md-4">Scope:</div>
+										{BEGIN print_friendly_all}
+					<div class="col-md-8">
+						<label for="printAll{$id}">
+							<input type="radio" id="printAll{$id}" data-href="retblresults_print.php?all=1&amp;{$crosstable_attrs}" name="printScope">
+							Print all pages
+						</label>
+					</div>
+					{END print_friendly_all}
+				</div>
+				<div class="row">
+					<div class="col-md-4">&nbsp;</div>
+					<div class="col-md-8">
+						<label for="printPage{$id}">
+							<input type="radio" id="printPage{$id}" data-href="retblresults_print.php?{$crosstable_attrs}" name="printScope" checked>
+							Print this page
+						</label>
+					</div>
+				</div>
+								<div class="row">
+					<div class="col-md-4">&nbsp;</div>
+					<div class="col-md-8">
+						<label for="printSelection{$id}" style="color: gray;">
+							<input type="radio" id="printSelection{$id}" name="printScope" disabled="disabled">
+							Print selected
+						</label>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li class="divider" role="separator"></li>
+
+		
+				<li>	
+			<div class="rnr-printdetails">
+				<label for="printPerPage{$id}">
+											１頁あたり表示数:
+				</label>
+				<input type="number" id="printPerPage{$id}" value="{$print_recspp}" class="rnr-printrecspp">		
+			</div>
+		</li>
+		<li class="divider" role="separator"></li>
+		<li class="rnr-printbutton">				
+			<button type="button" class="btn btn-primary" id="print_friendly_button{$id}" >Print</button>			
+		</li>
+	</ul>	
+</span>
+
+{END print_friendly}
+
+
+{BEGIN field_hide_panel}
+<div {$bsfieldhidepanel_hiddenattr} data-pageid="{$pageid}" data-brick="bsfieldhidepanel" id="fildhidepanel{$id}" class="keep-open btn-group" title="Show/hide columns">
+	<button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button"><i class="glyphicon glyphicon-th-list"></i> <span class="caret"></span></button>
+	<ul role="menu" class="dropdown-menu dropdown-left">
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_Price" checked="checked" value="1" data-field="Price">
+			  <span>{$label retblresults Price}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_Tax_Amount" checked="checked" value="1" data-field="Tax_Amount">
+			  <span>{$label retblresults Tax_Amount}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_MLS_Number" checked="checked" value="1" data-field="MLS_Number">
+			  <span>{$label retblresults MLS_Number}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_House_Number" checked="checked" value="1" data-field="House_Number">
+			  <span>{$label retblresults House_Number}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_Street_Name" checked="checked" value="1" data-field="Street_Name">
+			  <span>{$label retblresults Street_Name}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_Apartment_Unit" checked="checked" value="1" data-field="Apartment_Unit">
+			  <span>{$label retblresults Apartment_Unit}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_City" checked="checked" value="1" data-field="City">
+			  <span>{$label retblresults City}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_State" checked="checked" value="1" data-field="State">
+			  <span>{$label retblresults State}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_Zip" checked="checked" value="1" data-field="Zip">
+			  <span>{$label retblresults Zip}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_Bedrooms" checked="checked" value="1" data-field="Bedrooms">
+			  <span>{$label retblresults Bedrooms}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_Bathrooms" checked="checked" value="1" data-field="Bathrooms">
+			  <span>{$label retblresults Bathrooms}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_Year" checked="checked" value="1" data-field="Year">
+			  <span>{$label retblresults Year}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_Sq_Ft" checked="checked" value="1" data-field="Sq_Ft">
+			  <span>{$label retblresults Sq_Ft}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_Garage" checked="checked" value="1" data-field="Garage">
+			  <span>{$label retblresults Garage}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_Remarks" checked="checked" value="1" data-field="Remarks">
+			  <span>{$label retblresults Remarks}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_PhotoListing" checked="checked" value="1" data-field="PhotoListing">
+			  <span>{$label retblresults PhotoListing}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+	</ul>
+</div>
+
+{END field_hide_panel}
+
+
+
+</div>
+{END container_gridinfo}
+
+
+
+
+
+
+
+
+{BEGIN container_gridinfo_sort}
+<div {$gridinfo_sort_chiddenattr} data-pageid="{$pageid}" data-container="gridinfo_sort" class=" bottom-margin text-right col-md-12 "> 
+
+{BEGIN reorder_records}
+<div {$reorder_records_hiddenattr} data-pageid="{$pageid}" data-brick="reorder_records" class="form-inline sortby-ctrl">
+Sort by&nbsp;{$sortByDropdown}
+</div>
+
+{END reorder_records}
+
+
+
+</div>
+{END container_gridinfo_sort}
+
+
+
+
+
+
+</div>
+{END container_gridcontrols}
+
+
+		</div>
+		<div></div>
+		<div class="bs-sidebar-screenbound bs-minwidth">
+			
+
+{BEGIN container_center}
+<div {$center_chiddenattr} data-pageid="{$pageid}" data-container="center" class="    "> 
+
+
+
+
+{BEGIN container_grid}
+<div {$grid_chiddenattr} data-pageid="{$pageid}" data-container="grid" class="bs-grid    "> 
+
+{BEGIN grid_block}
+	<style>
+	.bs-gridcell[data-field=PropertyID]:before {
+		content: "{$label retblresults PropertyID}";
+	}
+	.bs-gridcell[data-field=MLS_Number]:before {
+		content: "{$label retblresults MLS_Number}";
+	}
+	.bs-gridcell[data-field=House_Number]:before {
+		content: "{$label retblresults House_Number}";
+	}
+	.bs-gridcell[data-field=Street_Name]:before {
+		content: "{$label retblresults Street_Name}";
+	}
+	.bs-gridcell[data-field=Apartment_Unit]:before {
+		content: "{$label retblresults Apartment_Unit}";
+	}
+	.bs-gridcell[data-field=City]:before {
+		content: "{$label retblresults City}";
+	}
+	.bs-gridcell[data-field=State]:before {
+		content: "{$label retblresults State}";
+	}
+	.bs-gridcell[data-field=Zip]:before {
+		content: "{$label retblresults Zip}";
+	}
+	.bs-gridcell[data-field=Country]:before {
+		content: "{$label retblresults Country}";
+	}
+	.bs-gridcell[data-field=Price]:before {
+		content: "{$label retblresults Price}";
+	}
+	.bs-gridcell[data-field=sType]:before {
+		content: "{$label retblresults sType}";
+	}
+	.bs-gridcell[data-field=Style]:before {
+		content: "{$label retblresults Style}";
+	}
+	.bs-gridcell[data-field=Bedrooms]:before {
+		content: "{$label retblresults Bedrooms}";
+	}
+	.bs-gridcell[data-field=Bathrooms]:before {
+		content: "{$label retblresults Bathrooms}";
+	}
+	.bs-gridcell[data-field=Year]:before {
+		content: "{$label retblresults Year}";
+	}
+	.bs-gridcell[data-field=Foundation]:before {
+		content: "{$label retblresults Foundation}";
+	}
+	.bs-gridcell[data-field=Sq_Ft]:before {
+		content: "{$label retblresults Sq_Ft}";
+	}
+	.bs-gridcell[data-field=Garage]:before {
+		content: "{$label retblresults Garage}";
+	}
+	.bs-gridcell[data-field=Acres]:before {
+		content: "{$label retblresults Acres}";
+	}
+	.bs-gridcell[data-field=Kitchen]:before {
+		content: "{$label retblresults Kitchen}";
+	}
+	.bs-gridcell[data-field=Kitchen_Dimension1]:before {
+		content: "{$label retblresults Kitchen_Dimension1}";
+	}
+	.bs-gridcell[data-field=Kitchen_Dimension2]:before {
+		content: "{$label retblresults Kitchen_Dimension2}";
+	}
+	.bs-gridcell[data-field=Living_Room]:before {
+		content: "{$label retblresults Living_Room}";
+	}
+	.bs-gridcell[data-field=Living_Room_Dimension1]:before {
+		content: "{$label retblresults Living_Room_Dimension1}";
+	}
+	.bs-gridcell[data-field=Living_Room_Dimension2]:before {
+		content: "{$label retblresults Living_Room_Dimension2}";
+	}
+	.bs-gridcell[data-field=Family_Room]:before {
+		content: "{$label retblresults Family_Room}";
+	}
+	.bs-gridcell[data-field=Family_Room_Dimension1]:before {
+		content: "{$label retblresults Family_Room_Dimension1}";
+	}
+	.bs-gridcell[data-field=Family_Room_Dimension2]:before {
+		content: "{$label retblresults Family_Room_Dimension2}";
+	}
+	.bs-gridcell[data-field=Rec_Room]:before {
+		content: "{$label retblresults Rec_Room}";
+	}
+	.bs-gridcell[data-field=Rec_Room_Dimension1]:before {
+		content: "{$label retblresults Rec_Room_Dimension1}";
+	}
+	.bs-gridcell[data-field=Rec_Room_Dimension2]:before {
+		content: "{$label retblresults Rec_Room_Dimension2}";
+	}
+	.bs-gridcell[data-field=Study_Room]:before {
+		content: "{$label retblresults Study_Room}";
+	}
+	.bs-gridcell[data-field=Study_Room_Dimension1]:before {
+		content: "{$label retblresults Study_Room_Dimension1}";
+	}
+	.bs-gridcell[data-field=Study_Room_Dimension2]:before {
+		content: "{$label retblresults Study_Room_Dimension2}";
+	}
+	.bs-gridcell[data-field=Sun_Room]:before {
+		content: "{$label retblresults Sun_Room}";
+	}
+	.bs-gridcell[data-field=Sun_Room_Dimension1]:before {
+		content: "{$label retblresults Sun_Room_Dimension1}";
+	}
+	.bs-gridcell[data-field=Sun_Room_Dimension2]:before {
+		content: "{$label retblresults Sun_Room_Dimension2}";
+	}
+	.bs-gridcell[data-field=Loft]:before {
+		content: "{$label retblresults Loft}";
+	}
+	.bs-gridcell[data-field=Loft_Dimension1]:before {
+		content: "{$label retblresults Loft_Dimension1}";
+	}
+	.bs-gridcell[data-field=Loft_Dimension2]:before {
+		content: "{$label retblresults Loft_Dimension2}";
+	}
+	.bs-gridcell[data-field=Dinning_Room]:before {
+		content: "{$label retblresults Dinning_Room}";
+	}
+	.bs-gridcell[data-field=Dinning_Room_Dimension1]:before {
+		content: "{$label retblresults Dinning_Room_Dimension1}";
+	}
+	.bs-gridcell[data-field=Dinning_Room_Dimension2]:before {
+		content: "{$label retblresults Dinning_Room_Dimension2}";
+	}
+	.bs-gridcell[data-field=Amusement_Room]:before {
+		content: "{$label retblresults Amusement_Room}";
+	}
+	.bs-gridcell[data-field=Amusement_Room_Dimension1]:before {
+		content: "{$label retblresults Amusement_Room_Dimension1}";
+	}
+	.bs-gridcell[data-field=Amusement_Room_Dimension2]:before {
+		content: "{$label retblresults Amusement_Room_Dimension2}";
+	}
+	.bs-gridcell[data-field=Foyer]:before {
+		content: "{$label retblresults Foyer}";
+	}
+	.bs-gridcell[data-field=Foyer_Dimension1]:before {
+		content: "{$label retblresults Foyer_Dimension1}";
+	}
+	.bs-gridcell[data-field=Foyer_Dimension2]:before {
+		content: "{$label retblresults Foyer_Dimension2}";
+	}
+	.bs-gridcell[data-field=Office]:before {
+		content: "{$label retblresults Office}";
+	}
+	.bs-gridcell[data-field=Office_Dimension1]:before {
+		content: "{$label retblresults Office_Dimension1}";
+	}
+	.bs-gridcell[data-field=Office_Dimension2]:before {
+		content: "{$label retblresults Office_Dimension2}";
+	}
+	.bs-gridcell[data-field=Den]:before {
+		content: "{$label retblresults Den}";
+	}
+	.bs-gridcell[data-field=Den_Dimension1]:before {
+		content: "{$label retblresults Den_Dimension1}";
+	}
+	.bs-gridcell[data-field=Den_Dimension2]:before {
+		content: "{$label retblresults Den_Dimension2}";
+	}
+	.bs-gridcell[data-field=FullBaths]:before {
+		content: "{$label retblresults FullBaths}";
+	}
+	.bs-gridcell[data-field=s3_4Baths]:before {
+		content: "{$label retblresults s3_4Baths}";
+	}
+	.bs-gridcell[data-field=s1_2Baths]:before {
+		content: "{$label retblresults s1_2Baths}";
+	}
+	.bs-gridcell[data-field=Fireplaces]:before {
+		content: "{$label retblresults Fireplaces}";
+	}
+	.bs-gridcell[data-field=Wood_Burning_Fireplace]:before {
+		content: "{$label retblresults Wood_Burning_Fireplace}";
+	}
+	.bs-gridcell[data-field=Gas_Burning_Fireplace]:before {
+		content: "{$label retblresults Gas_Burning_Fireplace}";
+	}
+	.bs-gridcell[data-field=Range]:before {
+		content: "{$label retblresults Range}";
+	}
+	.bs-gridcell[data-field=Cooktop]:before {
+		content: "{$label retblresults Cooktop}";
+	}
+	.bs-gridcell[data-field=Dishwasher]:before {
+		content: "{$label retblresults Dishwasher}";
+	}
+	.bs-gridcell[data-field=Disposal]:before {
+		content: "{$label retblresults Disposal}";
+	}
+	.bs-gridcell[data-field=Dryer]:before {
+		content: "{$label retblresults Dryer}";
+	}
+	.bs-gridcell[data-field=Exhaust_Fan_Hood]:before {
+		content: "{$label retblresults Exhaust_Fan_Hood}";
+	}
+	.bs-gridcell[data-field=Microwave]:before {
+		content: "{$label retblresults Microwave}";
+	}
+	.bs-gridcell[data-field=Refrigerator]:before {
+		content: "{$label retblresults Refrigerator}";
+	}
+	.bs-gridcell[data-field=Wall_Oven]:before {
+		content: "{$label retblresults Wall_Oven}";
+	}
+	.bs-gridcell[data-field=Water_Softener]:before {
+		content: "{$label retblresults Water_Softener}";
+	}
+	.bs-gridcell[data-field=Eat_In_Kitchen]:before {
+		content: "{$label retblresults Eat_In_Kitchen}";
+	}
+	.bs-gridcell[data-field=Kitchen_Dining_Room]:before {
+		content: "{$label retblresults Kitchen_Dining_Room}";
+	}
+	.bs-gridcell[data-field=Separate_Formal_Dining_Room]:before {
+		content: "{$label retblresults Separate_Formal_Dining_Room}";
+	}
+	.bs-gridcell[data-field=Basement]:before {
+		content: "{$label retblresults Basement}";
+	}
+	.bs-gridcell[data-field=Finished_Basement]:before {
+		content: "{$label retblresults Finished_Basement}";
+	}
+	.bs-gridcell[data-field=Drain_Tiled]:before {
+		content: "{$label retblresults Drain_Tiled}";
+	}
+	.bs-gridcell[data-field=Sum_Pump]:before {
+		content: "{$label retblresults Sum_Pump}";
+	}
+	.bs-gridcell[data-field=Walkout]:before {
+		content: "{$label retblresults Walkout}";
+	}
+	.bs-gridcell[data-field=Daylight_Lookout_Windows]:before {
+		content: "{$label retblresults Daylight_Lookout_Windows}";
+	}
+	.bs-gridcell[data-field=Cooling]:before {
+		content: "{$label retblresults Cooling}";
+	}
+	.bs-gridcell[data-field=Heating]:before {
+		content: "{$label retblresults Heating}";
+	}
+	.bs-gridcell[data-field=Lot]:before {
+		content: "{$label retblresults Lot}";
+	}
+	.bs-gridcell[data-field=Lot_Dimension1]:before {
+		content: "{$label retblresults Lot_Dimension1}";
+	}
+	.bs-gridcell[data-field=Lot_Dimension2]:before {
+		content: "{$label retblresults Lot_Dimension2}";
+	}
+	.bs-gridcell[data-field=Lot_Dimension3]:before {
+		content: "{$label retblresults Lot_Dimension3}";
+	}
+	.bs-gridcell[data-field=Lot_Dimension4]:before {
+		content: "{$label retblresults Lot_Dimension4}";
+	}
+	.bs-gridcell[data-field=Lot_Dimension5]:before {
+		content: "{$label retblresults Lot_Dimension5}";
+	}
+	.bs-gridcell[data-field=Lot_Dimension6]:before {
+		content: "{$label retblresults Lot_Dimension6}";
+	}
+	.bs-gridcell[data-field=Lot_Dimension7]:before {
+		content: "{$label retblresults Lot_Dimension7}";
+	}
+	.bs-gridcell[data-field=Lot_Dimension8]:before {
+		content: "{$label retblresults Lot_Dimension8}";
+	}
+	.bs-gridcell[data-field=Tax_Amount]:before {
+		content: "{$label retblresults Tax_Amount}";
+	}
+	.bs-gridcell[data-field=Tax_Year]:before {
+		content: "{$label retblresults Tax_Year}";
+	}
+	.bs-gridcell[data-field=Remarks]:before {
+		content: "{$label retblresults Remarks}";
+	}
+	.bs-gridcell[data-field=PhotoListing]:before {
+		content: "{$label retblresults PhotoListing}";
+	}
+	.bs-gridcell[data-field=Photo1]:before {
+		content: "{$label retblresults Photo1}";
+	}
+	.bs-gridcell[data-field=Photo2]:before {
+		content: "{$label retblresults Photo2}";
+	}
+	.bs-gridcell[data-field=Photo3]:before {
+		content: "{$label retblresults Photo3}";
+	}
+	.bs-gridcell[data-field=Photo4]:before {
+		content: "{$label retblresults Photo4}";
+	}
+	.bs-gridcell[data-field=Photo5]:before {
+		content: "{$label retblresults Photo5}";
+	}
+	.bs-gridcell[data-field=Photo6]:before {
+		content: "{$label retblresults Photo6}";
+	}
+	.bs-gridcell[data-field=Photo7]:before {
+		content: "{$label retblresults Photo7}";
+	}
+	.bs-gridcell[data-field=Photo8]:before {
+		content: "{$label retblresults Photo8}";
+	}
+	.bs-gridcell[data-field=Photo9]:before {
+		content: "{$label retblresults Photo9}";
+	}
+	.bs-gridcell[data-field=Photo10]:before {
+		content: "{$label retblresults Photo10}";
+	}
+</style>
+<table {$grid_hiddenattr} data-pageid="{$pageid}" data-brick="grid" class="table {$grid_classes} bs-flexgrid rnr-b-grid rnr-gridtable" cellpadding="0" >
+	<thead>
+										{BEGIN grid_header}
+								<tr class="rnr-toprow {$gridHeader_class}" >
+									{BEGIN record_header}
+									{BEGIN listIcons_column}
+									<th iEditCont="all">&nbsp;</th>
+									{END listIcons_column}	
+
+																		{BEGIN checkbox_column}
+									<th class="">
+										<input type="checkbox" {$checkboxheader_attrs}>
+									</th>
+									{END checkbox_column}
+
+																		
+									{BEGIN Price_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Price_class}" data-field=Price>
+									{BEGIN Price_fieldheader}
+																				<span {$Price_orderlinkattrs}>
+											{$label retblresults Price}
+										</span>
+									{END Price_fieldheader}
+									</th>
+									{END Price_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Tax_Amount_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Tax_Amount_class}" data-field=Tax_Amount>
+									{BEGIN Tax_Amount_fieldheader}
+																				<span {$Tax_Amount_orderlinkattrs}>
+											{$label retblresults Tax_Amount}
+										</span>
+									{END Tax_Amount_fieldheader}
+									</th>
+									{END Tax_Amount_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN MLS_Number_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$MLS_Number_class}" data-field=MLS_Number>
+									{BEGIN MLS_Number_fieldheader}
+																				<span {$MLS_Number_orderlinkattrs}>
+											{$label retblresults MLS_Number}
+										</span>
+									{END MLS_Number_fieldheader}
+									</th>
+									{END MLS_Number_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN House_Number_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$House_Number_class}" data-field=House_Number>
+									{BEGIN House_Number_fieldheader}
+																				<span {$House_Number_orderlinkattrs}>
+											{$label retblresults House_Number}
+										</span>
+									{END House_Number_fieldheader}
+									</th>
+									{END House_Number_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Street_Name_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Street_Name_class}" data-field=Street_Name>
+									{BEGIN Street_Name_fieldheader}
+																				<span {$Street_Name_orderlinkattrs}>
+											{$label retblresults Street_Name}
+										</span>
+									{END Street_Name_fieldheader}
+									</th>
+									{END Street_Name_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Apartment_Unit_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Apartment_Unit_class}" data-field=Apartment_Unit>
+									{BEGIN Apartment_Unit_fieldheader}
+																				<span {$Apartment_Unit_orderlinkattrs}>
+											{$label retblresults Apartment_Unit}
+										</span>
+									{END Apartment_Unit_fieldheader}
+									</th>
+									{END Apartment_Unit_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN City_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$City_class}" data-field=City>
+									{BEGIN City_fieldheader}
+																				<span {$City_orderlinkattrs}>
+											{$label retblresults City}
+										</span>
+									{END City_fieldheader}
+									</th>
+									{END City_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN State_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$State_class}" data-field=State>
+									{BEGIN State_fieldheader}
+																				<span {$State_orderlinkattrs}>
+											{$label retblresults State}
+										</span>
+									{END State_fieldheader}
+									</th>
+									{END State_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Zip_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Zip_class}" data-field=Zip>
+									{BEGIN Zip_fieldheader}
+																				<span {$Zip_orderlinkattrs}>
+											{$label retblresults Zip}
+										</span>
+									{END Zip_fieldheader}
+									</th>
+									{END Zip_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Bedrooms_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Bedrooms_class}" data-field=Bedrooms>
+									{BEGIN Bedrooms_fieldheader}
+																				<span {$Bedrooms_orderlinkattrs}>
+											{$label retblresults Bedrooms}
+										</span>
+									{END Bedrooms_fieldheader}
+									</th>
+									{END Bedrooms_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Bathrooms_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Bathrooms_class}" data-field=Bathrooms>
+									{BEGIN Bathrooms_fieldheader}
+																				<span {$Bathrooms_orderlinkattrs}>
+											{$label retblresults Bathrooms}
+										</span>
+									{END Bathrooms_fieldheader}
+									</th>
+									{END Bathrooms_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Year_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Year_class}" data-field=Year>
+									{BEGIN Year_fieldheader}
+																				<span {$Year_orderlinkattrs}>
+											{$label retblresults Year}
+										</span>
+									{END Year_fieldheader}
+									</th>
+									{END Year_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Sq_Ft_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Sq_Ft_class}" data-field=Sq_Ft>
+									{BEGIN Sq_Ft_fieldheader}
+																				<span {$Sq_Ft_orderlinkattrs}>
+											{$label retblresults Sq_Ft}
+										</span>
+									{END Sq_Ft_fieldheader}
+									</th>
+									{END Sq_Ft_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Garage_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Garage_class}" data-field=Garage>
+									{BEGIN Garage_fieldheader}
+																				<span {$Garage_orderlinkattrs}>
+											{$label retblresults Garage}
+										</span>
+									{END Garage_fieldheader}
+									</th>
+									{END Garage_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN Remarks_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$Remarks_class}" data-field=Remarks>
+									{BEGIN Remarks_fieldheader}
+																				<span {$Remarks_orderlinkattrs}>
+											{$label retblresults Remarks}
+										</span>
+									{END Remarks_fieldheader}
+									</th>
+									{END Remarks_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN PhotoListing_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$PhotoListing_class}" data-field=PhotoListing>
+									{BEGIN PhotoListing_fieldheader}
+																				<span {$PhotoListing_orderlinkattrs}>
+											{$label retblresults PhotoListing}
+										</span>
+									{END PhotoListing_fieldheader}
+									</th>
+									{END PhotoListing_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN endrecordheader_block}
+									<th class="rnr-cs">&nbsp;</th>
+									
+									{END endrecordheader_block}
+									
+									{END record_header}
+									
+								</tr>
+								{END grid_header}
+
+	</thead>
+	<tbody>	
+		{BEGIN grid_row}
+<tr class="{$rowclass} bs-gridrow" {$rowattrs} {$rowstyle}>
+	{BEGIN grid_record}
+	{BEGIN listIcons_column}
+	<td class="bs-gridicons" iEditCont="all" {$rowstyle} {$recordattrs}>
+		{BEGIN edit_column}
+	{BEGIN edit_link}
+			<a class="glyphicon glyphicon-pencil" {$editlink_attrs} title="編集"></a>
+	{END edit_link}
+	{END edit_column}
+
+		{BEGIN inlineedit_column}
+	{BEGIN inlineedit_link}
+			<a class="glyphicon glyphicon-edit" {$inlineeditlink_attrs} title="編集"></a>
+	{END inlineedit_link}
+	{END inlineedit_column}
+
+	
+		{BEGIN view_column}
+	{BEGIN view_link}
+			<a class="glyphicon glyphicon-search" {$viewlink_attrs} title="表示"></a>
+	{END view_link}
+	{END view_column}
+	</td>	
+	{END listIcons_column}	
+
+		{BEGIN checkbox_column}
+	<td  iEditCont="checkBox" class="bs-gridcheckbox" {$rowstyle} {$recordattrs}>
+	{BEGIN checkbox}
+	<input type="checkbox" {$checkbox_attrs}>
+	{END checkbox}
+	</td>
+	{END checkbox_column}
+
+	
+
+	{BEGIN Price_fieldcolumn}
+	<td class="bs-gridcell {$Price_class}"  data-field=Price {$rowstyle} {$recordattrs}>
+		{$Price_value}
+	</td>
+{END Price_fieldcolumn}
+
+
+	{BEGIN Tax_Amount_fieldcolumn}
+	<td class="bs-gridcell {$Tax_Amount_class}"  data-field=Tax_Amount {$rowstyle} {$recordattrs}>
+		{$Tax_Amount_value}
+	</td>
+{END Tax_Amount_fieldcolumn}
+
+
+	{BEGIN MLS_Number_fieldcolumn}
+	<td class="bs-gridcell {$MLS_Number_class}"  data-field=MLS_Number {$rowstyle} {$recordattrs}>
+		{$MLS_Number_value}
+	</td>
+{END MLS_Number_fieldcolumn}
+
+
+	{BEGIN House_Number_fieldcolumn}
+	<td class="bs-gridcell {$House_Number_class}"  data-field=House_Number {$rowstyle} {$recordattrs}>
+		{$House_Number_value}
+	</td>
+{END House_Number_fieldcolumn}
+
+
+	{BEGIN Street_Name_fieldcolumn}
+	<td class="bs-gridcell {$Street_Name_class}"  data-field=Street_Name {$rowstyle} {$recordattrs}>
+		{$Street_Name_value}
+	</td>
+{END Street_Name_fieldcolumn}
+
+
+	{BEGIN Apartment_Unit_fieldcolumn}
+	<td class="bs-gridcell {$Apartment_Unit_class}"  data-field=Apartment_Unit {$rowstyle} {$recordattrs}>
+		{$Apartment_Unit_value}
+	</td>
+{END Apartment_Unit_fieldcolumn}
+
+
+	{BEGIN City_fieldcolumn}
+	<td class="bs-gridcell {$City_class}"  data-field=City {$rowstyle} {$recordattrs}>
+		{$City_value}
+	</td>
+{END City_fieldcolumn}
+
+
+	{BEGIN State_fieldcolumn}
+	<td class="bs-gridcell {$State_class}"  data-field=State {$rowstyle} {$recordattrs}>
+		{$State_value}
+	</td>
+{END State_fieldcolumn}
+
+
+	{BEGIN Zip_fieldcolumn}
+	<td class="bs-gridcell {$Zip_class}"  data-field=Zip {$rowstyle} {$recordattrs}>
+		{$Zip_value}
+	</td>
+{END Zip_fieldcolumn}
+
+
+	{BEGIN Bedrooms_fieldcolumn}
+	<td class="bs-gridcell {$Bedrooms_class}"  data-field=Bedrooms {$rowstyle} {$recordattrs}>
+		{$Bedrooms_value}
+	</td>
+{END Bedrooms_fieldcolumn}
+
+
+	{BEGIN Bathrooms_fieldcolumn}
+	<td class="bs-gridcell {$Bathrooms_class}"  data-field=Bathrooms {$rowstyle} {$recordattrs}>
+		{$Bathrooms_value}
+	</td>
+{END Bathrooms_fieldcolumn}
+
+
+	{BEGIN Year_fieldcolumn}
+	<td class="bs-gridcell {$Year_class}"  data-field=Year {$rowstyle} {$recordattrs}>
+		{$Year_value}
+	</td>
+{END Year_fieldcolumn}
+
+
+	{BEGIN Sq_Ft_fieldcolumn}
+	<td class="bs-gridcell {$Sq_Ft_class}"  data-field=Sq_Ft {$rowstyle} {$recordattrs}>
+		{$Sq_Ft_value}
+	</td>
+{END Sq_Ft_fieldcolumn}
+
+
+	{BEGIN Garage_fieldcolumn}
+	<td class="bs-gridcell {$Garage_class}"  data-field=Garage {$rowstyle} {$recordattrs}>
+		{$Garage_value}
+	</td>
+{END Garage_fieldcolumn}
+
+
+	{BEGIN Remarks_fieldcolumn}
+	<td class="bs-gridcell {$Remarks_class}"  data-field=Remarks {$rowstyle} {$recordattrs}>
+		{$Remarks_value}
+	</td>
+{END Remarks_fieldcolumn}
+
+
+	{BEGIN PhotoListing_fieldcolumn}
+	<td class="bs-gridcell {$PhotoListing_class}"  data-field=PhotoListing {$rowstyle} {$recordattrs}>
+		{$PhotoListing_value}
+	</td>
+{END PhotoListing_fieldcolumn}
+
+	{BEGIN endrecord_block}
+	<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+	{END endrecord_block}
+									
+	{END grid_record}
+
+</tr>
+{END grid_row}
+	</tbody>
+	<tfoot>
+										
+	</tfoot>
+</table>
+
+
+
+{END grid_block}
+
+
+
+</div>
+{END container_grid}
+
+
+
+
+
+
+</div>
+{END container_center}
+
+
+
+{BEGIN container_pagination}
+<div {$pagination_chiddenattr} data-pageid="{$pageid}" data-container="pagination" class="  text-center col-md-12 "> 
+
+{BEGIN pagination_block}
+<div {$pagination_hiddenattr} data-pageid="{$pageid}" data-brick="pagination">
+{$pagination}
+</div>
+{END pagination_block}
+
+
+
+</div>
+{END container_pagination}
+
+
+		</div>
+	</div>
+</div>
+	
+
+		{$footer}
+	{END body}
+	</body>
+</html>

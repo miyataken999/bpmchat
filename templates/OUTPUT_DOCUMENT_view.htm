@@ -1,0 +1,474 @@
+<!doctype html>
+<html  {$html_attrs}>
+  <head>asdfsfs
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      {$pagetitle}
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link REL="stylesheet" href="styles/default.css" type="text/css">
+    {BEGIN rtlCSS}
+      <link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+    {END rtlCSS}
+    {BEGIN styleCSSFiles}
+      <link REL="stylesheet" href="{$stylepath}" type="text/css">
+    {END styleCSSFiles}
+  </head>
+  <BODY class="{$stylename} function-view" {$bodyattrs}>
+    {BEGIN body}
+      {$header}
+      <style>
+        {$containerCss}
+      </style>
+      <DIV class="bs-top">
+        
+
+{BEGIN container_viewpage}
+<div {$viewpage_chiddenattr} data-pageid="{$pageid}" data-container="viewpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN viewheader}
+	<h2 {$viewheader_hiddenattr} data-pageid="{$pageid}" data-brick="viewheader" >{$pagetitlelabel OUTPUT_DOCUMENT view}</h2>
+
+{END viewheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_viewpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class=" form-horizontal  col-md-12 "> 
+
+
+<div {$viewfields_hiddenattr} data-pageid="{$pageid}" data-brick="viewfields" >
+	{BEGIN OUT_DOC_UID_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_OUT_DOC_UID} bs-viewform-group" data-fieldname="OUT_DOC_UID">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_OUT_DOC_UID}">
+			{$label OUTPUT_DOCUMENT OUT_DOC_UID}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$OUT_DOC_UID_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END OUT_DOC_UID_fieldblock}
+	{BEGIN PRO_UID_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_PRO_UID} bs-viewform-group" data-fieldname="PRO_UID">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_PRO_UID}">
+			{$label OUTPUT_DOCUMENT PRO_UID}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$PRO_UID_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END PRO_UID_fieldblock}
+	{BEGIN OUT_DOC_REPORT_GENERATOR_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_OUT_DOC_REPORT_GENERATOR} bs-viewform-group" data-fieldname="OUT_DOC_REPORT_GENERATOR">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_OUT_DOC_REPORT_GENERATOR}">
+			{$label OUTPUT_DOCUMENT OUT_DOC_REPORT_GENERATOR}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$OUT_DOC_REPORT_GENERATOR_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END OUT_DOC_REPORT_GENERATOR_fieldblock}
+	{BEGIN OUT_DOC_LANDSCAPE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_OUT_DOC_LANDSCAPE} bs-viewform-group" data-fieldname="OUT_DOC_LANDSCAPE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_OUT_DOC_LANDSCAPE}">
+			{$label OUTPUT_DOCUMENT OUT_DOC_LANDSCAPE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$OUT_DOC_LANDSCAPE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END OUT_DOC_LANDSCAPE_fieldblock}
+	{BEGIN OUT_DOC_MEDIA_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_OUT_DOC_MEDIA} bs-viewform-group" data-fieldname="OUT_DOC_MEDIA">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_OUT_DOC_MEDIA}">
+			{$label OUTPUT_DOCUMENT OUT_DOC_MEDIA}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$OUT_DOC_MEDIA_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END OUT_DOC_MEDIA_fieldblock}
+	{BEGIN OUT_DOC_LEFT_MARGIN_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_OUT_DOC_LEFT_MARGIN} bs-viewform-group" data-fieldname="OUT_DOC_LEFT_MARGIN">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_OUT_DOC_LEFT_MARGIN}">
+			{$label OUTPUT_DOCUMENT OUT_DOC_LEFT_MARGIN}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$OUT_DOC_LEFT_MARGIN_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END OUT_DOC_LEFT_MARGIN_fieldblock}
+	{BEGIN OUT_DOC_RIGHT_MARGIN_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_OUT_DOC_RIGHT_MARGIN} bs-viewform-group" data-fieldname="OUT_DOC_RIGHT_MARGIN">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_OUT_DOC_RIGHT_MARGIN}">
+			{$label OUTPUT_DOCUMENT OUT_DOC_RIGHT_MARGIN}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$OUT_DOC_RIGHT_MARGIN_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END OUT_DOC_RIGHT_MARGIN_fieldblock}
+	{BEGIN OUT_DOC_TOP_MARGIN_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_OUT_DOC_TOP_MARGIN} bs-viewform-group" data-fieldname="OUT_DOC_TOP_MARGIN">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_OUT_DOC_TOP_MARGIN}">
+			{$label OUTPUT_DOCUMENT OUT_DOC_TOP_MARGIN}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$OUT_DOC_TOP_MARGIN_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END OUT_DOC_TOP_MARGIN_fieldblock}
+	{BEGIN OUT_DOC_BOTTOM_MARGIN_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_OUT_DOC_BOTTOM_MARGIN} bs-viewform-group" data-fieldname="OUT_DOC_BOTTOM_MARGIN">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_OUT_DOC_BOTTOM_MARGIN}">
+			{$label OUTPUT_DOCUMENT OUT_DOC_BOTTOM_MARGIN}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$OUT_DOC_BOTTOM_MARGIN_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END OUT_DOC_BOTTOM_MARGIN_fieldblock}
+	{BEGIN OUT_DOC_GENERATE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_OUT_DOC_GENERATE} bs-viewform-group" data-fieldname="OUT_DOC_GENERATE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_OUT_DOC_GENERATE}">
+			{$label OUTPUT_DOCUMENT OUT_DOC_GENERATE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$OUT_DOC_GENERATE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END OUT_DOC_GENERATE_fieldblock}
+	{BEGIN OUT_DOC_TYPE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_OUT_DOC_TYPE} bs-viewform-group" data-fieldname="OUT_DOC_TYPE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_OUT_DOC_TYPE}">
+			{$label OUTPUT_DOCUMENT OUT_DOC_TYPE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$OUT_DOC_TYPE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END OUT_DOC_TYPE_fieldblock}
+	{BEGIN OUT_DOC_CURRENT_REVISION_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_OUT_DOC_CURRENT_REVISION} bs-viewform-group" data-fieldname="OUT_DOC_CURRENT_REVISION">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_OUT_DOC_CURRENT_REVISION}">
+			{$label OUTPUT_DOCUMENT OUT_DOC_CURRENT_REVISION}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$OUT_DOC_CURRENT_REVISION_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END OUT_DOC_CURRENT_REVISION_fieldblock}
+	{BEGIN OUT_DOC_FIELD_MAPPING_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_OUT_DOC_FIELD_MAPPING} bs-viewform-group" data-fieldname="OUT_DOC_FIELD_MAPPING">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_OUT_DOC_FIELD_MAPPING}">
+			{$label OUTPUT_DOCUMENT OUT_DOC_FIELD_MAPPING}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$OUT_DOC_FIELD_MAPPING_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END OUT_DOC_FIELD_MAPPING_fieldblock}
+	{BEGIN OUT_DOC_VERSIONING_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_OUT_DOC_VERSIONING} bs-viewform-group" data-fieldname="OUT_DOC_VERSIONING">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_OUT_DOC_VERSIONING}">
+			{$label OUTPUT_DOCUMENT OUT_DOC_VERSIONING}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$OUT_DOC_VERSIONING_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END OUT_DOC_VERSIONING_fieldblock}
+	{BEGIN OUT_DOC_DESTINATION_PATH_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_OUT_DOC_DESTINATION_PATH} bs-viewform-group" data-fieldname="OUT_DOC_DESTINATION_PATH">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_OUT_DOC_DESTINATION_PATH}">
+			{$label OUTPUT_DOCUMENT OUT_DOC_DESTINATION_PATH}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$OUT_DOC_DESTINATION_PATH_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END OUT_DOC_DESTINATION_PATH_fieldblock}
+	{BEGIN OUT_DOC_TAGS_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_OUT_DOC_TAGS} bs-viewform-group" data-fieldname="OUT_DOC_TAGS">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_OUT_DOC_TAGS}">
+			{$label OUTPUT_DOCUMENT OUT_DOC_TAGS}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$OUT_DOC_TAGS_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END OUT_DOC_TAGS_fieldblock}
+	{BEGIN OUT_DOC_PDF_SECURITY_ENABLED_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_OUT_DOC_PDF_SECURITY_ENABLED} bs-viewform-group" data-fieldname="OUT_DOC_PDF_SECURITY_ENABLED">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_OUT_DOC_PDF_SECURITY_ENABLED}">
+			{$label OUTPUT_DOCUMENT OUT_DOC_PDF_SECURITY_ENABLED}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$OUT_DOC_PDF_SECURITY_ENABLED_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END OUT_DOC_PDF_SECURITY_ENABLED_fieldblock}
+	{BEGIN OUT_DOC_PDF_SECURITY_OPEN_PASSWORD_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_OUT_DOC_PDF_SECURITY_OPEN_PASSWORD} bs-viewform-group" data-fieldname="OUT_DOC_PDF_SECURITY_OPEN_PASSWORD">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_OUT_DOC_PDF_SECURITY_OPEN_PASSWORD}">
+			{$label OUTPUT_DOCUMENT OUT_DOC_PDF_SECURITY_OPEN_PASSWORD}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$OUT_DOC_PDF_SECURITY_OPEN_PASSWORD_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END OUT_DOC_PDF_SECURITY_OPEN_PASSWORD_fieldblock}
+	{BEGIN OUT_DOC_PDF_SECURITY_OWNER_PASSWORD_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_OUT_DOC_PDF_SECURITY_OWNER_PASSWORD} bs-viewform-group" data-fieldname="OUT_DOC_PDF_SECURITY_OWNER_PASSWORD">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_OUT_DOC_PDF_SECURITY_OWNER_PASSWORD}">
+			{$label OUTPUT_DOCUMENT OUT_DOC_PDF_SECURITY_OWNER_PASSWORD}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$OUT_DOC_PDF_SECURITY_OWNER_PASSWORD_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END OUT_DOC_PDF_SECURITY_OWNER_PASSWORD_fieldblock}
+	{BEGIN OUT_DOC_PDF_SECURITY_PERMISSIONS_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_OUT_DOC_PDF_SECURITY_PERMISSIONS} bs-viewform-group" data-fieldname="OUT_DOC_PDF_SECURITY_PERMISSIONS">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_OUT_DOC_PDF_SECURITY_PERMISSIONS}">
+			{$label OUTPUT_DOCUMENT OUT_DOC_PDF_SECURITY_PERMISSIONS}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$OUT_DOC_PDF_SECURITY_PERMISSIONS_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END OUT_DOC_PDF_SECURITY_PERMISSIONS_fieldblock}
+	{BEGIN OUT_DOC_OPEN_TYPE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_OUT_DOC_OPEN_TYPE} bs-viewform-group" data-fieldname="OUT_DOC_OPEN_TYPE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_OUT_DOC_OPEN_TYPE}">
+			{$label OUTPUT_DOCUMENT OUT_DOC_OPEN_TYPE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$OUT_DOC_OPEN_TYPE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END OUT_DOC_OPEN_TYPE_fieldblock}
+	{BEGIN OUT_DOC_TITLE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_OUT_DOC_TITLE} bs-viewform-group" data-fieldname="OUT_DOC_TITLE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_OUT_DOC_TITLE}">
+			{$label OUTPUT_DOCUMENT OUT_DOC_TITLE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$OUT_DOC_TITLE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END OUT_DOC_TITLE_fieldblock}
+	{BEGIN OUT_DOC_DESCRIPTION_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_OUT_DOC_DESCRIPTION} bs-viewform-group" data-fieldname="OUT_DOC_DESCRIPTION">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_OUT_DOC_DESCRIPTION}">
+			{$label OUTPUT_DOCUMENT OUT_DOC_DESCRIPTION}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$OUT_DOC_DESCRIPTION_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END OUT_DOC_DESCRIPTION_fieldblock}
+	{BEGIN OUT_DOC_FILENAME_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_OUT_DOC_FILENAME} bs-viewform-group" data-fieldname="OUT_DOC_FILENAME">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_OUT_DOC_FILENAME}">
+			{$label OUTPUT_DOCUMENT OUT_DOC_FILENAME}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$OUT_DOC_FILENAME_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END OUT_DOC_FILENAME_fieldblock}
+	{BEGIN OUT_DOC_TEMPLATE_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_OUT_DOC_TEMPLATE} bs-viewform-group" data-fieldname="OUT_DOC_TEMPLATE">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_OUT_DOC_TEMPLATE}">
+			{$label OUTPUT_DOCUMENT OUT_DOC_TEMPLATE}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$OUT_DOC_TEMPLATE_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END OUT_DOC_TEMPLATE_fieldblock}
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN viewbuttons}
+{BEGIN back_button}
+<button class="btn btn-primary" {$backbutton_attrs}>{mlang_message BACK_TO_LIST}</button>
+{END back_button}
+{BEGIN close_button}
+<button href="#" class="btn btn-primary" {$closebutton_attrs}>{mlang_message CLOSE_WINDOW}</button>
+{END close_button}
+{END viewbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+
+
+{BEGIN container_leftbuttons_1}
+<div {$leftbuttons_1_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons_1" class="  text-right col-md-3 "> 
+
+{BEGIN rightviewbuttons}
+<div class="btn-group" role="group">
+		{BEGIN prev_button}
+	<button class="btn btn-default {$prevbutton_class}" {$prevbutton_attrs}><span class="glyphicon glyphicon-chevron-left"></span></button>
+	{END prev_button}
+	{BEGIN next_button}
+	<button class="btn btn-default {$nextbutton_class}" {$nextbutton_attrs}><span class="glyphicon glyphicon-chevron-right"></span></button>
+	{END next_button}
+		{BEGIN view_menu_button}
+	<div class="btn-group dropup" role="group">
+		<button class="btn btn-default dropdown-toggle {$groupbutton_class}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+		<ul class="dropdown-menu dropdown-left">
+									{BEGIN edit_page_button}
+				<li><a href=# {$edit_page_button_attrs}>{mlang_message EDIT}</a></li>
+			{END edit_page_button}
+		</ul>
+	</div>
+	{END view_menu_button}
+</div>
+{END rightviewbuttons}
+
+
+
+</div>
+{END container_leftbuttons_1}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+      </div>
+      <DIV class="bs-middle ">
+        <DIV class="bs-topmiddle">
+          
+        </div>
+        <DIV class="bs-left" {$blockattr_left}>
+          
+        </div>
+        <DIV class="bs-center">
+          
+        </div>
+        <DIV class="bs-right">
+          
+        </div>
+      </div>
+      <DIV class="bs-bottom">
+        
+      </div>
+      {$footer}
+    {END body}
+  </body>
+</html>

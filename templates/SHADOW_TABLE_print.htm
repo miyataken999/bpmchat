@@ -1,0 +1,192 @@
+<!doctype html>
+<html  {$html_attrs}>
+  <head>asdfsfs
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      {$pagetitle}
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link REL="stylesheet" href="styles/default.css" type="text/css">
+    {BEGIN rtlCSS}
+      <link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+    {END rtlCSS}
+    {BEGIN styleCSSFiles}
+      <link REL="stylesheet" href="{$stylepath}" type="text/css">
+    {END styleCSSFiles}
+  </head>
+  <BODY class="{$stylename} function-print" {$bodyattrs}>
+    {BEGIN body}
+      {$header}
+      <style>
+        {$containerCss}
+      </style>
+      <DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel SHADOW_TABLE print}</h2>
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>{mlang_message PAGE1} <span class="rp-pageno">{$pageno}</span> {mlang_message PAGE2} <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="table table-bordered rp-maintable" {$printgrid_hiddenattr} data-pageid="{$pageid}" data-brick="printgrid" >
+	<thead>
+	{BEGIN grid_header}
+		<tr class="{$gridHeader_class}" >
+		{BEGIN record_header}
+			{BEGIN SHD_UID_fieldheadercolumn}
+			<th class="{$SHD_UID_class}" {$SHD_UID_style}  data-field="SHD_UID">
+				{$label SHADOW_TABLE SHD_UID}
+			</th>
+			{END SHD_UID_fieldheadercolumn}
+			{BEGIN ADD_TAB_UID_fieldheadercolumn}
+			<th class="{$ADD_TAB_UID_class}" {$ADD_TAB_UID_style}  data-field="ADD_TAB_UID">
+				{$label SHADOW_TABLE ADD_TAB_UID}
+			</th>
+			{END ADD_TAB_UID_fieldheadercolumn}
+			{BEGIN SHD_ACTION_fieldheadercolumn}
+			<th class="{$SHD_ACTION_class}" {$SHD_ACTION_style}  data-field="SHD_ACTION">
+				{$label SHADOW_TABLE SHD_ACTION}
+			</th>
+			{END SHD_ACTION_fieldheadercolumn}
+			{BEGIN SHD_DETAILS_fieldheadercolumn}
+			<th class="{$SHD_DETAILS_class}" {$SHD_DETAILS_style}  data-field="SHD_DETAILS">
+				{$label SHADOW_TABLE SHD_DETAILS}
+			</th>
+			{END SHD_DETAILS_fieldheadercolumn}
+			{BEGIN USR_UID_fieldheadercolumn}
+			<th class="{$USR_UID_class}" {$USR_UID_style}  data-field="USR_UID">
+				{$label SHADOW_TABLE USR_UID}
+			</th>
+			{END USR_UID_fieldheadercolumn}
+			{BEGIN APP_UID_fieldheadercolumn}
+			<th class="{$APP_UID_class}" {$APP_UID_style}  data-field="APP_UID">
+				{$label SHADOW_TABLE APP_UID}
+			</th>
+			{END APP_UID_fieldheadercolumn}
+			{BEGIN SHD_DATE_fieldheadercolumn}
+			<th class="{$SHD_DATE_class}" {$SHD_DATE_style}  data-field="SHD_DATE">
+				{$label SHADOW_TABLE SHD_DATE}
+			</th>
+			{END SHD_DATE_fieldheadercolumn}
+			{BEGIN endrecordheader_block}
+			<th class="rnr-cs">&nbsp;</th>
+			{END endrecordheader_block}
+		{END record_header}
+		</tr>
+	{END grid_header}
+	</thead>
+	
+	<tbody>	
+	{BEGIN grid_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+			{BEGIN SHD_UID_fieldcolumn}
+			<td  class="{$SHD_UID_class}" {$SHD_UID_style} {$recordattrs}>
+				{$SHD_UID_value}
+			</td>
+			{END SHD_UID_fieldcolumn}
+			{BEGIN ADD_TAB_UID_fieldcolumn}
+			<td  class="{$ADD_TAB_UID_class}" {$ADD_TAB_UID_style} {$recordattrs}>
+				{$ADD_TAB_UID_value}
+			</td>
+			{END ADD_TAB_UID_fieldcolumn}
+			{BEGIN SHD_ACTION_fieldcolumn}
+			<td  class="{$SHD_ACTION_class}" {$SHD_ACTION_style} {$recordattrs}>
+				{$SHD_ACTION_value}
+			</td>
+			{END SHD_ACTION_fieldcolumn}
+			{BEGIN SHD_DETAILS_fieldcolumn}
+			<td  class="{$SHD_DETAILS_class}" {$SHD_DETAILS_style} {$recordattrs}>
+				{$SHD_DETAILS_value}
+			</td>
+			{END SHD_DETAILS_fieldcolumn}
+			{BEGIN USR_UID_fieldcolumn}
+			<td  class="{$USR_UID_class}" {$USR_UID_style} {$recordattrs}>
+				{$USR_UID_value}
+			</td>
+			{END USR_UID_fieldcolumn}
+			{BEGIN APP_UID_fieldcolumn}
+			<td  class="{$APP_UID_class}" {$APP_UID_style} {$recordattrs}>
+				{$APP_UID_value}
+			</td>
+			{END APP_UID_fieldcolumn}
+			{BEGIN SHD_DATE_fieldcolumn}
+			<td  class="{$SHD_DATE_class}" {$SHD_DATE_style} {$recordattrs}>
+				{$SHD_DATE_value}
+			</td>
+			{END SHD_DATE_fieldcolumn}
+			{BEGIN endrecord_block}
+			<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+			{END endrecord_block}
+		{END grid_record}
+		</tr>
+{END grid_row}
+	</tbody>
+
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+      </div>
+      <DIV class="bs-middle ">
+        <DIV class="bs-topmiddle">
+          
+        </div>
+        <DIV class="bs-left" {$blockattr_left}>
+          
+        </div>
+        <DIV class="bs-center">
+          
+        </div>
+        <DIV class="bs-right">
+          
+        </div>
+      </div>
+      <DIV class="bs-bottom">
+        
+      </div>
+      {$footer}
+    {END body}
+  </body>
+</html>

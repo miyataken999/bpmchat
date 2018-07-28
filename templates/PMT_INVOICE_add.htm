@@ -1,0 +1,537 @@
+<!doctype html>
+<html  {$html_attrs}>
+  <head>asdfsfs
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      {$pagetitle}
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link REL="stylesheet" href="styles/default.css" type="text/css">
+    {BEGIN rtlCSS}
+      <link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+    {END rtlCSS}
+    {BEGIN styleCSSFiles}
+      <link REL="stylesheet" href="{$stylepath}" type="text/css">
+    {END styleCSSFiles}
+  </head>
+  <BODY class="{$stylename} function-add" {$bodyattrs}>
+    {BEGIN body}
+      {$header}
+      <style>
+        {$containerCss}
+      </style>
+      <DIV class="bs-top">
+        
+
+{BEGIN container_editpage}
+<div {$editpage_chiddenattr} data-pageid="{$pageid}" data-container="editpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN addheader}
+	<h2 {$addheader_hiddenattr} data-pageid="{$pageid}" data-brick="addheader" >{$pagetitlelabel PMT_INVOICE add}</h2>
+
+{END addheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+		<button class="btn btn-sm btn-default" {$backbutton_attrs}>{mlang_message BACK_TO_LIST}</button>
+{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>{mlang_message VIEW}</button>
+{END view_page_button}
+{BEGIN edit_page_button}
+	<button class="btn btn-sm btn-default" {$edit_page_button_attrs}>{mlang_message EDIT}</button>
+{END edit_page_button}
+</div>
+</div>
+
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+
+</div>
+{END container_editpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$addfields_hiddenattr} data-pageid="{$pageid}" data-brick="addfields" class="form-horizontal" role="form">
+			{BEGIN L50_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_L50}" data-fieldname="L50" data-signal-error-for="L50{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_L50}">
+		{BEGIN L50_label}{$label PMT_INVOICE L50}{END L50_label}
+	</label>
+	<div class="col-md-6" >
+		{$L50_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="L50">
+		<div class="text-muted" >
+		{$tooltip PMT_INVOICE L50}
+		</div>
+	</div>
+</div>
+</div>
+{END L50_fieldblock}
+
+			{BEGIN O48_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_O48}" data-fieldname="O48" data-signal-error-for="O48{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_O48}">
+		{BEGIN O48_label}{$label PMT_INVOICE O48}{END O48_label}
+	</label>
+	<div class="col-md-6" >
+		{$O48_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="O48">
+		<div class="text-muted" >
+		{$tooltip PMT_INVOICE O48}
+		</div>
+	</div>
+</div>
+</div>
+{END O48_fieldblock}
+
+			{BEGIN O49_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_O49}" data-fieldname="O49" data-signal-error-for="O49{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_O49}">
+		{BEGIN O49_label}{$label PMT_INVOICE O49}{END O49_label}
+	</label>
+	<div class="col-md-6" >
+		{$O49_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="O49">
+		<div class="text-muted" >
+		{$tooltip PMT_INVOICE O49}
+		</div>
+	</div>
+</div>
+</div>
+{END O49_fieldblock}
+
+			{BEGIN O50_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_O50}" data-fieldname="O50" data-signal-error-for="O50{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_O50}">
+		{BEGIN O50_label}{$label PMT_INVOICE O50}{END O50_label}
+	</label>
+	<div class="col-md-6" >
+		{$O50_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="O50">
+		<div class="text-muted" >
+		{$tooltip PMT_INVOICE O50}
+		</div>
+	</div>
+</div>
+</div>
+{END O50_fieldblock}
+
+			{BEGIN O51_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_O51}" data-fieldname="O51" data-signal-error-for="O51{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_O51}">
+		{BEGIN O51_label}{$label PMT_INVOICE O51}{END O51_label}
+	</label>
+	<div class="col-md-6" >
+		{$O51_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="O51">
+		<div class="text-muted" >
+		{$tooltip PMT_INVOICE O51}
+		</div>
+	</div>
+</div>
+</div>
+{END O51_fieldblock}
+
+			{BEGIN O52_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_O52}" data-fieldname="O52" data-signal-error-for="O52{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_O52}">
+		{BEGIN O52_label}{$label PMT_INVOICE O52}{END O52_label}
+	</label>
+	<div class="col-md-6" >
+		{$O52_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="O52">
+		<div class="text-muted" >
+		{$tooltip PMT_INVOICE O52}
+		</div>
+	</div>
+</div>
+</div>
+{END O52_fieldblock}
+
+			{BEGIN TOTAL_FEE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_TOTAL_FEE}" data-fieldname="TOTAL_FEE" data-signal-error-for="TOTAL_FEE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_TOTAL_FEE}">
+		{BEGIN TOTAL_FEE_label}{$label PMT_INVOICE TOTAL_FEE}{END TOTAL_FEE_label}
+	</label>
+	<div class="col-md-6" >
+		{$TOTAL_FEE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="TOTAL_FEE">
+		<div class="text-muted" >
+		{$tooltip PMT_INVOICE TOTAL_FEE}
+		</div>
+	</div>
+</div>
+</div>
+{END TOTAL_FEE_fieldblock}
+
+			{BEGIN PAYMENT_DEADLINE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PAYMENT_DEADLINE}" data-fieldname="PAYMENT_DEADLINE" data-signal-error-for="PAYMENT_DEADLINE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PAYMENT_DEADLINE}">
+		{BEGIN PAYMENT_DEADLINE_label}{$label PMT_INVOICE PAYMENT_DEADLINE}{END PAYMENT_DEADLINE_label}
+	</label>
+	<div class="col-md-6" >
+		{$PAYMENT_DEADLINE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PAYMENT_DEADLINE">
+		<div class="text-muted" >
+		{$tooltip PMT_INVOICE PAYMENT_DEADLINE}
+		</div>
+	</div>
+</div>
+</div>
+{END PAYMENT_DEADLINE_fieldblock}
+
+			{BEGIN COMPANY_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_COMPANY}" data-fieldname="COMPANY" data-signal-error-for="COMPANY{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_COMPANY}">
+		{BEGIN COMPANY_label}{$label PMT_INVOICE COMPANY}{END COMPANY_label}
+	</label>
+	<div class="col-md-6" >
+		{$COMPANY_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="COMPANY">
+		<div class="text-muted" >
+		{$tooltip PMT_INVOICE COMPANY}
+		</div>
+	</div>
+</div>
+</div>
+{END COMPANY_fieldblock}
+
+			{BEGIN POSTAL_CODE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_POSTAL_CODE}" data-fieldname="POSTAL_CODE" data-signal-error-for="POSTAL_CODE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_POSTAL_CODE}">
+		{BEGIN POSTAL_CODE_label}{$label PMT_INVOICE POSTAL_CODE}{END POSTAL_CODE_label}
+	</label>
+	<div class="col-md-6" >
+		{$POSTAL_CODE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="POSTAL_CODE">
+		<div class="text-muted" >
+		{$tooltip PMT_INVOICE POSTAL_CODE}
+		</div>
+	</div>
+</div>
+</div>
+{END POSTAL_CODE_fieldblock}
+
+			{BEGIN PREFECTURES_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PREFECTURES}" data-fieldname="PREFECTURES" data-signal-error-for="PREFECTURES{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PREFECTURES}">
+		{BEGIN PREFECTURES_label}{$label PMT_INVOICE PREFECTURES}{END PREFECTURES_label}
+	</label>
+	<div class="col-md-6" >
+		{$PREFECTURES_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PREFECTURES">
+		<div class="text-muted" >
+		{$tooltip PMT_INVOICE PREFECTURES}
+		</div>
+	</div>
+</div>
+</div>
+{END PREFECTURES_fieldblock}
+
+			{BEGIN TOWNS_AND_VILLAGES_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_TOWNS_AND_VILLAGES}" data-fieldname="TOWNS_AND_VILLAGES" data-signal-error-for="TOWNS_AND_VILLAGES{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_TOWNS_AND_VILLAGES}">
+		{BEGIN TOWNS_AND_VILLAGES_label}{$label PMT_INVOICE TOWNS_AND_VILLAGES}{END TOWNS_AND_VILLAGES_label}
+	</label>
+	<div class="col-md-6" >
+		{$TOWNS_AND_VILLAGES_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="TOWNS_AND_VILLAGES">
+		<div class="text-muted" >
+		{$tooltip PMT_INVOICE TOWNS_AND_VILLAGES}
+		</div>
+	</div>
+</div>
+</div>
+{END TOWNS_AND_VILLAGES_fieldblock}
+
+			{BEGIN REMARKS_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_REMARKS}" data-fieldname="REMARKS" data-signal-error-for="REMARKS{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_REMARKS}">
+		{BEGIN REMARKS_label}{$label PMT_INVOICE REMARKS}{END REMARKS_label}
+	</label>
+	<div class="col-md-6" >
+		{$REMARKS_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="REMARKS">
+		<div class="text-muted" >
+		{$tooltip PMT_INVOICE REMARKS}
+		</div>
+	</div>
+</div>
+</div>
+{END REMARKS_fieldblock}
+
+			{BEGIN SUBTOTAL_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_SUBTOTAL}" data-fieldname="SUBTOTAL" data-signal-error-for="SUBTOTAL{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_SUBTOTAL}">
+		{BEGIN SUBTOTAL_label}{$label PMT_INVOICE SUBTOTAL}{END SUBTOTAL_label}
+	</label>
+	<div class="col-md-6" >
+		{$SUBTOTAL_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="SUBTOTAL">
+		<div class="text-muted" >
+		{$tooltip PMT_INVOICE SUBTOTAL}
+		</div>
+	</div>
+</div>
+</div>
+{END SUBTOTAL_fieldblock}
+
+			{BEGIN TAX_RATE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_TAX_RATE}" data-fieldname="TAX_RATE" data-signal-error-for="TAX_RATE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_TAX_RATE}">
+		{BEGIN TAX_RATE_label}{$label PMT_INVOICE TAX_RATE}{END TAX_RATE_label}
+	</label>
+	<div class="col-md-6" >
+		{$TAX_RATE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="TAX_RATE">
+		<div class="text-muted" >
+		{$tooltip PMT_INVOICE TAX_RATE}
+		</div>
+	</div>
+</div>
+</div>
+{END TAX_RATE_fieldblock}
+
+			{BEGIN CONSUMPTION_TAX_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_CONSUMPTION_TAX}" data-fieldname="CONSUMPTION_TAX" data-signal-error-for="CONSUMPTION_TAX{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_CONSUMPTION_TAX}">
+		{BEGIN CONSUMPTION_TAX_label}{$label PMT_INVOICE CONSUMPTION_TAX}{END CONSUMPTION_TAX_label}
+	</label>
+	<div class="col-md-6" >
+		{$CONSUMPTION_TAX_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="CONSUMPTION_TAX">
+		<div class="text-muted" >
+		{$tooltip PMT_INVOICE CONSUMPTION_TAX}
+		</div>
+	</div>
+</div>
+</div>
+{END CONSUMPTION_TAX_fieldblock}
+
+			{BEGIN TOTAL_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_TOTAL}" data-fieldname="TOTAL" data-signal-error-for="TOTAL{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_TOTAL}">
+		{BEGIN TOTAL_label}{$label PMT_INVOICE TOTAL}{END TOTAL_label}
+	</label>
+	<div class="col-md-6" >
+		{$TOTAL_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="TOTAL">
+		<div class="text-muted" >
+		{$tooltip PMT_INVOICE TOTAL}
+		</div>
+	</div>
+</div>
+</div>
+{END TOTAL_fieldblock}
+
+			
+		
+
+
+
+
+
+{BEGIN details_PMT_INVOICE_ITEMS}
+<div data-pageid="1" class="bs-details"> 
+<div class="panel panel-info details-grid">
+
+<div class="panel-heading">
+	<h4 class="panel-title">{$caption PMT_INVOICE_ITEMS}
+		<span>
+{BEGIN details_inlineadd_PMT_INVOICE_ITEMS_link}
+			<button type="button" class="btn btn-xs btn-info" {$details_inlineadd_PMT_INVOICE_ITEMS_attrs}>{mlang_message INLINE_ADD}</button>
+{END details_inlineadd_PMT_INVOICE_ITEMS_link}		
+{BEGIN details_add_PMT_INVOICE_ITEMS_link}
+			<button type="button" class="btn btn-xs btn-info" {$details_add_PMT_INVOICE_ITEMS_attrs}>{mlang_message ADD_NEW}</button>
+{END details_add_PMT_INVOICE_ITEMS_link}
+{BEGIN details_edit_PMT_INVOICE_ITEMS_link}
+			<button type="button" class="btn btn-xs btn-info" disabled {$details_edit_PMT_INVOICE_ITEMS_attrs}>{mlang_message EDIT}</button>
+{END details_edit_PMT_INVOICE_ITEMS_link}
+{BEGIN details_updateselected_PMT_INVOICE_ITEMS_link}
+			<button type="button" class="btn btn-xs btn-info" disabled {$details_updateselected_PMT_INVOICE_ITEMS_attrs}>{mlang_message UPDATE_SELECTED}</button>
+{END details_updateselected_PMT_INVOICE_ITEMS_link}
+
+
+{BEGIN details_delete_PMT_INVOICE_ITEMS_link}
+			<button type="button" class="btn btn-xs btn-info " disabled {$details_delete_PMT_INVOICE_ITEMS_attrs}>{mlang_message DELETE}</button>
+{END details_delete_PMT_INVOICE_ITEMS_link}
+
+{BEGIN saveall_PMT_INVOICE_ITEMS_link}
+			<button type="button" class="btn btn-xs btn-info" {$savealllink_PMT_INVOICE_ITEMS_attrs} {$savealllink_PMT_INVOICE_ITEMS_span}>{mlang_message SAVE_ALL}</button>
+{END saveall_PMT_INVOICE_ITEMS_link}
+{BEGIN cancelall_PMT_INVOICE_ITEMS_link}
+			<button type="button" class="btn btn-xs btn-info" {$cancelalllink_PMT_INVOICE_ITEMS_attrs} {$cancelalllink_PMT_INVOICE_ITEMS_span}>{mlang_message CANCEL_ALL}</button>
+{END cancelall_PMT_INVOICE_ITEMS_link}
+		</span>
+	</h4>
+</div>
+<div class="panel-body">
+	{$displayDetailTable_PMT_INVOICE_ITEMS}
+</div>
+</div>
+</div>
+{END details_PMT_INVOICE_ITEMS}
+	
+	
+	
+
+
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN addbuttons}
+	{BEGIN save_button}
+	<button class="btn btn-primary" {$savebutton_attrs}>{mlang_message SAVE}</button>
+	{END save_button}
+	{BEGIN reset_button}
+	<button class="btn btn-default" id="resetButton{$id}">{mlang_message RESET}</button>
+	{END reset_button}
+	{BEGIN back_button}
+		<button class="btn btn-default" id="backButton{$id}">{mlang_message BACK_TO_LIST}</button>
+	{END back_button}
+	{BEGIN cancel_button}
+	<a href="#" class="btn btn-default" id="cancelButton{$id}">{mlang_message CANCEL}</a>
+	{END cancel_button}
+
+{END addbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+      </div>
+      <DIV class="bs-middle ">
+        <DIV class="bs-topmiddle">
+          
+        </div>
+        <DIV class="bs-left" {$blockattr_left}>
+          
+        </div>
+        <DIV class="bs-center">
+          
+        </div>
+        <DIV class="bs-right">
+          
+        </div>
+      </div>
+      <DIV class="bs-bottom">
+        
+      </div>
+      {$footer}
+    {END body}
+  </body>
+</html>

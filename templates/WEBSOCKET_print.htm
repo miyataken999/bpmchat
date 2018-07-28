@@ -1,0 +1,179 @@
+<!doctype html>
+<html  {$html_attrs}>
+  <head>asdfsfs
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      {$pagetitle}
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link REL="stylesheet" href="styles/default.css" type="text/css">
+    {BEGIN rtlCSS}
+      <link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+    {END rtlCSS}
+    {BEGIN styleCSSFiles}
+      <link REL="stylesheet" href="{$stylepath}" type="text/css">
+    {END styleCSSFiles}
+  </head>
+  <BODY class="{$stylename} function-print" {$bodyattrs}>
+    {BEGIN body}
+      {$header}
+      <style>
+        {$containerCss}
+      </style>
+      <DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+{BEGIN pdflink_block}
+<a href="#" class="pdflink btn btn-default" {$pdflink_attrs}>{mlang_message PDF_VIEW}</a>
+{END pdflink_block}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel WEBSOCKET print}</h2>
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>{mlang_message PAGE1} <span class="rp-pageno">{$pageno}</span> {mlang_message PAGE2} <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="table table-bordered rp-maintable" {$printgrid_hiddenattr} data-pageid="{$pageid}" data-brick="printgrid" >
+	<thead>
+	{BEGIN grid_header}
+		<tr class="{$gridHeader_class}" >
+		{BEGIN record_header}
+			{BEGIN WORD_fieldheadercolumn}
+			<th class="{$WORD_class}" {$WORD_style}  data-field="WORD">
+				{$label WEBSOCKET WORD}
+			</th>
+			{END WORD_fieldheadercolumn}
+			{BEGIN ID_fieldheadercolumn}
+			<th class="{$ID_class}" {$ID_style}  data-field="ID">
+				{$label WEBSOCKET ID}
+			</th>
+			{END ID_fieldheadercolumn}
+			{BEGIN URL_fieldheadercolumn}
+			<th class="{$URL_class}" {$URL_style}  data-field="URL">
+				{$label WEBSOCKET URL}
+			</th>
+			{END URL_fieldheadercolumn}
+			{BEGIN timestamp_fieldheadercolumn}
+			<th class="{$timestamp_class}" {$timestamp_style}  data-field="timestamp">
+				{$label WEBSOCKET timestamp}
+			</th>
+			{END timestamp_fieldheadercolumn}
+			{BEGIN endrecordheader_block}
+			<th class="rnr-cs">&nbsp;</th>
+			{END endrecordheader_block}
+		{END record_header}
+		</tr>
+	{END grid_header}
+	</thead>
+	
+	<tbody>	
+	{BEGIN grid_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+			{BEGIN WORD_fieldcolumn}
+			<td  class="{$WORD_class}" {$WORD_style} {$recordattrs}>
+				{$WORD_value}
+			</td>
+			{END WORD_fieldcolumn}
+			{BEGIN ID_fieldcolumn}
+			<td  class="{$ID_class}" {$ID_style} {$recordattrs}>
+				{$ID_value}
+			</td>
+			{END ID_fieldcolumn}
+			{BEGIN URL_fieldcolumn}
+			<td  class="{$URL_class}" {$URL_style} {$recordattrs}>
+				{$URL_value}
+			</td>
+			{END URL_fieldcolumn}
+			{BEGIN timestamp_fieldcolumn}
+			<td  class="{$timestamp_class}" {$timestamp_style} {$recordattrs}>
+				{$timestamp_value}
+			</td>
+			{END timestamp_fieldcolumn}
+			{BEGIN endrecord_block}
+			<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+			{END endrecord_block}
+		{END grid_record}
+		</tr>
+	{BEGIN details_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+			{BEGIN details_record}
+				<td colspan="5">
+					{BEGIN details_table}
+						{$details}
+					{END details_table}
+				</td>
+				{BEGIN endrecord_block}
+				<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+				{END endrecord_block}
+			{END details_record}
+		</tr>
+	{END details_row}
+{END grid_row}
+	</tbody>
+
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+      </div>
+      <DIV class="bs-middle ">
+        <DIV class="bs-topmiddle">
+          
+        </div>
+        <DIV class="bs-left" {$blockattr_left}>
+          
+        </div>
+        <DIV class="bs-center">
+          
+        </div>
+        <DIV class="bs-right">
+          
+        </div>
+      </div>
+      <DIV class="bs-bottom">
+        
+      </div>
+      {$footer}
+    {END body}
+  </body>
+</html>

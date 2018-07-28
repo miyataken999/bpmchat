@@ -1,0 +1,382 @@
+<!doctype html>
+<html  {$html_attrs}>
+  <head>asdfsfs
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      {$pagetitle}
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link REL="stylesheet" href="styles/default.css" type="text/css">
+    {BEGIN rtlCSS}
+      <link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+    {END rtlCSS}
+    {BEGIN styleCSSFiles}
+      <link REL="stylesheet" href="{$stylepath}" type="text/css">
+    {END styleCSSFiles}
+  </head>
+  <BODY class="{$stylename} function-print" {$bodyattrs}>
+    {BEGIN body}
+      {$header}
+      <style>
+        {$containerCss}
+      </style>
+      <DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel PMT_TEST_BUSINESS_3 print}</h2>
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>{mlang_message PAGE1} <span class="rp-pageno">{$pageno}</span> {mlang_message PAGE2} <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="table table-bordered rp-maintable" {$printgrid_hiddenattr} data-pageid="{$pageid}" data-brick="printgrid" >
+	<thead>
+	{BEGIN grid_header}
+		<tr class="{$gridHeader_class}" >
+		{BEGIN record_header}
+			{BEGIN APP_UID_fieldheadercolumn}
+			<th class="{$APP_UID_class}" {$APP_UID_style}  data-field="APP_UID">
+				{$label PMT_TEST_BUSINESS_3 APP_UID}
+			</th>
+			{END APP_UID_fieldheadercolumn}
+			{BEGIN APP_NUMBER_fieldheadercolumn}
+			<th class="{$APP_NUMBER_class}" {$APP_NUMBER_style}  data-field="APP_NUMBER">
+				{$label PMT_TEST_BUSINESS_3 APP_NUMBER}
+			</th>
+			{END APP_NUMBER_fieldheadercolumn}
+			{BEGIN APP_STATUS_fieldheadercolumn}
+			<th class="{$APP_STATUS_class}" {$APP_STATUS_style}  data-field="APP_STATUS">
+				{$label PMT_TEST_BUSINESS_3 APP_STATUS}
+			</th>
+			{END APP_STATUS_fieldheadercolumn}
+			{BEGIN ROW_fieldheadercolumn}
+			<th class="{$ROW_class}" {$ROW_style}  data-field="ROW">
+				{$label PMT_TEST_BUSINESS_3 ROW}
+			</th>
+			{END ROW_fieldheadercolumn}
+			{BEGIN EMPLOYEE_NO_fieldheadercolumn}
+			<th class="{$EMPLOYEE_NO_class}" {$EMPLOYEE_NO_style}  data-field="EMPLOYEE_NO">
+				{$label PMT_TEST_BUSINESS_3 EMPLOYEE_NO}
+			</th>
+			{END EMPLOYEE_NO_fieldheadercolumn}
+			{BEGIN TIME_fieldheadercolumn}
+			<th class="{$TIME_class}" {$TIME_style}  data-field="TIME">
+				{$label PMT_TEST_BUSINESS_3 TIME}
+			</th>
+			{END TIME_fieldheadercolumn}
+			{BEGIN MONTHLY_REPORT_fieldheadercolumn}
+			<th class="{$MONTHLY_REPORT_class}" {$MONTHLY_REPORT_style}  data-field="MONTHLY_REPORT">
+				{$label PMT_TEST_BUSINESS_3 MONTHLY_REPORT}
+			</th>
+			{END MONTHLY_REPORT_fieldheadercolumn}
+			{BEGIN BUSINESS_CONFIRMATION_1_fieldheadercolumn}
+			<th class="{$BUSINESS_CONFIRMATION_1_class}" {$BUSINESS_CONFIRMATION_1_style}  data-field="BUSINESS_CONFIRMATION_1">
+				{$label PMT_TEST_BUSINESS_3 BUSINESS_CONFIRMATION_1}
+			</th>
+			{END BUSINESS_CONFIRMATION_1_fieldheadercolumn}
+			{BEGIN BUSINESS_CONFIRMATION_2_fieldheadercolumn}
+			<th class="{$BUSINESS_CONFIRMATION_2_class}" {$BUSINESS_CONFIRMATION_2_style}  data-field="BUSINESS_CONFIRMATION_2">
+				{$label PMT_TEST_BUSINESS_3 BUSINESS_CONFIRMATION_2}
+			</th>
+			{END BUSINESS_CONFIRMATION_2_fieldheadercolumn}
+			{BEGIN BUSINESS_CONFIRMATION_3_fieldheadercolumn}
+			<th class="{$BUSINESS_CONFIRMATION_3_class}" {$BUSINESS_CONFIRMATION_3_style}  data-field="BUSINESS_CONFIRMATION_3">
+				{$label PMT_TEST_BUSINESS_3 BUSINESS_CONFIRMATION_3}
+			</th>
+			{END BUSINESS_CONFIRMATION_3_fieldheadercolumn}
+			{BEGIN BUSINESS_ACKNOWLEDGMENT_4_fieldheadercolumn}
+			<th class="{$BUSINESS_ACKNOWLEDGMENT_4_class}" {$BUSINESS_ACKNOWLEDGMENT_4_style}  data-field="BUSINESS_ACKNOWLEDGMENT_4">
+				{$label PMT_TEST_BUSINESS_3 BUSINESS_ACKNOWLEDGMENT_4}
+			</th>
+			{END BUSINESS_ACKNOWLEDGMENT_4_fieldheadercolumn}
+			{BEGIN FOR_THE_ITEM_fieldheadercolumn}
+			<th class="{$FOR_THE_ITEM_class}" {$FOR_THE_ITEM_style}  data-field="FOR_THE_ITEM">
+				{$label PMT_TEST_BUSINESS_3 FOR_THE_ITEM}
+			</th>
+			{END FOR_THE_ITEM_fieldheadercolumn}
+			{BEGIN ITEM_IN_FOR_2_fieldheadercolumn}
+			<th class="{$ITEM_IN_FOR_2_class}" {$ITEM_IN_FOR_2_style}  data-field="ITEM_IN_FOR_2">
+				{$label PMT_TEST_BUSINESS_3 ITEM_IN_FOR_2}
+			</th>
+			{END ITEM_IN_FOR_2_fieldheadercolumn}
+			{BEGIN BUSINESS_CONFIRMATION_7_fieldheadercolumn}
+			<th class="{$BUSINESS_CONFIRMATION_7_class}" {$BUSINESS_CONFIRMATION_7_style}  data-field="BUSINESS_CONFIRMATION_7">
+				{$label PMT_TEST_BUSINESS_3 BUSINESS_CONFIRMATION_7}
+			</th>
+			{END BUSINESS_CONFIRMATION_7_fieldheadercolumn}
+			{BEGIN BUSINESS_CONFIRMATION_8_fieldheadercolumn}
+			<th class="{$BUSINESS_CONFIRMATION_8_class}" {$BUSINESS_CONFIRMATION_8_style}  data-field="BUSINESS_CONFIRMATION_8">
+				{$label PMT_TEST_BUSINESS_3 BUSINESS_CONFIRMATION_8}
+			</th>
+			{END BUSINESS_CONFIRMATION_8_fieldheadercolumn}
+			{BEGIN BUSINESS_CONFIRMATION_9_fieldheadercolumn}
+			<th class="{$BUSINESS_CONFIRMATION_9_class}" {$BUSINESS_CONFIRMATION_9_style}  data-field="BUSINESS_CONFIRMATION_9">
+				{$label PMT_TEST_BUSINESS_3 BUSINESS_CONFIRMATION_9}
+			</th>
+			{END BUSINESS_CONFIRMATION_9_fieldheadercolumn}
+			{BEGIN BUSINESS_CONFIRMATION_10_fieldheadercolumn}
+			<th class="{$BUSINESS_CONFIRMATION_10_class}" {$BUSINESS_CONFIRMATION_10_style}  data-field="BUSINESS_CONFIRMATION_10">
+				{$label PMT_TEST_BUSINESS_3 BUSINESS_CONFIRMATION_10}
+			</th>
+			{END BUSINESS_CONFIRMATION_10_fieldheadercolumn}
+			{BEGIN BUSINESS_CONFIRMATION_11_fieldheadercolumn}
+			<th class="{$BUSINESS_CONFIRMATION_11_class}" {$BUSINESS_CONFIRMATION_11_style}  data-field="BUSINESS_CONFIRMATION_11">
+				{$label PMT_TEST_BUSINESS_3 BUSINESS_CONFIRMATION_11}
+			</th>
+			{END BUSINESS_CONFIRMATION_11_fieldheadercolumn}
+			{BEGIN BUSINESS_CONFIRMATION_12_fieldheadercolumn}
+			<th class="{$BUSINESS_CONFIRMATION_12_class}" {$BUSINESS_CONFIRMATION_12_style}  data-field="BUSINESS_CONFIRMATION_12">
+				{$label PMT_TEST_BUSINESS_3 BUSINESS_CONFIRMATION_12}
+			</th>
+			{END BUSINESS_CONFIRMATION_12_fieldheadercolumn}
+			{BEGIN BUSINESS_CONFIRMATION_13_fieldheadercolumn}
+			<th class="{$BUSINESS_CONFIRMATION_13_class}" {$BUSINESS_CONFIRMATION_13_style}  data-field="BUSINESS_CONFIRMATION_13">
+				{$label PMT_TEST_BUSINESS_3 BUSINESS_CONFIRMATION_13}
+			</th>
+			{END BUSINESS_CONFIRMATION_13_fieldheadercolumn}
+			{BEGIN BUSINESS_CONFIRMATION_14_fieldheadercolumn}
+			<th class="{$BUSINESS_CONFIRMATION_14_class}" {$BUSINESS_CONFIRMATION_14_style}  data-field="BUSINESS_CONFIRMATION_14">
+				{$label PMT_TEST_BUSINESS_3 BUSINESS_CONFIRMATION_14}
+			</th>
+			{END BUSINESS_CONFIRMATION_14_fieldheadercolumn}
+			{BEGIN BUSINESS_CONFIRMATION_15_fieldheadercolumn}
+			<th class="{$BUSINESS_CONFIRMATION_15_class}" {$BUSINESS_CONFIRMATION_15_style}  data-field="BUSINESS_CONFIRMATION_15">
+				{$label PMT_TEST_BUSINESS_3 BUSINESS_CONFIRMATION_15}
+			</th>
+			{END BUSINESS_CONFIRMATION_15_fieldheadercolumn}
+			{BEGIN BUSINESS_CONFIRMATION_16_fieldheadercolumn}
+			<th class="{$BUSINESS_CONFIRMATION_16_class}" {$BUSINESS_CONFIRMATION_16_style}  data-field="BUSINESS_CONFIRMATION_16">
+				{$label PMT_TEST_BUSINESS_3 BUSINESS_CONFIRMATION_16}
+			</th>
+			{END BUSINESS_CONFIRMATION_16_fieldheadercolumn}
+			{BEGIN BUSINESS_CONFIRMATION_17_fieldheadercolumn}
+			<th class="{$BUSINESS_CONFIRMATION_17_class}" {$BUSINESS_CONFIRMATION_17_style}  data-field="BUSINESS_CONFIRMATION_17">
+				{$label PMT_TEST_BUSINESS_3 BUSINESS_CONFIRMATION_17}
+			</th>
+			{END BUSINESS_CONFIRMATION_17_fieldheadercolumn}
+			{BEGIN BUSINESS_CONFIRMATION_18_fieldheadercolumn}
+			<th class="{$BUSINESS_CONFIRMATION_18_class}" {$BUSINESS_CONFIRMATION_18_style}  data-field="BUSINESS_CONFIRMATION_18">
+				{$label PMT_TEST_BUSINESS_3 BUSINESS_CONFIRMATION_18}
+			</th>
+			{END BUSINESS_CONFIRMATION_18_fieldheadercolumn}
+			{BEGIN BUSINESS_CONFIRMATION_19_fieldheadercolumn}
+			<th class="{$BUSINESS_CONFIRMATION_19_class}" {$BUSINESS_CONFIRMATION_19_style}  data-field="BUSINESS_CONFIRMATION_19">
+				{$label PMT_TEST_BUSINESS_3 BUSINESS_CONFIRMATION_19}
+			</th>
+			{END BUSINESS_CONFIRMATION_19_fieldheadercolumn}
+			{BEGIN endrecordheader_block}
+			<th class="rnr-cs">&nbsp;</th>
+			{END endrecordheader_block}
+		{END record_header}
+		</tr>
+	{END grid_header}
+	</thead>
+	
+	<tbody>	
+	{BEGIN grid_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+			{BEGIN APP_UID_fieldcolumn}
+			<td  class="{$APP_UID_class}" {$APP_UID_style} {$recordattrs}>
+				{$APP_UID_value}
+			</td>
+			{END APP_UID_fieldcolumn}
+			{BEGIN APP_NUMBER_fieldcolumn}
+			<td  class="{$APP_NUMBER_class}" {$APP_NUMBER_style} {$recordattrs}>
+				{$APP_NUMBER_value}
+			</td>
+			{END APP_NUMBER_fieldcolumn}
+			{BEGIN APP_STATUS_fieldcolumn}
+			<td  class="{$APP_STATUS_class}" {$APP_STATUS_style} {$recordattrs}>
+				{$APP_STATUS_value}
+			</td>
+			{END APP_STATUS_fieldcolumn}
+			{BEGIN ROW_fieldcolumn}
+			<td  class="{$ROW_class}" {$ROW_style} {$recordattrs}>
+				{$ROW_value}
+			</td>
+			{END ROW_fieldcolumn}
+			{BEGIN EMPLOYEE_NO_fieldcolumn}
+			<td  class="{$EMPLOYEE_NO_class}" {$EMPLOYEE_NO_style} {$recordattrs}>
+				{$EMPLOYEE_NO_value}
+			</td>
+			{END EMPLOYEE_NO_fieldcolumn}
+			{BEGIN TIME_fieldcolumn}
+			<td  class="{$TIME_class}" {$TIME_style} {$recordattrs}>
+				{$TIME_value}
+			</td>
+			{END TIME_fieldcolumn}
+			{BEGIN MONTHLY_REPORT_fieldcolumn}
+			<td  class="{$MONTHLY_REPORT_class}" {$MONTHLY_REPORT_style} {$recordattrs}>
+				{$MONTHLY_REPORT_value}
+			</td>
+			{END MONTHLY_REPORT_fieldcolumn}
+			{BEGIN BUSINESS_CONFIRMATION_1_fieldcolumn}
+			<td  class="{$BUSINESS_CONFIRMATION_1_class}" {$BUSINESS_CONFIRMATION_1_style} {$recordattrs}>
+				{$BUSINESS_CONFIRMATION_1_value}
+			</td>
+			{END BUSINESS_CONFIRMATION_1_fieldcolumn}
+			{BEGIN BUSINESS_CONFIRMATION_2_fieldcolumn}
+			<td  class="{$BUSINESS_CONFIRMATION_2_class}" {$BUSINESS_CONFIRMATION_2_style} {$recordattrs}>
+				{$BUSINESS_CONFIRMATION_2_value}
+			</td>
+			{END BUSINESS_CONFIRMATION_2_fieldcolumn}
+			{BEGIN BUSINESS_CONFIRMATION_3_fieldcolumn}
+			<td  class="{$BUSINESS_CONFIRMATION_3_class}" {$BUSINESS_CONFIRMATION_3_style} {$recordattrs}>
+				{$BUSINESS_CONFIRMATION_3_value}
+			</td>
+			{END BUSINESS_CONFIRMATION_3_fieldcolumn}
+			{BEGIN BUSINESS_ACKNOWLEDGMENT_4_fieldcolumn}
+			<td  class="{$BUSINESS_ACKNOWLEDGMENT_4_class}" {$BUSINESS_ACKNOWLEDGMENT_4_style} {$recordattrs}>
+				{$BUSINESS_ACKNOWLEDGMENT_4_value}
+			</td>
+			{END BUSINESS_ACKNOWLEDGMENT_4_fieldcolumn}
+			{BEGIN FOR_THE_ITEM_fieldcolumn}
+			<td  class="{$FOR_THE_ITEM_class}" {$FOR_THE_ITEM_style} {$recordattrs}>
+				{$FOR_THE_ITEM_value}
+			</td>
+			{END FOR_THE_ITEM_fieldcolumn}
+			{BEGIN ITEM_IN_FOR_2_fieldcolumn}
+			<td  class="{$ITEM_IN_FOR_2_class}" {$ITEM_IN_FOR_2_style} {$recordattrs}>
+				{$ITEM_IN_FOR_2_value}
+			</td>
+			{END ITEM_IN_FOR_2_fieldcolumn}
+			{BEGIN BUSINESS_CONFIRMATION_7_fieldcolumn}
+			<td  class="{$BUSINESS_CONFIRMATION_7_class}" {$BUSINESS_CONFIRMATION_7_style} {$recordattrs}>
+				{$BUSINESS_CONFIRMATION_7_value}
+			</td>
+			{END BUSINESS_CONFIRMATION_7_fieldcolumn}
+			{BEGIN BUSINESS_CONFIRMATION_8_fieldcolumn}
+			<td  class="{$BUSINESS_CONFIRMATION_8_class}" {$BUSINESS_CONFIRMATION_8_style} {$recordattrs}>
+				{$BUSINESS_CONFIRMATION_8_value}
+			</td>
+			{END BUSINESS_CONFIRMATION_8_fieldcolumn}
+			{BEGIN BUSINESS_CONFIRMATION_9_fieldcolumn}
+			<td  class="{$BUSINESS_CONFIRMATION_9_class}" {$BUSINESS_CONFIRMATION_9_style} {$recordattrs}>
+				{$BUSINESS_CONFIRMATION_9_value}
+			</td>
+			{END BUSINESS_CONFIRMATION_9_fieldcolumn}
+			{BEGIN BUSINESS_CONFIRMATION_10_fieldcolumn}
+			<td  class="{$BUSINESS_CONFIRMATION_10_class}" {$BUSINESS_CONFIRMATION_10_style} {$recordattrs}>
+				{$BUSINESS_CONFIRMATION_10_value}
+			</td>
+			{END BUSINESS_CONFIRMATION_10_fieldcolumn}
+			{BEGIN BUSINESS_CONFIRMATION_11_fieldcolumn}
+			<td  class="{$BUSINESS_CONFIRMATION_11_class}" {$BUSINESS_CONFIRMATION_11_style} {$recordattrs}>
+				{$BUSINESS_CONFIRMATION_11_value}
+			</td>
+			{END BUSINESS_CONFIRMATION_11_fieldcolumn}
+			{BEGIN BUSINESS_CONFIRMATION_12_fieldcolumn}
+			<td  class="{$BUSINESS_CONFIRMATION_12_class}" {$BUSINESS_CONFIRMATION_12_style} {$recordattrs}>
+				{$BUSINESS_CONFIRMATION_12_value}
+			</td>
+			{END BUSINESS_CONFIRMATION_12_fieldcolumn}
+			{BEGIN BUSINESS_CONFIRMATION_13_fieldcolumn}
+			<td  class="{$BUSINESS_CONFIRMATION_13_class}" {$BUSINESS_CONFIRMATION_13_style} {$recordattrs}>
+				{$BUSINESS_CONFIRMATION_13_value}
+			</td>
+			{END BUSINESS_CONFIRMATION_13_fieldcolumn}
+			{BEGIN BUSINESS_CONFIRMATION_14_fieldcolumn}
+			<td  class="{$BUSINESS_CONFIRMATION_14_class}" {$BUSINESS_CONFIRMATION_14_style} {$recordattrs}>
+				{$BUSINESS_CONFIRMATION_14_value}
+			</td>
+			{END BUSINESS_CONFIRMATION_14_fieldcolumn}
+			{BEGIN BUSINESS_CONFIRMATION_15_fieldcolumn}
+			<td  class="{$BUSINESS_CONFIRMATION_15_class}" {$BUSINESS_CONFIRMATION_15_style} {$recordattrs}>
+				{$BUSINESS_CONFIRMATION_15_value}
+			</td>
+			{END BUSINESS_CONFIRMATION_15_fieldcolumn}
+			{BEGIN BUSINESS_CONFIRMATION_16_fieldcolumn}
+			<td  class="{$BUSINESS_CONFIRMATION_16_class}" {$BUSINESS_CONFIRMATION_16_style} {$recordattrs}>
+				{$BUSINESS_CONFIRMATION_16_value}
+			</td>
+			{END BUSINESS_CONFIRMATION_16_fieldcolumn}
+			{BEGIN BUSINESS_CONFIRMATION_17_fieldcolumn}
+			<td  class="{$BUSINESS_CONFIRMATION_17_class}" {$BUSINESS_CONFIRMATION_17_style} {$recordattrs}>
+				{$BUSINESS_CONFIRMATION_17_value}
+			</td>
+			{END BUSINESS_CONFIRMATION_17_fieldcolumn}
+			{BEGIN BUSINESS_CONFIRMATION_18_fieldcolumn}
+			<td  class="{$BUSINESS_CONFIRMATION_18_class}" {$BUSINESS_CONFIRMATION_18_style} {$recordattrs}>
+				{$BUSINESS_CONFIRMATION_18_value}
+			</td>
+			{END BUSINESS_CONFIRMATION_18_fieldcolumn}
+			{BEGIN BUSINESS_CONFIRMATION_19_fieldcolumn}
+			<td  class="{$BUSINESS_CONFIRMATION_19_class}" {$BUSINESS_CONFIRMATION_19_style} {$recordattrs}>
+				{$BUSINESS_CONFIRMATION_19_value}
+			</td>
+			{END BUSINESS_CONFIRMATION_19_fieldcolumn}
+			{BEGIN endrecord_block}
+			<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+			{END endrecord_block}
+		{END grid_record}
+		</tr>
+{END grid_row}
+	</tbody>
+
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+      </div>
+      <DIV class="bs-middle ">
+        <DIV class="bs-topmiddle">
+          
+        </div>
+        <DIV class="bs-left" {$blockattr_left}>
+          
+        </div>
+        <DIV class="bs-center">
+          
+        </div>
+        <DIV class="bs-right">
+          
+        </div>
+      </div>
+      <DIV class="bs-bottom">
+        
+      </div>
+      {$footer}
+    {END body}
+  </body>
+</html>

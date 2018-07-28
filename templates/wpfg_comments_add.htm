@@ -1,0 +1,432 @@
+<!doctype html>
+<html  {$html_attrs}>
+  <head>asdfsfs
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      {$pagetitle}
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link REL="stylesheet" href="styles/default.css" type="text/css">
+    {BEGIN rtlCSS}
+      <link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+    {END rtlCSS}
+    {BEGIN styleCSSFiles}
+      <link REL="stylesheet" href="{$stylepath}" type="text/css">
+    {END styleCSSFiles}
+  </head>
+  <BODY class="{$stylename} function-add" {$bodyattrs}>
+    {BEGIN body}
+      {$header}
+      <style>
+        {$containerCss}
+      </style>
+      <DIV class="bs-top">
+        
+
+{BEGIN container_editpage}
+<div {$editpage_chiddenattr} data-pageid="{$pageid}" data-container="editpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN addheader}
+	<h2 {$addheader_hiddenattr} data-pageid="{$pageid}" data-brick="addheader" >{$pagetitlelabel wpfg_comments add}</h2>
+
+{END addheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+		<button class="btn btn-sm btn-default" {$backbutton_attrs}>{mlang_message BACK_TO_LIST}</button>
+{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>{mlang_message VIEW}</button>
+{END view_page_button}
+{BEGIN edit_page_button}
+	<button class="btn btn-sm btn-default" {$edit_page_button_attrs}>{mlang_message EDIT}</button>
+{END edit_page_button}
+</div>
+</div>
+
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+
+</div>
+{END container_editpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$addfields_hiddenattr} data-pageid="{$pageid}" data-brick="addfields" class="form-horizontal" role="form">
+			{BEGIN comment_post_ID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_comment_post_ID}" data-fieldname="comment_post_ID" data-signal-error-for="comment_post_ID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_comment_post_ID}">
+		{BEGIN comment_post_ID_label}{$label wpfg_comments comment_post_ID}{END comment_post_ID_label}
+	</label>
+	<div class="col-md-6" >
+		{$comment_post_ID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="comment_post_ID">
+		<div class="text-muted" >
+		{$tooltip wpfg_comments comment_post_ID}
+		</div>
+	</div>
+</div>
+</div>
+{END comment_post_ID_fieldblock}
+
+			{BEGIN comment_author_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_comment_author}" data-fieldname="comment_author" data-signal-error-for="comment_author{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_comment_author}">
+		{BEGIN comment_author_label}{$label wpfg_comments comment_author}{END comment_author_label}
+	</label>
+	<div class="col-md-6" >
+		{$comment_author_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="comment_author">
+		<div class="text-muted" >
+		{$tooltip wpfg_comments comment_author}
+		</div>
+	</div>
+</div>
+</div>
+{END comment_author_fieldblock}
+
+			{BEGIN comment_author_email_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_comment_author_email}" data-fieldname="comment_author_email" data-signal-error-for="comment_author_email{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_comment_author_email}">
+		{BEGIN comment_author_email_label}{$label wpfg_comments comment_author_email}{END comment_author_email_label}
+	</label>
+	<div class="col-md-6" >
+		{$comment_author_email_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="comment_author_email">
+		<div class="text-muted" >
+		{$tooltip wpfg_comments comment_author_email}
+		</div>
+	</div>
+</div>
+</div>
+{END comment_author_email_fieldblock}
+
+			{BEGIN comment_author_url_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_comment_author_url}" data-fieldname="comment_author_url" data-signal-error-for="comment_author_url{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_comment_author_url}">
+		{BEGIN comment_author_url_label}{$label wpfg_comments comment_author_url}{END comment_author_url_label}
+	</label>
+	<div class="col-md-6" >
+		{$comment_author_url_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="comment_author_url">
+		<div class="text-muted" >
+		{$tooltip wpfg_comments comment_author_url}
+		</div>
+	</div>
+</div>
+</div>
+{END comment_author_url_fieldblock}
+
+			{BEGIN comment_author_IP_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_comment_author_IP}" data-fieldname="comment_author_IP" data-signal-error-for="comment_author_IP{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_comment_author_IP}">
+		{BEGIN comment_author_IP_label}{$label wpfg_comments comment_author_IP}{END comment_author_IP_label}
+	</label>
+	<div class="col-md-6" >
+		{$comment_author_IP_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="comment_author_IP">
+		<div class="text-muted" >
+		{$tooltip wpfg_comments comment_author_IP}
+		</div>
+	</div>
+</div>
+</div>
+{END comment_author_IP_fieldblock}
+
+			{BEGIN comment_date_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_comment_date}" data-fieldname="comment_date" data-signal-error-for="comment_date{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_comment_date}">
+		{BEGIN comment_date_label}{$label wpfg_comments comment_date}{END comment_date_label}
+	</label>
+	<div class="col-md-6" >
+		{$comment_date_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="comment_date">
+		<div class="text-muted" >
+		{$tooltip wpfg_comments comment_date}
+		</div>
+	</div>
+</div>
+</div>
+{END comment_date_fieldblock}
+
+			{BEGIN comment_date_gmt_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_comment_date_gmt}" data-fieldname="comment_date_gmt" data-signal-error-for="comment_date_gmt{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_comment_date_gmt}">
+		{BEGIN comment_date_gmt_label}{$label wpfg_comments comment_date_gmt}{END comment_date_gmt_label}
+	</label>
+	<div class="col-md-6" >
+		{$comment_date_gmt_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="comment_date_gmt">
+		<div class="text-muted" >
+		{$tooltip wpfg_comments comment_date_gmt}
+		</div>
+	</div>
+</div>
+</div>
+{END comment_date_gmt_fieldblock}
+
+			{BEGIN comment_content_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_comment_content}" data-fieldname="comment_content" data-signal-error-for="comment_content{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_comment_content}">
+		{BEGIN comment_content_label}{$label wpfg_comments comment_content}{END comment_content_label}
+	</label>
+	<div class="col-md-6" >
+		{$comment_content_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="comment_content">
+		<div class="text-muted" >
+		{$tooltip wpfg_comments comment_content}
+		</div>
+	</div>
+</div>
+</div>
+{END comment_content_fieldblock}
+
+			{BEGIN comment_karma_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_comment_karma}" data-fieldname="comment_karma" data-signal-error-for="comment_karma{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_comment_karma}">
+		{BEGIN comment_karma_label}{$label wpfg_comments comment_karma}{END comment_karma_label}
+	</label>
+	<div class="col-md-6" >
+		{$comment_karma_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="comment_karma">
+		<div class="text-muted" >
+		{$tooltip wpfg_comments comment_karma}
+		</div>
+	</div>
+</div>
+</div>
+{END comment_karma_fieldblock}
+
+			{BEGIN comment_approved_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_comment_approved}" data-fieldname="comment_approved" data-signal-error-for="comment_approved{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_comment_approved}">
+		{BEGIN comment_approved_label}{$label wpfg_comments comment_approved}{END comment_approved_label}
+	</label>
+	<div class="col-md-6" >
+		{$comment_approved_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="comment_approved">
+		<div class="text-muted" >
+		{$tooltip wpfg_comments comment_approved}
+		</div>
+	</div>
+</div>
+</div>
+{END comment_approved_fieldblock}
+
+			{BEGIN comment_agent_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_comment_agent}" data-fieldname="comment_agent" data-signal-error-for="comment_agent{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_comment_agent}">
+		{BEGIN comment_agent_label}{$label wpfg_comments comment_agent}{END comment_agent_label}
+	</label>
+	<div class="col-md-6" >
+		{$comment_agent_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="comment_agent">
+		<div class="text-muted" >
+		{$tooltip wpfg_comments comment_agent}
+		</div>
+	</div>
+</div>
+</div>
+{END comment_agent_fieldblock}
+
+			{BEGIN comment_type_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_comment_type}" data-fieldname="comment_type" data-signal-error-for="comment_type{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_comment_type}">
+		{BEGIN comment_type_label}{$label wpfg_comments comment_type}{END comment_type_label}
+	</label>
+	<div class="col-md-6" >
+		{$comment_type_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="comment_type">
+		<div class="text-muted" >
+		{$tooltip wpfg_comments comment_type}
+		</div>
+	</div>
+</div>
+</div>
+{END comment_type_fieldblock}
+
+			{BEGIN comment_parent_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_comment_parent}" data-fieldname="comment_parent" data-signal-error-for="comment_parent{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_comment_parent}">
+		{BEGIN comment_parent_label}{$label wpfg_comments comment_parent}{END comment_parent_label}
+	</label>
+	<div class="col-md-6" >
+		{$comment_parent_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="comment_parent">
+		<div class="text-muted" >
+		{$tooltip wpfg_comments comment_parent}
+		</div>
+	</div>
+</div>
+</div>
+{END comment_parent_fieldblock}
+
+			{BEGIN user_id_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_user_id}" data-fieldname="user_id" data-signal-error-for="user_id{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_user_id}">
+		{BEGIN user_id_label}{$label wpfg_comments user_id}{END user_id_label}
+	</label>
+	<div class="col-md-6" >
+		{$user_id_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="user_id">
+		<div class="text-muted" >
+		{$tooltip wpfg_comments user_id}
+		</div>
+	</div>
+</div>
+</div>
+{END user_id_fieldblock}
+
+
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN addbuttons}
+	{BEGIN save_button}
+	<button class="btn btn-primary" {$savebutton_attrs}>{mlang_message SAVE}</button>
+	{END save_button}
+	{BEGIN reset_button}
+	<button class="btn btn-default" id="resetButton{$id}">{mlang_message RESET}</button>
+	{END reset_button}
+	{BEGIN back_button}
+		<button class="btn btn-default" id="backButton{$id}">{mlang_message BACK_TO_LIST}</button>
+	{END back_button}
+	{BEGIN cancel_button}
+	<a href="#" class="btn btn-default" id="cancelButton{$id}">{mlang_message CANCEL}</a>
+	{END cancel_button}
+
+{END addbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+      </div>
+      <DIV class="bs-middle ">
+        <DIV class="bs-topmiddle">
+          
+        </div>
+        <DIV class="bs-left" {$blockattr_left}>
+          
+        </div>
+        <DIV class="bs-center">
+          
+        </div>
+        <DIV class="bs-right">
+          
+        </div>
+      </div>
+      <DIV class="bs-bottom">
+        
+      </div>
+      {$footer}
+    {END body}
+  </body>
+</html>

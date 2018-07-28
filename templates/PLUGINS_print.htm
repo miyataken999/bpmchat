@@ -1,0 +1,232 @@
+<!doctype html>
+<html  {$html_attrs}>
+  <head>asdfsfs
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      {$pagetitle}
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link REL="stylesheet" href="styles/default.css" type="text/css">
+    {BEGIN rtlCSS}
+      <link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+    {END rtlCSS}
+    {BEGIN styleCSSFiles}
+      <link REL="stylesheet" href="{$stylepath}" type="text/css">
+    {END styleCSSFiles}
+  </head>
+  <BODY class="{$stylename} function-print" {$bodyattrs}>
+    {BEGIN body}
+      {$header}
+      <style>
+        {$containerCss}
+      </style>
+      <DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel PLUGINS print}</h2>
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>{mlang_message PAGE1} <span class="rp-pageno">{$pageno}</span> {mlang_message PAGE2} <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="table table-bordered rp-maintable" {$printgrid_hiddenattr} data-pageid="{$pageid}" data-brick="printgrid" >
+	<thead>
+	{BEGIN grid_header}
+		<tr class="{$gridHeader_class}" >
+		{BEGIN record_header}
+			{BEGIN PLUGIN_NAME_fieldheadercolumn}
+			<th class="{$PLUGIN_NAME_class}" {$PLUGIN_NAME_style}  data-field="PLUGIN_NAME">
+				{$label PLUGINS PLUGIN_NAME}
+			</th>
+			{END PLUGIN_NAME_fieldheadercolumn}
+			{BEGIN PLUGIN_VERSION_fieldheadercolumn}
+			<th class="{$PLUGIN_VERSION_class}" {$PLUGIN_VERSION_style}  data-field="PLUGIN_VERSION">
+				{$label PLUGINS PLUGIN_VERSION}
+			</th>
+			{END PLUGIN_VERSION_fieldheadercolumn}
+			{BEGIN PLUGIN_STATUS_fieldheadercolumn}
+			<th class="{$PLUGIN_STATUS_class}" {$PLUGIN_STATUS_style}  data-field="PLUGIN_STATUS">
+				{$label PLUGINS PLUGIN_STATUS}
+			</th>
+			{END PLUGIN_STATUS_fieldheadercolumn}
+			{BEGIN PLUGIN_TYPE_fieldheadercolumn}
+			<th class="{$PLUGIN_TYPE_class}" {$PLUGIN_TYPE_style}  data-field="PLUGIN_TYPE">
+				{$label PLUGINS PLUGIN_TYPE}
+			</th>
+			{END PLUGIN_TYPE_fieldheadercolumn}
+			{BEGIN PLUGIN_TYPE_VERSION_fieldheadercolumn}
+			<th class="{$PLUGIN_TYPE_VERSION_class}" {$PLUGIN_TYPE_VERSION_style}  data-field="PLUGIN_TYPE_VERSION">
+				{$label PLUGINS PLUGIN_TYPE_VERSION}
+			</th>
+			{END PLUGIN_TYPE_VERSION_fieldheadercolumn}
+			{BEGIN PLUGIN_LIBRARY_fieldheadercolumn}
+			<th class="{$PLUGIN_LIBRARY_class}" {$PLUGIN_LIBRARY_style}  data-field="PLUGIN_LIBRARY">
+				{$label PLUGINS PLUGIN_LIBRARY}
+			</th>
+			{END PLUGIN_LIBRARY_fieldheadercolumn}
+			{BEGIN PLUGIN_LIBRARY_VERSION_fieldheadercolumn}
+			<th class="{$PLUGIN_LIBRARY_VERSION_class}" {$PLUGIN_LIBRARY_VERSION_style}  data-field="PLUGIN_LIBRARY_VERSION">
+				{$label PLUGINS PLUGIN_LIBRARY_VERSION}
+			</th>
+			{END PLUGIN_LIBRARY_VERSION_fieldheadercolumn}
+			{BEGIN PLUGIN_AUTHOR_fieldheadercolumn}
+			<th class="{$PLUGIN_AUTHOR_class}" {$PLUGIN_AUTHOR_style}  data-field="PLUGIN_AUTHOR">
+				{$label PLUGINS PLUGIN_AUTHOR}
+			</th>
+			{END PLUGIN_AUTHOR_fieldheadercolumn}
+			{BEGIN PLUGIN_DESCRIPTION_fieldheadercolumn}
+			<th class="{$PLUGIN_DESCRIPTION_class}" {$PLUGIN_DESCRIPTION_style}  data-field="PLUGIN_DESCRIPTION">
+				{$label PLUGINS PLUGIN_DESCRIPTION}
+			</th>
+			{END PLUGIN_DESCRIPTION_fieldheadercolumn}
+			{BEGIN PLUGIN_LICENSE_fieldheadercolumn}
+			<th class="{$PLUGIN_LICENSE_class}" {$PLUGIN_LICENSE_style}  data-field="PLUGIN_LICENSE">
+				{$label PLUGINS PLUGIN_LICENSE}
+			</th>
+			{END PLUGIN_LICENSE_fieldheadercolumn}
+			{BEGIN LOAD_OPTION_fieldheadercolumn}
+			<th class="{$LOAD_OPTION_class}" {$LOAD_OPTION_style}  data-field="LOAD_OPTION">
+				{$label PLUGINS LOAD_OPTION}
+			</th>
+			{END LOAD_OPTION_fieldheadercolumn}
+			{BEGIN endrecordheader_block}
+			<th class="rnr-cs">&nbsp;</th>
+			{END endrecordheader_block}
+		{END record_header}
+		</tr>
+	{END grid_header}
+	</thead>
+	
+	<tbody>	
+	{BEGIN grid_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+			{BEGIN PLUGIN_NAME_fieldcolumn}
+			<td  class="{$PLUGIN_NAME_class}" {$PLUGIN_NAME_style} {$recordattrs}>
+				{$PLUGIN_NAME_value}
+			</td>
+			{END PLUGIN_NAME_fieldcolumn}
+			{BEGIN PLUGIN_VERSION_fieldcolumn}
+			<td  class="{$PLUGIN_VERSION_class}" {$PLUGIN_VERSION_style} {$recordattrs}>
+				{$PLUGIN_VERSION_value}
+			</td>
+			{END PLUGIN_VERSION_fieldcolumn}
+			{BEGIN PLUGIN_STATUS_fieldcolumn}
+			<td  class="{$PLUGIN_STATUS_class}" {$PLUGIN_STATUS_style} {$recordattrs}>
+				{$PLUGIN_STATUS_value}
+			</td>
+			{END PLUGIN_STATUS_fieldcolumn}
+			{BEGIN PLUGIN_TYPE_fieldcolumn}
+			<td  class="{$PLUGIN_TYPE_class}" {$PLUGIN_TYPE_style} {$recordattrs}>
+				{$PLUGIN_TYPE_value}
+			</td>
+			{END PLUGIN_TYPE_fieldcolumn}
+			{BEGIN PLUGIN_TYPE_VERSION_fieldcolumn}
+			<td  class="{$PLUGIN_TYPE_VERSION_class}" {$PLUGIN_TYPE_VERSION_style} {$recordattrs}>
+				{$PLUGIN_TYPE_VERSION_value}
+			</td>
+			{END PLUGIN_TYPE_VERSION_fieldcolumn}
+			{BEGIN PLUGIN_LIBRARY_fieldcolumn}
+			<td  class="{$PLUGIN_LIBRARY_class}" {$PLUGIN_LIBRARY_style} {$recordattrs}>
+				{$PLUGIN_LIBRARY_value}
+			</td>
+			{END PLUGIN_LIBRARY_fieldcolumn}
+			{BEGIN PLUGIN_LIBRARY_VERSION_fieldcolumn}
+			<td  class="{$PLUGIN_LIBRARY_VERSION_class}" {$PLUGIN_LIBRARY_VERSION_style} {$recordattrs}>
+				{$PLUGIN_LIBRARY_VERSION_value}
+			</td>
+			{END PLUGIN_LIBRARY_VERSION_fieldcolumn}
+			{BEGIN PLUGIN_AUTHOR_fieldcolumn}
+			<td  class="{$PLUGIN_AUTHOR_class}" {$PLUGIN_AUTHOR_style} {$recordattrs}>
+				{$PLUGIN_AUTHOR_value}
+			</td>
+			{END PLUGIN_AUTHOR_fieldcolumn}
+			{BEGIN PLUGIN_DESCRIPTION_fieldcolumn}
+			<td  class="{$PLUGIN_DESCRIPTION_class}" {$PLUGIN_DESCRIPTION_style} {$recordattrs}>
+				{$PLUGIN_DESCRIPTION_value}
+			</td>
+			{END PLUGIN_DESCRIPTION_fieldcolumn}
+			{BEGIN PLUGIN_LICENSE_fieldcolumn}
+			<td  class="{$PLUGIN_LICENSE_class}" {$PLUGIN_LICENSE_style} {$recordattrs}>
+				{$PLUGIN_LICENSE_value}
+			</td>
+			{END PLUGIN_LICENSE_fieldcolumn}
+			{BEGIN LOAD_OPTION_fieldcolumn}
+			<td  class="{$LOAD_OPTION_class}" {$LOAD_OPTION_style} {$recordattrs}>
+				{$LOAD_OPTION_value}
+			</td>
+			{END LOAD_OPTION_fieldcolumn}
+			{BEGIN endrecord_block}
+			<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+			{END endrecord_block}
+		{END grid_record}
+		</tr>
+{END grid_row}
+	</tbody>
+
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+      </div>
+      <DIV class="bs-middle ">
+        <DIV class="bs-topmiddle">
+          
+        </div>
+        <DIV class="bs-left" {$blockattr_left}>
+          
+        </div>
+        <DIV class="bs-center">
+          
+        </div>
+        <DIV class="bs-right">
+          
+        </div>
+      </div>
+      <DIV class="bs-bottom">
+        
+      </div>
+      {$footer}
+    {END body}
+  </body>
+</html>

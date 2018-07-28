@@ -1,0 +1,370 @@
+<!doctype html>
+<html  {$html_attrs}>
+  <head>asdfsfs
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      {$pagetitle}
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link REL="stylesheet" href="styles/default.css" type="text/css">
+    {BEGIN rtlCSS}
+      <link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+    {END rtlCSS}
+    {BEGIN styleCSSFiles}
+      <link REL="stylesheet" href="{$stylepath}" type="text/css">
+    {END styleCSSFiles}
+  </head>
+  <BODY class="{$stylename} function-edit" {$bodyattrs}>
+    {BEGIN body}
+      {$header}
+      <style>
+        {$containerCss}
+      </style>
+      <DIV class="bs-top">
+        
+
+{BEGIN container_editpage}
+<div {$editpage_chiddenattr} data-pageid="{$pageid}" data-container="editpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN editheader}
+	<h2 {$editheader_hiddenattr} data-pageid="{$pageid}" data-brick="editheader" >{$pagetitlelabel REPORT_TABLE edit}</h2>
+
+{END editheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+		<button class="btn btn-sm btn-default" {$backbutton_attrs}>{mlang_message BACK_TO_LIST}</button>
+{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>{mlang_message VIEW}</button>
+{END view_page_button}
+</div>
+</div>
+
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+
+</div>
+{END container_editpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$editfields_hiddenattr} data-pageid="{$pageid}" data-brick="editfields" class="form-horizontal" role="form">
+
+
+
+			{BEGIN REP_TAB_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_REP_TAB_UID}" data-fieldname="REP_TAB_UID" data-signal-error-for="REP_TAB_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_REP_TAB_UID}">
+		{BEGIN REP_TAB_UID_label}{$label REPORT_TABLE REP_TAB_UID}{END REP_TAB_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$REP_TAB_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="REP_TAB_UID">
+		<div class="text-muted" >
+		{$tooltip REPORT_TABLE REP_TAB_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END REP_TAB_UID_fieldblock}
+
+			{BEGIN PRO_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PRO_UID}" data-fieldname="PRO_UID" data-signal-error-for="PRO_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PRO_UID}">
+		{BEGIN PRO_UID_label}{$label REPORT_TABLE PRO_UID}{END PRO_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$PRO_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PRO_UID">
+		<div class="text-muted" >
+		{$tooltip REPORT_TABLE PRO_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END PRO_UID_fieldblock}
+
+			{BEGIN REP_TAB_NAME_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_REP_TAB_NAME}" data-fieldname="REP_TAB_NAME" data-signal-error-for="REP_TAB_NAME{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_REP_TAB_NAME}">
+		{BEGIN REP_TAB_NAME_label}{$label REPORT_TABLE REP_TAB_NAME}{END REP_TAB_NAME_label}
+	</label>
+	<div class="col-md-6" >
+		{$REP_TAB_NAME_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="REP_TAB_NAME">
+		<div class="text-muted" >
+		{$tooltip REPORT_TABLE REP_TAB_NAME}
+		</div>
+	</div>
+</div>
+</div>
+{END REP_TAB_NAME_fieldblock}
+
+			{BEGIN REP_TAB_TYPE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_REP_TAB_TYPE}" data-fieldname="REP_TAB_TYPE" data-signal-error-for="REP_TAB_TYPE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_REP_TAB_TYPE}">
+		{BEGIN REP_TAB_TYPE_label}{$label REPORT_TABLE REP_TAB_TYPE}{END REP_TAB_TYPE_label}
+	</label>
+	<div class="col-md-6" >
+		{$REP_TAB_TYPE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="REP_TAB_TYPE">
+		<div class="text-muted" >
+		{$tooltip REPORT_TABLE REP_TAB_TYPE}
+		</div>
+	</div>
+</div>
+</div>
+{END REP_TAB_TYPE_fieldblock}
+
+			{BEGIN REP_TAB_GRID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_REP_TAB_GRID}" data-fieldname="REP_TAB_GRID" data-signal-error-for="REP_TAB_GRID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_REP_TAB_GRID}">
+		{BEGIN REP_TAB_GRID_label}{$label REPORT_TABLE REP_TAB_GRID}{END REP_TAB_GRID_label}
+	</label>
+	<div class="col-md-6" >
+		{$REP_TAB_GRID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="REP_TAB_GRID">
+		<div class="text-muted" >
+		{$tooltip REPORT_TABLE REP_TAB_GRID}
+		</div>
+	</div>
+</div>
+</div>
+{END REP_TAB_GRID_fieldblock}
+
+			{BEGIN REP_TAB_CONNECTION_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_REP_TAB_CONNECTION}" data-fieldname="REP_TAB_CONNECTION" data-signal-error-for="REP_TAB_CONNECTION{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_REP_TAB_CONNECTION}">
+		{BEGIN REP_TAB_CONNECTION_label}{$label REPORT_TABLE REP_TAB_CONNECTION}{END REP_TAB_CONNECTION_label}
+	</label>
+	<div class="col-md-6" >
+		{$REP_TAB_CONNECTION_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="REP_TAB_CONNECTION">
+		<div class="text-muted" >
+		{$tooltip REPORT_TABLE REP_TAB_CONNECTION}
+		</div>
+	</div>
+</div>
+</div>
+{END REP_TAB_CONNECTION_fieldblock}
+
+			{BEGIN REP_TAB_CREATE_DATE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_REP_TAB_CREATE_DATE}" data-fieldname="REP_TAB_CREATE_DATE" data-signal-error-for="REP_TAB_CREATE_DATE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_REP_TAB_CREATE_DATE}">
+		{BEGIN REP_TAB_CREATE_DATE_label}{$label REPORT_TABLE REP_TAB_CREATE_DATE}{END REP_TAB_CREATE_DATE_label}
+	</label>
+	<div class="col-md-6" >
+		{$REP_TAB_CREATE_DATE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="REP_TAB_CREATE_DATE">
+		<div class="text-muted" >
+		{$tooltip REPORT_TABLE REP_TAB_CREATE_DATE}
+		</div>
+	</div>
+</div>
+</div>
+{END REP_TAB_CREATE_DATE_fieldblock}
+
+			{BEGIN REP_TAB_STATUS_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_REP_TAB_STATUS}" data-fieldname="REP_TAB_STATUS" data-signal-error-for="REP_TAB_STATUS{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_REP_TAB_STATUS}">
+		{BEGIN REP_TAB_STATUS_label}{$label REPORT_TABLE REP_TAB_STATUS}{END REP_TAB_STATUS_label}
+	</label>
+	<div class="col-md-6" >
+		{$REP_TAB_STATUS_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="REP_TAB_STATUS">
+		<div class="text-muted" >
+		{$tooltip REPORT_TABLE REP_TAB_STATUS}
+		</div>
+	</div>
+</div>
+</div>
+{END REP_TAB_STATUS_fieldblock}
+
+			{BEGIN REP_TAB_TITLE_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_REP_TAB_TITLE}" data-fieldname="REP_TAB_TITLE" data-signal-error-for="REP_TAB_TITLE{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_REP_TAB_TITLE}">
+		{BEGIN REP_TAB_TITLE_label}{$label REPORT_TABLE REP_TAB_TITLE}{END REP_TAB_TITLE_label}
+	</label>
+	<div class="col-md-6" >
+		{$REP_TAB_TITLE_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="REP_TAB_TITLE">
+		<div class="text-muted" >
+		{$tooltip REPORT_TABLE REP_TAB_TITLE}
+		</div>
+	</div>
+</div>
+</div>
+{END REP_TAB_TITLE_fieldblock}
+
+
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN editbuttons}
+	{BEGIN save_button}
+	<button class="btn btn-primary" {$savebutton_attrs}>{mlang_message SAVE}</button>
+	{END save_button}
+	{BEGIN back_button}
+		<button class="btn btn-default" {$backbutton_attrs}>{mlang_message BACK_TO_LIST}</button>
+	{END back_button}
+	{BEGIN close_button}
+	<a href="#" class="btn btn-default" {$closebutton_attrs}>{mlang_message CANCEL}</a>
+	{END close_button}
+
+{END editbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+
+
+{BEGIN container_leftbuttons_1}
+<div {$leftbuttons_1_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons_1" class="  text-right col-md-3 "> 
+
+{BEGIN righteditbuttons}
+<div class="btn-group" role="group">
+	<div class="btn-group dropup" role="group">
+		<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+		<ul class="dropdown-menu dropdown-left">
+			{BEGIN reset_button}
+				<li><a href="#" {$resetbutton_attrs}>{mlang_message RESET}</a></li>
+			{END reset_button}
+			{BEGIN view_page_button}
+				<li><a href="#" {$view_page_button_attrs}>{mlang_message VIEW}</a></li>
+			{END view_page_button}
+		</ul>
+	</div>
+</div>
+{END righteditbuttons}
+
+
+
+</div>
+{END container_leftbuttons_1}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+      </div>
+      <DIV class="bs-middle ">
+        <DIV class="bs-topmiddle">
+          
+        </div>
+        <DIV class="bs-left" {$blockattr_left}>
+          
+        </div>
+        <DIV class="bs-center">
+          
+        </div>
+        <DIV class="bs-right">
+          
+        </div>
+      </div>
+      <DIV class="bs-bottom">
+        
+      </div>
+      {$footer}
+    {END body}
+  </body>
+</html>

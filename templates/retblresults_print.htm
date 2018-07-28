@@ -1,0 +1,282 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel retblresults print}</h2>
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>ページ <span class="rp-pageno">{$pageno}</span> / <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="table table-bordered rp-maintable" {$printgrid_hiddenattr} data-pageid="{$pageid}" data-brick="printgrid" >
+	<thead>
+	{BEGIN grid_header}
+		<tr class="{$gridHeader_class}" >
+		{BEGIN record_header}
+			{BEGIN MLS_Number_fieldheadercolumn}
+			<th class="{$MLS_Number_class}" {$MLS_Number_style}  data-field="MLS_Number">
+				{$label retblresults MLS_Number}
+			</th>
+			{END MLS_Number_fieldheadercolumn}
+			{BEGIN House_Number_fieldheadercolumn}
+			<th class="{$House_Number_class}" {$House_Number_style}  data-field="House_Number">
+				{$label retblresults House_Number}
+			</th>
+			{END House_Number_fieldheadercolumn}
+			{BEGIN Street_Name_fieldheadercolumn}
+			<th class="{$Street_Name_class}" {$Street_Name_style}  data-field="Street_Name">
+				{$label retblresults Street_Name}
+			</th>
+			{END Street_Name_fieldheadercolumn}
+			{BEGIN Apartment_Unit_fieldheadercolumn}
+			<th class="{$Apartment_Unit_class}" {$Apartment_Unit_style}  data-field="Apartment_Unit">
+				{$label retblresults Apartment_Unit}
+			</th>
+			{END Apartment_Unit_fieldheadercolumn}
+			{BEGIN City_fieldheadercolumn}
+			<th class="{$City_class}" {$City_style}  data-field="City">
+				{$label retblresults City}
+			</th>
+			{END City_fieldheadercolumn}
+			{BEGIN State_fieldheadercolumn}
+			<th class="{$State_class}" {$State_style}  data-field="State">
+				{$label retblresults State}
+			</th>
+			{END State_fieldheadercolumn}
+			{BEGIN Zip_fieldheadercolumn}
+			<th class="{$Zip_class}" {$Zip_style}  data-field="Zip">
+				{$label retblresults Zip}
+			</th>
+			{END Zip_fieldheadercolumn}
+			{BEGIN Price_fieldheadercolumn}
+			<th class="{$Price_class}" {$Price_style}  data-field="Price">
+				{$label retblresults Price}
+			</th>
+			{END Price_fieldheadercolumn}
+			{BEGIN Bedrooms_fieldheadercolumn}
+			<th class="{$Bedrooms_class}" {$Bedrooms_style}  data-field="Bedrooms">
+				{$label retblresults Bedrooms}
+			</th>
+			{END Bedrooms_fieldheadercolumn}
+			{BEGIN Bathrooms_fieldheadercolumn}
+			<th class="{$Bathrooms_class}" {$Bathrooms_style}  data-field="Bathrooms">
+				{$label retblresults Bathrooms}
+			</th>
+			{END Bathrooms_fieldheadercolumn}
+			{BEGIN Year_fieldheadercolumn}
+			<th class="{$Year_class}" {$Year_style}  data-field="Year">
+				{$label retblresults Year}
+			</th>
+			{END Year_fieldheadercolumn}
+			{BEGIN Sq_Ft_fieldheadercolumn}
+			<th class="{$Sq_Ft_class}" {$Sq_Ft_style}  data-field="Sq_Ft">
+				{$label retblresults Sq_Ft}
+			</th>
+			{END Sq_Ft_fieldheadercolumn}
+			{BEGIN Garage_fieldheadercolumn}
+			<th class="{$Garage_class}" {$Garage_style}  data-field="Garage">
+				{$label retblresults Garage}
+			</th>
+			{END Garage_fieldheadercolumn}
+			{BEGIN Tax_Amount_fieldheadercolumn}
+			<th class="{$Tax_Amount_class}" {$Tax_Amount_style}  data-field="Tax_Amount">
+				{$label retblresults Tax_Amount}
+			</th>
+			{END Tax_Amount_fieldheadercolumn}
+			{BEGIN Remarks_fieldheadercolumn}
+			<th class="{$Remarks_class}" {$Remarks_style}  data-field="Remarks">
+				{$label retblresults Remarks}
+			</th>
+			{END Remarks_fieldheadercolumn}
+			{BEGIN PhotoListing_fieldheadercolumn}
+			<th class="{$PhotoListing_class}" {$PhotoListing_style}  data-field="PhotoListing">
+				{$label retblresults PhotoListing}
+			</th>
+			{END PhotoListing_fieldheadercolumn}
+			{BEGIN endrecordheader_block}
+			<th class="rnr-cs">&nbsp;</th>
+			{END endrecordheader_block}
+		{END record_header}
+		</tr>
+	{END grid_header}
+	</thead>
+	
+	<tbody>	
+	{BEGIN grid_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+			{BEGIN MLS_Number_fieldcolumn}
+			<td  class="{$MLS_Number_class}" {$MLS_Number_style} {$recordattrs}>
+				{$MLS_Number_value}
+			</td>
+			{END MLS_Number_fieldcolumn}
+			{BEGIN House_Number_fieldcolumn}
+			<td  class="{$House_Number_class}" {$House_Number_style} {$recordattrs}>
+				{$House_Number_value}
+			</td>
+			{END House_Number_fieldcolumn}
+			{BEGIN Street_Name_fieldcolumn}
+			<td  class="{$Street_Name_class}" {$Street_Name_style} {$recordattrs}>
+				{$Street_Name_value}
+			</td>
+			{END Street_Name_fieldcolumn}
+			{BEGIN Apartment_Unit_fieldcolumn}
+			<td  class="{$Apartment_Unit_class}" {$Apartment_Unit_style} {$recordattrs}>
+				{$Apartment_Unit_value}
+			</td>
+			{END Apartment_Unit_fieldcolumn}
+			{BEGIN City_fieldcolumn}
+			<td  class="{$City_class}" {$City_style} {$recordattrs}>
+				{$City_value}
+			</td>
+			{END City_fieldcolumn}
+			{BEGIN State_fieldcolumn}
+			<td  class="{$State_class}" {$State_style} {$recordattrs}>
+				{$State_value}
+			</td>
+			{END State_fieldcolumn}
+			{BEGIN Zip_fieldcolumn}
+			<td  class="{$Zip_class}" {$Zip_style} {$recordattrs}>
+				{$Zip_value}
+			</td>
+			{END Zip_fieldcolumn}
+			{BEGIN Price_fieldcolumn}
+			<td  class="{$Price_class}" {$Price_style} {$recordattrs}>
+				{$Price_value}
+			</td>
+			{END Price_fieldcolumn}
+			{BEGIN Bedrooms_fieldcolumn}
+			<td  class="{$Bedrooms_class}" {$Bedrooms_style} {$recordattrs}>
+				{$Bedrooms_value}
+			</td>
+			{END Bedrooms_fieldcolumn}
+			{BEGIN Bathrooms_fieldcolumn}
+			<td  class="{$Bathrooms_class}" {$Bathrooms_style} {$recordattrs}>
+				{$Bathrooms_value}
+			</td>
+			{END Bathrooms_fieldcolumn}
+			{BEGIN Year_fieldcolumn}
+			<td  class="{$Year_class}" {$Year_style} {$recordattrs}>
+				{$Year_value}
+			</td>
+			{END Year_fieldcolumn}
+			{BEGIN Sq_Ft_fieldcolumn}
+			<td  class="{$Sq_Ft_class}" {$Sq_Ft_style} {$recordattrs}>
+				{$Sq_Ft_value}
+			</td>
+			{END Sq_Ft_fieldcolumn}
+			{BEGIN Garage_fieldcolumn}
+			<td  class="{$Garage_class}" {$Garage_style} {$recordattrs}>
+				{$Garage_value}
+			</td>
+			{END Garage_fieldcolumn}
+			{BEGIN Tax_Amount_fieldcolumn}
+			<td  class="{$Tax_Amount_class}" {$Tax_Amount_style} {$recordattrs}>
+				{$Tax_Amount_value}
+			</td>
+			{END Tax_Amount_fieldcolumn}
+			{BEGIN Remarks_fieldcolumn}
+			<td  class="{$Remarks_class}" {$Remarks_style} {$recordattrs}>
+				{$Remarks_value}
+			</td>
+			{END Remarks_fieldcolumn}
+			{BEGIN PhotoListing_fieldcolumn}
+			<td  class="{$PhotoListing_class}" {$PhotoListing_style} {$recordattrs}>
+				{$PhotoListing_value}
+			</td>
+			{END PhotoListing_fieldcolumn}
+			{BEGIN endrecord_block}
+			<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+			{END endrecord_block}
+		{END grid_record}
+		</tr>
+{END grid_row}
+	</tbody>
+
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

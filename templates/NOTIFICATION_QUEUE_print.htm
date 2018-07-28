@@ -1,0 +1,212 @@
+<!doctype html>
+<html  {$html_attrs}>
+  <head>asdfsfs
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      {$pagetitle}
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link REL="stylesheet" href="styles/default.css" type="text/css">
+    {BEGIN rtlCSS}
+      <link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+    {END rtlCSS}
+    {BEGIN styleCSSFiles}
+      <link REL="stylesheet" href="{$stylepath}" type="text/css">
+    {END styleCSSFiles}
+  </head>
+  <BODY class="{$stylename} function-print" {$bodyattrs}>
+    {BEGIN body}
+      {$header}
+      <style>
+        {$containerCss}
+      </style>
+      <DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel NOTIFICATION_QUEUE print}</h2>
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>{mlang_message PAGE1} <span class="rp-pageno">{$pageno}</span> {mlang_message PAGE2} <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="table table-bordered rp-maintable" {$printgrid_hiddenattr} data-pageid="{$pageid}" data-brick="printgrid" >
+	<thead>
+	{BEGIN grid_header}
+		<tr class="{$gridHeader_class}" >
+		{BEGIN record_header}
+			{BEGIN NOT_UID_fieldheadercolumn}
+			<th class="{$NOT_UID_class}" {$NOT_UID_style}  data-field="NOT_UID">
+				{$label NOTIFICATION_QUEUE NOT_UID}
+			</th>
+			{END NOT_UID_fieldheadercolumn}
+			{BEGIN DEV_TYPE_fieldheadercolumn}
+			<th class="{$DEV_TYPE_class}" {$DEV_TYPE_style}  data-field="DEV_TYPE">
+				{$label NOTIFICATION_QUEUE DEV_TYPE}
+			</th>
+			{END DEV_TYPE_fieldheadercolumn}
+			{BEGIN DEV_UID_fieldheadercolumn}
+			<th class="{$DEV_UID_class}" {$DEV_UID_style}  data-field="DEV_UID">
+				{$label NOTIFICATION_QUEUE DEV_UID}
+			</th>
+			{END DEV_UID_fieldheadercolumn}
+			{BEGIN NOT_MSG_fieldheadercolumn}
+			<th class="{$NOT_MSG_class}" {$NOT_MSG_style}  data-field="NOT_MSG">
+				{$label NOTIFICATION_QUEUE NOT_MSG}
+			</th>
+			{END NOT_MSG_fieldheadercolumn}
+			{BEGIN NOT_DATA_fieldheadercolumn}
+			<th class="{$NOT_DATA_class}" {$NOT_DATA_style}  data-field="NOT_DATA">
+				{$label NOTIFICATION_QUEUE NOT_DATA}
+			</th>
+			{END NOT_DATA_fieldheadercolumn}
+			{BEGIN NOT_STATUS_fieldheadercolumn}
+			<th class="{$NOT_STATUS_class}" {$NOT_STATUS_style}  data-field="NOT_STATUS">
+				{$label NOTIFICATION_QUEUE NOT_STATUS}
+			</th>
+			{END NOT_STATUS_fieldheadercolumn}
+			{BEGIN NOT_SEND_DATE_fieldheadercolumn}
+			<th class="{$NOT_SEND_DATE_class}" {$NOT_SEND_DATE_style}  data-field="NOT_SEND_DATE">
+				{$label NOTIFICATION_QUEUE NOT_SEND_DATE}
+			</th>
+			{END NOT_SEND_DATE_fieldheadercolumn}
+			{BEGIN APP_UID_fieldheadercolumn}
+			<th class="{$APP_UID_class}" {$APP_UID_style}  data-field="APP_UID">
+				{$label NOTIFICATION_QUEUE APP_UID}
+			</th>
+			{END APP_UID_fieldheadercolumn}
+			{BEGIN DEL_INDEX_fieldheadercolumn}
+			<th class="{$DEL_INDEX_class}" {$DEL_INDEX_style}  data-field="DEL_INDEX">
+				{$label NOTIFICATION_QUEUE DEL_INDEX}
+			</th>
+			{END DEL_INDEX_fieldheadercolumn}
+			{BEGIN endrecordheader_block}
+			<th class="rnr-cs">&nbsp;</th>
+			{END endrecordheader_block}
+		{END record_header}
+		</tr>
+	{END grid_header}
+	</thead>
+	
+	<tbody>	
+	{BEGIN grid_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+			{BEGIN NOT_UID_fieldcolumn}
+			<td  class="{$NOT_UID_class}" {$NOT_UID_style} {$recordattrs}>
+				{$NOT_UID_value}
+			</td>
+			{END NOT_UID_fieldcolumn}
+			{BEGIN DEV_TYPE_fieldcolumn}
+			<td  class="{$DEV_TYPE_class}" {$DEV_TYPE_style} {$recordattrs}>
+				{$DEV_TYPE_value}
+			</td>
+			{END DEV_TYPE_fieldcolumn}
+			{BEGIN DEV_UID_fieldcolumn}
+			<td  class="{$DEV_UID_class}" {$DEV_UID_style} {$recordattrs}>
+				{$DEV_UID_value}
+			</td>
+			{END DEV_UID_fieldcolumn}
+			{BEGIN NOT_MSG_fieldcolumn}
+			<td  class="{$NOT_MSG_class}" {$NOT_MSG_style} {$recordattrs}>
+				{$NOT_MSG_value}
+			</td>
+			{END NOT_MSG_fieldcolumn}
+			{BEGIN NOT_DATA_fieldcolumn}
+			<td  class="{$NOT_DATA_class}" {$NOT_DATA_style} {$recordattrs}>
+				{$NOT_DATA_value}
+			</td>
+			{END NOT_DATA_fieldcolumn}
+			{BEGIN NOT_STATUS_fieldcolumn}
+			<td  class="{$NOT_STATUS_class}" {$NOT_STATUS_style} {$recordattrs}>
+				{$NOT_STATUS_value}
+			</td>
+			{END NOT_STATUS_fieldcolumn}
+			{BEGIN NOT_SEND_DATE_fieldcolumn}
+			<td  class="{$NOT_SEND_DATE_class}" {$NOT_SEND_DATE_style} {$recordattrs}>
+				{$NOT_SEND_DATE_value}
+			</td>
+			{END NOT_SEND_DATE_fieldcolumn}
+			{BEGIN APP_UID_fieldcolumn}
+			<td  class="{$APP_UID_class}" {$APP_UID_style} {$recordattrs}>
+				{$APP_UID_value}
+			</td>
+			{END APP_UID_fieldcolumn}
+			{BEGIN DEL_INDEX_fieldcolumn}
+			<td  class="{$DEL_INDEX_class}" {$DEL_INDEX_style} {$recordattrs}>
+				{$DEL_INDEX_value}
+			</td>
+			{END DEL_INDEX_fieldcolumn}
+			{BEGIN endrecord_block}
+			<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+			{END endrecord_block}
+		{END grid_record}
+		</tr>
+{END grid_row}
+	</tbody>
+
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+      </div>
+      <DIV class="bs-middle ">
+        <DIV class="bs-topmiddle">
+          
+        </div>
+        <DIV class="bs-left" {$blockattr_left}>
+          
+        </div>
+        <DIV class="bs-center">
+          
+        </div>
+        <DIV class="bs-right">
+          
+        </div>
+      </div>
+      <DIV class="bs-bottom">
+        
+      </div>
+      {$footer}
+    {END body}
+  </body>
+</html>

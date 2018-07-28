@@ -1,0 +1,576 @@
+<!doctype html>
+<html  {$html_attrs}>
+  <head>asdfsfs
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      {$pagetitle}
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link REL="stylesheet" href="styles/default.css" type="text/css">
+    {BEGIN rtlCSS}
+      <link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+    {END rtlCSS}
+    {BEGIN styleCSSFiles}
+      <link REL="stylesheet" href="{$stylepath}" type="text/css">
+    {END styleCSSFiles}
+  </head>
+  <BODY class="{$stylename} function-add" {$bodyattrs}>
+    {BEGIN body}
+      {$header}
+      <style>
+        {$containerCss}
+      </style>
+      <DIV class="bs-top">
+        
+
+{BEGIN container_editpage}
+<div {$editpage_chiddenattr} data-pageid="{$pageid}" data-container="editpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN addheader}
+	<h2 {$addheader_hiddenattr} data-pageid="{$pageid}" data-brick="addheader" >{$pagetitlelabel wpfg_posts add}</h2>
+
+{END addheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+		<button class="btn btn-sm btn-default" {$backbutton_attrs}>{mlang_message BACK_TO_LIST}</button>
+{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>{mlang_message VIEW}</button>
+{END view_page_button}
+{BEGIN edit_page_button}
+	<button class="btn btn-sm btn-default" {$edit_page_button_attrs}>{mlang_message EDIT}</button>
+{END edit_page_button}
+</div>
+</div>
+
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+
+</div>
+{END container_editpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$addfields_hiddenattr} data-pageid="{$pageid}" data-brick="addfields" class="form-horizontal" role="form">
+			{BEGIN post_author_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_post_author}" data-fieldname="post_author" data-signal-error-for="post_author{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_post_author}">
+		{BEGIN post_author_label}{$label wpfg_posts post_author}{END post_author_label}
+	</label>
+	<div class="col-md-6" >
+		{$post_author_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="post_author">
+		<div class="text-muted" >
+		{$tooltip wpfg_posts post_author}
+		</div>
+	</div>
+</div>
+</div>
+{END post_author_fieldblock}
+
+			{BEGIN post_date_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_post_date}" data-fieldname="post_date" data-signal-error-for="post_date{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_post_date}">
+		{BEGIN post_date_label}{$label wpfg_posts post_date}{END post_date_label}
+	</label>
+	<div class="col-md-6" >
+		{$post_date_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="post_date">
+		<div class="text-muted" >
+		{$tooltip wpfg_posts post_date}
+		</div>
+	</div>
+</div>
+</div>
+{END post_date_fieldblock}
+
+			{BEGIN post_date_gmt_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_post_date_gmt}" data-fieldname="post_date_gmt" data-signal-error-for="post_date_gmt{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_post_date_gmt}">
+		{BEGIN post_date_gmt_label}{$label wpfg_posts post_date_gmt}{END post_date_gmt_label}
+	</label>
+	<div class="col-md-6" >
+		{$post_date_gmt_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="post_date_gmt">
+		<div class="text-muted" >
+		{$tooltip wpfg_posts post_date_gmt}
+		</div>
+	</div>
+</div>
+</div>
+{END post_date_gmt_fieldblock}
+
+			{BEGIN post_content_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_post_content}" data-fieldname="post_content" data-signal-error-for="post_content{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_post_content}">
+		{BEGIN post_content_label}{$label wpfg_posts post_content}{END post_content_label}
+	</label>
+	<div class="col-md-6" >
+		{$post_content_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="post_content">
+		<div class="text-muted" >
+		{$tooltip wpfg_posts post_content}
+		</div>
+	</div>
+</div>
+</div>
+{END post_content_fieldblock}
+
+			{BEGIN post_title_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_post_title}" data-fieldname="post_title" data-signal-error-for="post_title{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_post_title}">
+		{BEGIN post_title_label}{$label wpfg_posts post_title}{END post_title_label}
+	</label>
+	<div class="col-md-6" >
+		{$post_title_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="post_title">
+		<div class="text-muted" >
+		{$tooltip wpfg_posts post_title}
+		</div>
+	</div>
+</div>
+</div>
+{END post_title_fieldblock}
+
+			{BEGIN post_excerpt_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_post_excerpt}" data-fieldname="post_excerpt" data-signal-error-for="post_excerpt{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_post_excerpt}">
+		{BEGIN post_excerpt_label}{$label wpfg_posts post_excerpt}{END post_excerpt_label}
+	</label>
+	<div class="col-md-6" >
+		{$post_excerpt_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="post_excerpt">
+		<div class="text-muted" >
+		{$tooltip wpfg_posts post_excerpt}
+		</div>
+	</div>
+</div>
+</div>
+{END post_excerpt_fieldblock}
+
+			{BEGIN post_status_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_post_status}" data-fieldname="post_status" data-signal-error-for="post_status{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_post_status}">
+		{BEGIN post_status_label}{$label wpfg_posts post_status}{END post_status_label}
+	</label>
+	<div class="col-md-6" >
+		{$post_status_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="post_status">
+		<div class="text-muted" >
+		{$tooltip wpfg_posts post_status}
+		</div>
+	</div>
+</div>
+</div>
+{END post_status_fieldblock}
+
+			{BEGIN comment_status_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_comment_status}" data-fieldname="comment_status" data-signal-error-for="comment_status{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_comment_status}">
+		{BEGIN comment_status_label}{$label wpfg_posts comment_status}{END comment_status_label}
+	</label>
+	<div class="col-md-6" >
+		{$comment_status_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="comment_status">
+		<div class="text-muted" >
+		{$tooltip wpfg_posts comment_status}
+		</div>
+	</div>
+</div>
+</div>
+{END comment_status_fieldblock}
+
+			{BEGIN ping_status_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ping_status}" data-fieldname="ping_status" data-signal-error-for="ping_status{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ping_status}">
+		{BEGIN ping_status_label}{$label wpfg_posts ping_status}{END ping_status_label}
+	</label>
+	<div class="col-md-6" >
+		{$ping_status_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ping_status">
+		<div class="text-muted" >
+		{$tooltip wpfg_posts ping_status}
+		</div>
+	</div>
+</div>
+</div>
+{END ping_status_fieldblock}
+
+			{BEGIN post_password_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_post_password}" data-fieldname="post_password" data-signal-error-for="post_password{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_post_password}">
+		{BEGIN post_password_label}{$label wpfg_posts post_password}{END post_password_label}
+	</label>
+	<div class="col-md-6" >
+		{$post_password_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="post_password">
+		<div class="text-muted" >
+		{$tooltip wpfg_posts post_password}
+		</div>
+	</div>
+</div>
+</div>
+{END post_password_fieldblock}
+
+			{BEGIN post_name_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_post_name}" data-fieldname="post_name" data-signal-error-for="post_name{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_post_name}">
+		{BEGIN post_name_label}{$label wpfg_posts post_name}{END post_name_label}
+	</label>
+	<div class="col-md-6" >
+		{$post_name_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="post_name">
+		<div class="text-muted" >
+		{$tooltip wpfg_posts post_name}
+		</div>
+	</div>
+</div>
+</div>
+{END post_name_fieldblock}
+
+			{BEGIN to_ping_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_to_ping}" data-fieldname="to_ping" data-signal-error-for="to_ping{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_to_ping}">
+		{BEGIN to_ping_label}{$label wpfg_posts to_ping}{END to_ping_label}
+	</label>
+	<div class="col-md-6" >
+		{$to_ping_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="to_ping">
+		<div class="text-muted" >
+		{$tooltip wpfg_posts to_ping}
+		</div>
+	</div>
+</div>
+</div>
+{END to_ping_fieldblock}
+
+			{BEGIN pinged_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_pinged}" data-fieldname="pinged" data-signal-error-for="pinged{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_pinged}">
+		{BEGIN pinged_label}{$label wpfg_posts pinged}{END pinged_label}
+	</label>
+	<div class="col-md-6" >
+		{$pinged_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="pinged">
+		<div class="text-muted" >
+		{$tooltip wpfg_posts pinged}
+		</div>
+	</div>
+</div>
+</div>
+{END pinged_fieldblock}
+
+			{BEGIN post_modified_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_post_modified}" data-fieldname="post_modified" data-signal-error-for="post_modified{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_post_modified}">
+		{BEGIN post_modified_label}{$label wpfg_posts post_modified}{END post_modified_label}
+	</label>
+	<div class="col-md-6" >
+		{$post_modified_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="post_modified">
+		<div class="text-muted" >
+		{$tooltip wpfg_posts post_modified}
+		</div>
+	</div>
+</div>
+</div>
+{END post_modified_fieldblock}
+
+			{BEGIN post_modified_gmt_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_post_modified_gmt}" data-fieldname="post_modified_gmt" data-signal-error-for="post_modified_gmt{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_post_modified_gmt}">
+		{BEGIN post_modified_gmt_label}{$label wpfg_posts post_modified_gmt}{END post_modified_gmt_label}
+	</label>
+	<div class="col-md-6" >
+		{$post_modified_gmt_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="post_modified_gmt">
+		<div class="text-muted" >
+		{$tooltip wpfg_posts post_modified_gmt}
+		</div>
+	</div>
+</div>
+</div>
+{END post_modified_gmt_fieldblock}
+
+			{BEGIN post_content_filtered_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_post_content_filtered}" data-fieldname="post_content_filtered" data-signal-error-for="post_content_filtered{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_post_content_filtered}">
+		{BEGIN post_content_filtered_label}{$label wpfg_posts post_content_filtered}{END post_content_filtered_label}
+	</label>
+	<div class="col-md-6" >
+		{$post_content_filtered_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="post_content_filtered">
+		<div class="text-muted" >
+		{$tooltip wpfg_posts post_content_filtered}
+		</div>
+	</div>
+</div>
+</div>
+{END post_content_filtered_fieldblock}
+
+			{BEGIN post_parent_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_post_parent}" data-fieldname="post_parent" data-signal-error-for="post_parent{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_post_parent}">
+		{BEGIN post_parent_label}{$label wpfg_posts post_parent}{END post_parent_label}
+	</label>
+	<div class="col-md-6" >
+		{$post_parent_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="post_parent">
+		<div class="text-muted" >
+		{$tooltip wpfg_posts post_parent}
+		</div>
+	</div>
+</div>
+</div>
+{END post_parent_fieldblock}
+
+			{BEGIN guid_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_guid}" data-fieldname="guid" data-signal-error-for="guid{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_guid}">
+		{BEGIN guid_label}{$label wpfg_posts guid}{END guid_label}
+	</label>
+	<div class="col-md-6" >
+		{$guid_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="guid">
+		<div class="text-muted" >
+		{$tooltip wpfg_posts guid}
+		</div>
+	</div>
+</div>
+</div>
+{END guid_fieldblock}
+
+			{BEGIN menu_order_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_menu_order}" data-fieldname="menu_order" data-signal-error-for="menu_order{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_menu_order}">
+		{BEGIN menu_order_label}{$label wpfg_posts menu_order}{END menu_order_label}
+	</label>
+	<div class="col-md-6" >
+		{$menu_order_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="menu_order">
+		<div class="text-muted" >
+		{$tooltip wpfg_posts menu_order}
+		</div>
+	</div>
+</div>
+</div>
+{END menu_order_fieldblock}
+
+			{BEGIN post_type_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_post_type}" data-fieldname="post_type" data-signal-error-for="post_type{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_post_type}">
+		{BEGIN post_type_label}{$label wpfg_posts post_type}{END post_type_label}
+	</label>
+	<div class="col-md-6" >
+		{$post_type_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="post_type">
+		<div class="text-muted" >
+		{$tooltip wpfg_posts post_type}
+		</div>
+	</div>
+</div>
+</div>
+{END post_type_fieldblock}
+
+			{BEGIN post_mime_type_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_post_mime_type}" data-fieldname="post_mime_type" data-signal-error-for="post_mime_type{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_post_mime_type}">
+		{BEGIN post_mime_type_label}{$label wpfg_posts post_mime_type}{END post_mime_type_label}
+	</label>
+	<div class="col-md-6" >
+		{$post_mime_type_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="post_mime_type">
+		<div class="text-muted" >
+		{$tooltip wpfg_posts post_mime_type}
+		</div>
+	</div>
+</div>
+</div>
+{END post_mime_type_fieldblock}
+
+			{BEGIN comment_count_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_comment_count}" data-fieldname="comment_count" data-signal-error-for="comment_count{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_comment_count}">
+		{BEGIN comment_count_label}{$label wpfg_posts comment_count}{END comment_count_label}
+	</label>
+	<div class="col-md-6" >
+		{$comment_count_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="comment_count">
+		<div class="text-muted" >
+		{$tooltip wpfg_posts comment_count}
+		</div>
+	</div>
+</div>
+</div>
+{END comment_count_fieldblock}
+
+
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN addbuttons}
+	{BEGIN save_button}
+	<button class="btn btn-primary" {$savebutton_attrs}>{mlang_message SAVE}</button>
+	{END save_button}
+	{BEGIN reset_button}
+	<button class="btn btn-default" id="resetButton{$id}">{mlang_message RESET}</button>
+	{END reset_button}
+	{BEGIN back_button}
+		<button class="btn btn-default" id="backButton{$id}">{mlang_message BACK_TO_LIST}</button>
+	{END back_button}
+	{BEGIN cancel_button}
+	<a href="#" class="btn btn-default" id="cancelButton{$id}">{mlang_message CANCEL}</a>
+	{END cancel_button}
+
+{END addbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+      </div>
+      <DIV class="bs-middle ">
+        <DIV class="bs-topmiddle">
+          
+        </div>
+        <DIV class="bs-left" {$blockattr_left}>
+          
+        </div>
+        <DIV class="bs-center">
+          
+        </div>
+        <DIV class="bs-right">
+          
+        </div>
+      </div>
+      <DIV class="bs-bottom">
+        
+      </div>
+      {$footer}
+    {END body}
+  </body>
+</html>

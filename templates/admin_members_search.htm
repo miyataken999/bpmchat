@@ -1,0 +1,746 @@
+<!doctype html>
+<html  {$html_attrs}>
+  <head>asdfsfs
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      {$pagetitle}
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link REL="stylesheet" href="styles/default.css" type="text/css">
+    {BEGIN rtlCSS}
+      <link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+    {END rtlCSS}
+    {BEGIN styleCSSFiles}
+      <link REL="stylesheet" href="{$stylepath}" type="text/css">
+    {END styleCSSFiles}
+  </head>
+  <BODY class="{$stylename} function-search" {$bodyattrs}>
+    {BEGIN body}
+      {$header}
+      <style>
+        {$containerCss}
+      </style>
+      <DIV class="bs-top">
+        
+
+{BEGIN container_searchpage}
+<div {$searchpage_chiddenattr} data-pageid="{$pageid}" data-container="searchpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN searchheader}
+	<h2 {$bssearchheader_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchheader" >{$pagetitlelabel admin_members search}</h2>
+
+{END searchheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_searchpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$bssearchfields_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchfields" class="form-horizontal" role="form">
+<div class="container">
+	<div class="form-group">
+		<div class="col-md-12" >
+			&nbsp;
+		</div>
+	</div>
+</div>
+	{BEGIN USR_UID_fieldblock}		
+	<div class="container {$fielddispclass_USR_UID}" data-fieldname="USR_UID">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label admin_members USR_UID}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_USR_UID}
+			</div>
+			<div class="col-md-4" >
+				{$USR_UID_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$USR_UID_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END USR_UID_fieldblock}
+	{BEGIN USR_USERNAME_fieldblock}		
+	<div class="container {$fielddispclass_USR_USERNAME}" data-fieldname="USR_USERNAME">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label admin_members USR_USERNAME}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_USR_USERNAME}
+			</div>
+			<div class="col-md-4" >
+				{$USR_USERNAME_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$USR_USERNAME_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END USR_USERNAME_fieldblock}
+	{BEGIN USR_PASSWORD_fieldblock}		
+	<div class="container {$fielddispclass_USR_PASSWORD}" data-fieldname="USR_PASSWORD">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label admin_members USR_PASSWORD}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_USR_PASSWORD}
+			</div>
+			<div class="col-md-4" >
+				{$USR_PASSWORD_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$USR_PASSWORD_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END USR_PASSWORD_fieldblock}
+	{BEGIN USR_FIRSTNAME_fieldblock}		
+	<div class="container {$fielddispclass_USR_FIRSTNAME}" data-fieldname="USR_FIRSTNAME">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label admin_members USR_FIRSTNAME}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_USR_FIRSTNAME}
+			</div>
+			<div class="col-md-4" >
+				{$USR_FIRSTNAME_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$USR_FIRSTNAME_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END USR_FIRSTNAME_fieldblock}
+	{BEGIN USR_LASTNAME_fieldblock}		
+	<div class="container {$fielddispclass_USR_LASTNAME}" data-fieldname="USR_LASTNAME">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label admin_members USR_LASTNAME}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_USR_LASTNAME}
+			</div>
+			<div class="col-md-4" >
+				{$USR_LASTNAME_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$USR_LASTNAME_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END USR_LASTNAME_fieldblock}
+	{BEGIN USR_EMAIL_fieldblock}		
+	<div class="container {$fielddispclass_USR_EMAIL}" data-fieldname="USR_EMAIL">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label admin_members USR_EMAIL}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_USR_EMAIL}
+			</div>
+			<div class="col-md-4" >
+				{$USR_EMAIL_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$USR_EMAIL_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END USR_EMAIL_fieldblock}
+	{BEGIN USR_DUE_DATE_fieldblock}		
+	<div class="container {$fielddispclass_USR_DUE_DATE}" data-fieldname="USR_DUE_DATE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label admin_members USR_DUE_DATE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_USR_DUE_DATE}
+			</div>
+			<div class="col-md-4" >
+				{$USR_DUE_DATE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$USR_DUE_DATE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END USR_DUE_DATE_fieldblock}
+	{BEGIN USR_CREATE_DATE_fieldblock}		
+	<div class="container {$fielddispclass_USR_CREATE_DATE}" data-fieldname="USR_CREATE_DATE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label admin_members USR_CREATE_DATE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_USR_CREATE_DATE}
+			</div>
+			<div class="col-md-4" >
+				{$USR_CREATE_DATE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$USR_CREATE_DATE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END USR_CREATE_DATE_fieldblock}
+	{BEGIN USR_UPDATE_DATE_fieldblock}		
+	<div class="container {$fielddispclass_USR_UPDATE_DATE}" data-fieldname="USR_UPDATE_DATE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label admin_members USR_UPDATE_DATE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_USR_UPDATE_DATE}
+			</div>
+			<div class="col-md-4" >
+				{$USR_UPDATE_DATE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$USR_UPDATE_DATE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END USR_UPDATE_DATE_fieldblock}
+	{BEGIN USR_STATUS_fieldblock}		
+	<div class="container {$fielddispclass_USR_STATUS}" data-fieldname="USR_STATUS">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label admin_members USR_STATUS}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_USR_STATUS}
+			</div>
+			<div class="col-md-4" >
+				{$USR_STATUS_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$USR_STATUS_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END USR_STATUS_fieldblock}
+	{BEGIN USR_COUNTRY_fieldblock}		
+	<div class="container {$fielddispclass_USR_COUNTRY}" data-fieldname="USR_COUNTRY">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label admin_members USR_COUNTRY}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_USR_COUNTRY}
+			</div>
+			<div class="col-md-4" >
+				{$USR_COUNTRY_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$USR_COUNTRY_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END USR_COUNTRY_fieldblock}
+	{BEGIN USR_CITY_fieldblock}		
+	<div class="container {$fielddispclass_USR_CITY}" data-fieldname="USR_CITY">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label admin_members USR_CITY}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_USR_CITY}
+			</div>
+			<div class="col-md-4" >
+				{$USR_CITY_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$USR_CITY_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END USR_CITY_fieldblock}
+	{BEGIN USR_LOCATION_fieldblock}		
+	<div class="container {$fielddispclass_USR_LOCATION}" data-fieldname="USR_LOCATION">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label admin_members USR_LOCATION}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_USR_LOCATION}
+			</div>
+			<div class="col-md-4" >
+				{$USR_LOCATION_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$USR_LOCATION_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END USR_LOCATION_fieldblock}
+	{BEGIN USR_ADDRESS_fieldblock}		
+	<div class="container {$fielddispclass_USR_ADDRESS}" data-fieldname="USR_ADDRESS">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label admin_members USR_ADDRESS}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_USR_ADDRESS}
+			</div>
+			<div class="col-md-4" >
+				{$USR_ADDRESS_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$USR_ADDRESS_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END USR_ADDRESS_fieldblock}
+	{BEGIN USR_PHONE_fieldblock}		
+	<div class="container {$fielddispclass_USR_PHONE}" data-fieldname="USR_PHONE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label admin_members USR_PHONE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_USR_PHONE}
+			</div>
+			<div class="col-md-4" >
+				{$USR_PHONE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$USR_PHONE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END USR_PHONE_fieldblock}
+	{BEGIN USR_FAX_fieldblock}		
+	<div class="container {$fielddispclass_USR_FAX}" data-fieldname="USR_FAX">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label admin_members USR_FAX}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_USR_FAX}
+			</div>
+			<div class="col-md-4" >
+				{$USR_FAX_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$USR_FAX_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END USR_FAX_fieldblock}
+	{BEGIN USR_CELLULAR_fieldblock}		
+	<div class="container {$fielddispclass_USR_CELLULAR}" data-fieldname="USR_CELLULAR">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label admin_members USR_CELLULAR}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_USR_CELLULAR}
+			</div>
+			<div class="col-md-4" >
+				{$USR_CELLULAR_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$USR_CELLULAR_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END USR_CELLULAR_fieldblock}
+	{BEGIN USR_ZIP_CODE_fieldblock}		
+	<div class="container {$fielddispclass_USR_ZIP_CODE}" data-fieldname="USR_ZIP_CODE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label admin_members USR_ZIP_CODE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_USR_ZIP_CODE}
+			</div>
+			<div class="col-md-4" >
+				{$USR_ZIP_CODE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$USR_ZIP_CODE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END USR_ZIP_CODE_fieldblock}
+	{BEGIN DEP_UID_fieldblock}		
+	<div class="container {$fielddispclass_DEP_UID}" data-fieldname="DEP_UID">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label admin_members DEP_UID}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_DEP_UID}
+			</div>
+			<div class="col-md-4" >
+				{$DEP_UID_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$DEP_UID_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END DEP_UID_fieldblock}
+	{BEGIN USR_POSITION_fieldblock}		
+	<div class="container {$fielddispclass_USR_POSITION}" data-fieldname="USR_POSITION">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label admin_members USR_POSITION}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_USR_POSITION}
+			</div>
+			<div class="col-md-4" >
+				{$USR_POSITION_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$USR_POSITION_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END USR_POSITION_fieldblock}
+	{BEGIN USR_RESUME_fieldblock}		
+	<div class="container {$fielddispclass_USR_RESUME}" data-fieldname="USR_RESUME">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label admin_members USR_RESUME}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_USR_RESUME}
+			</div>
+			<div class="col-md-4" >
+				{$USR_RESUME_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$USR_RESUME_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END USR_RESUME_fieldblock}
+	{BEGIN USR_BIRTHDAY_fieldblock}		
+	<div class="container {$fielddispclass_USR_BIRTHDAY}" data-fieldname="USR_BIRTHDAY">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label admin_members USR_BIRTHDAY}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_USR_BIRTHDAY}
+			</div>
+			<div class="col-md-4" >
+				{$USR_BIRTHDAY_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$USR_BIRTHDAY_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END USR_BIRTHDAY_fieldblock}
+	{BEGIN USR_ROLE_fieldblock}		
+	<div class="container {$fielddispclass_USR_ROLE}" data-fieldname="USR_ROLE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label admin_members USR_ROLE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_USR_ROLE}
+			</div>
+			<div class="col-md-4" >
+				{$USR_ROLE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$USR_ROLE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END USR_ROLE_fieldblock}
+	{BEGIN USR_REPORTS_TO_fieldblock}		
+	<div class="container {$fielddispclass_USR_REPORTS_TO}" data-fieldname="USR_REPORTS_TO">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label admin_members USR_REPORTS_TO}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_USR_REPORTS_TO}
+			</div>
+			<div class="col-md-4" >
+				{$USR_REPORTS_TO_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$USR_REPORTS_TO_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END USR_REPORTS_TO_fieldblock}
+	{BEGIN USR_REPLACED_BY_fieldblock}		
+	<div class="container {$fielddispclass_USR_REPLACED_BY}" data-fieldname="USR_REPLACED_BY">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label admin_members USR_REPLACED_BY}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_USR_REPLACED_BY}
+			</div>
+			<div class="col-md-4" >
+				{$USR_REPLACED_BY_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$USR_REPLACED_BY_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END USR_REPLACED_BY_fieldblock}
+	{BEGIN USR_UX_fieldblock}		
+	<div class="container {$fielddispclass_USR_UX}" data-fieldname="USR_UX">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label admin_members USR_UX}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_USR_UX}
+			</div>
+			<div class="col-md-4" >
+				{$USR_UX_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$USR_UX_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END USR_UX_fieldblock}
+	{BEGIN USR_COST_BY_HOUR_fieldblock}		
+	<div class="container {$fielddispclass_USR_COST_BY_HOUR}" data-fieldname="USR_COST_BY_HOUR">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label admin_members USR_COST_BY_HOUR}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_USR_COST_BY_HOUR}
+			</div>
+			<div class="col-md-4" >
+				{$USR_COST_BY_HOUR_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$USR_COST_BY_HOUR_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END USR_COST_BY_HOUR_fieldblock}
+	{BEGIN USR_UNIT_COST_fieldblock}		
+	<div class="container {$fielddispclass_USR_UNIT_COST}" data-fieldname="USR_UNIT_COST">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label admin_members USR_UNIT_COST}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_USR_UNIT_COST}
+			</div>
+			<div class="col-md-4" >
+				{$USR_UNIT_COST_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$USR_UNIT_COST_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END USR_UNIT_COST_fieldblock}
+	{BEGIN USR_PMDRIVE_FOLDER_UID_fieldblock}		
+	<div class="container {$fielddispclass_USR_PMDRIVE_FOLDER_UID}" data-fieldname="USR_PMDRIVE_FOLDER_UID">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label admin_members USR_PMDRIVE_FOLDER_UID}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_USR_PMDRIVE_FOLDER_UID}
+			</div>
+			<div class="col-md-4" >
+				{$USR_PMDRIVE_FOLDER_UID_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$USR_PMDRIVE_FOLDER_UID_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END USR_PMDRIVE_FOLDER_UID_fieldblock}
+	{BEGIN USR_BOOKMARK_START_CASES_fieldblock}		
+	<div class="container {$fielddispclass_USR_BOOKMARK_START_CASES}" data-fieldname="USR_BOOKMARK_START_CASES">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label admin_members USR_BOOKMARK_START_CASES}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_USR_BOOKMARK_START_CASES}
+			</div>
+			<div class="col-md-4" >
+				{$USR_BOOKMARK_START_CASES_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$USR_BOOKMARK_START_CASES_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END USR_BOOKMARK_START_CASES_fieldblock}
+	{BEGIN USR_TIME_ZONE_fieldblock}		
+	<div class="container {$fielddispclass_USR_TIME_ZONE}" data-fieldname="USR_TIME_ZONE">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label admin_members USR_TIME_ZONE}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_USR_TIME_ZONE}
+			</div>
+			<div class="col-md-4" >
+				{$USR_TIME_ZONE_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$USR_TIME_ZONE_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END USR_TIME_ZONE_fieldblock}
+	{BEGIN USR_DEFAULT_LANG_fieldblock}		
+	<div class="container {$fielddispclass_USR_DEFAULT_LANG}" data-fieldname="USR_DEFAULT_LANG">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label admin_members USR_DEFAULT_LANG}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_USR_DEFAULT_LANG}
+			</div>
+			<div class="col-md-4" >
+				{$USR_DEFAULT_LANG_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$USR_DEFAULT_LANG_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END USR_DEFAULT_LANG_fieldblock}
+	{BEGIN USR_LAST_LOGIN_fieldblock}		
+	<div class="container {$fielddispclass_USR_LAST_LOGIN}" data-fieldname="USR_LAST_LOGIN">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label admin_members USR_LAST_LOGIN}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_USR_LAST_LOGIN}
+			</div>
+			<div class="col-md-4" >
+				{$USR_LAST_LOGIN_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$USR_LAST_LOGIN_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END USR_LAST_LOGIN_fieldblock}
+	{BEGIN USR_ID_fieldblock}		
+	<div class="container {$fielddispclass_USR_ID}" data-fieldname="USR_ID">
+		<div class="form-group">
+			<div class="col-md-2">
+				{$label admin_members USR_ID}
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_USR_ID}
+			</div>
+			<div class="col-md-4" >
+				{$USR_ID_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$USR_ID_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END USR_ID_fieldblock}
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-4"> 
+
+{BEGIN searchbuttons}
+{BEGIN search_button}
+<button class="btn btn-primary" {$searchbutton_attrs}>{mlang_message SEARCH}</button>
+{END search_button} 
+{BEGIN reset_button}
+<button class="btn btn-default" {$resetbutton_attrs}>{mlang_message RESET}</button>
+{END reset_button}
+{BEGIN back_button}
+<button class="btn btn-default" {$backbutton_attrs}>{mlang_message BACK_TO_LIST}</button>
+{END back_button}
+{END searchbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+      </div>
+      <DIV class="bs-middle ">
+        <DIV class="bs-topmiddle">
+          
+        </div>
+        <DIV class="bs-left" {$blockattr_left}>
+          
+        </div>
+        <DIV class="bs-center">
+          
+        </div>
+        <DIV class="bs-right">
+          
+        </div>
+      </div>
+      <DIV class="bs-bottom">
+        
+      </div>
+      {$footer}
+    {END body}
+  </body>
+</html>

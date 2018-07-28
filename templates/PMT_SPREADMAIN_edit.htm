@@ -1,0 +1,1151 @@
+<!doctype html>
+<html  {$html_attrs}>
+  <head>asdfsfs
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      {$pagetitle}
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link REL="stylesheet" href="styles/default.css" type="text/css">
+    {BEGIN rtlCSS}
+      <link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+    {END rtlCSS}
+    {BEGIN styleCSSFiles}
+      <link REL="stylesheet" href="{$stylepath}" type="text/css">
+    {END styleCSSFiles}
+  </head>
+  <BODY class="{$stylename} function-edit" {$bodyattrs}>
+    {BEGIN body}
+      {$header}
+      <style>
+        {$containerCss}
+      </style>
+      <DIV class="bs-top">
+        
+
+{BEGIN container_editpage}
+<div {$editpage_chiddenattr} data-pageid="{$pageid}" data-container="editpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN editheader}
+	<h2 {$editheader_hiddenattr} data-pageid="{$pageid}" data-brick="editheader" >{$pagetitlelabel PMT_SPREADMAIN edit}</h2>
+
+{END editheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+		<button class="btn btn-sm btn-default" {$backbutton_attrs}>{mlang_message BACK_TO_LIST}</button>
+{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>{mlang_message VIEW}</button>
+{END view_page_button}
+</div>
+</div>
+
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+
+</div>
+{END container_editpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$editfields_hiddenattr} data-pageid="{$pageid}" data-brick="editfields" class="form-horizontal" role="form">
+
+
+
+			{BEGIN APP_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_APP_UID}" data-fieldname="APP_UID" data-signal-error-for="APP_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_APP_UID}">
+		{BEGIN APP_UID_label}{$label PMT_SPREADMAIN APP_UID}{END APP_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$APP_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="APP_UID">
+		<div class="text-muted" >
+		{$tooltip PMT_SPREADMAIN APP_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END APP_UID_fieldblock}
+
+			{BEGIN APP_NUMBER_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_APP_NUMBER}" data-fieldname="APP_NUMBER" data-signal-error-for="APP_NUMBER{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_APP_NUMBER}">
+		{BEGIN APP_NUMBER_label}{$label PMT_SPREADMAIN APP_NUMBER}{END APP_NUMBER_label}
+	</label>
+	<div class="col-md-6" >
+		{$APP_NUMBER_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="APP_NUMBER">
+		<div class="text-muted" >
+		{$tooltip PMT_SPREADMAIN APP_NUMBER}
+		</div>
+	</div>
+</div>
+</div>
+{END APP_NUMBER_fieldblock}
+
+			{BEGIN APP_STATUS_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_APP_STATUS}" data-fieldname="APP_STATUS" data-signal-error-for="APP_STATUS{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_APP_STATUS}">
+		{BEGIN APP_STATUS_label}{$label PMT_SPREADMAIN APP_STATUS}{END APP_STATUS_label}
+	</label>
+	<div class="col-md-6" >
+		{$APP_STATUS_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="APP_STATUS">
+		<div class="text-muted" >
+		{$tooltip PMT_SPREADMAIN APP_STATUS}
+		</div>
+	</div>
+</div>
+</div>
+{END APP_STATUS_fieldblock}
+
+			{BEGIN A30_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_A30}" data-fieldname="A30" data-signal-error-for="A30{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_A30}">
+		{BEGIN A30_label}{$label PMT_SPREADMAIN A30}{END A30_label}
+	</label>
+	<div class="col-md-6" >
+		{$A30_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="A30">
+		<div class="text-muted" >
+		{$tooltip PMT_SPREADMAIN A30}
+		</div>
+	</div>
+</div>
+</div>
+{END A30_fieldblock}
+
+			{BEGIN A31_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_A31}" data-fieldname="A31" data-signal-error-for="A31{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_A31}">
+		{BEGIN A31_label}{$label PMT_SPREADMAIN A31}{END A31_label}
+	</label>
+	<div class="col-md-6" >
+		{$A31_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="A31">
+		<div class="text-muted" >
+		{$tooltip PMT_SPREADMAIN A31}
+		</div>
+	</div>
+</div>
+</div>
+{END A31_fieldblock}
+
+			{BEGIN A32_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_A32}" data-fieldname="A32" data-signal-error-for="A32{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_A32}">
+		{BEGIN A32_label}{$label PMT_SPREADMAIN A32}{END A32_label}
+	</label>
+	<div class="col-md-6" >
+		{$A32_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="A32">
+		<div class="text-muted" >
+		{$tooltip PMT_SPREADMAIN A32}
+		</div>
+	</div>
+</div>
+</div>
+{END A32_fieldblock}
+
+			{BEGIN D35_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_D35}" data-fieldname="D35" data-signal-error-for="D35{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_D35}">
+		{BEGIN D35_label}{$label PMT_SPREADMAIN D35}{END D35_label}
+	</label>
+	<div class="col-md-6" >
+		{$D35_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="D35">
+		<div class="text-muted" >
+		{$tooltip PMT_SPREADMAIN D35}
+		</div>
+	</div>
+</div>
+</div>
+{END D35_fieldblock}
+
+			{BEGIN D36_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_D36}" data-fieldname="D36" data-signal-error-for="D36{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_D36}">
+		{BEGIN D36_label}{$label PMT_SPREADMAIN D36}{END D36_label}
+	</label>
+	<div class="col-md-6" >
+		{$D36_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="D36">
+		<div class="text-muted" >
+		{$tooltip PMT_SPREADMAIN D36}
+		</div>
+	</div>
+</div>
+</div>
+{END D36_fieldblock}
+
+			{BEGIN D38_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_D38}" data-fieldname="D38" data-signal-error-for="D38{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_D38}">
+		{BEGIN D38_label}{$label PMT_SPREADMAIN D38}{END D38_label}
+	</label>
+	<div class="col-md-6" >
+		{$D38_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="D38">
+		<div class="text-muted" >
+		{$tooltip PMT_SPREADMAIN D38}
+		</div>
+	</div>
+</div>
+</div>
+{END D38_fieldblock}
+
+			{BEGIN D39_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_D39}" data-fieldname="D39" data-signal-error-for="D39{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_D39}">
+		{BEGIN D39_label}{$label PMT_SPREADMAIN D39}{END D39_label}
+	</label>
+	<div class="col-md-6" >
+		{$D39_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="D39">
+		<div class="text-muted" >
+		{$tooltip PMT_SPREADMAIN D39}
+		</div>
+	</div>
+</div>
+</div>
+{END D39_fieldblock}
+
+			{BEGIN D40_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_D40}" data-fieldname="D40" data-signal-error-for="D40{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_D40}">
+		{BEGIN D40_label}{$label PMT_SPREADMAIN D40}{END D40_label}
+	</label>
+	<div class="col-md-6" >
+		{$D40_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="D40">
+		<div class="text-muted" >
+		{$tooltip PMT_SPREADMAIN D40}
+		</div>
+	</div>
+</div>
+</div>
+{END D40_fieldblock}
+
+			{BEGIN D41_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_D41}" data-fieldname="D41" data-signal-error-for="D41{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_D41}">
+		{BEGIN D41_label}{$label PMT_SPREADMAIN D41}{END D41_label}
+	</label>
+	<div class="col-md-6" >
+		{$D41_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="D41">
+		<div class="text-muted" >
+		{$tooltip PMT_SPREADMAIN D41}
+		</div>
+	</div>
+</div>
+</div>
+{END D41_fieldblock}
+
+			{BEGIN D42_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_D42}" data-fieldname="D42" data-signal-error-for="D42{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_D42}">
+		{BEGIN D42_label}{$label PMT_SPREADMAIN D42}{END D42_label}
+	</label>
+	<div class="col-md-6" >
+		{$D42_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="D42">
+		<div class="text-muted" >
+		{$tooltip PMT_SPREADMAIN D42}
+		</div>
+	</div>
+</div>
+</div>
+{END D42_fieldblock}
+
+			{BEGIN D43_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_D43}" data-fieldname="D43" data-signal-error-for="D43{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_D43}">
+		{BEGIN D43_label}{$label PMT_SPREADMAIN D43}{END D43_label}
+	</label>
+	<div class="col-md-6" >
+		{$D43_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="D43">
+		<div class="text-muted" >
+		{$tooltip PMT_SPREADMAIN D43}
+		</div>
+	</div>
+</div>
+</div>
+{END D43_fieldblock}
+
+			{BEGIN D44_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_D44}" data-fieldname="D44" data-signal-error-for="D44{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_D44}">
+		{BEGIN D44_label}{$label PMT_SPREADMAIN D44}{END D44_label}
+	</label>
+	<div class="col-md-6" >
+		{$D44_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="D44">
+		<div class="text-muted" >
+		{$tooltip PMT_SPREADMAIN D44}
+		</div>
+	</div>
+</div>
+</div>
+{END D44_fieldblock}
+
+			{BEGIN D45_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_D45}" data-fieldname="D45" data-signal-error-for="D45{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_D45}">
+		{BEGIN D45_label}{$label PMT_SPREADMAIN D45}{END D45_label}
+	</label>
+	<div class="col-md-6" >
+		{$D45_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="D45">
+		<div class="text-muted" >
+		{$tooltip PMT_SPREADMAIN D45}
+		</div>
+	</div>
+</div>
+</div>
+{END D45_fieldblock}
+
+			{BEGIN D48_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_D48}" data-fieldname="D48" data-signal-error-for="D48{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_D48}">
+		{BEGIN D48_label}{$label PMT_SPREADMAIN D48}{END D48_label}
+	</label>
+	<div class="col-md-6" >
+		{$D48_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="D48">
+		<div class="text-muted" >
+		{$tooltip PMT_SPREADMAIN D48}
+		</div>
+	</div>
+</div>
+</div>
+{END D48_fieldblock}
+
+			{BEGIN D49_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_D49}" data-fieldname="D49" data-signal-error-for="D49{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_D49}">
+		{BEGIN D49_label}{$label PMT_SPREADMAIN D49}{END D49_label}
+	</label>
+	<div class="col-md-6" >
+		{$D49_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="D49">
+		<div class="text-muted" >
+		{$tooltip PMT_SPREADMAIN D49}
+		</div>
+	</div>
+</div>
+</div>
+{END D49_fieldblock}
+
+			{BEGIN D51_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_D51}" data-fieldname="D51" data-signal-error-for="D51{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_D51}">
+		{BEGIN D51_label}{$label PMT_SPREADMAIN D51}{END D51_label}
+	</label>
+	<div class="col-md-6" >
+		{$D51_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="D51">
+		<div class="text-muted" >
+		{$tooltip PMT_SPREADMAIN D51}
+		</div>
+	</div>
+</div>
+</div>
+{END D51_fieldblock}
+
+			{BEGIN D52_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_D52}" data-fieldname="D52" data-signal-error-for="D52{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_D52}">
+		{BEGIN D52_label}{$label PMT_SPREADMAIN D52}{END D52_label}
+	</label>
+	<div class="col-md-6" >
+		{$D52_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="D52">
+		<div class="text-muted" >
+		{$tooltip PMT_SPREADMAIN D52}
+		</div>
+	</div>
+</div>
+</div>
+{END D52_fieldblock}
+
+			{BEGIN E27_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_E27}" data-fieldname="E27" data-signal-error-for="E27{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_E27}">
+		{BEGIN E27_label}{$label PMT_SPREADMAIN E27}{END E27_label}
+	</label>
+	<div class="col-md-6" >
+		{$E27_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="E27">
+		<div class="text-muted" >
+		{$tooltip PMT_SPREADMAIN E27}
+		</div>
+	</div>
+</div>
+</div>
+{END E27_fieldblock}
+
+			{BEGIN F25_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_F25}" data-fieldname="F25" data-signal-error-for="F25{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_F25}">
+		{BEGIN F25_label}{$label PMT_SPREADMAIN F25}{END F25_label}
+	</label>
+	<div class="col-md-6" >
+		{$F25_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="F25">
+		<div class="text-muted" >
+		{$tooltip PMT_SPREADMAIN F25}
+		</div>
+	</div>
+</div>
+</div>
+{END F25_fieldblock}
+
+			{BEGIN F26_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_F26}" data-fieldname="F26" data-signal-error-for="F26{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_F26}">
+		{BEGIN F26_label}{$label PMT_SPREADMAIN F26}{END F26_label}
+	</label>
+	<div class="col-md-6" >
+		{$F26_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="F26">
+		<div class="text-muted" >
+		{$tooltip PMT_SPREADMAIN F26}
+		</div>
+	</div>
+</div>
+</div>
+{END F26_fieldblock}
+
+			{BEGIN F43_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_F43}" data-fieldname="F43" data-signal-error-for="F43{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_F43}">
+		{BEGIN F43_label}{$label PMT_SPREADMAIN F43}{END F43_label}
+	</label>
+	<div class="col-md-6" >
+		{$F43_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="F43">
+		<div class="text-muted" >
+		{$tooltip PMT_SPREADMAIN F43}
+		</div>
+	</div>
+</div>
+</div>
+{END F43_fieldblock}
+
+			{BEGIN F44_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_F44}" data-fieldname="F44" data-signal-error-for="F44{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_F44}">
+		{BEGIN F44_label}{$label PMT_SPREADMAIN F44}{END F44_label}
+	</label>
+	<div class="col-md-6" >
+		{$F44_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="F44">
+		<div class="text-muted" >
+		{$tooltip PMT_SPREADMAIN F44}
+		</div>
+	</div>
+</div>
+</div>
+{END F44_fieldblock}
+
+			{BEGIN F35_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_F35}" data-fieldname="F35" data-signal-error-for="F35{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_F35}">
+		{BEGIN F35_label}{$label PMT_SPREADMAIN F35}{END F35_label}
+	</label>
+	<div class="col-md-6" >
+		{$F35_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="F35">
+		<div class="text-muted" >
+		{$tooltip PMT_SPREADMAIN F35}
+		</div>
+	</div>
+</div>
+</div>
+{END F35_fieldblock}
+
+			{BEGIN F36_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_F36}" data-fieldname="F36" data-signal-error-for="F36{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_F36}">
+		{BEGIN F36_label}{$label PMT_SPREADMAIN F36}{END F36_label}
+	</label>
+	<div class="col-md-6" >
+		{$F36_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="F36">
+		<div class="text-muted" >
+		{$tooltip PMT_SPREADMAIN F36}
+		</div>
+	</div>
+</div>
+</div>
+{END F36_fieldblock}
+
+			{BEGIN F38_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_F38}" data-fieldname="F38" data-signal-error-for="F38{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_F38}">
+		{BEGIN F38_label}{$label PMT_SPREADMAIN F38}{END F38_label}
+	</label>
+	<div class="col-md-6" >
+		{$F38_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="F38">
+		<div class="text-muted" >
+		{$tooltip PMT_SPREADMAIN F38}
+		</div>
+	</div>
+</div>
+</div>
+{END F38_fieldblock}
+
+			{BEGIN F48_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_F48}" data-fieldname="F48" data-signal-error-for="F48{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_F48}">
+		{BEGIN F48_label}{$label PMT_SPREADMAIN F48}{END F48_label}
+	</label>
+	<div class="col-md-6" >
+		{$F48_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="F48">
+		<div class="text-muted" >
+		{$tooltip PMT_SPREADMAIN F48}
+		</div>
+	</div>
+</div>
+</div>
+{END F48_fieldblock}
+
+			{BEGIN ROW_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ROW}" data-fieldname="ROW" data-signal-error-for="ROW{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ROW}">
+		{BEGIN ROW_label}{$label PMT_SPREADMAIN ROW}{END ROW_label}
+	</label>
+	<div class="col-md-6" >
+		{$ROW_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ROW">
+		<div class="text-muted" >
+		{$tooltip PMT_SPREADMAIN ROW}
+		</div>
+	</div>
+</div>
+</div>
+{END ROW_fieldblock}
+
+			{BEGIN N1_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_N1}" data-fieldname="N1" data-signal-error-for="N1{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_N1}">
+		{BEGIN N1_label}{$label PMT_SPREADMAIN N1}{END N1_label}
+	</label>
+	<div class="col-md-6" >
+		{$N1_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="N1">
+		<div class="text-muted" >
+		{$tooltip PMT_SPREADMAIN N1}
+		</div>
+	</div>
+</div>
+</div>
+{END N1_fieldblock}
+
+			{BEGIN P1_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_P1}" data-fieldname="P1" data-signal-error-for="P1{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_P1}">
+		{BEGIN P1_label}{$label PMT_SPREADMAIN P1}{END P1_label}
+	</label>
+	<div class="col-md-6" >
+		{$P1_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="P1">
+		<div class="text-muted" >
+		{$tooltip PMT_SPREADMAIN P1}
+		</div>
+	</div>
+</div>
+</div>
+{END P1_fieldblock}
+
+			{BEGIN K80_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_K80}" data-fieldname="K80" data-signal-error-for="K80{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_K80}">
+		{BEGIN K80_label}{$label PMT_SPREADMAIN K80}{END K80_label}
+	</label>
+	<div class="col-md-6" >
+		{$K80_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="K80">
+		<div class="text-muted" >
+		{$tooltip PMT_SPREADMAIN K80}
+		</div>
+	</div>
+</div>
+</div>
+{END K80_fieldblock}
+
+			{BEGIN K27_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_K27}" data-fieldname="K27" data-signal-error-for="K27{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_K27}">
+		{BEGIN K27_label}{$label PMT_SPREADMAIN K27}{END K27_label}
+	</label>
+	<div class="col-md-6" >
+		{$K27_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="K27">
+		<div class="text-muted" >
+		{$tooltip PMT_SPREADMAIN K27}
+		</div>
+	</div>
+</div>
+</div>
+{END K27_fieldblock}
+
+			{BEGIN K25_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_K25}" data-fieldname="K25" data-signal-error-for="K25{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_K25}">
+		{BEGIN K25_label}{$label PMT_SPREADMAIN K25}{END K25_label}
+	</label>
+	<div class="col-md-6" >
+		{$K25_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="K25">
+		<div class="text-muted" >
+		{$tooltip PMT_SPREADMAIN K25}
+		</div>
+	</div>
+</div>
+</div>
+{END K25_fieldblock}
+
+			{BEGIN M35_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_M35}" data-fieldname="M35" data-signal-error-for="M35{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_M35}">
+		{BEGIN M35_label}{$label PMT_SPREADMAIN M35}{END M35_label}
+	</label>
+	<div class="col-md-6" >
+		{$M35_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="M35">
+		<div class="text-muted" >
+		{$tooltip PMT_SPREADMAIN M35}
+		</div>
+	</div>
+</div>
+</div>
+{END M35_fieldblock}
+
+			{BEGIN J36_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_J36}" data-fieldname="J36" data-signal-error-for="J36{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_J36}">
+		{BEGIN J36_label}{$label PMT_SPREADMAIN J36}{END J36_label}
+	</label>
+	<div class="col-md-6" >
+		{$J36_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="J36">
+		<div class="text-muted" >
+		{$tooltip PMT_SPREADMAIN J36}
+		</div>
+	</div>
+</div>
+</div>
+{END J36_fieldblock}
+
+			{BEGIN TIME_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_TIME}" data-fieldname="TIME" data-signal-error-for="TIME{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_TIME}">
+		{BEGIN TIME_label}{$label PMT_SPREADMAIN TIME}{END TIME_label}
+	</label>
+	<div class="col-md-6" >
+		{$TIME_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="TIME">
+		<div class="text-muted" >
+		{$tooltip PMT_SPREADMAIN TIME}
+		</div>
+	</div>
+</div>
+</div>
+{END TIME_fieldblock}
+
+			{BEGIN MONTHLY_REPORT_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_MONTHLY_REPORT}" data-fieldname="MONTHLY_REPORT" data-signal-error-for="MONTHLY_REPORT{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_MONTHLY_REPORT}">
+		{BEGIN MONTHLY_REPORT_label}{$label PMT_SPREADMAIN MONTHLY_REPORT}{END MONTHLY_REPORT_label}
+	</label>
+	<div class="col-md-6" >
+		{$MONTHLY_REPORT_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="MONTHLY_REPORT">
+		<div class="text-muted" >
+		{$tooltip PMT_SPREADMAIN MONTHLY_REPORT}
+		</div>
+	</div>
+</div>
+</div>
+{END MONTHLY_REPORT_fieldblock}
+
+			{BEGIN M39_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_M39}" data-fieldname="M39" data-signal-error-for="M39{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_M39}">
+		{BEGIN M39_label}{$label PMT_SPREADMAIN M39}{END M39_label}
+	</label>
+	<div class="col-md-6" >
+		{$M39_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="M39">
+		<div class="text-muted" >
+		{$tooltip PMT_SPREADMAIN M39}
+		</div>
+	</div>
+</div>
+</div>
+{END M39_fieldblock}
+
+			{BEGIN M43_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_M43}" data-fieldname="M43" data-signal-error-for="M43{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_M43}">
+		{BEGIN M43_label}{$label PMT_SPREADMAIN M43}{END M43_label}
+	</label>
+	<div class="col-md-6" >
+		{$M43_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="M43">
+		<div class="text-muted" >
+		{$tooltip PMT_SPREADMAIN M43}
+		</div>
+	</div>
+</div>
+</div>
+{END M43_fieldblock}
+
+			{BEGIN M45_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_M45}" data-fieldname="M45" data-signal-error-for="M45{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_M45}">
+		{BEGIN M45_label}{$label PMT_SPREADMAIN M45}{END M45_label}
+	</label>
+	<div class="col-md-6" >
+		{$M45_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="M45">
+		<div class="text-muted" >
+		{$tooltip PMT_SPREADMAIN M45}
+		</div>
+	</div>
+</div>
+</div>
+{END M45_fieldblock}
+
+			{BEGIN K50_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_K50}" data-fieldname="K50" data-signal-error-for="K50{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_K50}">
+		{BEGIN K50_label}{$label PMT_SPREADMAIN K50}{END K50_label}
+	</label>
+	<div class="col-md-6" >
+		{$K50_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="K50">
+		<div class="text-muted" >
+		{$tooltip PMT_SPREADMAIN K50}
+		</div>
+	</div>
+</div>
+</div>
+{END K50_fieldblock}
+
+			{BEGIN P48_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_P48}" data-fieldname="P48" data-signal-error-for="P48{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_P48}">
+		{BEGIN P48_label}{$label PMT_SPREADMAIN P48}{END P48_label}
+	</label>
+	<div class="col-md-6" >
+		{$P48_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="P48">
+		<div class="text-muted" >
+		{$tooltip PMT_SPREADMAIN P48}
+		</div>
+	</div>
+</div>
+</div>
+{END P48_fieldblock}
+
+			{BEGIN P49_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_P49}" data-fieldname="P49" data-signal-error-for="P49{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_P49}">
+		{BEGIN P49_label}{$label PMT_SPREADMAIN P49}{END P49_label}
+	</label>
+	<div class="col-md-6" >
+		{$P49_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="P49">
+		<div class="text-muted" >
+		{$tooltip PMT_SPREADMAIN P49}
+		</div>
+	</div>
+</div>
+</div>
+{END P49_fieldblock}
+
+			{BEGIN P50_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_P50}" data-fieldname="P50" data-signal-error-for="P50{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_P50}">
+		{BEGIN P50_label}{$label PMT_SPREADMAIN P50}{END P50_label}
+	</label>
+	<div class="col-md-6" >
+		{$P50_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="P50">
+		<div class="text-muted" >
+		{$tooltip PMT_SPREADMAIN P50}
+		</div>
+	</div>
+</div>
+</div>
+{END P50_fieldblock}
+
+			{BEGIN P51_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_P51}" data-fieldname="P51" data-signal-error-for="P51{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_P51}">
+		{BEGIN P51_label}{$label PMT_SPREADMAIN P51}{END P51_label}
+	</label>
+	<div class="col-md-6" >
+		{$P51_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="P51">
+		<div class="text-muted" >
+		{$tooltip PMT_SPREADMAIN P51}
+		</div>
+	</div>
+</div>
+</div>
+{END P51_fieldblock}
+
+			{BEGIN P52_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_P52}" data-fieldname="P52" data-signal-error-for="P52{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_P52}">
+		{BEGIN P52_label}{$label PMT_SPREADMAIN P52}{END P52_label}
+	</label>
+	<div class="col-md-6" >
+		{$P52_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="P52">
+		<div class="text-muted" >
+		{$tooltip PMT_SPREADMAIN P52}
+		</div>
+	</div>
+</div>
+</div>
+{END P52_fieldblock}
+
+			{BEGIN id_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_id}" data-fieldname="id" data-signal-error-for="id{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_id}">
+		{BEGIN id_label}{$label PMT_SPREADMAIN id}{END id_label}
+	</label>
+	<div class="col-md-6" >
+		{$id_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="id">
+		<div class="text-muted" >
+		{$tooltip PMT_SPREADMAIN id}
+		</div>
+	</div>
+</div>
+</div>
+{END id_fieldblock}
+
+			
+		
+
+
+
+
+
+{BEGIN details_PMT_SPREADSUB}
+<div data-pageid="1" class="bs-details"> 
+<div class="panel panel-info details-grid">
+
+<div class="panel-heading">
+	<h4 class="panel-title">{$caption PMT_SPREADSUB}
+		<span>
+{BEGIN details_inlineadd_PMT_SPREADSUB_link}
+			<button type="button" class="btn btn-xs btn-info" {$details_inlineadd_PMT_SPREADSUB_attrs}>{mlang_message INLINE_ADD}</button>
+{END details_inlineadd_PMT_SPREADSUB_link}		
+{BEGIN details_add_PMT_SPREADSUB_link}
+			<button type="button" class="btn btn-xs btn-info" {$details_add_PMT_SPREADSUB_attrs}>{mlang_message ADD_NEW}</button>
+{END details_add_PMT_SPREADSUB_link}
+{BEGIN details_edit_PMT_SPREADSUB_link}
+			<button type="button" class="btn btn-xs btn-info" disabled {$details_edit_PMT_SPREADSUB_attrs}>{mlang_message EDIT}</button>
+{END details_edit_PMT_SPREADSUB_link}
+{BEGIN details_updateselected_PMT_SPREADSUB_link}
+			<button type="button" class="btn btn-xs btn-info" disabled {$details_updateselected_PMT_SPREADSUB_attrs}>{mlang_message UPDATE_SELECTED}</button>
+{END details_updateselected_PMT_SPREADSUB_link}
+
+
+{BEGIN details_delete_PMT_SPREADSUB_link}
+			<button type="button" class="btn btn-xs btn-info " disabled {$details_delete_PMT_SPREADSUB_attrs}>{mlang_message DELETE}</button>
+{END details_delete_PMT_SPREADSUB_link}
+
+{BEGIN saveall_PMT_SPREADSUB_link}
+			<button type="button" class="btn btn-xs btn-info" {$savealllink_PMT_SPREADSUB_attrs} {$savealllink_PMT_SPREADSUB_span}>{mlang_message SAVE_ALL}</button>
+{END saveall_PMT_SPREADSUB_link}
+{BEGIN cancelall_PMT_SPREADSUB_link}
+			<button type="button" class="btn btn-xs btn-info" {$cancelalllink_PMT_SPREADSUB_attrs} {$cancelalllink_PMT_SPREADSUB_span}>{mlang_message CANCEL_ALL}</button>
+{END cancelall_PMT_SPREADSUB_link}
+		</span>
+	</h4>
+</div>
+<div class="panel-body">
+	{$displayDetailTable_PMT_SPREADSUB}
+</div>
+</div>
+</div>
+{END details_PMT_SPREADSUB}
+	
+	
+	
+
+
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN editbuttons}
+	{BEGIN save_button}
+	<button class="btn btn-primary" {$savebutton_attrs}>{mlang_message SAVE}</button>
+	{END save_button}
+	{BEGIN updsel_button}
+	<button class="btn btn-primary" {$updselbutton_attrs}>{$update_selected}</button>
+	{END updsel_button}
+	{BEGIN back_button}
+		<button class="btn btn-default" {$backbutton_attrs}>{mlang_message BACK_TO_LIST}</button>
+	{END back_button}
+	{BEGIN close_button}
+	<a href="#" class="btn btn-default" {$closebutton_attrs}>{mlang_message CANCEL}</a>
+	{END close_button}
+
+{END editbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+
+
+{BEGIN container_leftbuttons_1}
+<div {$leftbuttons_1_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons_1" class="  text-right col-md-3 "> 
+
+{BEGIN righteditbuttons}
+<div class="btn-group" role="group">
+
+	{BEGIN prev_button}
+	<button class="btn btn-default {$prevbutton_class}" {$prevbutton_attrs}><span class="glyphicon glyphicon-chevron-left"></span></button>
+	{END prev_button}
+	{BEGIN next_button}
+	<button class="btn btn-default  {$nextbutton_class}" {$nextbutton_attrs}><span class="glyphicon glyphicon-chevron-right"></span></button>
+	{END next_button}
+	<div class="btn-group dropup" role="group">
+		<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+		<ul class="dropdown-menu dropdown-left">
+			{BEGIN reset_button}
+				<li><a href="#" {$resetbutton_attrs}>{mlang_message RESET}</a></li>
+			{END reset_button}
+			{BEGIN view_page_button}
+				<li><a href="#" {$view_page_button_attrs}>{mlang_message VIEW}</a></li>
+			{END view_page_button}
+		</ul>
+	</div>
+</div>
+{END righteditbuttons}
+
+
+
+</div>
+{END container_leftbuttons_1}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+      </div>
+      <DIV class="bs-middle ">
+        <DIV class="bs-topmiddle">
+          
+        </div>
+        <DIV class="bs-left" {$blockattr_left}>
+          
+        </div>
+        <DIV class="bs-center">
+          
+        </div>
+        <DIV class="bs-right">
+          
+        </div>
+      </div>
+      <DIV class="bs-bottom">
+        
+      </div>
+      {$footer}
+    {END body}
+  </body>
+</html>

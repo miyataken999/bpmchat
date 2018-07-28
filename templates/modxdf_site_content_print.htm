@@ -1,0 +1,552 @@
+<!doctype html>
+<html  {$html_attrs}>
+  <head>asdfsfs
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      {$pagetitle}
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link REL="stylesheet" href="styles/default.css" type="text/css">
+    {BEGIN rtlCSS}
+      <link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+    {END rtlCSS}
+    {BEGIN styleCSSFiles}
+      <link REL="stylesheet" href="{$stylepath}" type="text/css">
+    {END styleCSSFiles}
+  </head>
+  <BODY class="{$stylename} function-print" {$bodyattrs}>
+    {BEGIN body}
+      {$header}
+      <style>
+        {$containerCss}
+      </style>
+      <DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel modxdf_site_content print}</h2>
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>{mlang_message PAGE1} <span class="rp-pageno">{$pageno}</span> {mlang_message PAGE2} <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="table table-bordered rp-maintable" {$printgrid_hiddenattr} data-pageid="{$pageid}" data-brick="printgrid" >
+	<thead>
+	{BEGIN grid_header}
+		<tr class="{$gridHeader_class}" >
+		{BEGIN record_header}
+			{BEGIN id_fieldheadercolumn}
+			<th class="{$id_class}" {$id_style}  data-field="id">
+				{$label modxdf_site_content id}
+			</th>
+			{END id_fieldheadercolumn}
+			{BEGIN type_fieldheadercolumn}
+			<th class="{$type_class}" {$type_style}  data-field="type">
+				{$label modxdf_site_content type}
+			</th>
+			{END type_fieldheadercolumn}
+			{BEGIN contentType_fieldheadercolumn}
+			<th class="{$contentType_class}" {$contentType_style}  data-field="contentType">
+				{$label modxdf_site_content contentType}
+			</th>
+			{END contentType_fieldheadercolumn}
+			{BEGIN pagetitle_fieldheadercolumn}
+			<th class="{$pagetitle_class}" {$pagetitle_style}  data-field="pagetitle">
+				{$label modxdf_site_content pagetitle}
+			</th>
+			{END pagetitle_fieldheadercolumn}
+			{BEGIN longtitle_fieldheadercolumn}
+			<th class="{$longtitle_class}" {$longtitle_style}  data-field="longtitle">
+				{$label modxdf_site_content longtitle}
+			</th>
+			{END longtitle_fieldheadercolumn}
+			{BEGIN description_fieldheadercolumn}
+			<th class="{$description_class}" {$description_style}  data-field="description">
+				{$label modxdf_site_content description}
+			</th>
+			{END description_fieldheadercolumn}
+			{BEGIN alias_fieldheadercolumn}
+			<th class="{$alias_class}" {$alias_style}  data-field="alias">
+				{$label modxdf_site_content alias}
+			</th>
+			{END alias_fieldheadercolumn}
+			{BEGIN link_attributes_fieldheadercolumn}
+			<th class="{$link_attributes_class}" {$link_attributes_style}  data-field="link_attributes">
+				{$label modxdf_site_content link_attributes}
+			</th>
+			{END link_attributes_fieldheadercolumn}
+			{BEGIN published_fieldheadercolumn}
+			<th class="{$published_class}" {$published_style}  data-field="published">
+				{$label modxdf_site_content published}
+			</th>
+			{END published_fieldheadercolumn}
+			{BEGIN pub_date_fieldheadercolumn}
+			<th class="{$pub_date_class}" {$pub_date_style}  data-field="pub_date">
+				{$label modxdf_site_content pub_date}
+			</th>
+			{END pub_date_fieldheadercolumn}
+			{BEGIN unpub_date_fieldheadercolumn}
+			<th class="{$unpub_date_class}" {$unpub_date_style}  data-field="unpub_date">
+				{$label modxdf_site_content unpub_date}
+			</th>
+			{END unpub_date_fieldheadercolumn}
+			{BEGIN parent_fieldheadercolumn}
+			<th class="{$parent_class}" {$parent_style}  data-field="parent">
+				{$label modxdf_site_content parent}
+			</th>
+			{END parent_fieldheadercolumn}
+			{BEGIN isfolder_fieldheadercolumn}
+			<th class="{$isfolder_class}" {$isfolder_style}  data-field="isfolder">
+				{$label modxdf_site_content isfolder}
+			</th>
+			{END isfolder_fieldheadercolumn}
+			{BEGIN introtext_fieldheadercolumn}
+			<th class="{$introtext_class}" {$introtext_style}  data-field="introtext">
+				{$label modxdf_site_content introtext}
+			</th>
+			{END introtext_fieldheadercolumn}
+			{BEGIN content_fieldheadercolumn}
+			<th class="{$content_class}" {$content_style}  data-field="content">
+				{$label modxdf_site_content content}
+			</th>
+			{END content_fieldheadercolumn}
+			{BEGIN richtext_fieldheadercolumn}
+			<th class="{$richtext_class}" {$richtext_style}  data-field="richtext">
+				{$label modxdf_site_content richtext}
+			</th>
+			{END richtext_fieldheadercolumn}
+			{BEGIN template_fieldheadercolumn}
+			<th class="{$template_class}" {$template_style}  data-field="template">
+				{$label modxdf_site_content template}
+			</th>
+			{END template_fieldheadercolumn}
+			{BEGIN menuindex_fieldheadercolumn}
+			<th class="{$menuindex_class}" {$menuindex_style}  data-field="menuindex">
+				{$label modxdf_site_content menuindex}
+			</th>
+			{END menuindex_fieldheadercolumn}
+			{BEGIN searchable_fieldheadercolumn}
+			<th class="{$searchable_class}" {$searchable_style}  data-field="searchable">
+				{$label modxdf_site_content searchable}
+			</th>
+			{END searchable_fieldheadercolumn}
+			{BEGIN cacheable_fieldheadercolumn}
+			<th class="{$cacheable_class}" {$cacheable_style}  data-field="cacheable">
+				{$label modxdf_site_content cacheable}
+			</th>
+			{END cacheable_fieldheadercolumn}
+			{BEGIN createdby_fieldheadercolumn}
+			<th class="{$createdby_class}" {$createdby_style}  data-field="createdby">
+				{$label modxdf_site_content createdby}
+			</th>
+			{END createdby_fieldheadercolumn}
+			{BEGIN createdon_fieldheadercolumn}
+			<th class="{$createdon_class}" {$createdon_style}  data-field="createdon">
+				{$label modxdf_site_content createdon}
+			</th>
+			{END createdon_fieldheadercolumn}
+			{BEGIN editedby_fieldheadercolumn}
+			<th class="{$editedby_class}" {$editedby_style}  data-field="editedby">
+				{$label modxdf_site_content editedby}
+			</th>
+			{END editedby_fieldheadercolumn}
+			{BEGIN editedon_fieldheadercolumn}
+			<th class="{$editedon_class}" {$editedon_style}  data-field="editedon">
+				{$label modxdf_site_content editedon}
+			</th>
+			{END editedon_fieldheadercolumn}
+			{BEGIN deleted_fieldheadercolumn}
+			<th class="{$deleted_class}" {$deleted_style}  data-field="deleted">
+				{$label modxdf_site_content deleted}
+			</th>
+			{END deleted_fieldheadercolumn}
+			{BEGIN deletedon_fieldheadercolumn}
+			<th class="{$deletedon_class}" {$deletedon_style}  data-field="deletedon">
+				{$label modxdf_site_content deletedon}
+			</th>
+			{END deletedon_fieldheadercolumn}
+			{BEGIN deletedby_fieldheadercolumn}
+			<th class="{$deletedby_class}" {$deletedby_style}  data-field="deletedby">
+				{$label modxdf_site_content deletedby}
+			</th>
+			{END deletedby_fieldheadercolumn}
+			{BEGIN publishedon_fieldheadercolumn}
+			<th class="{$publishedon_class}" {$publishedon_style}  data-field="publishedon">
+				{$label modxdf_site_content publishedon}
+			</th>
+			{END publishedon_fieldheadercolumn}
+			{BEGIN publishedby_fieldheadercolumn}
+			<th class="{$publishedby_class}" {$publishedby_style}  data-field="publishedby">
+				{$label modxdf_site_content publishedby}
+			</th>
+			{END publishedby_fieldheadercolumn}
+			{BEGIN menutitle_fieldheadercolumn}
+			<th class="{$menutitle_class}" {$menutitle_style}  data-field="menutitle">
+				{$label modxdf_site_content menutitle}
+			</th>
+			{END menutitle_fieldheadercolumn}
+			{BEGIN donthit_fieldheadercolumn}
+			<th class="{$donthit_class}" {$donthit_style}  data-field="donthit">
+				{$label modxdf_site_content donthit}
+			</th>
+			{END donthit_fieldheadercolumn}
+			{BEGIN privateweb_fieldheadercolumn}
+			<th class="{$privateweb_class}" {$privateweb_style}  data-field="privateweb">
+				{$label modxdf_site_content privateweb}
+			</th>
+			{END privateweb_fieldheadercolumn}
+			{BEGIN privatemgr_fieldheadercolumn}
+			<th class="{$privatemgr_class}" {$privatemgr_style}  data-field="privatemgr">
+				{$label modxdf_site_content privatemgr}
+			</th>
+			{END privatemgr_fieldheadercolumn}
+			{BEGIN content_dispo_fieldheadercolumn}
+			<th class="{$content_dispo_class}" {$content_dispo_style}  data-field="content_dispo">
+				{$label modxdf_site_content content_dispo}
+			</th>
+			{END content_dispo_fieldheadercolumn}
+			{BEGIN hidemenu_fieldheadercolumn}
+			<th class="{$hidemenu_class}" {$hidemenu_style}  data-field="hidemenu">
+				{$label modxdf_site_content hidemenu}
+			</th>
+			{END hidemenu_fieldheadercolumn}
+			{BEGIN class_key_fieldheadercolumn}
+			<th class="{$class_key_class}" {$class_key_style}  data-field="class_key">
+				{$label modxdf_site_content class_key}
+			</th>
+			{END class_key_fieldheadercolumn}
+			{BEGIN context_key_fieldheadercolumn}
+			<th class="{$context_key_class}" {$context_key_style}  data-field="context_key">
+				{$label modxdf_site_content context_key}
+			</th>
+			{END context_key_fieldheadercolumn}
+			{BEGIN content_type_fieldheadercolumn}
+			<th class="{$content_type_class}" {$content_type_style}  data-field="content_type">
+				{$label modxdf_site_content content_type}
+			</th>
+			{END content_type_fieldheadercolumn}
+			{BEGIN uri_fieldheadercolumn}
+			<th class="{$uri_class}" {$uri_style}  data-field="uri">
+				{$label modxdf_site_content uri}
+			</th>
+			{END uri_fieldheadercolumn}
+			{BEGIN uri_override_fieldheadercolumn}
+			<th class="{$uri_override_class}" {$uri_override_style}  data-field="uri_override">
+				{$label modxdf_site_content uri_override}
+			</th>
+			{END uri_override_fieldheadercolumn}
+			{BEGIN hide_children_in_tree_fieldheadercolumn}
+			<th class="{$hide_children_in_tree_class}" {$hide_children_in_tree_style}  data-field="hide_children_in_tree">
+				{$label modxdf_site_content hide_children_in_tree}
+			</th>
+			{END hide_children_in_tree_fieldheadercolumn}
+			{BEGIN show_in_tree_fieldheadercolumn}
+			<th class="{$show_in_tree_class}" {$show_in_tree_style}  data-field="show_in_tree">
+				{$label modxdf_site_content show_in_tree}
+			</th>
+			{END show_in_tree_fieldheadercolumn}
+			{BEGIN properties_fieldheadercolumn}
+			<th class="{$properties_class}" {$properties_style}  data-field="properties">
+				{$label modxdf_site_content properties}
+			</th>
+			{END properties_fieldheadercolumn}
+			{BEGIN endrecordheader_block}
+			<th class="rnr-cs">&nbsp;</th>
+			{END endrecordheader_block}
+		{END record_header}
+		</tr>
+	{END grid_header}
+	</thead>
+	
+	<tbody>	
+	{BEGIN grid_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+			{BEGIN id_fieldcolumn}
+			<td  class="{$id_class}" {$id_style} {$recordattrs}>
+				{$id_value}
+			</td>
+			{END id_fieldcolumn}
+			{BEGIN type_fieldcolumn}
+			<td  class="{$type_class}" {$type_style} {$recordattrs}>
+				{$type_value}
+			</td>
+			{END type_fieldcolumn}
+			{BEGIN contentType_fieldcolumn}
+			<td  class="{$contentType_class}" {$contentType_style} {$recordattrs}>
+				{$contentType_value}
+			</td>
+			{END contentType_fieldcolumn}
+			{BEGIN pagetitle_fieldcolumn}
+			<td  class="{$pagetitle_class}" {$pagetitle_style} {$recordattrs}>
+				{$pagetitle_value}
+			</td>
+			{END pagetitle_fieldcolumn}
+			{BEGIN longtitle_fieldcolumn}
+			<td  class="{$longtitle_class}" {$longtitle_style} {$recordattrs}>
+				{$longtitle_value}
+			</td>
+			{END longtitle_fieldcolumn}
+			{BEGIN description_fieldcolumn}
+			<td  class="{$description_class}" {$description_style} {$recordattrs}>
+				{$description_value}
+			</td>
+			{END description_fieldcolumn}
+			{BEGIN alias_fieldcolumn}
+			<td  class="{$alias_class}" {$alias_style} {$recordattrs}>
+				{$alias_value}
+			</td>
+			{END alias_fieldcolumn}
+			{BEGIN link_attributes_fieldcolumn}
+			<td  class="{$link_attributes_class}" {$link_attributes_style} {$recordattrs}>
+				{$link_attributes_value}
+			</td>
+			{END link_attributes_fieldcolumn}
+			{BEGIN published_fieldcolumn}
+			<td  class="{$published_class}" {$published_style} {$recordattrs}>
+				{$published_value}
+			</td>
+			{END published_fieldcolumn}
+			{BEGIN pub_date_fieldcolumn}
+			<td  class="{$pub_date_class}" {$pub_date_style} {$recordattrs}>
+				{$pub_date_value}
+			</td>
+			{END pub_date_fieldcolumn}
+			{BEGIN unpub_date_fieldcolumn}
+			<td  class="{$unpub_date_class}" {$unpub_date_style} {$recordattrs}>
+				{$unpub_date_value}
+			</td>
+			{END unpub_date_fieldcolumn}
+			{BEGIN parent_fieldcolumn}
+			<td  class="{$parent_class}" {$parent_style} {$recordattrs}>
+				{$parent_value}
+			</td>
+			{END parent_fieldcolumn}
+			{BEGIN isfolder_fieldcolumn}
+			<td  class="{$isfolder_class}" {$isfolder_style} {$recordattrs}>
+				{$isfolder_value}
+			</td>
+			{END isfolder_fieldcolumn}
+			{BEGIN introtext_fieldcolumn}
+			<td  class="{$introtext_class}" {$introtext_style} {$recordattrs}>
+				{$introtext_value}
+			</td>
+			{END introtext_fieldcolumn}
+			{BEGIN content_fieldcolumn}
+			<td  class="{$content_class}" {$content_style} {$recordattrs}>
+				{$content_value}
+			</td>
+			{END content_fieldcolumn}
+			{BEGIN richtext_fieldcolumn}
+			<td  class="{$richtext_class}" {$richtext_style} {$recordattrs}>
+				{$richtext_value}
+			</td>
+			{END richtext_fieldcolumn}
+			{BEGIN template_fieldcolumn}
+			<td  class="{$template_class}" {$template_style} {$recordattrs}>
+				{$template_value}
+			</td>
+			{END template_fieldcolumn}
+			{BEGIN menuindex_fieldcolumn}
+			<td  class="{$menuindex_class}" {$menuindex_style} {$recordattrs}>
+				{$menuindex_value}
+			</td>
+			{END menuindex_fieldcolumn}
+			{BEGIN searchable_fieldcolumn}
+			<td  class="{$searchable_class}" {$searchable_style} {$recordattrs}>
+				{$searchable_value}
+			</td>
+			{END searchable_fieldcolumn}
+			{BEGIN cacheable_fieldcolumn}
+			<td  class="{$cacheable_class}" {$cacheable_style} {$recordattrs}>
+				{$cacheable_value}
+			</td>
+			{END cacheable_fieldcolumn}
+			{BEGIN createdby_fieldcolumn}
+			<td  class="{$createdby_class}" {$createdby_style} {$recordattrs}>
+				{$createdby_value}
+			</td>
+			{END createdby_fieldcolumn}
+			{BEGIN createdon_fieldcolumn}
+			<td  class="{$createdon_class}" {$createdon_style} {$recordattrs}>
+				{$createdon_value}
+			</td>
+			{END createdon_fieldcolumn}
+			{BEGIN editedby_fieldcolumn}
+			<td  class="{$editedby_class}" {$editedby_style} {$recordattrs}>
+				{$editedby_value}
+			</td>
+			{END editedby_fieldcolumn}
+			{BEGIN editedon_fieldcolumn}
+			<td  class="{$editedon_class}" {$editedon_style} {$recordattrs}>
+				{$editedon_value}
+			</td>
+			{END editedon_fieldcolumn}
+			{BEGIN deleted_fieldcolumn}
+			<td  class="{$deleted_class}" {$deleted_style} {$recordattrs}>
+				{$deleted_value}
+			</td>
+			{END deleted_fieldcolumn}
+			{BEGIN deletedon_fieldcolumn}
+			<td  class="{$deletedon_class}" {$deletedon_style} {$recordattrs}>
+				{$deletedon_value}
+			</td>
+			{END deletedon_fieldcolumn}
+			{BEGIN deletedby_fieldcolumn}
+			<td  class="{$deletedby_class}" {$deletedby_style} {$recordattrs}>
+				{$deletedby_value}
+			</td>
+			{END deletedby_fieldcolumn}
+			{BEGIN publishedon_fieldcolumn}
+			<td  class="{$publishedon_class}" {$publishedon_style} {$recordattrs}>
+				{$publishedon_value}
+			</td>
+			{END publishedon_fieldcolumn}
+			{BEGIN publishedby_fieldcolumn}
+			<td  class="{$publishedby_class}" {$publishedby_style} {$recordattrs}>
+				{$publishedby_value}
+			</td>
+			{END publishedby_fieldcolumn}
+			{BEGIN menutitle_fieldcolumn}
+			<td  class="{$menutitle_class}" {$menutitle_style} {$recordattrs}>
+				{$menutitle_value}
+			</td>
+			{END menutitle_fieldcolumn}
+			{BEGIN donthit_fieldcolumn}
+			<td  class="{$donthit_class}" {$donthit_style} {$recordattrs}>
+				{$donthit_value}
+			</td>
+			{END donthit_fieldcolumn}
+			{BEGIN privateweb_fieldcolumn}
+			<td  class="{$privateweb_class}" {$privateweb_style} {$recordattrs}>
+				{$privateweb_value}
+			</td>
+			{END privateweb_fieldcolumn}
+			{BEGIN privatemgr_fieldcolumn}
+			<td  class="{$privatemgr_class}" {$privatemgr_style} {$recordattrs}>
+				{$privatemgr_value}
+			</td>
+			{END privatemgr_fieldcolumn}
+			{BEGIN content_dispo_fieldcolumn}
+			<td  class="{$content_dispo_class}" {$content_dispo_style} {$recordattrs}>
+				{$content_dispo_value}
+			</td>
+			{END content_dispo_fieldcolumn}
+			{BEGIN hidemenu_fieldcolumn}
+			<td  class="{$hidemenu_class}" {$hidemenu_style} {$recordattrs}>
+				{$hidemenu_value}
+			</td>
+			{END hidemenu_fieldcolumn}
+			{BEGIN class_key_fieldcolumn}
+			<td  class="{$class_key_class}" {$class_key_style} {$recordattrs}>
+				{$class_key_value}
+			</td>
+			{END class_key_fieldcolumn}
+			{BEGIN context_key_fieldcolumn}
+			<td  class="{$context_key_class}" {$context_key_style} {$recordattrs}>
+				{$context_key_value}
+			</td>
+			{END context_key_fieldcolumn}
+			{BEGIN content_type_fieldcolumn}
+			<td  class="{$content_type_class}" {$content_type_style} {$recordattrs}>
+				{$content_type_value}
+			</td>
+			{END content_type_fieldcolumn}
+			{BEGIN uri_fieldcolumn}
+			<td  class="{$uri_class}" {$uri_style} {$recordattrs}>
+				{$uri_value}
+			</td>
+			{END uri_fieldcolumn}
+			{BEGIN uri_override_fieldcolumn}
+			<td  class="{$uri_override_class}" {$uri_override_style} {$recordattrs}>
+				{$uri_override_value}
+			</td>
+			{END uri_override_fieldcolumn}
+			{BEGIN hide_children_in_tree_fieldcolumn}
+			<td  class="{$hide_children_in_tree_class}" {$hide_children_in_tree_style} {$recordattrs}>
+				{$hide_children_in_tree_value}
+			</td>
+			{END hide_children_in_tree_fieldcolumn}
+			{BEGIN show_in_tree_fieldcolumn}
+			<td  class="{$show_in_tree_class}" {$show_in_tree_style} {$recordattrs}>
+				{$show_in_tree_value}
+			</td>
+			{END show_in_tree_fieldcolumn}
+			{BEGIN properties_fieldcolumn}
+			<td  class="{$properties_class}" {$properties_style} {$recordattrs}>
+				{$properties_value}
+			</td>
+			{END properties_fieldcolumn}
+			{BEGIN endrecord_block}
+			<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+			{END endrecord_block}
+		{END grid_record}
+		</tr>
+{END grid_row}
+	</tbody>
+
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+      </div>
+      <DIV class="bs-middle ">
+        <DIV class="bs-topmiddle">
+          
+        </div>
+        <DIV class="bs-left" {$blockattr_left}>
+          
+        </div>
+        <DIV class="bs-center">
+          
+        </div>
+        <DIV class="bs-right">
+          
+        </div>
+      </div>
+      <DIV class="bs-bottom">
+        
+      </div>
+      {$footer}
+    {END body}
+  </body>
+</html>

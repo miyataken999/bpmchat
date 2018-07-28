@@ -1,0 +1,170 @@
+<div {$pageattrs}>
+
+{BEGIN container_column}
+<div class="rnr-c rnr-ch rnr-c-column">
+
+{BEGIN masterlist_title}
+<div  class="style1 rnr-bl rnr-b-masterlistheader {$brickclass_masterlistheader}"><a {$backtomasterlink_attrs} class="btn btn-link btn-xs">{mlang_message BACK_TO} {$backtomasterlink_caption}</a><span>{$pagetitlelabel PMT_GOLD_PURCHASE masterlist}</span></div>
+{END masterlist_title}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_column}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+	<style>
+	.bs-gridcell[data-field=APP_UID]:before {
+		content: "{$label PMT_GOLD_PURCHASE APP_UID}";
+	}
+	.bs-gridcell[data-field=APP_NUMBER]:before {
+		content: "{$label PMT_GOLD_PURCHASE APP_NUMBER}";
+	}
+	.bs-gridcell[data-field=APP_STATUS]:before {
+		content: "{$label PMT_GOLD_PURCHASE APP_STATUS}";
+	}
+	.bs-gridcell[data-field=ROW]:before {
+		content: "{$label PMT_GOLD_PURCHASE ROW}";
+	}
+	.bs-gridcell[data-field=A]:before {
+		content: "{$label PMT_GOLD_PURCHASE A}";
+	}
+	.bs-gridcell[data-field=B]:before {
+		content: "{$label PMT_GOLD_PURCHASE B}";
+	}
+	.bs-gridcell[data-field=C]:before {
+		content: "{$label PMT_GOLD_PURCHASE C}";
+	}
+	.bs-gridcell[data-field=D]:before {
+		content: "{$label PMT_GOLD_PURCHASE D}";
+	}
+	.bs-gridcell[data-field=E]:before {
+		content: "{$label PMT_GOLD_PURCHASE E}";
+	}
+	.bs-gridcell[data-field=F]:before {
+		content: "{$label PMT_GOLD_PURCHASE F}";
+	}
+	.bs-gridcell[data-field=G]:before {
+		content: "{$label PMT_GOLD_PURCHASE G}";
+	}
+	.bs-gridcell[data-field=H]:before {
+		content: "{$label PMT_GOLD_PURCHASE H}";
+	}
+	.bs-gridcell[data-field=I]:before {
+		content: "{$label PMT_GOLD_PURCHASE I}";
+	}
+	.bs-gridcell[data-field=J]:before {
+		content: "{$label PMT_GOLD_PURCHASE J}";
+	}
+	.bs-gridcell[data-field=K]:before {
+		content: "{$label PMT_GOLD_PURCHASE K}";
+	}
+	.bs-gridcell[data-field=L]:before {
+		content: "{$label PMT_GOLD_PURCHASE L}";
+	}
+	.bs-gridcell[data-field=M]:before {
+		content: "{$label PMT_GOLD_PURCHASE M}";
+	}
+	.bs-gridcell[data-field=N]:before {
+		content: "{$label PMT_GOLD_PURCHASE N}";
+	}
+	.bs-gridcell[data-field=O]:before {
+		content: "{$label PMT_GOLD_PURCHASE O}";
+	}
+	.bs-gridcell[data-field=P]:before {
+		content: "{$label PMT_GOLD_PURCHASE P}";
+	}
+	.bs-gridcell[data-field=Q]:before {
+		content: "{$label PMT_GOLD_PURCHASE Q}";
+	}
+	.bs-gridcell[data-field=R]:before {
+		content: "{$label PMT_GOLD_PURCHASE R}";
+	}
+	.bs-gridcell[data-field=S]:before {
+		content: "{$label PMT_GOLD_PURCHASE S}";
+	}
+	.bs-gridcell[data-field=T]:before {
+		content: "{$label PMT_GOLD_PURCHASE T}";
+	}
+	.bs-gridcell[data-field=TIME]:before {
+		content: "{$label PMT_GOLD_PURCHASE TIME}";
+	}
+	.bs-gridcell[data-field=MONTHLY_REPORT]:before {
+		content: "{$label PMT_GOLD_PURCHASE MONTHLY_REPORT}";
+	}
+</style>
+<table {$masterlistgrid_hiddenattr} data-pageid="{$pageid}" data-brick="masterlistgrid" class="table rnr-b-mastergridfields rnr-gridtable bs-flexgrid" >
+		<thead>
+		<tr>
+			<th class="{$APP_UID_class}">{$label PMT_GOLD_PURCHASE APP_UID}</th>
+			<th class="{$APP_NUMBER_class}">{$label PMT_GOLD_PURCHASE APP_NUMBER}</th>
+			<th class="{$APP_STATUS_class}">{$label PMT_GOLD_PURCHASE APP_STATUS}</th>
+			<th class="{$ROW_class}">{$label PMT_GOLD_PURCHASE ROW}</th>
+			<th class="{$A_class}">{$label PMT_GOLD_PURCHASE A}</th>
+			<th class="{$B_class}">{$label PMT_GOLD_PURCHASE B}</th>
+			<th class="{$C_class}">{$label PMT_GOLD_PURCHASE C}</th>
+			<th class="{$D_class}">{$label PMT_GOLD_PURCHASE D}</th>
+			<th class="{$E_class}">{$label PMT_GOLD_PURCHASE E}</th>
+			<th class="{$F_class}">{$label PMT_GOLD_PURCHASE F}</th>
+			<th class="{$G_class}">{$label PMT_GOLD_PURCHASE G}</th>
+			<th class="{$H_class}">{$label PMT_GOLD_PURCHASE H}</th>
+			<th class="{$I_class}">{$label PMT_GOLD_PURCHASE I}</th>
+			<th class="{$J_class}">{$label PMT_GOLD_PURCHASE J}</th>
+			<th class="{$K_class}">{$label PMT_GOLD_PURCHASE K}</th>
+			<th class="{$L_class}">{$label PMT_GOLD_PURCHASE L}</th>
+			<th class="{$M_class}">{$label PMT_GOLD_PURCHASE M}</th>
+			<th class="{$N_class}">{$label PMT_GOLD_PURCHASE N}</th>
+			<th class="{$O_class}">{$label PMT_GOLD_PURCHASE O}</th>
+			<th class="{$P_class}">{$label PMT_GOLD_PURCHASE P}</th>
+			<th class="{$Q_class}">{$label PMT_GOLD_PURCHASE Q}</th>
+			<th class="{$R_class}">{$label PMT_GOLD_PURCHASE R}</th>
+			<th class="{$S_class}">{$label PMT_GOLD_PURCHASE S}</th>
+			<th class="{$T_class}">{$label PMT_GOLD_PURCHASE T}</th>
+			<th class="{$TIME_class}">{$label PMT_GOLD_PURCHASE TIME}</th>
+			<th class="{$MONTHLY_REPORT_class}">{$label PMT_GOLD_PURCHASE MONTHLY_REPORT}</th>
+		</tr>
+	</thead>
+	
+	<tbody>
+		<tr>
+			<td class="{$APP_UID_class} bs-gridcell" data-field=APP_UID>{$APP_UID_mastervalue}</td>
+			<td class="{$APP_NUMBER_class} bs-gridcell" data-field=APP_NUMBER>{$APP_NUMBER_mastervalue}</td>
+			<td class="{$APP_STATUS_class} bs-gridcell" data-field=APP_STATUS>{$APP_STATUS_mastervalue}</td>
+			<td class="{$ROW_class} bs-gridcell" data-field=ROW>{$ROW_mastervalue}</td>
+			<td class="{$A_class} bs-gridcell" data-field=A>{$A_mastervalue}</td>
+			<td class="{$B_class} bs-gridcell" data-field=B>{$B_mastervalue}</td>
+			<td class="{$C_class} bs-gridcell" data-field=C>{$C_mastervalue}</td>
+			<td class="{$D_class} bs-gridcell" data-field=D>{$D_mastervalue}</td>
+			<td class="{$E_class} bs-gridcell" data-field=E>{$E_mastervalue}</td>
+			<td class="{$F_class} bs-gridcell" data-field=F>{$F_mastervalue}</td>
+			<td class="{$G_class} bs-gridcell" data-field=G>{$G_mastervalue}</td>
+			<td class="{$H_class} bs-gridcell" data-field=H>{$H_mastervalue}</td>
+			<td class="{$I_class} bs-gridcell" data-field=I>{$I_mastervalue}</td>
+			<td class="{$J_class} bs-gridcell" data-field=J>{$J_mastervalue}</td>
+			<td class="{$K_class} bs-gridcell" data-field=K>{$K_mastervalue}</td>
+			<td class="{$L_class} bs-gridcell" data-field=L>{$L_mastervalue}</td>
+			<td class="{$M_class} bs-gridcell" data-field=M>{$M_mastervalue}</td>
+			<td class="{$N_class} bs-gridcell" data-field=N>{$N_mastervalue}</td>
+			<td class="{$O_class} bs-gridcell" data-field=O>{$O_mastervalue}</td>
+			<td class="{$P_class} bs-gridcell" data-field=P>{$P_mastervalue}</td>
+			<td class="{$Q_class} bs-gridcell" data-field=Q>{$Q_mastervalue}</td>
+			<td class="{$R_class} bs-gridcell" data-field=R>{$R_mastervalue}</td>
+			<td class="{$S_class} bs-gridcell" data-field=S>{$S_mastervalue}</td>
+			<td class="{$T_class} bs-gridcell" data-field=T>{$T_mastervalue}</td>
+			<td class="{$TIME_class} bs-gridcell" data-field=TIME>{$TIME_mastervalue}</td>
+			<td class="{$MONTHLY_REPORT_class} bs-gridcell" data-field=MONTHLY_REPORT>{$MONTHLY_REPORT_mastervalue}</td>
+		</tr>
+	</tbody>
+
+</table> 
+
+
+
+
+{END container_mastergrid}
+
+</div>

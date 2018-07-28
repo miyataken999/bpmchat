@@ -1,0 +1,170 @@
+<div {$pageattrs}>
+
+{BEGIN container_column}
+<div class="rnr-c rnr-ch rnr-c-column">
+
+{BEGIN masterlist_title}
+<div  class="style1 rnr-bl rnr-b-masterlistheader {$brickclass_masterlistheader}"><a {$backtomasterlink_attrs} class="btn btn-link btn-xs">{mlang_message BACK_TO} {$backtomasterlink_caption}</a><span>{$pagetitlelabel PMT_GYOUMU001 masterlist}</span></div>
+{END masterlist_title}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_column}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+	<style>
+	.bs-gridcell[data-field=APP_UID]:before {
+		content: "{$label PMT_GYOUMU001 APP_UID}";
+	}
+	.bs-gridcell[data-field=A]:before {
+		content: "{$label PMT_GYOUMU001 A}";
+	}
+	.bs-gridcell[data-field=B]:before {
+		content: "{$label PMT_GYOUMU001 B}";
+	}
+	.bs-gridcell[data-field=C]:before {
+		content: "{$label PMT_GYOUMU001 C}";
+	}
+	.bs-gridcell[data-field=D]:before {
+		content: "{$label PMT_GYOUMU001 D}";
+	}
+	.bs-gridcell[data-field=E]:before {
+		content: "{$label PMT_GYOUMU001 E}";
+	}
+	.bs-gridcell[data-field=F]:before {
+		content: "{$label PMT_GYOUMU001 F}";
+	}
+	.bs-gridcell[data-field=G]:before {
+		content: "{$label PMT_GYOUMU001 G}";
+	}
+	.bs-gridcell[data-field=H]:before {
+		content: "{$label PMT_GYOUMU001 H}";
+	}
+	.bs-gridcell[data-field=I]:before {
+		content: "{$label PMT_GYOUMU001 I}";
+	}
+	.bs-gridcell[data-field=J]:before {
+		content: "{$label PMT_GYOUMU001 J}";
+	}
+	.bs-gridcell[data-field=K]:before {
+		content: "{$label PMT_GYOUMU001 K}";
+	}
+	.bs-gridcell[data-field=E_LABEL]:before {
+		content: "{$label PMT_GYOUMU001 E_LABEL}";
+	}
+	.bs-gridcell[data-field=A_LABEL]:before {
+		content: "{$label PMT_GYOUMU001 A_LABEL}";
+	}
+	.bs-gridcell[data-field=B_LABEL]:before {
+		content: "{$label PMT_GYOUMU001 B_LABEL}";
+	}
+	.bs-gridcell[data-field=C_LABEL]:before {
+		content: "{$label PMT_GYOUMU001 C_LABEL}";
+	}
+	.bs-gridcell[data-field=D_LABEL]:before {
+		content: "{$label PMT_GYOUMU001 D_LABEL}";
+	}
+	.bs-gridcell[data-field=APP_NUMBER]:before {
+		content: "{$label PMT_GYOUMU001 APP_NUMBER}";
+	}
+	.bs-gridcell[data-field=APP_STATUS]:before {
+		content: "{$label PMT_GYOUMU001 APP_STATUS}";
+	}
+	.bs-gridcell[data-field=ROW]:before {
+		content: "{$label PMT_GYOUMU001 ROW}";
+	}
+	.bs-gridcell[data-field=EMPLOYEE_NO]:before {
+		content: "{$label PMT_GYOUMU001 EMPLOYEE_NO}";
+	}
+	.bs-gridcell[data-field=TIME]:before {
+		content: "{$label PMT_GYOUMU001 TIME}";
+	}
+	.bs-gridcell[data-field=MONTHLY_REPORT]:before {
+		content: "{$label PMT_GYOUMU001 MONTHLY_REPORT}";
+	}
+	.bs-gridcell[data-field=BUSINESS_CONFIRMATION_17]:before {
+		content: "{$label PMT_GYOUMU001 BUSINESS_CONFIRMATION_17}";
+	}
+	.bs-gridcell[data-field=BUSINESS_CONFIRMATION_18]:before {
+		content: "{$label PMT_GYOUMU001 BUSINESS_CONFIRMATION_18}";
+	}
+	.bs-gridcell[data-field=BUSINESS_CONFIRMATION_19]:before {
+		content: "{$label PMT_GYOUMU001 BUSINESS_CONFIRMATION_19}";
+	}
+</style>
+<table {$masterlistgrid_hiddenattr} data-pageid="{$pageid}" data-brick="masterlistgrid" class="table rnr-b-mastergridfields rnr-gridtable bs-flexgrid" >
+		<thead>
+		<tr>
+			<th class="{$APP_UID_class}">{$label PMT_GYOUMU001 APP_UID}</th>
+			<th class="{$A_class}">{$label PMT_GYOUMU001 A}</th>
+			<th class="{$B_class}">{$label PMT_GYOUMU001 B}</th>
+			<th class="{$C_class}">{$label PMT_GYOUMU001 C}</th>
+			<th class="{$D_class}">{$label PMT_GYOUMU001 D}</th>
+			<th class="{$E_class}">{$label PMT_GYOUMU001 E}</th>
+			<th class="{$F_class}">{$label PMT_GYOUMU001 F}</th>
+			<th class="{$G_class}">{$label PMT_GYOUMU001 G}</th>
+			<th class="{$H_class}">{$label PMT_GYOUMU001 H}</th>
+			<th class="{$I_class}">{$label PMT_GYOUMU001 I}</th>
+			<th class="{$J_class}">{$label PMT_GYOUMU001 J}</th>
+			<th class="{$K_class}">{$label PMT_GYOUMU001 K}</th>
+			<th class="{$E_LABEL_class}">{$label PMT_GYOUMU001 E_LABEL}</th>
+			<th class="{$A_LABEL_class}">{$label PMT_GYOUMU001 A_LABEL}</th>
+			<th class="{$B_LABEL_class}">{$label PMT_GYOUMU001 B_LABEL}</th>
+			<th class="{$C_LABEL_class}">{$label PMT_GYOUMU001 C_LABEL}</th>
+			<th class="{$D_LABEL_class}">{$label PMT_GYOUMU001 D_LABEL}</th>
+			<th class="{$APP_NUMBER_class}">{$label PMT_GYOUMU001 APP_NUMBER}</th>
+			<th class="{$APP_STATUS_class}">{$label PMT_GYOUMU001 APP_STATUS}</th>
+			<th class="{$ROW_class}">{$label PMT_GYOUMU001 ROW}</th>
+			<th class="{$EMPLOYEE_NO_class}">{$label PMT_GYOUMU001 EMPLOYEE_NO}</th>
+			<th class="{$TIME_class}">{$label PMT_GYOUMU001 TIME}</th>
+			<th class="{$MONTHLY_REPORT_class}">{$label PMT_GYOUMU001 MONTHLY_REPORT}</th>
+			<th class="{$BUSINESS_CONFIRMATION_17_class}">{$label PMT_GYOUMU001 BUSINESS_CONFIRMATION_17}</th>
+			<th class="{$BUSINESS_CONFIRMATION_18_class}">{$label PMT_GYOUMU001 BUSINESS_CONFIRMATION_18}</th>
+			<th class="{$BUSINESS_CONFIRMATION_19_class}">{$label PMT_GYOUMU001 BUSINESS_CONFIRMATION_19}</th>
+		</tr>
+	</thead>
+	
+	<tbody>
+		<tr>
+			<td class="{$APP_UID_class} bs-gridcell" data-field=APP_UID>{$APP_UID_mastervalue}</td>
+			<td class="{$A_class} bs-gridcell" data-field=A>{$A_mastervalue}</td>
+			<td class="{$B_class} bs-gridcell" data-field=B>{$B_mastervalue}</td>
+			<td class="{$C_class} bs-gridcell" data-field=C>{$C_mastervalue}</td>
+			<td class="{$D_class} bs-gridcell" data-field=D>{$D_mastervalue}</td>
+			<td class="{$E_class} bs-gridcell" data-field=E>{$E_mastervalue}</td>
+			<td class="{$F_class} bs-gridcell" data-field=F>{$F_mastervalue}</td>
+			<td class="{$G_class} bs-gridcell" data-field=G>{$G_mastervalue}</td>
+			<td class="{$H_class} bs-gridcell" data-field=H>{$H_mastervalue}</td>
+			<td class="{$I_class} bs-gridcell" data-field=I>{$I_mastervalue}</td>
+			<td class="{$J_class} bs-gridcell" data-field=J>{$J_mastervalue}</td>
+			<td class="{$K_class} bs-gridcell" data-field=K>{$K_mastervalue}</td>
+			<td class="{$E_LABEL_class} bs-gridcell" data-field=E_LABEL>{$E_LABEL_mastervalue}</td>
+			<td class="{$A_LABEL_class} bs-gridcell" data-field=A_LABEL>{$A_LABEL_mastervalue}</td>
+			<td class="{$B_LABEL_class} bs-gridcell" data-field=B_LABEL>{$B_LABEL_mastervalue}</td>
+			<td class="{$C_LABEL_class} bs-gridcell" data-field=C_LABEL>{$C_LABEL_mastervalue}</td>
+			<td class="{$D_LABEL_class} bs-gridcell" data-field=D_LABEL>{$D_LABEL_mastervalue}</td>
+			<td class="{$APP_NUMBER_class} bs-gridcell" data-field=APP_NUMBER>{$APP_NUMBER_mastervalue}</td>
+			<td class="{$APP_STATUS_class} bs-gridcell" data-field=APP_STATUS>{$APP_STATUS_mastervalue}</td>
+			<td class="{$ROW_class} bs-gridcell" data-field=ROW>{$ROW_mastervalue}</td>
+			<td class="{$EMPLOYEE_NO_class} bs-gridcell" data-field=EMPLOYEE_NO>{$EMPLOYEE_NO_mastervalue}</td>
+			<td class="{$TIME_class} bs-gridcell" data-field=TIME>{$TIME_mastervalue}</td>
+			<td class="{$MONTHLY_REPORT_class} bs-gridcell" data-field=MONTHLY_REPORT>{$MONTHLY_REPORT_mastervalue}</td>
+			<td class="{$BUSINESS_CONFIRMATION_17_class} bs-gridcell" data-field=BUSINESS_CONFIRMATION_17>{$BUSINESS_CONFIRMATION_17_mastervalue}</td>
+			<td class="{$BUSINESS_CONFIRMATION_18_class} bs-gridcell" data-field=BUSINESS_CONFIRMATION_18>{$BUSINESS_CONFIRMATION_18_mastervalue}</td>
+			<td class="{$BUSINESS_CONFIRMATION_19_class} bs-gridcell" data-field=BUSINESS_CONFIRMATION_19>{$BUSINESS_CONFIRMATION_19_mastervalue}</td>
+		</tr>
+	</tbody>
+
+</table> 
+
+
+
+
+{END container_mastergrid}
+
+</div>

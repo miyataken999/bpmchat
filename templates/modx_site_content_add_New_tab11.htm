@@ -1,0 +1,304 @@
+<div {$pageattrs}>
+
+{BEGIN container_tabfields}
+<div {$tabfields_chiddenattr} data-pageid="{$pageid}" data-container="tabfields" class=" form-horizontal   "> 
+
+
+{BEGIN content_tabfieldblock}
+<div class="container">
+	<div class="form-group in-tab {$fielddispclass_content}" data-fieldname="content" data-signal-error-for="content{$id}" >
+		<label class="col-md-3 control-label" for="{$labelfor_content}">
+			{BEGIN content_label}{$label modx_site_content content}{END content_label}
+		</label>
+		<div class="col-md-6 " >
+			{$content_editcontrol}
+		</div>
+		<div class="col-md-3 help-block " data-helpfor="content">
+			<div class="text-muted" >
+			{$tooltip modx_site_content content}
+			</div>
+		</div>
+	</div>
+</div>
+{END content_tabfieldblock}
+{BEGIN introtext_tabfieldblock}
+<div class="container">
+	<div class="form-group in-tab {$fielddispclass_introtext}" data-fieldname="introtext" data-signal-error-for="introtext{$id}" >
+		<label class="col-md-3 control-label" for="{$labelfor_introtext}">
+			{BEGIN introtext_label}{$label modx_site_content introtext}{END introtext_label}
+		</label>
+		<div class="col-md-6 " >
+			{$introtext_editcontrol}
+		</div>
+		<div class="col-md-3 help-block " data-helpfor="introtext">
+			<div class="text-muted" >
+			{$tooltip modx_site_content introtext}
+			</div>
+		</div>
+	</div>
+</div>
+{END introtext_tabfieldblock}
+{BEGIN menuindex_tabfieldblock}
+<div class="container">
+	<div class="form-group in-tab {$fielddispclass_menuindex}" data-fieldname="menuindex" data-signal-error-for="menuindex{$id}" >
+		<label class="col-md-3 control-label" for="{$labelfor_menuindex}">
+			{BEGIN menuindex_label}{$label modx_site_content menuindex}{END menuindex_label}
+		</label>
+		<div class="col-md-6 " >
+			{$menuindex_editcontrol}
+		</div>
+		<div class="col-md-3 help-block " data-helpfor="menuindex">
+			<div class="text-muted" >
+			{$tooltip modx_site_content menuindex}
+			</div>
+		</div>
+	</div>
+</div>
+{END menuindex_tabfieldblock}
+{BEGIN richtext_tabfieldblock}
+<div class="container">
+	<div class="form-group in-tab {$fielddispclass_richtext}" data-fieldname="richtext" data-signal-error-for="richtext{$id}" >
+		<label class="col-md-3 control-label" for="{$labelfor_richtext}">
+			{BEGIN richtext_label}{$label modx_site_content richtext}{END richtext_label}
+		</label>
+		<div class="col-md-6 " >
+			{$richtext_editcontrol}
+		</div>
+		<div class="col-md-3 help-block " data-helpfor="richtext">
+			<div class="text-muted" >
+			{$tooltip modx_site_content richtext}
+			</div>
+		</div>
+	</div>
+</div>
+{END richtext_tabfieldblock}
+{BEGIN modx_site_snippet_id_tabfieldblock}
+<div class="container">
+	<div class="form-group in-tab {$fielddispclass_modx_site_snippet_id}" data-fieldname="modx_site_snippet_id" data-signal-error-for="modx_site_snippet_id{$id}" >
+		<label class="col-md-3 control-label" for="{$labelfor_modx_site_snippet_id}">
+			{BEGIN modx_site_snippet_id_label}{$label modx_site_content modx_site_snippet_id}{END modx_site_snippet_id_label}
+		</label>
+		<div class="col-md-6 " >
+			{$modx_site_snippet_id_editcontrol}
+		</div>
+		<div class="col-md-3 help-block " data-helpfor="modx_site_snippet_id">
+			<div class="text-muted" >
+			{$tooltip modx_site_content modx_site_snippet_id}
+			</div>
+		</div>
+	</div>
+</div>
+{END modx_site_snippet_id_tabfieldblock}
+{BEGIN modex_site_htmlsnippet_id_tabfieldblock}
+<div class="container">
+	<div class="form-group in-tab {$fielddispclass_modex_site_htmlsnippet_id}" data-fieldname="modex_site_htmlsnippet_id" data-signal-error-for="modex_site_htmlsnippet_id{$id}" >
+		<label class="col-md-3 control-label" for="{$labelfor_modex_site_htmlsnippet_id}">
+			{BEGIN modex_site_htmlsnippet_id_label}{$label modx_site_content modex_site_htmlsnippet_id}{END modex_site_htmlsnippet_id_label}
+		</label>
+		<div class="col-md-6 " >
+			{$modex_site_htmlsnippet_id_editcontrol}
+		</div>
+		<div class="col-md-3 help-block " data-helpfor="modex_site_htmlsnippet_id">
+			<div class="text-muted" >
+			{$tooltip modx_site_content modex_site_htmlsnippet_id}
+			</div>
+		</div>
+	</div>
+</div>
+{END modex_site_htmlsnippet_id_tabfieldblock}
+{BEGIN template_tabfieldblock}
+<div class="container">
+	<div class="form-group in-tab {$fielddispclass_template}" data-fieldname="template" data-signal-error-for="template{$id}" >
+		<label class="col-md-3 control-label" for="{$labelfor_template}">
+			{BEGIN template_label}{$label modx_site_content template}{END template_label}
+		</label>
+		<div class="col-md-6 " >
+			{$template_editcontrol}
+		</div>
+		<div class="col-md-3 help-block " data-helpfor="template">
+			<div class="text-muted" >
+			{$tooltip modx_site_content template}
+			</div>
+		</div>
+	</div>
+</div>
+{END template_tabfieldblock}
+{BEGIN type_tabfieldblock}
+<div class="container">
+	<div class="form-group in-tab {$fielddispclass_type}" data-fieldname="type" data-signal-error-for="type{$id}" >
+		<label class="col-md-3 control-label" for="{$labelfor_type}">
+			{BEGIN type_label}{$label modx_site_content type}{END type_label}
+		</label>
+		<div class="col-md-6 " >
+			{$type_editcontrol}
+		</div>
+		<div class="col-md-3 help-block " data-helpfor="type">
+			<div class="text-muted" >
+			{$tooltip modx_site_content type}
+			</div>
+		</div>
+	</div>
+</div>
+{END type_tabfieldblock}
+{BEGIN publishedon_tabfieldblock}
+<div class="container">
+	<div class="form-group in-tab {$fielddispclass_publishedon}" data-fieldname="publishedon" data-signal-error-for="publishedon{$id}" >
+		<label class="col-md-3 control-label" for="{$labelfor_publishedon}">
+			{BEGIN publishedon_label}{$label modx_site_content publishedon}{END publishedon_label}
+		</label>
+		<div class="col-md-6 " >
+			{$publishedon_editcontrol}
+		</div>
+		<div class="col-md-3 help-block " data-helpfor="publishedon">
+			<div class="text-muted" >
+			{$tooltip modx_site_content publishedon}
+			</div>
+		</div>
+	</div>
+</div>
+{END publishedon_tabfieldblock}
+{BEGIN contentType_tabfieldblock}
+<div class="container">
+	<div class="form-group in-tab {$fielddispclass_contentType}" data-fieldname="contentType" data-signal-error-for="contentType{$id}" >
+		<label class="col-md-3 control-label" for="{$labelfor_contentType}">
+			{BEGIN contentType_label}{$label modx_site_content contentType}{END contentType_label}
+		</label>
+		<div class="col-md-6 " >
+			{$contentType_editcontrol}
+		</div>
+		<div class="col-md-3 help-block " data-helpfor="contentType">
+			<div class="text-muted" >
+			{$tooltip modx_site_content contentType}
+			</div>
+		</div>
+	</div>
+</div>
+{END contentType_tabfieldblock}
+{BEGIN pagetitle_tabfieldblock}
+<div class="container">
+	<div class="form-group in-tab {$fielddispclass_pagetitle}" data-fieldname="pagetitle" data-signal-error-for="pagetitle{$id}" >
+		<label class="col-md-3 control-label" for="{$labelfor_pagetitle}">
+			{BEGIN pagetitle_label}{$label modx_site_content pagetitle}{END pagetitle_label}
+		</label>
+		<div class="col-md-6 " >
+			{$pagetitle_editcontrol}
+		</div>
+		<div class="col-md-3 help-block " data-helpfor="pagetitle">
+			<div class="text-muted" >
+			{$tooltip modx_site_content pagetitle}
+			</div>
+		</div>
+	</div>
+</div>
+{END pagetitle_tabfieldblock}
+{BEGIN longtitle_tabfieldblock}
+<div class="container">
+	<div class="form-group in-tab {$fielddispclass_longtitle}" data-fieldname="longtitle" data-signal-error-for="longtitle{$id}" >
+		<label class="col-md-3 control-label" for="{$labelfor_longtitle}">
+			{BEGIN longtitle_label}{$label modx_site_content longtitle}{END longtitle_label}
+		</label>
+		<div class="col-md-6 " >
+			{$longtitle_editcontrol}
+		</div>
+		<div class="col-md-3 help-block " data-helpfor="longtitle">
+			<div class="text-muted" >
+			{$tooltip modx_site_content longtitle}
+			</div>
+		</div>
+	</div>
+</div>
+{END longtitle_tabfieldblock}
+{BEGIN description_tabfieldblock}
+<div class="container">
+	<div class="form-group in-tab {$fielddispclass_description}" data-fieldname="description" data-signal-error-for="description{$id}" >
+		<label class="col-md-3 control-label" for="{$labelfor_description}">
+			{BEGIN description_label}{$label modx_site_content description}{END description_label}
+		</label>
+		<div class="col-md-6 " >
+			{$description_editcontrol}
+		</div>
+		<div class="col-md-3 help-block " data-helpfor="description">
+			<div class="text-muted" >
+			{$tooltip modx_site_content description}
+			</div>
+		</div>
+	</div>
+</div>
+{END description_tabfieldblock}
+{BEGIN alias_tabfieldblock}
+<div class="container">
+	<div class="form-group in-tab {$fielddispclass_alias}" data-fieldname="alias" data-signal-error-for="alias{$id}" >
+		<label class="col-md-3 control-label" for="{$labelfor_alias}">
+			{BEGIN alias_label}{$label modx_site_content alias}{END alias_label}
+		</label>
+		<div class="col-md-6 " >
+			{$alias_editcontrol}
+		</div>
+		<div class="col-md-3 help-block " data-helpfor="alias">
+			<div class="text-muted" >
+			{$tooltip modx_site_content alias}
+			</div>
+		</div>
+	</div>
+</div>
+{END alias_tabfieldblock}
+{BEGIN link_attributes_tabfieldblock}
+<div class="container">
+	<div class="form-group in-tab {$fielddispclass_link_attributes}" data-fieldname="link_attributes" data-signal-error-for="link_attributes{$id}" >
+		<label class="col-md-3 control-label" for="{$labelfor_link_attributes}">
+			{BEGIN link_attributes_label}{$label modx_site_content link_attributes}{END link_attributes_label}
+		</label>
+		<div class="col-md-6 " >
+			{$link_attributes_editcontrol}
+		</div>
+		<div class="col-md-3 help-block " data-helpfor="link_attributes">
+			<div class="text-muted" >
+			{$tooltip modx_site_content link_attributes}
+			</div>
+		</div>
+	</div>
+</div>
+{END link_attributes_tabfieldblock}
+{BEGIN published_tabfieldblock}
+<div class="container">
+	<div class="form-group in-tab {$fielddispclass_published}" data-fieldname="published" data-signal-error-for="published{$id}" >
+		<label class="col-md-3 control-label" for="{$labelfor_published}">
+			{BEGIN published_label}{$label modx_site_content published}{END published_label}
+		</label>
+		<div class="col-md-6 " >
+			{$published_editcontrol}
+		</div>
+		<div class="col-md-3 help-block " data-helpfor="published">
+			<div class="text-muted" >
+			{$tooltip modx_site_content published}
+			</div>
+		</div>
+	</div>
+</div>
+{END published_tabfieldblock}
+{BEGIN pub_date_tabfieldblock}
+<div class="container">
+	<div class="form-group in-tab {$fielddispclass_pub_date}" data-fieldname="pub_date" data-signal-error-for="pub_date{$id}" >
+		<label class="col-md-3 control-label" for="{$labelfor_pub_date}">
+			{BEGIN pub_date_label}{$label modx_site_content pub_date}{END pub_date_label}
+		</label>
+		<div class="col-md-6 " >
+			{$pub_date_editcontrol}
+		</div>
+		<div class="col-md-3 help-block " data-helpfor="pub_date">
+			<div class="text-muted" >
+			{$tooltip modx_site_content pub_date}
+			</div>
+		</div>
+	</div>
+</div>
+{END pub_date_tabfieldblock}
+
+
+
+
+
+</div>
+{END container_tabfields}
+
+</div>

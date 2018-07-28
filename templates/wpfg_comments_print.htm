@@ -1,0 +1,272 @@
+<!doctype html>
+<html  {$html_attrs}>
+  <head>asdfsfs
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      {$pagetitle}
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link REL="stylesheet" href="styles/default.css" type="text/css">
+    {BEGIN rtlCSS}
+      <link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+    {END rtlCSS}
+    {BEGIN styleCSSFiles}
+      <link REL="stylesheet" href="{$stylepath}" type="text/css">
+    {END styleCSSFiles}
+  </head>
+  <BODY class="{$stylename} function-print" {$bodyattrs}>
+    {BEGIN body}
+      {$header}
+      <style>
+        {$containerCss}
+      </style>
+      <DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel wpfg_comments print}</h2>
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>{mlang_message PAGE1} <span class="rp-pageno">{$pageno}</span> {mlang_message PAGE2} <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="table table-bordered rp-maintable" {$printgrid_hiddenattr} data-pageid="{$pageid}" data-brick="printgrid" >
+	<thead>
+	{BEGIN grid_header}
+		<tr class="{$gridHeader_class}" >
+		{BEGIN record_header}
+			{BEGIN comment_ID_fieldheadercolumn}
+			<th class="{$comment_ID_class}" {$comment_ID_style}  data-field="comment_ID">
+				{$label wpfg_comments comment_ID}
+			</th>
+			{END comment_ID_fieldheadercolumn}
+			{BEGIN comment_post_ID_fieldheadercolumn}
+			<th class="{$comment_post_ID_class}" {$comment_post_ID_style}  data-field="comment_post_ID">
+				{$label wpfg_comments comment_post_ID}
+			</th>
+			{END comment_post_ID_fieldheadercolumn}
+			{BEGIN comment_author_fieldheadercolumn}
+			<th class="{$comment_author_class}" {$comment_author_style}  data-field="comment_author">
+				{$label wpfg_comments comment_author}
+			</th>
+			{END comment_author_fieldheadercolumn}
+			{BEGIN comment_author_email_fieldheadercolumn}
+			<th class="{$comment_author_email_class}" {$comment_author_email_style}  data-field="comment_author_email">
+				{$label wpfg_comments comment_author_email}
+			</th>
+			{END comment_author_email_fieldheadercolumn}
+			{BEGIN comment_author_url_fieldheadercolumn}
+			<th class="{$comment_author_url_class}" {$comment_author_url_style}  data-field="comment_author_url">
+				{$label wpfg_comments comment_author_url}
+			</th>
+			{END comment_author_url_fieldheadercolumn}
+			{BEGIN comment_author_IP_fieldheadercolumn}
+			<th class="{$comment_author_IP_class}" {$comment_author_IP_style}  data-field="comment_author_IP">
+				{$label wpfg_comments comment_author_IP}
+			</th>
+			{END comment_author_IP_fieldheadercolumn}
+			{BEGIN comment_date_fieldheadercolumn}
+			<th class="{$comment_date_class}" {$comment_date_style}  data-field="comment_date">
+				{$label wpfg_comments comment_date}
+			</th>
+			{END comment_date_fieldheadercolumn}
+			{BEGIN comment_date_gmt_fieldheadercolumn}
+			<th class="{$comment_date_gmt_class}" {$comment_date_gmt_style}  data-field="comment_date_gmt">
+				{$label wpfg_comments comment_date_gmt}
+			</th>
+			{END comment_date_gmt_fieldheadercolumn}
+			{BEGIN comment_content_fieldheadercolumn}
+			<th class="{$comment_content_class}" {$comment_content_style}  data-field="comment_content">
+				{$label wpfg_comments comment_content}
+			</th>
+			{END comment_content_fieldheadercolumn}
+			{BEGIN comment_karma_fieldheadercolumn}
+			<th class="{$comment_karma_class}" {$comment_karma_style}  data-field="comment_karma">
+				{$label wpfg_comments comment_karma}
+			</th>
+			{END comment_karma_fieldheadercolumn}
+			{BEGIN comment_approved_fieldheadercolumn}
+			<th class="{$comment_approved_class}" {$comment_approved_style}  data-field="comment_approved">
+				{$label wpfg_comments comment_approved}
+			</th>
+			{END comment_approved_fieldheadercolumn}
+			{BEGIN comment_agent_fieldheadercolumn}
+			<th class="{$comment_agent_class}" {$comment_agent_style}  data-field="comment_agent">
+				{$label wpfg_comments comment_agent}
+			</th>
+			{END comment_agent_fieldheadercolumn}
+			{BEGIN comment_type_fieldheadercolumn}
+			<th class="{$comment_type_class}" {$comment_type_style}  data-field="comment_type">
+				{$label wpfg_comments comment_type}
+			</th>
+			{END comment_type_fieldheadercolumn}
+			{BEGIN comment_parent_fieldheadercolumn}
+			<th class="{$comment_parent_class}" {$comment_parent_style}  data-field="comment_parent">
+				{$label wpfg_comments comment_parent}
+			</th>
+			{END comment_parent_fieldheadercolumn}
+			{BEGIN user_id_fieldheadercolumn}
+			<th class="{$user_id_class}" {$user_id_style}  data-field="user_id">
+				{$label wpfg_comments user_id}
+			</th>
+			{END user_id_fieldheadercolumn}
+			{BEGIN endrecordheader_block}
+			<th class="rnr-cs">&nbsp;</th>
+			{END endrecordheader_block}
+		{END record_header}
+		</tr>
+	{END grid_header}
+	</thead>
+	
+	<tbody>	
+	{BEGIN grid_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+			{BEGIN comment_ID_fieldcolumn}
+			<td  class="{$comment_ID_class}" {$comment_ID_style} {$recordattrs}>
+				{$comment_ID_value}
+			</td>
+			{END comment_ID_fieldcolumn}
+			{BEGIN comment_post_ID_fieldcolumn}
+			<td  class="{$comment_post_ID_class}" {$comment_post_ID_style} {$recordattrs}>
+				{$comment_post_ID_value}
+			</td>
+			{END comment_post_ID_fieldcolumn}
+			{BEGIN comment_author_fieldcolumn}
+			<td  class="{$comment_author_class}" {$comment_author_style} {$recordattrs}>
+				{$comment_author_value}
+			</td>
+			{END comment_author_fieldcolumn}
+			{BEGIN comment_author_email_fieldcolumn}
+			<td  class="{$comment_author_email_class}" {$comment_author_email_style} {$recordattrs}>
+				{$comment_author_email_value}
+			</td>
+			{END comment_author_email_fieldcolumn}
+			{BEGIN comment_author_url_fieldcolumn}
+			<td  class="{$comment_author_url_class}" {$comment_author_url_style} {$recordattrs}>
+				{$comment_author_url_value}
+			</td>
+			{END comment_author_url_fieldcolumn}
+			{BEGIN comment_author_IP_fieldcolumn}
+			<td  class="{$comment_author_IP_class}" {$comment_author_IP_style} {$recordattrs}>
+				{$comment_author_IP_value}
+			</td>
+			{END comment_author_IP_fieldcolumn}
+			{BEGIN comment_date_fieldcolumn}
+			<td  class="{$comment_date_class}" {$comment_date_style} {$recordattrs}>
+				{$comment_date_value}
+			</td>
+			{END comment_date_fieldcolumn}
+			{BEGIN comment_date_gmt_fieldcolumn}
+			<td  class="{$comment_date_gmt_class}" {$comment_date_gmt_style} {$recordattrs}>
+				{$comment_date_gmt_value}
+			</td>
+			{END comment_date_gmt_fieldcolumn}
+			{BEGIN comment_content_fieldcolumn}
+			<td  class="{$comment_content_class}" {$comment_content_style} {$recordattrs}>
+				{$comment_content_value}
+			</td>
+			{END comment_content_fieldcolumn}
+			{BEGIN comment_karma_fieldcolumn}
+			<td  class="{$comment_karma_class}" {$comment_karma_style} {$recordattrs}>
+				{$comment_karma_value}
+			</td>
+			{END comment_karma_fieldcolumn}
+			{BEGIN comment_approved_fieldcolumn}
+			<td  class="{$comment_approved_class}" {$comment_approved_style} {$recordattrs}>
+				{$comment_approved_value}
+			</td>
+			{END comment_approved_fieldcolumn}
+			{BEGIN comment_agent_fieldcolumn}
+			<td  class="{$comment_agent_class}" {$comment_agent_style} {$recordattrs}>
+				{$comment_agent_value}
+			</td>
+			{END comment_agent_fieldcolumn}
+			{BEGIN comment_type_fieldcolumn}
+			<td  class="{$comment_type_class}" {$comment_type_style} {$recordattrs}>
+				{$comment_type_value}
+			</td>
+			{END comment_type_fieldcolumn}
+			{BEGIN comment_parent_fieldcolumn}
+			<td  class="{$comment_parent_class}" {$comment_parent_style} {$recordattrs}>
+				{$comment_parent_value}
+			</td>
+			{END comment_parent_fieldcolumn}
+			{BEGIN user_id_fieldcolumn}
+			<td  class="{$user_id_class}" {$user_id_style} {$recordattrs}>
+				{$user_id_value}
+			</td>
+			{END user_id_fieldcolumn}
+			{BEGIN endrecord_block}
+			<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+			{END endrecord_block}
+		{END grid_record}
+		</tr>
+{END grid_row}
+	</tbody>
+
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+      </div>
+      <DIV class="bs-middle ">
+        <DIV class="bs-topmiddle">
+          
+        </div>
+        <DIV class="bs-left" {$blockattr_left}>
+          
+        </div>
+        <DIV class="bs-center">
+          
+        </div>
+        <DIV class="bs-right">
+          
+        </div>
+      </div>
+      <DIV class="bs-bottom">
+        
+      </div>
+      {$footer}
+    {END body}
+  </body>
+</html>

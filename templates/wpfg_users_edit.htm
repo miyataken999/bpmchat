@@ -1,0 +1,377 @@
+<!doctype html>
+<html  {$html_attrs}>
+  <head>asdfsfs
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      {$pagetitle}
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link REL="stylesheet" href="styles/default.css" type="text/css">
+    {BEGIN rtlCSS}
+      <link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+    {END rtlCSS}
+    {BEGIN styleCSSFiles}
+      <link REL="stylesheet" href="{$stylepath}" type="text/css">
+    {END styleCSSFiles}
+  </head>
+  <BODY class="{$stylename} function-edit" {$bodyattrs}>
+    {BEGIN body}
+      {$header}
+      <style>
+        {$containerCss}
+      </style>
+      <DIV class="bs-top">
+        
+
+{BEGIN container_editpage}
+<div {$editpage_chiddenattr} data-pageid="{$pageid}" data-container="editpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN editheader}
+	<h2 {$editheader_hiddenattr} data-pageid="{$pageid}" data-brick="editheader" >{$pagetitlelabel wpfg_users edit}</h2>
+
+{END editheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+		<button class="btn btn-sm btn-default" {$backbutton_attrs}>{mlang_message BACK_TO_LIST}</button>
+{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>{mlang_message VIEW}</button>
+{END view_page_button}
+</div>
+</div>
+
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+
+</div>
+{END container_editpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$editfields_hiddenattr} data-pageid="{$pageid}" data-brick="editfields" class="form-horizontal" role="form">
+
+
+
+			{BEGIN user_login_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_user_login}" data-fieldname="user_login" data-signal-error-for="user_login{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_user_login}">
+		{BEGIN user_login_label}{$label wpfg_users user_login}{END user_login_label}
+	</label>
+	<div class="col-md-6" >
+		{$user_login_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="user_login">
+		<div class="text-muted" >
+		{$tooltip wpfg_users user_login}
+		</div>
+	</div>
+</div>
+</div>
+{END user_login_fieldblock}
+
+			{BEGIN user_pass_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_user_pass}" data-fieldname="user_pass" data-signal-error-for="user_pass{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_user_pass}">
+		{BEGIN user_pass_label}{$label wpfg_users user_pass}{END user_pass_label}
+	</label>
+	<div class="col-md-6" >
+		{$user_pass_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="user_pass">
+		<div class="text-muted" >
+		{$tooltip wpfg_users user_pass}
+		</div>
+	</div>
+</div>
+</div>
+{END user_pass_fieldblock}
+
+			{BEGIN user_nicename_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_user_nicename}" data-fieldname="user_nicename" data-signal-error-for="user_nicename{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_user_nicename}">
+		{BEGIN user_nicename_label}{$label wpfg_users user_nicename}{END user_nicename_label}
+	</label>
+	<div class="col-md-6" >
+		{$user_nicename_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="user_nicename">
+		<div class="text-muted" >
+		{$tooltip wpfg_users user_nicename}
+		</div>
+	</div>
+</div>
+</div>
+{END user_nicename_fieldblock}
+
+			{BEGIN user_email_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_user_email}" data-fieldname="user_email" data-signal-error-for="user_email{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_user_email}">
+		{BEGIN user_email_label}{$label wpfg_users user_email}{END user_email_label}
+	</label>
+	<div class="col-md-6" >
+		{$user_email_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="user_email">
+		<div class="text-muted" >
+		{$tooltip wpfg_users user_email}
+		</div>
+	</div>
+</div>
+</div>
+{END user_email_fieldblock}
+
+			{BEGIN user_url_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_user_url}" data-fieldname="user_url" data-signal-error-for="user_url{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_user_url}">
+		{BEGIN user_url_label}{$label wpfg_users user_url}{END user_url_label}
+	</label>
+	<div class="col-md-6" >
+		{$user_url_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="user_url">
+		<div class="text-muted" >
+		{$tooltip wpfg_users user_url}
+		</div>
+	</div>
+</div>
+</div>
+{END user_url_fieldblock}
+
+			{BEGIN user_registered_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_user_registered}" data-fieldname="user_registered" data-signal-error-for="user_registered{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_user_registered}">
+		{BEGIN user_registered_label}{$label wpfg_users user_registered}{END user_registered_label}
+	</label>
+	<div class="col-md-6" >
+		{$user_registered_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="user_registered">
+		<div class="text-muted" >
+		{$tooltip wpfg_users user_registered}
+		</div>
+	</div>
+</div>
+</div>
+{END user_registered_fieldblock}
+
+			{BEGIN user_activation_key_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_user_activation_key}" data-fieldname="user_activation_key" data-signal-error-for="user_activation_key{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_user_activation_key}">
+		{BEGIN user_activation_key_label}{$label wpfg_users user_activation_key}{END user_activation_key_label}
+	</label>
+	<div class="col-md-6" >
+		{$user_activation_key_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="user_activation_key">
+		<div class="text-muted" >
+		{$tooltip wpfg_users user_activation_key}
+		</div>
+	</div>
+</div>
+</div>
+{END user_activation_key_fieldblock}
+
+			{BEGIN user_status_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_user_status}" data-fieldname="user_status" data-signal-error-for="user_status{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_user_status}">
+		{BEGIN user_status_label}{$label wpfg_users user_status}{END user_status_label}
+	</label>
+	<div class="col-md-6" >
+		{$user_status_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="user_status">
+		<div class="text-muted" >
+		{$tooltip wpfg_users user_status}
+		</div>
+	</div>
+</div>
+</div>
+{END user_status_fieldblock}
+
+			{BEGIN display_name_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_display_name}" data-fieldname="display_name" data-signal-error-for="display_name{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_display_name}">
+		{BEGIN display_name_label}{$label wpfg_users display_name}{END display_name_label}
+	</label>
+	<div class="col-md-6" >
+		{$display_name_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="display_name">
+		<div class="text-muted" >
+		{$tooltip wpfg_users display_name}
+		</div>
+	</div>
+</div>
+</div>
+{END display_name_fieldblock}
+
+
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN editbuttons}
+	{BEGIN save_button}
+	<button class="btn btn-primary" {$savebutton_attrs}>{mlang_message SAVE}</button>
+	{END save_button}
+	{BEGIN back_button}
+		<button class="btn btn-default" {$backbutton_attrs}>{mlang_message BACK_TO_LIST}</button>
+	{END back_button}
+	{BEGIN close_button}
+	<a href="#" class="btn btn-default" {$closebutton_attrs}>{mlang_message CANCEL}</a>
+	{END close_button}
+
+{END editbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+
+
+{BEGIN container_leftbuttons_1}
+<div {$leftbuttons_1_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons_1" class="  text-right col-md-3 "> 
+
+{BEGIN righteditbuttons}
+<div class="btn-group" role="group">
+
+	{BEGIN prev_button}
+	<button class="btn btn-default {$prevbutton_class}" {$prevbutton_attrs}><span class="glyphicon glyphicon-chevron-left"></span></button>
+	{END prev_button}
+	{BEGIN next_button}
+	<button class="btn btn-default  {$nextbutton_class}" {$nextbutton_attrs}><span class="glyphicon glyphicon-chevron-right"></span></button>
+	{END next_button}
+	<div class="btn-group dropup" role="group">
+		<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+		<ul class="dropdown-menu dropdown-left">
+			{BEGIN reset_button}
+				<li><a href="#" {$resetbutton_attrs}>{mlang_message RESET}</a></li>
+			{END reset_button}
+			{BEGIN view_page_button}
+				<li><a href="#" {$view_page_button_attrs}>{mlang_message VIEW}</a></li>
+			{END view_page_button}
+		</ul>
+	</div>
+</div>
+{END righteditbuttons}
+
+
+
+</div>
+{END container_leftbuttons_1}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+      </div>
+      <DIV class="bs-middle ">
+        <DIV class="bs-topmiddle">
+          
+        </div>
+        <DIV class="bs-left" {$blockattr_left}>
+          
+        </div>
+        <DIV class="bs-center">
+          
+        </div>
+        <DIV class="bs-right">
+          
+        </div>
+      </div>
+      <DIV class="bs-bottom">
+        
+      </div>
+      {$footer}
+    {END body}
+  </body>
+</html>

@@ -1,0 +1,450 @@
+<!doctype html>
+<html  {$html_attrs}>
+  <head>asdfsfs
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      {$pagetitle}
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link REL="stylesheet" href="styles/default.css" type="text/css">
+    {BEGIN rtlCSS}
+      <link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+    {END rtlCSS}
+    {BEGIN styleCSSFiles}
+      <link REL="stylesheet" href="{$stylepath}" type="text/css">
+    {END styleCSSFiles}
+  </head>
+  <BODY class="{$stylename} function-view" {$bodyattrs}>
+    {BEGIN body}
+      {$header}
+      <style>
+        {$containerCss}
+      </style>
+      <DIV class="bs-top">
+        
+
+{BEGIN container_viewpage}
+<div {$viewpage_chiddenattr} data-pageid="{$pageid}" data-container="viewpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN viewheader}
+	<h2 {$viewheader_hiddenattr} data-pageid="{$pageid}" data-brick="viewheader" >{$pagetitlelabel wpfg_posts view}</h2>
+
+{END viewheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_viewpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class=" form-horizontal  col-md-12 "> 
+
+
+<div {$viewfields_hiddenattr} data-pageid="{$pageid}" data-brick="viewfields" >
+	{BEGIN ID_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_ID} bs-viewform-group" data-fieldname="ID">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_ID}">
+			{$label wpfg_posts ID}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$ID_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END ID_fieldblock}
+	{BEGIN post_author_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_post_author} bs-viewform-group" data-fieldname="post_author">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_post_author}">
+			{$label wpfg_posts post_author}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$post_author_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END post_author_fieldblock}
+	{BEGIN post_date_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_post_date} bs-viewform-group" data-fieldname="post_date">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_post_date}">
+			{$label wpfg_posts post_date}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$post_date_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END post_date_fieldblock}
+	{BEGIN post_date_gmt_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_post_date_gmt} bs-viewform-group" data-fieldname="post_date_gmt">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_post_date_gmt}">
+			{$label wpfg_posts post_date_gmt}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$post_date_gmt_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END post_date_gmt_fieldblock}
+	{BEGIN post_content_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_post_content} bs-viewform-group" data-fieldname="post_content">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_post_content}">
+			{$label wpfg_posts post_content}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$post_content_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END post_content_fieldblock}
+	{BEGIN post_title_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_post_title} bs-viewform-group" data-fieldname="post_title">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_post_title}">
+			{$label wpfg_posts post_title}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$post_title_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END post_title_fieldblock}
+	{BEGIN post_excerpt_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_post_excerpt} bs-viewform-group" data-fieldname="post_excerpt">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_post_excerpt}">
+			{$label wpfg_posts post_excerpt}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$post_excerpt_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END post_excerpt_fieldblock}
+	{BEGIN post_status_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_post_status} bs-viewform-group" data-fieldname="post_status">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_post_status}">
+			{$label wpfg_posts post_status}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$post_status_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END post_status_fieldblock}
+	{BEGIN comment_status_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_comment_status} bs-viewform-group" data-fieldname="comment_status">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_comment_status}">
+			{$label wpfg_posts comment_status}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$comment_status_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END comment_status_fieldblock}
+	{BEGIN ping_status_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_ping_status} bs-viewform-group" data-fieldname="ping_status">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_ping_status}">
+			{$label wpfg_posts ping_status}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$ping_status_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END ping_status_fieldblock}
+	{BEGIN post_password_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_post_password} bs-viewform-group" data-fieldname="post_password">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_post_password}">
+			{$label wpfg_posts post_password}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$post_password_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END post_password_fieldblock}
+	{BEGIN post_name_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_post_name} bs-viewform-group" data-fieldname="post_name">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_post_name}">
+			{$label wpfg_posts post_name}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$post_name_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END post_name_fieldblock}
+	{BEGIN to_ping_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_to_ping} bs-viewform-group" data-fieldname="to_ping">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_to_ping}">
+			{$label wpfg_posts to_ping}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$to_ping_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END to_ping_fieldblock}
+	{BEGIN pinged_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_pinged} bs-viewform-group" data-fieldname="pinged">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_pinged}">
+			{$label wpfg_posts pinged}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$pinged_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END pinged_fieldblock}
+	{BEGIN post_modified_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_post_modified} bs-viewform-group" data-fieldname="post_modified">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_post_modified}">
+			{$label wpfg_posts post_modified}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$post_modified_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END post_modified_fieldblock}
+	{BEGIN post_modified_gmt_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_post_modified_gmt} bs-viewform-group" data-fieldname="post_modified_gmt">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_post_modified_gmt}">
+			{$label wpfg_posts post_modified_gmt}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$post_modified_gmt_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END post_modified_gmt_fieldblock}
+	{BEGIN post_content_filtered_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_post_content_filtered} bs-viewform-group" data-fieldname="post_content_filtered">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_post_content_filtered}">
+			{$label wpfg_posts post_content_filtered}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$post_content_filtered_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END post_content_filtered_fieldblock}
+	{BEGIN post_parent_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_post_parent} bs-viewform-group" data-fieldname="post_parent">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_post_parent}">
+			{$label wpfg_posts post_parent}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$post_parent_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END post_parent_fieldblock}
+	{BEGIN guid_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_guid} bs-viewform-group" data-fieldname="guid">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_guid}">
+			{$label wpfg_posts guid}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$guid_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END guid_fieldblock}
+	{BEGIN menu_order_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_menu_order} bs-viewform-group" data-fieldname="menu_order">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_menu_order}">
+			{$label wpfg_posts menu_order}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$menu_order_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END menu_order_fieldblock}
+	{BEGIN post_type_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_post_type} bs-viewform-group" data-fieldname="post_type">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_post_type}">
+			{$label wpfg_posts post_type}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$post_type_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END post_type_fieldblock}
+	{BEGIN post_mime_type_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_post_mime_type} bs-viewform-group" data-fieldname="post_mime_type">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_post_mime_type}">
+			{$label wpfg_posts post_mime_type}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$post_mime_type_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END post_mime_type_fieldblock}
+	{BEGIN comment_count_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_comment_count} bs-viewform-group" data-fieldname="comment_count">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_comment_count}">
+			{$label wpfg_posts comment_count}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$comment_count_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END comment_count_fieldblock}
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN viewbuttons}
+{BEGIN back_button}
+<button class="btn btn-primary" {$backbutton_attrs}>{mlang_message BACK_TO_LIST}</button>
+{END back_button}
+{BEGIN close_button}
+<button href="#" class="btn btn-primary" {$closebutton_attrs}>{mlang_message CLOSE_WINDOW}</button>
+{END close_button}
+{END viewbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+
+
+{BEGIN container_leftbuttons_1}
+<div {$leftbuttons_1_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons_1" class="  text-right col-md-3 "> 
+
+{BEGIN rightviewbuttons}
+<div class="btn-group" role="group">
+		{BEGIN prev_button}
+	<button class="btn btn-default {$prevbutton_class}" {$prevbutton_attrs}><span class="glyphicon glyphicon-chevron-left"></span></button>
+	{END prev_button}
+	{BEGIN next_button}
+	<button class="btn btn-default {$nextbutton_class}" {$nextbutton_attrs}><span class="glyphicon glyphicon-chevron-right"></span></button>
+	{END next_button}
+		{BEGIN view_menu_button}
+	<div class="btn-group dropup" role="group">
+		<button class="btn btn-default dropdown-toggle {$groupbutton_class}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+		<ul class="dropdown-menu dropdown-left">
+									{BEGIN edit_page_button}
+				<li><a href=# {$edit_page_button_attrs}>{mlang_message EDIT}</a></li>
+			{END edit_page_button}
+		</ul>
+	</div>
+	{END view_menu_button}
+</div>
+{END rightviewbuttons}
+
+
+
+</div>
+{END container_leftbuttons_1}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+      </div>
+      <DIV class="bs-middle ">
+        <DIV class="bs-topmiddle">
+          
+        </div>
+        <DIV class="bs-left" {$blockattr_left}>
+          
+        </div>
+        <DIV class="bs-center">
+          
+        </div>
+        <DIV class="bs-right">
+          
+        </div>
+      </div>
+      <DIV class="bs-bottom">
+        
+      </div>
+      {$footer}
+    {END body}
+  </body>
+</html>

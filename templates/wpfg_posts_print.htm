@@ -1,0 +1,352 @@
+<!doctype html>
+<html  {$html_attrs}>
+  <head>asdfsfs
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      {$pagetitle}
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link REL="stylesheet" href="styles/default.css" type="text/css">
+    {BEGIN rtlCSS}
+      <link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+    {END rtlCSS}
+    {BEGIN styleCSSFiles}
+      <link REL="stylesheet" href="{$stylepath}" type="text/css">
+    {END styleCSSFiles}
+  </head>
+  <BODY class="{$stylename} function-print" {$bodyattrs}>
+    {BEGIN body}
+      {$header}
+      <style>
+        {$containerCss}
+      </style>
+      <DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel wpfg_posts print}</h2>
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>{mlang_message PAGE1} <span class="rp-pageno">{$pageno}</span> {mlang_message PAGE2} <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="table table-bordered rp-maintable" {$printgrid_hiddenattr} data-pageid="{$pageid}" data-brick="printgrid" >
+	<thead>
+	{BEGIN grid_header}
+		<tr class="{$gridHeader_class}" >
+		{BEGIN record_header}
+			{BEGIN ID_fieldheadercolumn}
+			<th class="{$ID_class}" {$ID_style}  data-field="ID">
+				{$label wpfg_posts ID}
+			</th>
+			{END ID_fieldheadercolumn}
+			{BEGIN post_author_fieldheadercolumn}
+			<th class="{$post_author_class}" {$post_author_style}  data-field="post_author">
+				{$label wpfg_posts post_author}
+			</th>
+			{END post_author_fieldheadercolumn}
+			{BEGIN post_date_fieldheadercolumn}
+			<th class="{$post_date_class}" {$post_date_style}  data-field="post_date">
+				{$label wpfg_posts post_date}
+			</th>
+			{END post_date_fieldheadercolumn}
+			{BEGIN post_date_gmt_fieldheadercolumn}
+			<th class="{$post_date_gmt_class}" {$post_date_gmt_style}  data-field="post_date_gmt">
+				{$label wpfg_posts post_date_gmt}
+			</th>
+			{END post_date_gmt_fieldheadercolumn}
+			{BEGIN post_content_fieldheadercolumn}
+			<th class="{$post_content_class}" {$post_content_style}  data-field="post_content">
+				{$label wpfg_posts post_content}
+			</th>
+			{END post_content_fieldheadercolumn}
+			{BEGIN post_title_fieldheadercolumn}
+			<th class="{$post_title_class}" {$post_title_style}  data-field="post_title">
+				{$label wpfg_posts post_title}
+			</th>
+			{END post_title_fieldheadercolumn}
+			{BEGIN post_excerpt_fieldheadercolumn}
+			<th class="{$post_excerpt_class}" {$post_excerpt_style}  data-field="post_excerpt">
+				{$label wpfg_posts post_excerpt}
+			</th>
+			{END post_excerpt_fieldheadercolumn}
+			{BEGIN post_status_fieldheadercolumn}
+			<th class="{$post_status_class}" {$post_status_style}  data-field="post_status">
+				{$label wpfg_posts post_status}
+			</th>
+			{END post_status_fieldheadercolumn}
+			{BEGIN comment_status_fieldheadercolumn}
+			<th class="{$comment_status_class}" {$comment_status_style}  data-field="comment_status">
+				{$label wpfg_posts comment_status}
+			</th>
+			{END comment_status_fieldheadercolumn}
+			{BEGIN ping_status_fieldheadercolumn}
+			<th class="{$ping_status_class}" {$ping_status_style}  data-field="ping_status">
+				{$label wpfg_posts ping_status}
+			</th>
+			{END ping_status_fieldheadercolumn}
+			{BEGIN post_password_fieldheadercolumn}
+			<th class="{$post_password_class}" {$post_password_style}  data-field="post_password">
+				{$label wpfg_posts post_password}
+			</th>
+			{END post_password_fieldheadercolumn}
+			{BEGIN post_name_fieldheadercolumn}
+			<th class="{$post_name_class}" {$post_name_style}  data-field="post_name">
+				{$label wpfg_posts post_name}
+			</th>
+			{END post_name_fieldheadercolumn}
+			{BEGIN to_ping_fieldheadercolumn}
+			<th class="{$to_ping_class}" {$to_ping_style}  data-field="to_ping">
+				{$label wpfg_posts to_ping}
+			</th>
+			{END to_ping_fieldheadercolumn}
+			{BEGIN pinged_fieldheadercolumn}
+			<th class="{$pinged_class}" {$pinged_style}  data-field="pinged">
+				{$label wpfg_posts pinged}
+			</th>
+			{END pinged_fieldheadercolumn}
+			{BEGIN post_modified_fieldheadercolumn}
+			<th class="{$post_modified_class}" {$post_modified_style}  data-field="post_modified">
+				{$label wpfg_posts post_modified}
+			</th>
+			{END post_modified_fieldheadercolumn}
+			{BEGIN post_modified_gmt_fieldheadercolumn}
+			<th class="{$post_modified_gmt_class}" {$post_modified_gmt_style}  data-field="post_modified_gmt">
+				{$label wpfg_posts post_modified_gmt}
+			</th>
+			{END post_modified_gmt_fieldheadercolumn}
+			{BEGIN post_content_filtered_fieldheadercolumn}
+			<th class="{$post_content_filtered_class}" {$post_content_filtered_style}  data-field="post_content_filtered">
+				{$label wpfg_posts post_content_filtered}
+			</th>
+			{END post_content_filtered_fieldheadercolumn}
+			{BEGIN post_parent_fieldheadercolumn}
+			<th class="{$post_parent_class}" {$post_parent_style}  data-field="post_parent">
+				{$label wpfg_posts post_parent}
+			</th>
+			{END post_parent_fieldheadercolumn}
+			{BEGIN guid_fieldheadercolumn}
+			<th class="{$guid_class}" {$guid_style}  data-field="guid">
+				{$label wpfg_posts guid}
+			</th>
+			{END guid_fieldheadercolumn}
+			{BEGIN menu_order_fieldheadercolumn}
+			<th class="{$menu_order_class}" {$menu_order_style}  data-field="menu_order">
+				{$label wpfg_posts menu_order}
+			</th>
+			{END menu_order_fieldheadercolumn}
+			{BEGIN post_type_fieldheadercolumn}
+			<th class="{$post_type_class}" {$post_type_style}  data-field="post_type">
+				{$label wpfg_posts post_type}
+			</th>
+			{END post_type_fieldheadercolumn}
+			{BEGIN post_mime_type_fieldheadercolumn}
+			<th class="{$post_mime_type_class}" {$post_mime_type_style}  data-field="post_mime_type">
+				{$label wpfg_posts post_mime_type}
+			</th>
+			{END post_mime_type_fieldheadercolumn}
+			{BEGIN comment_count_fieldheadercolumn}
+			<th class="{$comment_count_class}" {$comment_count_style}  data-field="comment_count">
+				{$label wpfg_posts comment_count}
+			</th>
+			{END comment_count_fieldheadercolumn}
+			{BEGIN endrecordheader_block}
+			<th class="rnr-cs">&nbsp;</th>
+			{END endrecordheader_block}
+		{END record_header}
+		</tr>
+	{END grid_header}
+	</thead>
+	
+	<tbody>	
+	{BEGIN grid_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+			{BEGIN ID_fieldcolumn}
+			<td  class="{$ID_class}" {$ID_style} {$recordattrs}>
+				{$ID_value}
+			</td>
+			{END ID_fieldcolumn}
+			{BEGIN post_author_fieldcolumn}
+			<td  class="{$post_author_class}" {$post_author_style} {$recordattrs}>
+				{$post_author_value}
+			</td>
+			{END post_author_fieldcolumn}
+			{BEGIN post_date_fieldcolumn}
+			<td  class="{$post_date_class}" {$post_date_style} {$recordattrs}>
+				{$post_date_value}
+			</td>
+			{END post_date_fieldcolumn}
+			{BEGIN post_date_gmt_fieldcolumn}
+			<td  class="{$post_date_gmt_class}" {$post_date_gmt_style} {$recordattrs}>
+				{$post_date_gmt_value}
+			</td>
+			{END post_date_gmt_fieldcolumn}
+			{BEGIN post_content_fieldcolumn}
+			<td  class="{$post_content_class}" {$post_content_style} {$recordattrs}>
+				{$post_content_value}
+			</td>
+			{END post_content_fieldcolumn}
+			{BEGIN post_title_fieldcolumn}
+			<td  class="{$post_title_class}" {$post_title_style} {$recordattrs}>
+				{$post_title_value}
+			</td>
+			{END post_title_fieldcolumn}
+			{BEGIN post_excerpt_fieldcolumn}
+			<td  class="{$post_excerpt_class}" {$post_excerpt_style} {$recordattrs}>
+				{$post_excerpt_value}
+			</td>
+			{END post_excerpt_fieldcolumn}
+			{BEGIN post_status_fieldcolumn}
+			<td  class="{$post_status_class}" {$post_status_style} {$recordattrs}>
+				{$post_status_value}
+			</td>
+			{END post_status_fieldcolumn}
+			{BEGIN comment_status_fieldcolumn}
+			<td  class="{$comment_status_class}" {$comment_status_style} {$recordattrs}>
+				{$comment_status_value}
+			</td>
+			{END comment_status_fieldcolumn}
+			{BEGIN ping_status_fieldcolumn}
+			<td  class="{$ping_status_class}" {$ping_status_style} {$recordattrs}>
+				{$ping_status_value}
+			</td>
+			{END ping_status_fieldcolumn}
+			{BEGIN post_password_fieldcolumn}
+			<td  class="{$post_password_class}" {$post_password_style} {$recordattrs}>
+				{$post_password_value}
+			</td>
+			{END post_password_fieldcolumn}
+			{BEGIN post_name_fieldcolumn}
+			<td  class="{$post_name_class}" {$post_name_style} {$recordattrs}>
+				{$post_name_value}
+			</td>
+			{END post_name_fieldcolumn}
+			{BEGIN to_ping_fieldcolumn}
+			<td  class="{$to_ping_class}" {$to_ping_style} {$recordattrs}>
+				{$to_ping_value}
+			</td>
+			{END to_ping_fieldcolumn}
+			{BEGIN pinged_fieldcolumn}
+			<td  class="{$pinged_class}" {$pinged_style} {$recordattrs}>
+				{$pinged_value}
+			</td>
+			{END pinged_fieldcolumn}
+			{BEGIN post_modified_fieldcolumn}
+			<td  class="{$post_modified_class}" {$post_modified_style} {$recordattrs}>
+				{$post_modified_value}
+			</td>
+			{END post_modified_fieldcolumn}
+			{BEGIN post_modified_gmt_fieldcolumn}
+			<td  class="{$post_modified_gmt_class}" {$post_modified_gmt_style} {$recordattrs}>
+				{$post_modified_gmt_value}
+			</td>
+			{END post_modified_gmt_fieldcolumn}
+			{BEGIN post_content_filtered_fieldcolumn}
+			<td  class="{$post_content_filtered_class}" {$post_content_filtered_style} {$recordattrs}>
+				{$post_content_filtered_value}
+			</td>
+			{END post_content_filtered_fieldcolumn}
+			{BEGIN post_parent_fieldcolumn}
+			<td  class="{$post_parent_class}" {$post_parent_style} {$recordattrs}>
+				{$post_parent_value}
+			</td>
+			{END post_parent_fieldcolumn}
+			{BEGIN guid_fieldcolumn}
+			<td  class="{$guid_class}" {$guid_style} {$recordattrs}>
+				{$guid_value}
+			</td>
+			{END guid_fieldcolumn}
+			{BEGIN menu_order_fieldcolumn}
+			<td  class="{$menu_order_class}" {$menu_order_style} {$recordattrs}>
+				{$menu_order_value}
+			</td>
+			{END menu_order_fieldcolumn}
+			{BEGIN post_type_fieldcolumn}
+			<td  class="{$post_type_class}" {$post_type_style} {$recordattrs}>
+				{$post_type_value}
+			</td>
+			{END post_type_fieldcolumn}
+			{BEGIN post_mime_type_fieldcolumn}
+			<td  class="{$post_mime_type_class}" {$post_mime_type_style} {$recordattrs}>
+				{$post_mime_type_value}
+			</td>
+			{END post_mime_type_fieldcolumn}
+			{BEGIN comment_count_fieldcolumn}
+			<td  class="{$comment_count_class}" {$comment_count_style} {$recordattrs}>
+				{$comment_count_value}
+			</td>
+			{END comment_count_fieldcolumn}
+			{BEGIN endrecord_block}
+			<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+			{END endrecord_block}
+		{END grid_record}
+		</tr>
+{END grid_row}
+	</tbody>
+
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+      </div>
+      <DIV class="bs-middle ">
+        <DIV class="bs-topmiddle">
+          
+        </div>
+        <DIV class="bs-left" {$blockattr_left}>
+          
+        </div>
+        <DIV class="bs-center">
+          
+        </div>
+        <DIV class="bs-right">
+          
+        </div>
+      </div>
+      <DIV class="bs-bottom">
+        
+      </div>
+      {$footer}
+    {END body}
+  </body>
+</html>

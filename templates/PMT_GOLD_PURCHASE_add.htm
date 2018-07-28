@@ -1,0 +1,681 @@
+<!doctype html>
+<html  {$html_attrs}>
+  <head>asdfsfs
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      {$pagetitle}
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link REL="stylesheet" href="styles/default.css" type="text/css">
+    {BEGIN rtlCSS}
+      <link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+    {END rtlCSS}
+    {BEGIN styleCSSFiles}
+      <link REL="stylesheet" href="{$stylepath}" type="text/css">
+    {END styleCSSFiles}
+  </head>
+  <BODY class="{$stylename} function-add" {$bodyattrs}>
+    {BEGIN body}
+      {$header}
+      <style>
+        {$containerCss}
+      </style>
+      <DIV class="bs-top">
+        
+
+{BEGIN container_editpage}
+<div {$editpage_chiddenattr} data-pageid="{$pageid}" data-container="editpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN addheader}
+	<h2 {$addheader_hiddenattr} data-pageid="{$pageid}" data-brick="addheader" >{$pagetitlelabel PMT_GOLD_PURCHASE add}</h2>
+
+{END addheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+		<button class="btn btn-sm btn-default" {$backbutton_attrs}>{mlang_message BACK_TO_LIST}</button>
+{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>{mlang_message VIEW}</button>
+{END view_page_button}
+{BEGIN edit_page_button}
+	<button class="btn btn-sm btn-default" {$edit_page_button_attrs}>{mlang_message EDIT}</button>
+{END edit_page_button}
+</div>
+</div>
+
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+
+</div>
+{END container_editpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$addfields_hiddenattr} data-pageid="{$pageid}" data-brick="addfields" class="form-horizontal" role="form">
+			{BEGIN APP_NUMBER_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_APP_NUMBER}" data-fieldname="APP_NUMBER" data-signal-error-for="APP_NUMBER{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_APP_NUMBER}">
+		{BEGIN APP_NUMBER_label}{$label PMT_GOLD_PURCHASE APP_NUMBER}{END APP_NUMBER_label}
+	</label>
+	<div class="col-md-6" >
+		{$APP_NUMBER_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="APP_NUMBER">
+		<div class="text-muted" >
+		{$tooltip PMT_GOLD_PURCHASE APP_NUMBER}
+		</div>
+	</div>
+</div>
+</div>
+{END APP_NUMBER_fieldblock}
+
+			{BEGIN APP_STATUS_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_APP_STATUS}" data-fieldname="APP_STATUS" data-signal-error-for="APP_STATUS{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_APP_STATUS}">
+		{BEGIN APP_STATUS_label}{$label PMT_GOLD_PURCHASE APP_STATUS}{END APP_STATUS_label}
+	</label>
+	<div class="col-md-6" >
+		{$APP_STATUS_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="APP_STATUS">
+		<div class="text-muted" >
+		{$tooltip PMT_GOLD_PURCHASE APP_STATUS}
+		</div>
+	</div>
+</div>
+</div>
+{END APP_STATUS_fieldblock}
+
+			{BEGIN ROW_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_ROW}" data-fieldname="ROW" data-signal-error-for="ROW{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_ROW}">
+		{BEGIN ROW_label}{$label PMT_GOLD_PURCHASE ROW}{END ROW_label}
+	</label>
+	<div class="col-md-6" >
+		{$ROW_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="ROW">
+		<div class="text-muted" >
+		{$tooltip PMT_GOLD_PURCHASE ROW}
+		</div>
+	</div>
+</div>
+</div>
+{END ROW_fieldblock}
+
+			{BEGIN A_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_A}" data-fieldname="A" data-signal-error-for="A{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_A}">
+		{BEGIN A_label}{$label PMT_GOLD_PURCHASE A}{END A_label}
+	</label>
+	<div class="col-md-6" >
+		{$A_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="A">
+		<div class="text-muted" >
+		{$tooltip PMT_GOLD_PURCHASE A}
+		</div>
+	</div>
+</div>
+</div>
+{END A_fieldblock}
+
+			{BEGIN B_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_B}" data-fieldname="B" data-signal-error-for="B{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_B}">
+		{BEGIN B_label}{$label PMT_GOLD_PURCHASE B}{END B_label}
+	</label>
+	<div class="col-md-6" >
+		{$B_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="B">
+		<div class="text-muted" >
+		{$tooltip PMT_GOLD_PURCHASE B}
+		</div>
+	</div>
+</div>
+</div>
+{END B_fieldblock}
+
+			{BEGIN C_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_C}" data-fieldname="C" data-signal-error-for="C{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_C}">
+		{BEGIN C_label}{$label PMT_GOLD_PURCHASE C}{END C_label}
+	</label>
+	<div class="col-md-6" >
+		{$C_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="C">
+		<div class="text-muted" >
+		{$tooltip PMT_GOLD_PURCHASE C}
+		</div>
+	</div>
+</div>
+</div>
+{END C_fieldblock}
+
+			{BEGIN D_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_D}" data-fieldname="D" data-signal-error-for="D{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_D}">
+		{BEGIN D_label}{$label PMT_GOLD_PURCHASE D}{END D_label}
+	</label>
+	<div class="col-md-6" >
+		{$D_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="D">
+		<div class="text-muted" >
+		{$tooltip PMT_GOLD_PURCHASE D}
+		</div>
+	</div>
+</div>
+</div>
+{END D_fieldblock}
+
+			{BEGIN E_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_E}" data-fieldname="E" data-signal-error-for="E{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_E}">
+		{BEGIN E_label}{$label PMT_GOLD_PURCHASE E}{END E_label}
+	</label>
+	<div class="col-md-6" >
+		{$E_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="E">
+		<div class="text-muted" >
+		{$tooltip PMT_GOLD_PURCHASE E}
+		</div>
+	</div>
+</div>
+</div>
+{END E_fieldblock}
+
+			{BEGIN F_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_F}" data-fieldname="F" data-signal-error-for="F{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_F}">
+		{BEGIN F_label}{$label PMT_GOLD_PURCHASE F}{END F_label}
+	</label>
+	<div class="col-md-6" >
+		{$F_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="F">
+		<div class="text-muted" >
+		{$tooltip PMT_GOLD_PURCHASE F}
+		</div>
+	</div>
+</div>
+</div>
+{END F_fieldblock}
+
+			{BEGIN G_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_G}" data-fieldname="G" data-signal-error-for="G{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_G}">
+		{BEGIN G_label}{$label PMT_GOLD_PURCHASE G}{END G_label}
+	</label>
+	<div class="col-md-6" >
+		{$G_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="G">
+		<div class="text-muted" >
+		{$tooltip PMT_GOLD_PURCHASE G}
+		</div>
+	</div>
+</div>
+</div>
+{END G_fieldblock}
+
+			{BEGIN H_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_H}" data-fieldname="H" data-signal-error-for="H{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_H}">
+		{BEGIN H_label}{$label PMT_GOLD_PURCHASE H}{END H_label}
+	</label>
+	<div class="col-md-6" >
+		{$H_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="H">
+		<div class="text-muted" >
+		{$tooltip PMT_GOLD_PURCHASE H}
+		</div>
+	</div>
+</div>
+</div>
+{END H_fieldblock}
+
+			{BEGIN I_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_I}" data-fieldname="I" data-signal-error-for="I{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_I}">
+		{BEGIN I_label}{$label PMT_GOLD_PURCHASE I}{END I_label}
+	</label>
+	<div class="col-md-6" >
+		{$I_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="I">
+		<div class="text-muted" >
+		{$tooltip PMT_GOLD_PURCHASE I}
+		</div>
+	</div>
+</div>
+</div>
+{END I_fieldblock}
+
+			{BEGIN J_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_J}" data-fieldname="J" data-signal-error-for="J{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_J}">
+		{BEGIN J_label}{$label PMT_GOLD_PURCHASE J}{END J_label}
+	</label>
+	<div class="col-md-6" >
+		{$J_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="J">
+		<div class="text-muted" >
+		{$tooltip PMT_GOLD_PURCHASE J}
+		</div>
+	</div>
+</div>
+</div>
+{END J_fieldblock}
+
+			{BEGIN K_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_K}" data-fieldname="K" data-signal-error-for="K{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_K}">
+		{BEGIN K_label}{$label PMT_GOLD_PURCHASE K}{END K_label}
+	</label>
+	<div class="col-md-6" >
+		{$K_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="K">
+		<div class="text-muted" >
+		{$tooltip PMT_GOLD_PURCHASE K}
+		</div>
+	</div>
+</div>
+</div>
+{END K_fieldblock}
+
+			{BEGIN L_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_L}" data-fieldname="L" data-signal-error-for="L{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_L}">
+		{BEGIN L_label}{$label PMT_GOLD_PURCHASE L}{END L_label}
+	</label>
+	<div class="col-md-6" >
+		{$L_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="L">
+		<div class="text-muted" >
+		{$tooltip PMT_GOLD_PURCHASE L}
+		</div>
+	</div>
+</div>
+</div>
+{END L_fieldblock}
+
+			{BEGIN M_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_M}" data-fieldname="M" data-signal-error-for="M{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_M}">
+		{BEGIN M_label}{$label PMT_GOLD_PURCHASE M}{END M_label}
+	</label>
+	<div class="col-md-6" >
+		{$M_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="M">
+		<div class="text-muted" >
+		{$tooltip PMT_GOLD_PURCHASE M}
+		</div>
+	</div>
+</div>
+</div>
+{END M_fieldblock}
+
+			{BEGIN N_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_N}" data-fieldname="N" data-signal-error-for="N{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_N}">
+		{BEGIN N_label}{$label PMT_GOLD_PURCHASE N}{END N_label}
+	</label>
+	<div class="col-md-6" >
+		{$N_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="N">
+		<div class="text-muted" >
+		{$tooltip PMT_GOLD_PURCHASE N}
+		</div>
+	</div>
+</div>
+</div>
+{END N_fieldblock}
+
+			{BEGIN O_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_O}" data-fieldname="O" data-signal-error-for="O{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_O}">
+		{BEGIN O_label}{$label PMT_GOLD_PURCHASE O}{END O_label}
+	</label>
+	<div class="col-md-6" >
+		{$O_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="O">
+		<div class="text-muted" >
+		{$tooltip PMT_GOLD_PURCHASE O}
+		</div>
+	</div>
+</div>
+</div>
+{END O_fieldblock}
+
+			{BEGIN P_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_P}" data-fieldname="P" data-signal-error-for="P{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_P}">
+		{BEGIN P_label}{$label PMT_GOLD_PURCHASE P}{END P_label}
+	</label>
+	<div class="col-md-6" >
+		{$P_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="P">
+		<div class="text-muted" >
+		{$tooltip PMT_GOLD_PURCHASE P}
+		</div>
+	</div>
+</div>
+</div>
+{END P_fieldblock}
+
+			{BEGIN Q_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Q}" data-fieldname="Q" data-signal-error-for="Q{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Q}">
+		{BEGIN Q_label}{$label PMT_GOLD_PURCHASE Q}{END Q_label}
+	</label>
+	<div class="col-md-6" >
+		{$Q_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Q">
+		<div class="text-muted" >
+		{$tooltip PMT_GOLD_PURCHASE Q}
+		</div>
+	</div>
+</div>
+</div>
+{END Q_fieldblock}
+
+			{BEGIN R_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_R}" data-fieldname="R" data-signal-error-for="R{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_R}">
+		{BEGIN R_label}{$label PMT_GOLD_PURCHASE R}{END R_label}
+	</label>
+	<div class="col-md-6" >
+		{$R_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="R">
+		<div class="text-muted" >
+		{$tooltip PMT_GOLD_PURCHASE R}
+		</div>
+	</div>
+</div>
+</div>
+{END R_fieldblock}
+
+			{BEGIN S_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_S}" data-fieldname="S" data-signal-error-for="S{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_S}">
+		{BEGIN S_label}{$label PMT_GOLD_PURCHASE S}{END S_label}
+	</label>
+	<div class="col-md-6" >
+		{$S_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="S">
+		<div class="text-muted" >
+		{$tooltip PMT_GOLD_PURCHASE S}
+		</div>
+	</div>
+</div>
+</div>
+{END S_fieldblock}
+
+			{BEGIN T_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_T}" data-fieldname="T" data-signal-error-for="T{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_T}">
+		{BEGIN T_label}{$label PMT_GOLD_PURCHASE T}{END T_label}
+	</label>
+	<div class="col-md-6" >
+		{$T_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="T">
+		<div class="text-muted" >
+		{$tooltip PMT_GOLD_PURCHASE T}
+		</div>
+	</div>
+</div>
+</div>
+{END T_fieldblock}
+
+			{BEGIN TIME_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_TIME}" data-fieldname="TIME" data-signal-error-for="TIME{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_TIME}">
+		{BEGIN TIME_label}{$label PMT_GOLD_PURCHASE TIME}{END TIME_label}
+	</label>
+	<div class="col-md-6" >
+		{$TIME_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="TIME">
+		<div class="text-muted" >
+		{$tooltip PMT_GOLD_PURCHASE TIME}
+		</div>
+	</div>
+</div>
+</div>
+{END TIME_fieldblock}
+
+			{BEGIN MONTHLY_REPORT_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_MONTHLY_REPORT}" data-fieldname="MONTHLY_REPORT" data-signal-error-for="MONTHLY_REPORT{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_MONTHLY_REPORT}">
+		{BEGIN MONTHLY_REPORT_label}{$label PMT_GOLD_PURCHASE MONTHLY_REPORT}{END MONTHLY_REPORT_label}
+	</label>
+	<div class="col-md-6" >
+		{$MONTHLY_REPORT_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="MONTHLY_REPORT">
+		<div class="text-muted" >
+		{$tooltip PMT_GOLD_PURCHASE MONTHLY_REPORT}
+		</div>
+	</div>
+</div>
+</div>
+{END MONTHLY_REPORT_fieldblock}
+
+			
+		
+
+
+
+
+
+{BEGIN details_PMT_GOLD_PURCHASE_SUB}
+<div data-pageid="1" class="bs-details"> 
+<div class="panel panel-info details-grid">
+
+<div class="panel-heading">
+	<h4 class="panel-title">{$caption PMT_GOLD_PURCHASE_SUB}
+		<span>
+{BEGIN details_inlineadd_PMT_GOLD_PURCHASE_SUB_link}
+			<button type="button" class="btn btn-xs btn-info" {$details_inlineadd_PMT_GOLD_PURCHASE_SUB_attrs}>{mlang_message INLINE_ADD}</button>
+{END details_inlineadd_PMT_GOLD_PURCHASE_SUB_link}		
+{BEGIN details_add_PMT_GOLD_PURCHASE_SUB_link}
+			<button type="button" class="btn btn-xs btn-info" {$details_add_PMT_GOLD_PURCHASE_SUB_attrs}>{mlang_message ADD_NEW}</button>
+{END details_add_PMT_GOLD_PURCHASE_SUB_link}
+{BEGIN details_edit_PMT_GOLD_PURCHASE_SUB_link}
+			<button type="button" class="btn btn-xs btn-info" disabled {$details_edit_PMT_GOLD_PURCHASE_SUB_attrs}>{mlang_message EDIT}</button>
+{END details_edit_PMT_GOLD_PURCHASE_SUB_link}
+{BEGIN details_updateselected_PMT_GOLD_PURCHASE_SUB_link}
+			<button type="button" class="btn btn-xs btn-info" disabled {$details_updateselected_PMT_GOLD_PURCHASE_SUB_attrs}>{mlang_message UPDATE_SELECTED}</button>
+{END details_updateselected_PMT_GOLD_PURCHASE_SUB_link}
+
+
+{BEGIN details_delete_PMT_GOLD_PURCHASE_SUB_link}
+			<button type="button" class="btn btn-xs btn-info " disabled {$details_delete_PMT_GOLD_PURCHASE_SUB_attrs}>{mlang_message DELETE}</button>
+{END details_delete_PMT_GOLD_PURCHASE_SUB_link}
+
+{BEGIN saveall_PMT_GOLD_PURCHASE_SUB_link}
+			<button type="button" class="btn btn-xs btn-info" {$savealllink_PMT_GOLD_PURCHASE_SUB_attrs} {$savealllink_PMT_GOLD_PURCHASE_SUB_span}>{mlang_message SAVE_ALL}</button>
+{END saveall_PMT_GOLD_PURCHASE_SUB_link}
+{BEGIN cancelall_PMT_GOLD_PURCHASE_SUB_link}
+			<button type="button" class="btn btn-xs btn-info" {$cancelalllink_PMT_GOLD_PURCHASE_SUB_attrs} {$cancelalllink_PMT_GOLD_PURCHASE_SUB_span}>{mlang_message CANCEL_ALL}</button>
+{END cancelall_PMT_GOLD_PURCHASE_SUB_link}
+		</span>
+	</h4>
+</div>
+<div class="panel-body">
+	{$displayDetailTable_PMT_GOLD_PURCHASE_SUB}
+</div>
+</div>
+</div>
+{END details_PMT_GOLD_PURCHASE_SUB}
+	
+	
+	
+
+
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN addbuttons}
+	{BEGIN save_button}
+	<button class="btn btn-primary" {$savebutton_attrs}>{mlang_message SAVE}</button>
+	{END save_button}
+	{BEGIN reset_button}
+	<button class="btn btn-default" id="resetButton{$id}">{mlang_message RESET}</button>
+	{END reset_button}
+	{BEGIN back_button}
+		<button class="btn btn-default" id="backButton{$id}">{mlang_message BACK_TO_LIST}</button>
+	{END back_button}
+	{BEGIN cancel_button}
+	<a href="#" class="btn btn-default" id="cancelButton{$id}">{mlang_message CANCEL}</a>
+	{END cancel_button}
+
+{END addbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+      </div>
+      <DIV class="bs-middle ">
+        <DIV class="bs-topmiddle">
+          
+        </div>
+        <DIV class="bs-left" {$blockattr_left}>
+          
+        </div>
+        <DIV class="bs-center">
+          
+        </div>
+        <DIV class="bs-right">
+          
+        </div>
+      </div>
+      <DIV class="bs-bottom">
+        
+      </div>
+      {$footer}
+    {END body}
+  </body>
+</html>

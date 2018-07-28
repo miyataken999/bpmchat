@@ -1,0 +1,330 @@
+<!doctype html>
+<html  {$html_attrs}>
+  <head>asdfsfs
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      {$pagetitle}
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link REL="stylesheet" href="styles/default.css" type="text/css">
+    {BEGIN rtlCSS}
+      <link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+    {END rtlCSS}
+    {BEGIN styleCSSFiles}
+      <link REL="stylesheet" href="{$stylepath}" type="text/css">
+    {END styleCSSFiles}
+  </head>
+  <BODY class="{$stylename} function-view" {$bodyattrs}>
+    {BEGIN body}
+      {$header}
+      <style>
+        {$containerCss}
+      </style>
+      <DIV class="bs-top">
+        
+
+{BEGIN container_viewpage}
+<div {$viewpage_chiddenattr} data-pageid="{$pageid}" data-container="viewpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN viewheader}
+	<h2 {$viewheader_hiddenattr} data-pageid="{$pageid}" data-brick="viewheader" >{$pagetitlelabel wpfg_links view}</h2>
+
+{END viewheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_viewpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class=" form-horizontal  col-md-12 "> 
+
+
+<div {$viewfields_hiddenattr} data-pageid="{$pageid}" data-brick="viewfields" >
+	{BEGIN link_id_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_link_id} bs-viewform-group" data-fieldname="link_id">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_link_id}">
+			{$label wpfg_links link_id}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$link_id_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END link_id_fieldblock}
+	{BEGIN link_url_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_link_url} bs-viewform-group" data-fieldname="link_url">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_link_url}">
+			{$label wpfg_links link_url}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$link_url_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END link_url_fieldblock}
+	{BEGIN link_name_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_link_name} bs-viewform-group" data-fieldname="link_name">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_link_name}">
+			{$label wpfg_links link_name}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$link_name_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END link_name_fieldblock}
+	{BEGIN link_image_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_link_image} bs-viewform-group" data-fieldname="link_image">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_link_image}">
+			{$label wpfg_links link_image}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$link_image_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END link_image_fieldblock}
+	{BEGIN link_target_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_link_target} bs-viewform-group" data-fieldname="link_target">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_link_target}">
+			{$label wpfg_links link_target}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$link_target_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END link_target_fieldblock}
+	{BEGIN link_description_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_link_description} bs-viewform-group" data-fieldname="link_description">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_link_description}">
+			{$label wpfg_links link_description}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$link_description_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END link_description_fieldblock}
+	{BEGIN link_visible_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_link_visible} bs-viewform-group" data-fieldname="link_visible">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_link_visible}">
+			{$label wpfg_links link_visible}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$link_visible_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END link_visible_fieldblock}
+	{BEGIN link_owner_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_link_owner} bs-viewform-group" data-fieldname="link_owner">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_link_owner}">
+			{$label wpfg_links link_owner}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$link_owner_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END link_owner_fieldblock}
+	{BEGIN link_rating_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_link_rating} bs-viewform-group" data-fieldname="link_rating">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_link_rating}">
+			{$label wpfg_links link_rating}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$link_rating_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END link_rating_fieldblock}
+	{BEGIN link_updated_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_link_updated} bs-viewform-group" data-fieldname="link_updated">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_link_updated}">
+			{$label wpfg_links link_updated}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$link_updated_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END link_updated_fieldblock}
+	{BEGIN link_rel_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_link_rel} bs-viewform-group" data-fieldname="link_rel">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_link_rel}">
+			{$label wpfg_links link_rel}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$link_rel_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END link_rel_fieldblock}
+	{BEGIN link_notes_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_link_notes} bs-viewform-group" data-fieldname="link_notes">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_link_notes}">
+			{$label wpfg_links link_notes}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$link_notes_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END link_notes_fieldblock}
+	{BEGIN link_rss_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_link_rss} bs-viewform-group" data-fieldname="link_rss">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_link_rss}">
+			{$label wpfg_links link_rss}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$link_rss_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END link_rss_fieldblock}
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN viewbuttons}
+{BEGIN back_button}
+<button class="btn btn-primary" {$backbutton_attrs}>{mlang_message BACK_TO_LIST}</button>
+{END back_button}
+{BEGIN close_button}
+<button href="#" class="btn btn-primary" {$closebutton_attrs}>{mlang_message CLOSE_WINDOW}</button>
+{END close_button}
+{END viewbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+
+
+{BEGIN container_leftbuttons_1}
+<div {$leftbuttons_1_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons_1" class="  text-right col-md-3 "> 
+
+{BEGIN rightviewbuttons}
+<div class="btn-group" role="group">
+		{BEGIN prev_button}
+	<button class="btn btn-default {$prevbutton_class}" {$prevbutton_attrs}><span class="glyphicon glyphicon-chevron-left"></span></button>
+	{END prev_button}
+	{BEGIN next_button}
+	<button class="btn btn-default {$nextbutton_class}" {$nextbutton_attrs}><span class="glyphicon glyphicon-chevron-right"></span></button>
+	{END next_button}
+		{BEGIN view_menu_button}
+	<div class="btn-group dropup" role="group">
+		<button class="btn btn-default dropdown-toggle {$groupbutton_class}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+		<ul class="dropdown-menu dropdown-left">
+									{BEGIN edit_page_button}
+				<li><a href=# {$edit_page_button_attrs}>{mlang_message EDIT}</a></li>
+			{END edit_page_button}
+		</ul>
+	</div>
+	{END view_menu_button}
+</div>
+{END rightviewbuttons}
+
+
+
+</div>
+{END container_leftbuttons_1}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+      </div>
+      <DIV class="bs-middle ">
+        <DIV class="bs-topmiddle">
+          
+        </div>
+        <DIV class="bs-left" {$blockattr_left}>
+          
+        </div>
+        <DIV class="bs-center">
+          
+        </div>
+        <DIV class="bs-right">
+          
+        </div>
+      </div>
+      <DIV class="bs-bottom">
+        
+      </div>
+      {$footer}
+    {END body}
+  </body>
+</html>

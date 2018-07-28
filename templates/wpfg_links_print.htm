@@ -1,0 +1,252 @@
+<!doctype html>
+<html  {$html_attrs}>
+  <head>asdfsfs
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      {$pagetitle}
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link REL="stylesheet" href="styles/default.css" type="text/css">
+    {BEGIN rtlCSS}
+      <link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+    {END rtlCSS}
+    {BEGIN styleCSSFiles}
+      <link REL="stylesheet" href="{$stylepath}" type="text/css">
+    {END styleCSSFiles}
+  </head>
+  <BODY class="{$stylename} function-print" {$bodyattrs}>
+    {BEGIN body}
+      {$header}
+      <style>
+        {$containerCss}
+      </style>
+      <DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel wpfg_links print}</h2>
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>{mlang_message PAGE1} <span class="rp-pageno">{$pageno}</span> {mlang_message PAGE2} <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="table table-bordered rp-maintable" {$printgrid_hiddenattr} data-pageid="{$pageid}" data-brick="printgrid" >
+	<thead>
+	{BEGIN grid_header}
+		<tr class="{$gridHeader_class}" >
+		{BEGIN record_header}
+			{BEGIN link_id_fieldheadercolumn}
+			<th class="{$link_id_class}" {$link_id_style}  data-field="link_id">
+				{$label wpfg_links link_id}
+			</th>
+			{END link_id_fieldheadercolumn}
+			{BEGIN link_url_fieldheadercolumn}
+			<th class="{$link_url_class}" {$link_url_style}  data-field="link_url">
+				{$label wpfg_links link_url}
+			</th>
+			{END link_url_fieldheadercolumn}
+			{BEGIN link_name_fieldheadercolumn}
+			<th class="{$link_name_class}" {$link_name_style}  data-field="link_name">
+				{$label wpfg_links link_name}
+			</th>
+			{END link_name_fieldheadercolumn}
+			{BEGIN link_image_fieldheadercolumn}
+			<th class="{$link_image_class}" {$link_image_style}  data-field="link_image">
+				{$label wpfg_links link_image}
+			</th>
+			{END link_image_fieldheadercolumn}
+			{BEGIN link_target_fieldheadercolumn}
+			<th class="{$link_target_class}" {$link_target_style}  data-field="link_target">
+				{$label wpfg_links link_target}
+			</th>
+			{END link_target_fieldheadercolumn}
+			{BEGIN link_description_fieldheadercolumn}
+			<th class="{$link_description_class}" {$link_description_style}  data-field="link_description">
+				{$label wpfg_links link_description}
+			</th>
+			{END link_description_fieldheadercolumn}
+			{BEGIN link_visible_fieldheadercolumn}
+			<th class="{$link_visible_class}" {$link_visible_style}  data-field="link_visible">
+				{$label wpfg_links link_visible}
+			</th>
+			{END link_visible_fieldheadercolumn}
+			{BEGIN link_owner_fieldheadercolumn}
+			<th class="{$link_owner_class}" {$link_owner_style}  data-field="link_owner">
+				{$label wpfg_links link_owner}
+			</th>
+			{END link_owner_fieldheadercolumn}
+			{BEGIN link_rating_fieldheadercolumn}
+			<th class="{$link_rating_class}" {$link_rating_style}  data-field="link_rating">
+				{$label wpfg_links link_rating}
+			</th>
+			{END link_rating_fieldheadercolumn}
+			{BEGIN link_updated_fieldheadercolumn}
+			<th class="{$link_updated_class}" {$link_updated_style}  data-field="link_updated">
+				{$label wpfg_links link_updated}
+			</th>
+			{END link_updated_fieldheadercolumn}
+			{BEGIN link_rel_fieldheadercolumn}
+			<th class="{$link_rel_class}" {$link_rel_style}  data-field="link_rel">
+				{$label wpfg_links link_rel}
+			</th>
+			{END link_rel_fieldheadercolumn}
+			{BEGIN link_notes_fieldheadercolumn}
+			<th class="{$link_notes_class}" {$link_notes_style}  data-field="link_notes">
+				{$label wpfg_links link_notes}
+			</th>
+			{END link_notes_fieldheadercolumn}
+			{BEGIN link_rss_fieldheadercolumn}
+			<th class="{$link_rss_class}" {$link_rss_style}  data-field="link_rss">
+				{$label wpfg_links link_rss}
+			</th>
+			{END link_rss_fieldheadercolumn}
+			{BEGIN endrecordheader_block}
+			<th class="rnr-cs">&nbsp;</th>
+			{END endrecordheader_block}
+		{END record_header}
+		</tr>
+	{END grid_header}
+	</thead>
+	
+	<tbody>	
+	{BEGIN grid_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+			{BEGIN link_id_fieldcolumn}
+			<td  class="{$link_id_class}" {$link_id_style} {$recordattrs}>
+				{$link_id_value}
+			</td>
+			{END link_id_fieldcolumn}
+			{BEGIN link_url_fieldcolumn}
+			<td  class="{$link_url_class}" {$link_url_style} {$recordattrs}>
+				{$link_url_value}
+			</td>
+			{END link_url_fieldcolumn}
+			{BEGIN link_name_fieldcolumn}
+			<td  class="{$link_name_class}" {$link_name_style} {$recordattrs}>
+				{$link_name_value}
+			</td>
+			{END link_name_fieldcolumn}
+			{BEGIN link_image_fieldcolumn}
+			<td  class="{$link_image_class}" {$link_image_style} {$recordattrs}>
+				{$link_image_value}
+			</td>
+			{END link_image_fieldcolumn}
+			{BEGIN link_target_fieldcolumn}
+			<td  class="{$link_target_class}" {$link_target_style} {$recordattrs}>
+				{$link_target_value}
+			</td>
+			{END link_target_fieldcolumn}
+			{BEGIN link_description_fieldcolumn}
+			<td  class="{$link_description_class}" {$link_description_style} {$recordattrs}>
+				{$link_description_value}
+			</td>
+			{END link_description_fieldcolumn}
+			{BEGIN link_visible_fieldcolumn}
+			<td  class="{$link_visible_class}" {$link_visible_style} {$recordattrs}>
+				{$link_visible_value}
+			</td>
+			{END link_visible_fieldcolumn}
+			{BEGIN link_owner_fieldcolumn}
+			<td  class="{$link_owner_class}" {$link_owner_style} {$recordattrs}>
+				{$link_owner_value}
+			</td>
+			{END link_owner_fieldcolumn}
+			{BEGIN link_rating_fieldcolumn}
+			<td  class="{$link_rating_class}" {$link_rating_style} {$recordattrs}>
+				{$link_rating_value}
+			</td>
+			{END link_rating_fieldcolumn}
+			{BEGIN link_updated_fieldcolumn}
+			<td  class="{$link_updated_class}" {$link_updated_style} {$recordattrs}>
+				{$link_updated_value}
+			</td>
+			{END link_updated_fieldcolumn}
+			{BEGIN link_rel_fieldcolumn}
+			<td  class="{$link_rel_class}" {$link_rel_style} {$recordattrs}>
+				{$link_rel_value}
+			</td>
+			{END link_rel_fieldcolumn}
+			{BEGIN link_notes_fieldcolumn}
+			<td  class="{$link_notes_class}" {$link_notes_style} {$recordattrs}>
+				{$link_notes_value}
+			</td>
+			{END link_notes_fieldcolumn}
+			{BEGIN link_rss_fieldcolumn}
+			<td  class="{$link_rss_class}" {$link_rss_style} {$recordattrs}>
+				{$link_rss_value}
+			</td>
+			{END link_rss_fieldcolumn}
+			{BEGIN endrecord_block}
+			<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+			{END endrecord_block}
+		{END grid_record}
+		</tr>
+{END grid_row}
+	</tbody>
+
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+      </div>
+      <DIV class="bs-middle ">
+        <DIV class="bs-topmiddle">
+          
+        </div>
+        <DIV class="bs-left" {$blockattr_left}>
+          
+        </div>
+        <DIV class="bs-center">
+          
+        </div>
+        <DIV class="bs-right">
+          
+        </div>
+      </div>
+      <DIV class="bs-bottom">
+        
+      </div>
+      {$footer}
+    {END body}
+  </body>
+</html>

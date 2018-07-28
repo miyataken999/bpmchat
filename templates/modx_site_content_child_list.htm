@@ -1,0 +1,2046 @@
+<!doctype html>
+<html  {$html_attrs}>
+  <head>cddadasa
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      {$pagetitle}
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link REL="stylesheet" href="styles/default.css" type="text/css">
+    {BEGIN rtlCSS}
+      <link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+    {END rtlCSS}
+    {BEGIN styleCSSFiles}
+      <link REL="stylesheet" href="{$stylepath}" type="text/css">
+    {END styleCSSFiles}
+  </head>
+  <BODY class="{$stylename} function-list" {$bodyattrs}>
+    {BEGIN body}
+      {$header}
+      <style>
+        {$containerCss}
+      </style>
+      {BEGIN container_menu}<nav {$menu_chiddenattr} data-pageid="{$pageid}" data-container="menu" class="navbar navbar-default ">					
+
+
+
+{BEGIN container_hdr}
+<div {$hdr_chiddenattr} data-pageid="{$pageid}" data-container="hdr" class=" navbar-header   "> 
+
+{BEGIN logo_block}
+<a href="{$home_link}" {$logo_hiddenattr} data-pageid="{$pageid}" data-brick="logo" class="navbar-brand" >{$logo}</a>
+{END logo_block}
+
+
+{BEGIN collapse_block}
+<button {$bsnavbarcollapse_hiddenattr} data-pageid="{$pageid}" data-brick="bsnavbarcollapse" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target=".bs-navcontrolled">	
+	<span class="sr-only">Toggle navigation</span>	
+	<span class="icon-bar"></span>					
+</button>												
+
+{END collapse_block}
+
+
+
+</div>
+{END container_hdr}
+
+
+
+
+
+
+{BEGIN container_menu_1}<div {$menu_1_chiddenattr} data-pageid="{$pageid}" data-container="menu_1" class="bs-navform navbar-collapse bs-navcontrolled bs-hidden-xs" aria-expanded="false" >												   
+{BEGIN menu_block}
+{$menu main horizontal}
+
+{END menu_block}
+
+
+
+
+
+{BEGIN container_more}
+<div {$more_chiddenattr} data-pageid="{$pageid}" data-container="more" class=" navbar-right navbar-form   "> 
+
+{BEGIN more_list}
+<div {$morebutton_hiddenattr} data-pageid="{$pageid}" data-brick="morebutton" class="btn-group bs-navsection">
+	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		<span class="glyphicon glyphicon-cog"></span>
+		<span class="caret"></span>
+	</button>
+	<ul class="dropdown-menu">
+				{BEGIN editselected_link}
+		<li class="massButton{$id} disabled"><a href="#" {$editselectedlink_attrs} {$editselectedlink_span} >{mlang_message EDIT_SELECTED}</a></li>
+		{END editselected_link}
+
+				{BEGIN exportselected_link}
+		<li class="massButton{$id} disabled"><a href="#" {$exportselectedlink_attrs} {$exportselectedlink_span} >{mlang_message EXPORT_SELECTED}</a></li>
+		{END exportselected_link}
+		
+				{BEGIN deleteselected_link}
+		<li class="massButton{$id} disabled"><a href="#" {$deleteselectedlink_attrs} {$deleteselectedlink_span}>{mlang_message DELETE_SELECTED}</a></li>
+		{END deleteselected_link}
+		
+				<li role="separator" class="divider"></li>	
+
+				{BEGIN asearch_link}
+		<li><a href="modx_site_content_child_search.php" {$advsearchlink_attrs}>{mlang_message ADVANCED_SEARCH}</a></li>
+		{END asearch_link}
+
+				{BEGIN searchPanelTopButtons}
+		<li><a href=# id="showOptPanel{$id}">{mlang_message SHOW_SEARCH_PANEL}</a></li>
+		{END searchPanelTopButtons}	
+		
+				<li role="separator" class="divider"></li>	
+		{BEGIN saveSeachButton}
+		<li><a href=# id="saveSearch{$id}"  >{mlang_message SAVE_SEARCH}</a></li>
+		{END saveSeachButton}
+		{BEGIN savedSeachesButton}
+		<li><a {$saveSearchButtonAttrs} id="savedSearches{$id}">{mlang_message SAVED_SEARCHES}:</a></li>
+		{END savedSeachesButton}
+		
+				<li role="separator" class="divider"></li>	
+		
+				
+				{BEGIN export_link}
+		<li><a target="_blank" href="modx_site_content_child_export.php"  {$exportlink_attrs}>{mlang_message EXPORT_RESULTS}</a></li>
+		{END export_link}
+
+				{BEGIN import_link}
+		<li><a href="modx_site_content_child_import.php?{$crosstable_attrs}"  {$importlink_attrs}>{mlang_message IMPORT}</a></li>
+		{END import_link}
+
+					<li role="separator" class="divider"></li>
+				{BEGIN EnglishLANGLINK}
+				<li><a href="#" data-lang="English" class="rnr-langlink">
+					{BEGIN EnglishLANGLINK_ACTIVE}<span class="glyphicon glyphicon-ok">&nbsp;</span>{END EnglishLANGLINK_ACTIVE}
+					English</a></li>
+				{END EnglishLANGLINK}
+				{BEGIN JapaneseLANGLINK}
+				<li><a href="#" data-lang="Japanese" class="rnr-langlink">
+					{BEGIN JapaneseLANGLINK_ACTIVE}<span class="glyphicon glyphicon-ok">&nbsp;</span>{END JapaneseLANGLINK_ACTIVE}
+					日本語</a></li>
+				{END JapaneseLANGLINK}
+		
+	</ul>  
+</div>
+
+{END more_list}
+
+
+{BEGIN security_block}
+<span {$loggedas_hiddenattr} data-pageid="{$pageid}" data-brick="loggedas" id="login_block{$id}" class="bs-navsection">
+	{BEGIN guestloginbutton}
+		<button class="btn btn-info" type="button" {$guestloginlink_attrs}>{mlang_message LOGIN}</button>
+	{END guestloginbutton}
+	{BEGIN loggedas_message} 
+		<span class="dropdown">
+			<button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon-user"></span>	{$username}</button>
+			<ul class="dropdown-menu">
+		{BEGIN logoutbutton}
+				<li><a href="#" {$logoutlink_attrs}>{mlang_message LOG_OUT}</a></li>
+		{END logoutbutton}
+		
+		{BEGIN adminarea_link}
+				<li><a href="admin_rights_list.php" {$adminarealink_attrs}>{mlang_message AA_ADMINAREA}</a></li>
+		{END adminarea_link}
+
+
+	{BEGIN changepwd_link}
+				<li><a href="#" {$changepwdlink_attrs}>{mlang_message CHANGE_PASSWORD}</a></li>
+	{END changepwd_link}
+			</ul>
+		</span>
+	{END loggedas_message}
+</span>
+{END security_block}
+
+
+
+</div>
+{END container_more}
+
+
+
+
+
+
+
+
+{BEGIN container_more_1}
+<div {$more_1_chiddenattr} data-pageid="{$pageid}" data-container="more_1" class=" navbar-right navbar-form   "> 
+
+{BEGIN searchform_block}
+<span {$search_hiddenattr} data-pageid="{$pageid}" data-brick="search" class="form-group">
+
+	{$simpleSearchFieldCombo}
+	
+	{$simpleSearchTypeCombo}
+ <div  class="input-group">
+{BEGIN searchform_text}
+	<input type="search" class="form-control" {$searchfor_attrs} size="25">
+{END searchform_text}
+	<span class="input-group-btn">
+	{BEGIN searchform_showall}
+		<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="{mlang_message SHOW_ALL}">
+			<span class="glyphicon glyphicon-remove"></span>
+		</button>
+	{END searchform_showall}
+	{BEGIN searchform_search}
+	<button {$searchbutton_attrs} class="btn btn-primary" >
+		<span class="glyphicon glyphicon-search"></span>
+	</button>
+	{END searchform_search}
+	</span>
+</div>
+		
+</span>
+{END searchform_block}
+
+
+
+</div>
+{END container_more_1}
+
+
+
+
+												</div>						{END container_menu_1}
+
+
+									</nav>{END container_menu}
+      <DIV class="bs-middle ">
+        <DIV class="bs-topmiddle">
+          
+
+{BEGIN container_breadcrumbs}
+<div {$breadcrumbs_chiddenattr} data-pageid="{$pageid}" data-container="breadcrumbs" class="    "> 
+
+
+
+
+{BEGIN container_bc}
+<div {$bc_chiddenattr} data-pageid="{$pageid}" data-container="bc" class="    "> 
+
+{BEGIN breadcrumbs}
+<ol class="breadcrumb">
+<li ><a href="{$home_link}"><span class="glyphicon glyphicon-home"></span></a>{$crumb_dropdown}</li>
+{BEGIN crumb}
+  <li class="{$crumb_item_class}">
+{BEGIN crumb_title_link}
+	<a {$crumb_attrs}>{$crumb_title}</a>
+{END crumb_title_link}
+{BEGIN crumb_title_span}
+	<span {$crumb_attrs}>{$crumb_title}</span>
+{END crumb_title_span}	
+	{$crumb_dropdown}
+  </li>
+{END crumb}
+</ol>
+{END breadcrumbs}
+
+
+
+</div>
+{END container_bc}
+
+
+
+
+
+
+</div>
+{END container_breadcrumbs}
+
+
+
+{BEGIN container_masterinfo}
+<div {$masterinfo_chiddenattr} data-pageid="{$pageid}" data-container="masterinfo" class="    "> 
+
+{BEGIN mastertable_block}
+<div class="panel panel-info table-panel">
+	<div class="panel-heading">
+		{$master_heading}
+	</div>
+	<div class="panel-body">
+		{$showmasterfile}
+		
+	</div>
+</div>
+
+{END mastertable_block}
+
+
+
+</div>
+{END container_masterinfo}
+
+
+        </div>
+        <DIV class="bs-left" {$blockattr_left}>
+          
+
+{BEGIN container_left}
+<div {$left_chiddenattr} data-pageid="{$pageid}" data-container="left" class="    "> 
+
+{BEGIN searchPanel}
+<div {$searchpanel_hiddenattr} data-pageid="{$pageid}" data-brick="searchpanel" class="searchOptions panel panel-primary searchPanelContainer " {$srchOpt_attrs} >
+	<!-- Search panel content -->
+	
+	<div class="panel-heading">
+		<div class="btn-group" id="addSearchFieldButton{$id}">
+			<button id="showHideControlChooseMenu{$id}" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			{mlang_message SEARCH_IN}
+			<span class="caret"></span>
+			</button>
+		</div>
+
+		
+		<div class="btn-group searchpanel-options" id="searchPanelOptions{$id}">
+			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon glyphicon-option-vertical"></span>
+			</button>
+			<ul class="dropdown-menu dropdown-left">
+				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>{mlang_message SEARCH_SHOW_OPTIONS_BUTTON}</a></li>
+				<li role="separator" class="divider"></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>{mlang_message SEARCH_ALL_CONDITIONS}</label></a></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>{mlang_message SEARCH_ANY_CONDITIONS}</label></a></li>
+				<li role="separator" class="divider"></li>
+				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>{mlang_message HIDE}</a></li>
+			</ul>
+		</div>
+	
+		
+		</div>
+	<div class="panel-body controlsBlock" {$bottomSearchButt_attrs} >
+
+
+		
+		{BEGIN searchCtrlBlock}
+		<div class="srchPanelRow form-group" {$filterRow_attrs}>
+			<label>{$fLabel}</label>	{$delCtrlButt}
+				<span class="rnr-searchtype">{$searchtype}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
+		</div>
+		{END searchCtrlBlock}
+		 
+		{BEGIN searchCtrlBlock_link}
+		
+		
+		<div class="form-group srchPanelRow {$filterRow_class_link}" {$filterRow_attrs_link}>
+			<label>
+			
+			{$label modx_site_content_child link}</label>
+							{$delCtrlButt}
+
+								<span class="rnr-searchtype">{$searchtype_link}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol_link}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_link}</span>
+		</div>
+		{END searchCtrlBlock_link}
+		 
+		{BEGIN searchCtrlBlock_url}
+		
+		
+		<div class="form-group srchPanelRow {$filterRow_class_url}" {$filterRow_attrs_url}>
+			<label>
+			
+			{$label modx_site_content_child url}</label>
+							{$delCtrlButt}
+
+								<span class="rnr-searchtype">{$searchtype_url}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol_url}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_url}</span>
+		</div>
+		{END searchCtrlBlock_url}
+		 
+		{BEGIN searchCtrlBlock_content}
+		
+		
+		<div class="form-group srchPanelRow {$filterRow_class_content}" {$filterRow_attrs_content}>
+			<label>
+			
+			{$label modx_site_content_child content}</label>
+							{$delCtrlButt}
+
+								<span class="rnr-searchtype">{$searchtype_content}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol_content}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_content}</span>
+		</div>
+		{END searchCtrlBlock_content}
+		 
+		{BEGIN searchCtrlBlock_id}
+		
+		
+		<div class="form-group srchPanelRow {$filterRow_class_id}" {$filterRow_attrs_id}>
+			<label>
+			
+			{$label modx_site_content_child id}</label>
+							{$delCtrlButt}
+
+								<span class="rnr-searchtype">{$searchtype_id}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_id}</span>
+		</div>
+		{END searchCtrlBlock_id}
+		 
+		{BEGIN searchCtrlBlock_menutitle}
+		
+		
+		<div class="form-group srchPanelRow {$filterRow_class_menutitle}" {$filterRow_attrs_menutitle}>
+			<label>
+			
+			{$label modx_site_content_child menutitle}</label>
+							{$delCtrlButt}
+
+								<span class="rnr-searchtype">{$searchtype_menutitle}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol_menutitle}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_menutitle}</span>
+		</div>
+		{END searchCtrlBlock_menutitle}
+		 
+		{BEGIN searchCtrlBlock_longtitle}
+		
+		
+		<div class="form-group srchPanelRow {$filterRow_class_longtitle}" {$filterRow_attrs_longtitle}>
+			<label>
+			
+			{$label modx_site_content_child longtitle}</label>
+							{$delCtrlButt}
+
+								<span class="rnr-searchtype">{$searchtype_longtitle}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol_longtitle}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_longtitle}</span>
+		</div>
+		{END searchCtrlBlock_longtitle}
+		 
+		{BEGIN searchCtrlBlock_pagetitle}
+		
+		
+		<div class="form-group srchPanelRow {$filterRow_class_pagetitle}" {$filterRow_attrs_pagetitle}>
+			<label>
+			
+			{$label modx_site_content_child pagetitle}</label>
+							{$delCtrlButt}
+
+								<span class="rnr-searchtype">{$searchtype_pagetitle}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol_pagetitle}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_pagetitle}</span>
+		</div>
+		{END searchCtrlBlock_pagetitle}
+		 
+		{BEGIN searchCtrlBlock_template}
+		
+		
+		<div class="form-group srchPanelRow {$filterRow_class_template}" {$filterRow_attrs_template}>
+			<label>
+			
+			{$label modx_site_content_child template}</label>
+							{$delCtrlButt}
+
+								<span class="rnr-searchtype">{$searchtype_template}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol_template}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_template}</span>
+		</div>
+		{END searchCtrlBlock_template}
+		 
+		{BEGIN searchCtrlBlock_publishedon}
+		
+		
+		<div class="form-group srchPanelRow {$filterRow_class_publishedon}" {$filterRow_attrs_publishedon}>
+			<label>
+			
+			{$label modx_site_content_child publishedon}</label>
+							{$delCtrlButt}
+
+								<span class="rnr-searchtype">{$searchtype_publishedon}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol_publishedon}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_publishedon}</span>
+		</div>
+		{END searchCtrlBlock_publishedon}
+		 
+		{BEGIN searchCtrlBlock_description}
+		
+		
+		<div class="form-group srchPanelRow {$filterRow_class_description}" {$filterRow_attrs_description}>
+			<label>
+			
+			{$label modx_site_content_child description}</label>
+							{$delCtrlButt}
+
+								<span class="rnr-searchtype">{$searchtype_description}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol_description}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_description}</span>
+		</div>
+		{END searchCtrlBlock_description}
+		 
+		{BEGIN searchCtrlBlock_pub_date}
+		
+		
+		<div class="form-group srchPanelRow {$filterRow_class_pub_date}" {$filterRow_attrs_pub_date}>
+			<label>
+			
+			{$label modx_site_content_child pub_date}</label>
+							{$delCtrlButt}
+
+								<span class="rnr-searchtype">{$searchtype_pub_date}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol_pub_date}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_pub_date}</span>
+		</div>
+		{END searchCtrlBlock_pub_date}
+		 
+		{BEGIN searchCtrlBlock_alias}
+		
+		
+		<div class="form-group srchPanelRow {$filterRow_class_alias}" {$filterRow_attrs_alias}>
+			<label>
+			
+			{$label modx_site_content_child alias}</label>
+							{$delCtrlButt}
+
+								<span class="rnr-searchtype">{$searchtype_alias}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol_alias}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_alias}</span>
+		</div>
+		{END searchCtrlBlock_alias}
+		 
+		{BEGIN searchCtrlBlock_alias_visible}
+		
+		
+		<div class="form-group srchPanelRow {$filterRow_class_alias_visible}" {$filterRow_attrs_alias_visible}>
+			<label>
+			
+			{$label modx_site_content_child alias_visible}</label>
+							{$delCtrlButt}
+
+								<span class="rnr-searchtype">{$searchtype_alias_visible}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol_alias_visible}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_alias_visible}</span>
+		</div>
+		{END searchCtrlBlock_alias_visible}
+		 
+		{BEGIN searchCtrlBlock_published}
+		
+		
+		<div class="form-group srchPanelRow {$filterRow_class_published}" {$filterRow_attrs_published}>
+			<label>
+			
+			{$label modx_site_content_child published}</label>
+							{$delCtrlButt}
+
+								<span class="rnr-searchtype">{$searchtype_published}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol_published}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_published}</span>
+		</div>
+		{END searchCtrlBlock_published}
+		 
+		{BEGIN searchCtrlBlock_introtext}
+		
+		
+		<div class="form-group srchPanelRow {$filterRow_class_introtext}" {$filterRow_attrs_introtext}>
+			<label>
+			
+			{$label modx_site_content_child introtext}</label>
+							{$delCtrlButt}
+
+								<span class="rnr-searchtype">{$searchtype_introtext}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol_introtext}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_introtext}</span>
+		</div>
+		{END searchCtrlBlock_introtext}
+		 
+		{BEGIN searchCtrlBlock_menuindex}
+		
+		
+		<div class="form-group srchPanelRow {$filterRow_class_menuindex}" {$filterRow_attrs_menuindex}>
+			<label>
+			
+			{$label modx_site_content_child menuindex}</label>
+							{$delCtrlButt}
+
+								<span class="rnr-searchtype">{$searchtype_menuindex}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol_menuindex}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_menuindex}</span>
+		</div>
+		{END searchCtrlBlock_menuindex}
+		 
+		{BEGIN searchCtrlBlock_richtext}
+		
+		
+		<div class="form-group srchPanelRow {$filterRow_class_richtext}" {$filterRow_attrs_richtext}>
+			<label>
+			
+			{$label modx_site_content_child richtext}</label>
+							{$delCtrlButt}
+
+								<span class="rnr-searchtype">{$searchtype_richtext}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol_richtext}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_richtext}</span>
+		</div>
+		{END searchCtrlBlock_richtext}
+		 
+		{BEGIN searchCtrlBlock_modx_site_snippet_id}
+		
+		
+		<div class="form-group srchPanelRow {$filterRow_class_modx_site_snippet_id}" {$filterRow_attrs_modx_site_snippet_id}>
+			<label>
+			
+			{$label modx_site_content_child modx_site_snippet_id}</label>
+							{$delCtrlButt}
+
+								<span class="rnr-searchtype">{$searchtype_modx_site_snippet_id}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol_modx_site_snippet_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_modx_site_snippet_id}</span>
+		</div>
+		{END searchCtrlBlock_modx_site_snippet_id}
+		 
+		{BEGIN searchCtrlBlock_modex_site_htmlsnippet_id}
+		
+		
+		<div class="form-group srchPanelRow {$filterRow_class_modex_site_htmlsnippet_id}" {$filterRow_attrs_modex_site_htmlsnippet_id}>
+			<label>
+			
+			{$label modx_site_content_child modex_site_htmlsnippet_id}</label>
+							{$delCtrlButt}
+
+								<span class="rnr-searchtype">{$searchtype_modex_site_htmlsnippet_id}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol_modex_site_htmlsnippet_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_modex_site_htmlsnippet_id}</span>
+		</div>
+		{END searchCtrlBlock_modex_site_htmlsnippet_id}
+		 
+		{BEGIN searchCtrlBlock_type}
+		
+		
+		<div class="form-group srchPanelRow {$filterRow_class_type}" {$filterRow_attrs_type}>
+			<label>
+			
+			{$label modx_site_content_child type}</label>
+							{$delCtrlButt}
+
+								<span class="rnr-searchtype">{$searchtype_type}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol_type}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_type}</span>
+		</div>
+		{END searchCtrlBlock_type}
+		 
+		{BEGIN searchCtrlBlock_link_attributes}
+		
+		
+		<div class="form-group srchPanelRow {$filterRow_class_link_attributes}" {$filterRow_attrs_link_attributes}>
+			<label>
+			
+			{$label modx_site_content_child link_attributes}</label>
+							{$delCtrlButt}
+
+								<span class="rnr-searchtype">{$searchtype_link_attributes}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol_link_attributes}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_link_attributes}</span>
+		</div>
+		{END searchCtrlBlock_link_attributes}
+		 
+		{BEGIN searchCtrlBlock_parent}
+		
+		
+		<div class="form-group srchPanelRow {$filterRow_class_parent}" {$filterRow_attrs_parent}>
+			<label>
+			
+			{$label modx_site_content_child parent}</label>
+							{$delCtrlButt}
+
+								<span class="rnr-searchtype">{$searchtype_parent}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol_parent}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_parent}</span>
+		</div>
+		{END searchCtrlBlock_parent}
+		 
+		{BEGIN searchCtrlBlock_contentType}
+		
+		
+		<div class="form-group srchPanelRow {$filterRow_class_contentType}" {$filterRow_attrs_contentType}>
+			<label>
+			
+			{$label modx_site_content_child contentType}</label>
+							{$delCtrlButt}
+
+								<span class="rnr-searchtype">{$searchtype_contentType}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol_contentType}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_contentType}</span>
+		</div>
+		{END searchCtrlBlock_contentType}
+		 
+		{BEGIN searchCtrlBlock_searchable}
+		
+		
+		<div class="form-group srchPanelRow {$filterRow_class_searchable}" {$filterRow_attrs_searchable}>
+			<label>
+			
+			{$label modx_site_content_child searchable}</label>
+							{$delCtrlButt}
+
+								<span class="rnr-searchtype">{$searchtype_searchable}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol_searchable}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_searchable}</span>
+		</div>
+		{END searchCtrlBlock_searchable}
+		 
+		{BEGIN searchCtrlBlock_cacheable}
+		
+		
+		<div class="form-group srchPanelRow {$filterRow_class_cacheable}" {$filterRow_attrs_cacheable}>
+			<label>
+			
+			{$label modx_site_content_child cacheable}</label>
+							{$delCtrlButt}
+
+								<span class="rnr-searchtype">{$searchtype_cacheable}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol_cacheable}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_cacheable}</span>
+		</div>
+		{END searchCtrlBlock_cacheable}
+		 
+		{BEGIN searchCtrlBlock_unpub_date}
+		
+		
+		<div class="form-group srchPanelRow {$filterRow_class_unpub_date}" {$filterRow_attrs_unpub_date}>
+			<label>
+			
+			{$label modx_site_content_child unpub_date}</label>
+							{$delCtrlButt}
+
+								<span class="rnr-searchtype">{$searchtype_unpub_date}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol_unpub_date}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_unpub_date}</span>
+		</div>
+		{END searchCtrlBlock_unpub_date}
+		 
+		{BEGIN searchCtrlBlock_isfolder}
+		
+		
+		<div class="form-group srchPanelRow {$filterRow_class_isfolder}" {$filterRow_attrs_isfolder}>
+			<label>
+			
+			{$label modx_site_content_child isfolder}</label>
+							{$delCtrlButt}
+
+								<span class="rnr-searchtype">{$searchtype_isfolder}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol_isfolder}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_isfolder}</span>
+		</div>
+		{END searchCtrlBlock_isfolder}
+		 
+		{BEGIN searchCtrlBlock_createdby}
+		
+		
+		<div class="form-group srchPanelRow {$filterRow_class_createdby}" {$filterRow_attrs_createdby}>
+			<label>
+			
+			{$label modx_site_content_child createdby}</label>
+							{$delCtrlButt}
+
+								<span class="rnr-searchtype">{$searchtype_createdby}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol_createdby}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_createdby}</span>
+		</div>
+		{END searchCtrlBlock_createdby}
+		 
+		{BEGIN searchCtrlBlock_createdon}
+		
+		
+		<div class="form-group srchPanelRow {$filterRow_class_createdon}" {$filterRow_attrs_createdon}>
+			<label>
+			
+			{$label modx_site_content_child createdon}</label>
+							{$delCtrlButt}
+
+								<span class="rnr-searchtype">{$searchtype_createdon}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol_createdon}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_createdon}</span>
+		</div>
+		{END searchCtrlBlock_createdon}
+		 
+		{BEGIN searchCtrlBlock_editedby}
+		
+		
+		<div class="form-group srchPanelRow {$filterRow_class_editedby}" {$filterRow_attrs_editedby}>
+			<label>
+			
+			{$label modx_site_content_child editedby}</label>
+							{$delCtrlButt}
+
+								<span class="rnr-searchtype">{$searchtype_editedby}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol_editedby}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_editedby}</span>
+		</div>
+		{END searchCtrlBlock_editedby}
+		 
+		{BEGIN searchCtrlBlock_editedon}
+		
+		
+		<div class="form-group srchPanelRow {$filterRow_class_editedon}" {$filterRow_attrs_editedon}>
+			<label>
+			
+			{$label modx_site_content_child editedon}</label>
+							{$delCtrlButt}
+
+								<span class="rnr-searchtype">{$searchtype_editedon}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol_editedon}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_editedon}</span>
+		</div>
+		{END searchCtrlBlock_editedon}
+		 
+		{BEGIN searchCtrlBlock_deleted}
+		
+		
+		<div class="form-group srchPanelRow {$filterRow_class_deleted}" {$filterRow_attrs_deleted}>
+			<label>
+			
+			{$label modx_site_content_child deleted}</label>
+							{$delCtrlButt}
+
+								<span class="rnr-searchtype">{$searchtype_deleted}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol_deleted}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_deleted}</span>
+		</div>
+		{END searchCtrlBlock_deleted}
+		 
+		{BEGIN searchCtrlBlock_deletedon}
+		
+		
+		<div class="form-group srchPanelRow {$filterRow_class_deletedon}" {$filterRow_attrs_deletedon}>
+			<label>
+			
+			{$label modx_site_content_child deletedon}</label>
+							{$delCtrlButt}
+
+								<span class="rnr-searchtype">{$searchtype_deletedon}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol_deletedon}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_deletedon}</span>
+		</div>
+		{END searchCtrlBlock_deletedon}
+		 
+		{BEGIN searchCtrlBlock_deletedby}
+		
+		
+		<div class="form-group srchPanelRow {$filterRow_class_deletedby}" {$filterRow_attrs_deletedby}>
+			<label>
+			
+			{$label modx_site_content_child deletedby}</label>
+							{$delCtrlButt}
+
+								<span class="rnr-searchtype">{$searchtype_deletedby}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol_deletedby}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_deletedby}</span>
+		</div>
+		{END searchCtrlBlock_deletedby}
+		 
+		{BEGIN searchCtrlBlock_publishedby}
+		
+		
+		<div class="form-group srchPanelRow {$filterRow_class_publishedby}" {$filterRow_attrs_publishedby}>
+			<label>
+			
+			{$label modx_site_content_child publishedby}</label>
+							{$delCtrlButt}
+
+								<span class="rnr-searchtype">{$searchtype_publishedby}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol_publishedby}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_publishedby}</span>
+		</div>
+		{END searchCtrlBlock_publishedby}
+		 
+		{BEGIN searchCtrlBlock_donthit}
+		
+		
+		<div class="form-group srchPanelRow {$filterRow_class_donthit}" {$filterRow_attrs_donthit}>
+			<label>
+			
+			{$label modx_site_content_child donthit}</label>
+							{$delCtrlButt}
+
+								<span class="rnr-searchtype">{$searchtype_donthit}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol_donthit}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_donthit}</span>
+		</div>
+		{END searchCtrlBlock_donthit}
+		 
+		{BEGIN searchCtrlBlock_haskeywords}
+		
+		
+		<div class="form-group srchPanelRow {$filterRow_class_haskeywords}" {$filterRow_attrs_haskeywords}>
+			<label>
+			
+			{$label modx_site_content_child haskeywords}</label>
+							{$delCtrlButt}
+
+								<span class="rnr-searchtype">{$searchtype_haskeywords}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol_haskeywords}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_haskeywords}</span>
+		</div>
+		{END searchCtrlBlock_haskeywords}
+		 
+		{BEGIN searchCtrlBlock_hasmetatags}
+		
+		
+		<div class="form-group srchPanelRow {$filterRow_class_hasmetatags}" {$filterRow_attrs_hasmetatags}>
+			<label>
+			
+			{$label modx_site_content_child hasmetatags}</label>
+							{$delCtrlButt}
+
+								<span class="rnr-searchtype">{$searchtype_hasmetatags}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol_hasmetatags}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_hasmetatags}</span>
+		</div>
+		{END searchCtrlBlock_hasmetatags}
+		 
+		{BEGIN searchCtrlBlock_privateweb}
+		
+		
+		<div class="form-group srchPanelRow {$filterRow_class_privateweb}" {$filterRow_attrs_privateweb}>
+			<label>
+			
+			{$label modx_site_content_child privateweb}</label>
+							{$delCtrlButt}
+
+								<span class="rnr-searchtype">{$searchtype_privateweb}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol_privateweb}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_privateweb}</span>
+		</div>
+		{END searchCtrlBlock_privateweb}
+		 
+		{BEGIN searchCtrlBlock_privatemgr}
+		
+		
+		<div class="form-group srchPanelRow {$filterRow_class_privatemgr}" {$filterRow_attrs_privatemgr}>
+			<label>
+			
+			{$label modx_site_content_child privatemgr}</label>
+							{$delCtrlButt}
+
+								<span class="rnr-searchtype">{$searchtype_privatemgr}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol_privatemgr}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_privatemgr}</span>
+		</div>
+		{END searchCtrlBlock_privatemgr}
+		 
+		{BEGIN searchCtrlBlock_content_dispo}
+		
+		
+		<div class="form-group srchPanelRow {$filterRow_class_content_dispo}" {$filterRow_attrs_content_dispo}>
+			<label>
+			
+			{$label modx_site_content_child content_dispo}</label>
+							{$delCtrlButt}
+
+								<span class="rnr-searchtype">{$searchtype_content_dispo}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol_content_dispo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_content_dispo}</span>
+		</div>
+		{END searchCtrlBlock_content_dispo}
+		 
+		{BEGIN searchCtrlBlock_hidemenu}
+		
+		
+		<div class="form-group srchPanelRow {$filterRow_class_hidemenu}" {$filterRow_attrs_hidemenu}>
+			<label>
+			
+			{$label modx_site_content_child hidemenu}</label>
+							{$delCtrlButt}
+
+								<span class="rnr-searchtype">{$searchtype_hidemenu}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol_hidemenu}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_hidemenu}</span>
+		</div>
+		{END searchCtrlBlock_hidemenu}
+
+
+	</div>
+	
+	<div class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
+		<button class="btn btn-primary" id="searchButton{$id}" {$searchbutton_attrs}>{mlang_message SEARCH}</button>
+		<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs}>{mlang_message SHOW_ALL}</button>
+	</div>
+</div>
+
+
+{END searchPanel}
+
+
+
+
+</div>
+{END container_left}
+
+
+        </div>
+        <DIV class="bs-center bs-screenwidth bs-minwidth">
+          
+
+{BEGIN container_messagerow}
+<div {$messagerow_chiddenattr} data-pageid="{$pageid}" data-container="messagerow" class="row rnr-rowcontainer ">
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-12 "> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">{$message}</div>
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+</div>{END container_messagerow}
+
+
+
+{BEGIN container_gridcontrols}
+<div {$gridcontrols_chiddenattr} data-pageid="{$pageid}" data-container="gridcontrols" class="row rnr-rowcontainer bs-navcontrolled bs-hidden-xs">
+
+
+
+
+{BEGIN container_add_delete}
+<div {$add_delete_chiddenattr} data-pageid="{$pageid}" data-container="add_delete" class=" bottom-margin  col-md-6 "> 
+
+{BEGIN newrecord_controls_block}
+		{BEGIN add_link}
+		<a {$add_hiddenattr} data-pageid="{$pageid}" data-brick="add" type="button" class="btn btn-primary" {$addlink_attrs}>{mlang_message ADD_NEW}</a>
+	{END add_link}
+
+		{BEGIN inlineadd_link}
+		<button {$add_hiddenattr} data-pageid="{$pageid}" data-brick="add" type="button" class="btn btn-primary" {$inlineaddlink_attrs}>{mlang_message INLINE_ADD}</button>
+	{END inlineadd_link}
+
+{END newrecord_controls_block}
+
+
+{BEGIN record_controls_block}
+<span {$recordcontrol_hiddenattr} data-pageid="{$pageid}" data-brick="recordcontrol">
+		{BEGIN deleteselected_link}
+	<button type="button" class="btn btn-default" {$deleteselectedlink_attrs} {$deleteselectedlink_span} disabled>{mlang_message DELETE}</button>
+	{END deleteselected_link}
+		{BEGIN updateselected_link}
+		<button type="button" class="btn btn-default" {$updateselectedlink_attrs} disabled>{mlang_message UPDATE_SELECTED}</button>
+	{END updateselected_link}
+		{BEGIN saveall_link}
+		<button type="button" class="btn btn-primary" {$savealllink_attrs} {$savealllink_span}>{mlang_message SAVE_ALL}</button>
+	{END saveall_link}
+	{BEGIN cancelall_link}
+		<button type="button" class="btn btn-default" {$cancelalllink_attrs} {$cancelalllink_span}>{mlang_message CANCEL_ALL}</button>
+	{END cancelall_link}
+</span>
+
+{END record_controls_block}
+
+
+
+</div>
+{END container_add_delete}
+
+
+
+
+
+
+
+
+{BEGIN container_gridinfo}
+<div {$gridinfo_chiddenattr} data-pageid="{$pageid}" data-container="gridinfo" class=" bottom-margin pull-right text-right col-md-6 "> 
+
+{BEGIN details_found}
+<span {$details_found_hiddenattr} data-pageid="{$pageid}" data-brick="details_found" class="form-inline form-inline-always">
+	{$records_indicator}
+	<span>
+	{BEGIN recordspp_block}
+			{$recsPerPage}
+	{END recordspp_block}
+	</span>
+</span>
+{END details_found}
+
+
+{BEGIN print_friendly}
+<span {$printpanel_hiddenattr} data-pageid="{$pageid}" data-brick="printpanel" class="bs-printpanel" id="printpanelblock{$id}">
+	<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" title="{mlang_message WR_PRINT_FRIENDLY}">
+		<span class="glyphicon glyphicon-print" ></span>
+		<span class="caret"></span>
+    </button>
+	<ul class="dropdown-menu pull-right" >
+		<li>
+			<div class="container-fluid" id="print_friendly_scope{$id}">
+				<div class="row">
+					<div class="col-md-4">{mlang_message PPANEL_SCOPE}</div>
+										{BEGIN print_friendly_all}
+					<div class="col-md-8">
+						<label for="printAll{$id}">
+							<input type="radio" id="printAll{$id}" data-href="modx_site_content_child_print.php?all=1&amp;{$crosstable_attrs}" name="printScope">
+							{mlang_message PPANEL_ALL_PAGES}
+						</label>
+					</div>
+					{END print_friendly_all}
+				</div>
+				<div class="row">
+					<div class="col-md-4">&nbsp;</div>
+					<div class="col-md-8">
+						<label for="printPage{$id}">
+							<input type="radio" id="printPage{$id}" data-href="modx_site_content_child_print.php?{$crosstable_attrs}" name="printScope" checked>
+							{mlang_message PPANEL_THIS_PAGE}
+						</label>
+					</div>
+				</div>
+								<div class="row">
+					<div class="col-md-4">&nbsp;</div>
+					<div class="col-md-8">
+						<label for="printSelection{$id}" style="color: gray;">
+							<input type="radio" id="printSelection{$id}" name="printScope" disabled="disabled">
+							{mlang_message PPANEL_SELECTED}
+						</label>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li class="divider" role="separator"></li>
+
+		
+				<li>	
+			<div class="rnr-printdetails">
+				<label for="printPerPage{$id}">
+											{mlang_message RECORDS_PP}:
+				</label>
+				<input type="number" id="printPerPage{$id}" value="{$print_recspp}" class="rnr-printrecspp">		
+			</div>
+		</li>
+		<li class="divider" role="separator"></li>
+		<li class="rnr-printbutton">				
+			<button type="button" class="btn btn-primary" id="print_friendly_button{$id}" >{mlang_message PPANEL_PRINT}</button>			
+		</li>
+	</ul>	
+</span>
+
+{END print_friendly}
+
+
+{BEGIN field_hide_panel}
+<div {$bsfieldhidepanel_hiddenattr} data-pageid="{$pageid}" data-brick="bsfieldhidepanel" id="fildhidepanel{$id}" class="keep-open btn-group" title="{mlang_message SHOW_HIDE_COLUMNS}">
+	<button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button"><i class="glyphicon glyphicon-th-list"></i> <span class="caret"></span></button>
+	<ul role="menu" class="dropdown-menu dropdown-left">
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_link" checked="checked" value="1" data-field="link">
+			  <span>{$label modx_site_content_child link}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_url" checked="checked" value="1" data-field="url">
+			  <span>{$label modx_site_content_child url}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_content" checked="checked" value="1" data-field="content">
+			  <span>{$label modx_site_content_child content}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_id" checked="checked" value="1" data-field="id">
+			  <span>{$label modx_site_content_child id}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_menutitle" checked="checked" value="1" data-field="menutitle">
+			  <span>{$label modx_site_content_child menutitle}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_longtitle" checked="checked" value="1" data-field="longtitle">
+			  <span>{$label modx_site_content_child longtitle}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_pagetitle" checked="checked" value="1" data-field="pagetitle">
+			  <span>{$label modx_site_content_child pagetitle}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_template" checked="checked" value="1" data-field="template">
+			  <span>{$label modx_site_content_child template}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_description" checked="checked" value="1" data-field="description">
+			  <span>{$label modx_site_content_child description}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_alias" checked="checked" value="1" data-field="alias">
+			  <span>{$label modx_site_content_child alias}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_alias_visible" checked="checked" value="1" data-field="alias_visible">
+			  <span>{$label modx_site_content_child alias_visible}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_published" checked="checked" value="1" data-field="published">
+			  <span>{$label modx_site_content_child published}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_menuindex" checked="checked" value="1" data-field="menuindex">
+			  <span>{$label modx_site_content_child menuindex}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_modx_site_snippet_id" checked="checked" value="1" data-field="modx_site_snippet_id">
+			  <span>{$label modx_site_content_child modx_site_snippet_id}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_modex_site_htmlsnippet_id" checked="checked" value="1" data-field="modex_site_htmlsnippet_id">
+			  <span>{$label modx_site_content_child modex_site_htmlsnippet_id}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_type" checked="checked" value="1" data-field="type">
+			  <span>{$label modx_site_content_child type}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_link_attributes" checked="checked" value="1" data-field="link_attributes">
+			  <span>{$label modx_site_content_child link_attributes}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_parent" checked="checked" value="1" data-field="parent">
+			  <span>{$label modx_site_content_child parent}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_searchable" checked="checked" value="1" data-field="searchable">
+			  <span>{$label modx_site_content_child searchable}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_cacheable" checked="checked" value="1" data-field="cacheable">
+			  <span>{$label modx_site_content_child cacheable}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+	</ul>
+</div>
+
+{END field_hide_panel}
+
+
+
+</div>
+{END container_gridinfo}
+
+
+
+
+
+
+
+
+{BEGIN container_gridinfo_sort}
+<div {$gridinfo_sort_chiddenattr} data-pageid="{$pageid}" data-container="gridinfo_sort" class=" bottom-margin pull-right text-right col-md-12 "> 
+
+{BEGIN reorder_records}
+<div {$reorder_records_hiddenattr} data-pageid="{$pageid}" data-brick="reorder_records" class="form-inline sortby-ctrl">
+{mlang_message SORT_BY}&nbsp;{$sortByDropdown}
+</div>
+
+{END reorder_records}
+
+
+
+</div>
+{END container_gridinfo_sort}
+
+
+
+
+
+
+</div>{END container_gridcontrols}
+
+
+
+{BEGIN container_center}
+<div {$center_chiddenattr} data-pageid="{$pageid}" data-container="center" class="    "> 
+
+
+
+
+{BEGIN container_grid}
+<div {$grid_chiddenattr} data-pageid="{$pageid}" data-container="grid" class="bs-grid    "> 
+
+{BEGIN grid_block}
+	<style>
+	.bs-gridcell[data-field=id]:before {
+		content: "{$label modx_site_content_child id}";
+	}
+	.bs-gridcell[data-field=url]:before {
+		content: "{$label modx_site_content_child url}";
+	}
+	.bs-gridcell[data-field=link]:before {
+		content: "{$label modx_site_content_child link}";
+	}
+	.bs-gridcell[data-field=type]:before {
+		content: "{$label modx_site_content_child type}";
+	}
+	.bs-gridcell[data-field=contentType]:before {
+		content: "{$label modx_site_content_child contentType}";
+	}
+	.bs-gridcell[data-field=pagetitle]:before {
+		content: "{$label modx_site_content_child pagetitle}";
+	}
+	.bs-gridcell[data-field=longtitle]:before {
+		content: "{$label modx_site_content_child longtitle}";
+	}
+	.bs-gridcell[data-field=description]:before {
+		content: "{$label modx_site_content_child description}";
+	}
+	.bs-gridcell[data-field=alias]:before {
+		content: "{$label modx_site_content_child alias}";
+	}
+	.bs-gridcell[data-field=link_attributes]:before {
+		content: "{$label modx_site_content_child link_attributes}";
+	}
+	.bs-gridcell[data-field=published]:before {
+		content: "{$label modx_site_content_child published}";
+	}
+	.bs-gridcell[data-field=pub_date]:before {
+		content: "{$label modx_site_content_child pub_date}";
+	}
+	.bs-gridcell[data-field=unpub_date]:before {
+		content: "{$label modx_site_content_child unpub_date}";
+	}
+	.bs-gridcell[data-field=parent]:before {
+		content: "{$label modx_site_content_child parent}";
+	}
+	.bs-gridcell[data-field=isfolder]:before {
+		content: "{$label modx_site_content_child isfolder}";
+	}
+	.bs-gridcell[data-field=introtext]:before {
+		content: "{$label modx_site_content_child introtext}";
+	}
+	.bs-gridcell[data-field=content]:before {
+		content: "{$label modx_site_content_child content}";
+	}
+	.bs-gridcell[data-field=richtext]:before {
+		content: "{$label modx_site_content_child richtext}";
+	}
+	.bs-gridcell[data-field=template]:before {
+		content: "{$label modx_site_content_child template}";
+	}
+	.bs-gridcell[data-field=menuindex]:before {
+		content: "{$label modx_site_content_child menuindex}";
+	}
+	.bs-gridcell[data-field=searchable]:before {
+		content: "{$label modx_site_content_child searchable}";
+	}
+	.bs-gridcell[data-field=cacheable]:before {
+		content: "{$label modx_site_content_child cacheable}";
+	}
+	.bs-gridcell[data-field=createdby]:before {
+		content: "{$label modx_site_content_child createdby}";
+	}
+	.bs-gridcell[data-field=createdon]:before {
+		content: "{$label modx_site_content_child createdon}";
+	}
+	.bs-gridcell[data-field=editedby]:before {
+		content: "{$label modx_site_content_child editedby}";
+	}
+	.bs-gridcell[data-field=editedon]:before {
+		content: "{$label modx_site_content_child editedon}";
+	}
+	.bs-gridcell[data-field=deleted]:before {
+		content: "{$label modx_site_content_child deleted}";
+	}
+	.bs-gridcell[data-field=deletedon]:before {
+		content: "{$label modx_site_content_child deletedon}";
+	}
+	.bs-gridcell[data-field=deletedby]:before {
+		content: "{$label modx_site_content_child deletedby}";
+	}
+	.bs-gridcell[data-field=publishedon]:before {
+		content: "{$label modx_site_content_child publishedon}";
+	}
+	.bs-gridcell[data-field=publishedby]:before {
+		content: "{$label modx_site_content_child publishedby}";
+	}
+	.bs-gridcell[data-field=menutitle]:before {
+		content: "{$label modx_site_content_child menutitle}";
+	}
+	.bs-gridcell[data-field=donthit]:before {
+		content: "{$label modx_site_content_child donthit}";
+	}
+	.bs-gridcell[data-field=haskeywords]:before {
+		content: "{$label modx_site_content_child haskeywords}";
+	}
+	.bs-gridcell[data-field=hasmetatags]:before {
+		content: "{$label modx_site_content_child hasmetatags}";
+	}
+	.bs-gridcell[data-field=privateweb]:before {
+		content: "{$label modx_site_content_child privateweb}";
+	}
+	.bs-gridcell[data-field=privatemgr]:before {
+		content: "{$label modx_site_content_child privatemgr}";
+	}
+	.bs-gridcell[data-field=content_dispo]:before {
+		content: "{$label modx_site_content_child content_dispo}";
+	}
+	.bs-gridcell[data-field=hidemenu]:before {
+		content: "{$label modx_site_content_child hidemenu}";
+	}
+	.bs-gridcell[data-field=alias_visible]:before {
+		content: "{$label modx_site_content_child alias_visible}";
+	}
+	.bs-gridcell[data-field=modex_site_htmlsnippet_id]:before {
+		content: "{$label modx_site_content_child modex_site_htmlsnippet_id}";
+	}
+	.bs-gridcell[data-field=modx_site_snippet_id]:before {
+		content: "{$label modx_site_content_child modx_site_snippet_id}";
+	}
+</style>
+<table {$grid_hiddenattr} data-pageid="{$pageid}" data-brick="grid" class="table {$grid_classes} bs-flexgrid rnr-b-grid rnr-gridtable" cellpadding="0" >
+	<thead>
+										{BEGIN grid_header}
+								<tr class="rnr-toprow {$gridHeader_class}" >
+									{BEGIN record_header}
+									{BEGIN listIcons_column}
+									<th iEditCont="all">&nbsp;</th>
+									{END listIcons_column}	
+
+																		{BEGIN checkbox_column}
+									<th class="">
+										<input type="checkbox" {$checkboxheader_attrs}>
+									</th>
+									{END checkbox_column}
+
+																		
+									{BEGIN link_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$link_class}" data-field=link>
+									{BEGIN link_fieldheader}
+																				<span {$link_orderlinkattrs}>
+											{$label modx_site_content_child link}
+										</span>
+									{END link_fieldheader}
+									</th>
+									{END link_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN url_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$url_class}" data-field=url>
+									{BEGIN url_fieldheader}
+																				<span {$url_orderlinkattrs}>
+											{$label modx_site_content_child url}
+										</span>
+									{END url_fieldheader}
+									</th>
+									{END url_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN content_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$content_class}" data-field=content>
+									{BEGIN content_fieldheader}
+																				<span {$content_orderlinkattrs}>
+											{$label modx_site_content_child content}
+										</span>
+									{END content_fieldheader}
+									</th>
+									{END content_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN id_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$id_class}" data-field=id>
+									{BEGIN id_fieldheader}
+																				<span {$id_orderlinkattrs}>
+											{$label modx_site_content_child id}
+										</span>
+									{END id_fieldheader}
+									</th>
+									{END id_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN menutitle_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$menutitle_class}" data-field=menutitle>
+									{BEGIN menutitle_fieldheader}
+																				<span {$menutitle_orderlinkattrs}>
+											{$label modx_site_content_child menutitle}
+										</span>
+									{END menutitle_fieldheader}
+									</th>
+									{END menutitle_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN longtitle_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$longtitle_class}" data-field=longtitle>
+									{BEGIN longtitle_fieldheader}
+																				<span {$longtitle_orderlinkattrs}>
+											{$label modx_site_content_child longtitle}
+										</span>
+									{END longtitle_fieldheader}
+									</th>
+									{END longtitle_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN pagetitle_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$pagetitle_class}" data-field=pagetitle>
+									{BEGIN pagetitle_fieldheader}
+																				<span {$pagetitle_orderlinkattrs}>
+											{$label modx_site_content_child pagetitle}
+										</span>
+									{END pagetitle_fieldheader}
+									</th>
+									{END pagetitle_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN template_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$template_class}" data-field=template>
+									{BEGIN template_fieldheader}
+																				<span {$template_orderlinkattrs}>
+											{$label modx_site_content_child template}
+										</span>
+									{END template_fieldheader}
+									</th>
+									{END template_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN description_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$description_class}" data-field=description>
+									{BEGIN description_fieldheader}
+																				<span {$description_orderlinkattrs}>
+											{$label modx_site_content_child description}
+										</span>
+									{END description_fieldheader}
+									</th>
+									{END description_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN alias_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$alias_class}" data-field=alias>
+									{BEGIN alias_fieldheader}
+																				<span {$alias_orderlinkattrs}>
+											{$label modx_site_content_child alias}
+										</span>
+									{END alias_fieldheader}
+									</th>
+									{END alias_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN alias_visible_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$alias_visible_class}" data-field=alias_visible>
+									{BEGIN alias_visible_fieldheader}
+																				<span {$alias_visible_orderlinkattrs}>
+											{$label modx_site_content_child alias_visible}
+										</span>
+									{END alias_visible_fieldheader}
+									</th>
+									{END alias_visible_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN published_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$published_class}" data-field=published>
+									{BEGIN published_fieldheader}
+																				<span {$published_orderlinkattrs}>
+											{$label modx_site_content_child published}
+										</span>
+									{END published_fieldheader}
+									</th>
+									{END published_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN menuindex_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$menuindex_class}" data-field=menuindex>
+									{BEGIN menuindex_fieldheader}
+																				<span {$menuindex_orderlinkattrs}>
+											{$label modx_site_content_child menuindex}
+										</span>
+									{END menuindex_fieldheader}
+									</th>
+									{END menuindex_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN modx_site_snippet_id_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$modx_site_snippet_id_class}" data-field=modx_site_snippet_id>
+									{BEGIN modx_site_snippet_id_fieldheader}
+																				<span {$modx_site_snippet_id_orderlinkattrs}>
+											{$label modx_site_content_child modx_site_snippet_id}
+										</span>
+									{END modx_site_snippet_id_fieldheader}
+									</th>
+									{END modx_site_snippet_id_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN modex_site_htmlsnippet_id_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$modex_site_htmlsnippet_id_class}" data-field=modex_site_htmlsnippet_id>
+									{BEGIN modex_site_htmlsnippet_id_fieldheader}
+																				<span {$modex_site_htmlsnippet_id_orderlinkattrs}>
+											{$label modx_site_content_child modex_site_htmlsnippet_id}
+										</span>
+									{END modex_site_htmlsnippet_id_fieldheader}
+									</th>
+									{END modex_site_htmlsnippet_id_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN type_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$type_class}" data-field=type>
+									{BEGIN type_fieldheader}
+																				<span {$type_orderlinkattrs}>
+											{$label modx_site_content_child type}
+										</span>
+									{END type_fieldheader}
+									</th>
+									{END type_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN link_attributes_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$link_attributes_class}" data-field=link_attributes>
+									{BEGIN link_attributes_fieldheader}
+																				<span {$link_attributes_orderlinkattrs}>
+											{$label modx_site_content_child link_attributes}
+										</span>
+									{END link_attributes_fieldheader}
+									</th>
+									{END link_attributes_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN parent_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$parent_class}" data-field=parent>
+									{BEGIN parent_fieldheader}
+																				<span {$parent_orderlinkattrs}>
+											{$label modx_site_content_child parent}
+										</span>
+									{END parent_fieldheader}
+									</th>
+									{END parent_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN searchable_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$searchable_class}" data-field=searchable>
+									{BEGIN searchable_fieldheader}
+																				<span {$searchable_orderlinkattrs}>
+											{$label modx_site_content_child searchable}
+										</span>
+									{END searchable_fieldheader}
+									</th>
+									{END searchable_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN cacheable_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$cacheable_class}" data-field=cacheable>
+									{BEGIN cacheable_fieldheader}
+																				<span {$cacheable_orderlinkattrs}>
+											{$label modx_site_content_child cacheable}
+										</span>
+									{END cacheable_fieldheader}
+									</th>
+									{END cacheable_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN endrecordheader_block}
+									<th class="rnr-cs">&nbsp;</th>
+									
+									{END endrecordheader_block}
+									
+									{END record_header}
+									
+								</tr>
+								{END grid_header}
+
+	</thead>
+	<tbody>	
+		{BEGIN grid_row}
+<tr class="{$rowclass} bs-gridrow" {$rowattrs} {$rowstyle}>
+	{BEGIN grid_record}
+	{BEGIN listIcons_column}
+	<td class="bs-gridicons" iEditCont="all" {$rowstyle} {$recordattrs}>
+		{BEGIN edit_column}
+	{BEGIN edit_link}
+			<a class="glyphicon glyphicon-pencil" {$editlink_attrs} title="{mlang_message EDIT}"></a>
+	{END edit_link}
+	{END edit_column}
+
+		{BEGIN inlineedit_column}
+	{BEGIN inlineedit_link}
+			<a class="glyphicon glyphicon-edit" {$inlineeditlink_attrs} title="{mlang_message INLINE_EDIT}"></a>
+	{END inlineedit_link}
+	{END inlineedit_column}
+
+		{BEGIN copy_column}
+	{BEGIN copy_link}
+			<a class="glyphicon glyphicon-duplicate" {$copylink_attrs} title="{mlang_message COPY}"></a>
+	{END copy_link}
+	{END copy_column}
+
+		{BEGIN view_column}
+	{BEGIN view_link}
+			<a class="glyphicon glyphicon-search" {$viewlink_attrs} title="{mlang_message VIEW}"></a>
+	{END view_link}
+	{END view_column}
+	</td>	
+	{END listIcons_column}	
+
+		{BEGIN checkbox_column}
+	<td  iEditCont="checkBox" class="bs-gridcheckbox" {$rowstyle} {$recordattrs}>
+	{BEGIN checkbox}
+	<input type="checkbox" {$checkbox_attrs}>
+	{END checkbox}
+	</td>
+	{END checkbox_column}
+
+	
+
+	{BEGIN link_fieldcolumn}
+	<td class="bs-gridcell {$link_class}"  data-field=link {$rowstyle} {$recordattrs}>
+		{$link_value}
+	</td>
+{END link_fieldcolumn}
+
+
+	{BEGIN url_fieldcolumn}
+	<td class="bs-gridcell {$url_class}"  data-field=url {$rowstyle} {$recordattrs}>
+		{$url_value}
+	</td>
+{END url_fieldcolumn}
+
+
+	{BEGIN content_fieldcolumn}
+	<td class="bs-gridcell {$content_class}"  data-field=content {$rowstyle} {$recordattrs}>
+		{$content_value}
+	</td>
+{END content_fieldcolumn}
+
+
+	{BEGIN id_fieldcolumn}
+	<td class="bs-gridcell {$id_class}"  data-field=id {$rowstyle} {$recordattrs}>
+		{$id_value}
+	</td>
+{END id_fieldcolumn}
+
+
+	{BEGIN menutitle_fieldcolumn}
+	<td class="bs-gridcell {$menutitle_class}"  data-field=menutitle {$rowstyle} {$recordattrs}>
+		{$menutitle_value}
+	</td>
+{END menutitle_fieldcolumn}
+
+
+	{BEGIN longtitle_fieldcolumn}
+	<td class="bs-gridcell {$longtitle_class}"  data-field=longtitle {$rowstyle} {$recordattrs}>
+		{$longtitle_value}
+	</td>
+{END longtitle_fieldcolumn}
+
+
+	{BEGIN pagetitle_fieldcolumn}
+	<td class="bs-gridcell {$pagetitle_class}"  data-field=pagetitle {$rowstyle} {$recordattrs}>
+		{$pagetitle_value}
+	</td>
+{END pagetitle_fieldcolumn}
+
+
+	{BEGIN template_fieldcolumn}
+	<td class="bs-gridcell {$template_class}"  data-field=template {$rowstyle} {$recordattrs}>
+		{$template_value}
+	</td>
+{END template_fieldcolumn}
+
+
+	{BEGIN description_fieldcolumn}
+	<td class="bs-gridcell {$description_class}"  data-field=description {$rowstyle} {$recordattrs}>
+		{$description_value}
+	</td>
+{END description_fieldcolumn}
+
+
+	{BEGIN alias_fieldcolumn}
+	<td class="bs-gridcell {$alias_class}"  data-field=alias {$rowstyle} {$recordattrs}>
+		{$alias_value}
+	</td>
+{END alias_fieldcolumn}
+
+
+	{BEGIN alias_visible_fieldcolumn}
+	<td class="bs-gridcell {$alias_visible_class}"  data-field=alias_visible {$rowstyle} {$recordattrs}>
+		{$alias_visible_value}
+	</td>
+{END alias_visible_fieldcolumn}
+
+
+	{BEGIN published_fieldcolumn}
+	<td class="bs-gridcell {$published_class}"  data-field=published {$rowstyle} {$recordattrs}>
+		{$published_value}
+	</td>
+{END published_fieldcolumn}
+
+
+	{BEGIN menuindex_fieldcolumn}
+	<td class="bs-gridcell {$menuindex_class}"  data-field=menuindex {$rowstyle} {$recordattrs}>
+		{$menuindex_value}
+	</td>
+{END menuindex_fieldcolumn}
+
+
+	{BEGIN modx_site_snippet_id_fieldcolumn}
+	<td class="bs-gridcell {$modx_site_snippet_id_class}"  data-field=modx_site_snippet_id {$rowstyle} {$recordattrs}>
+		{$modx_site_snippet_id_value}
+	</td>
+{END modx_site_snippet_id_fieldcolumn}
+
+
+	{BEGIN modex_site_htmlsnippet_id_fieldcolumn}
+	<td class="bs-gridcell {$modex_site_htmlsnippet_id_class}"  data-field=modex_site_htmlsnippet_id {$rowstyle} {$recordattrs}>
+		{$modex_site_htmlsnippet_id_value}
+	</td>
+{END modex_site_htmlsnippet_id_fieldcolumn}
+
+
+	{BEGIN type_fieldcolumn}
+	<td class="bs-gridcell {$type_class}"  data-field=type {$rowstyle} {$recordattrs}>
+		{$type_value}
+	</td>
+{END type_fieldcolumn}
+
+
+	{BEGIN link_attributes_fieldcolumn}
+	<td class="bs-gridcell {$link_attributes_class}"  data-field=link_attributes {$rowstyle} {$recordattrs}>
+		{$link_attributes_value}
+	</td>
+{END link_attributes_fieldcolumn}
+
+
+	{BEGIN parent_fieldcolumn}
+	<td class="bs-gridcell {$parent_class}"  data-field=parent {$rowstyle} {$recordattrs}>
+		{$parent_value}
+	</td>
+{END parent_fieldcolumn}
+
+
+	{BEGIN searchable_fieldcolumn}
+	<td class="bs-gridcell {$searchable_class}"  data-field=searchable {$rowstyle} {$recordattrs}>
+		{$searchable_value}
+	</td>
+{END searchable_fieldcolumn}
+
+
+	{BEGIN cacheable_fieldcolumn}
+	<td class="bs-gridcell {$cacheable_class}"  data-field=cacheable {$rowstyle} {$recordattrs}>
+		{$cacheable_value}
+	</td>
+{END cacheable_fieldcolumn}
+
+	{BEGIN endrecord_block}
+	<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+	{END endrecord_block}
+									
+	{END grid_record}
+
+</tr>
+{END grid_row}
+	</tbody>
+	<tfoot>
+										
+	</tfoot>
+</table>
+
+
+
+{END grid_block}
+
+
+
+</div>
+{END container_grid}
+
+
+
+
+
+
+</div>
+{END container_center}
+
+
+
+{BEGIN container_pagination}
+<div {$pagination_chiddenattr} data-pageid="{$pageid}" data-container="pagination" class="  text-center col-md-12 "> 
+
+{BEGIN pagination_block}
+<div {$pagination_hiddenattr} data-pageid="{$pageid}" data-brick="pagination">
+{$pagination}
+</div>
+{END pagination_block}
+
+
+
+</div>
+{END container_pagination}
+
+
+        </div>
+        <DIV class="bs-right">
+          
+        </div>
+      </div>
+      
+      {$footer}
+    {END body}
+  </body>
+</html>

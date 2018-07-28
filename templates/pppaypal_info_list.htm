@@ -1,0 +1,459 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-list" {$bodyattrs}>
+	{BEGIN body}
+<style>
+{$containerCss}
+</style>
+<div class="sidebar bs-fixed clearfix mCustomScrollbar" data-mcs-theme="minimal-dark" {$blockattr_left}>
+	<div class="sidebar-contents mCustomScrollBox mCS-minimal-dark mCSB_vertical mCSB_outside">
+		
+
+{BEGIN container_logo}
+<div {$logo_chiddenattr} data-pageid="{$pageid}" data-container="logo" class=" bs-sidebarlogo   "> 
+
+{BEGIN logo_block}
+<a href="{$home_link}" {$logo_hiddenattr} data-pageid="{$pageid}" data-brick="logo" class="navbar-brand" >{$logo}</a>
+{END logo_block}
+
+
+
+</div>
+{END container_logo}
+
+
+
+{BEGIN container_hdr}
+<div {$hdr_chiddenattr} data-pageid="{$pageid}" data-container="hdr" class=" navbar-default clearfix   "> 
+
+{BEGIN collapse_block}
+<button {$bsnavbarcollapse_hiddenattr} data-pageid="{$pageid}" data-brick="bsnavbarcollapse" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target=".bs-navcontrolled">	
+	<span class="sr-only">Toggle navigation</span>	
+	<span class="icon-bar"></span>					
+</button>												
+
+{END collapse_block}
+
+
+
+</div>
+{END container_hdr}
+
+{BEGIN container_sidemenu}<div {$sidemenu_chiddenattr} data-pageid="{$pageid}" data-container="sidemenu" class="bs-navform navbar-collapse sidebar-menu bs-hidden-xs bs-navcontrolled" aria-expanded="false" >												   
+{BEGIN menu_block}
+{$menu main}
+
+{END menu_block}
+
+												</div>						{END container_sidemenu}
+
+
+	</div>
+</div>	
+<div class="bs-wrapper">
+	<div class="bs-fixedheader" id="fixedheader{$id}">
+		{BEGIN container_menu}<nav {$menu_chiddenattr} data-pageid="{$pageid}" data-container="menu" class="navbar navbar-default bs-fullwidth-navbar">					
+
+
+
+{BEGIN container_bc}
+<div {$bc_chiddenattr} data-pageid="{$pageid}" data-container="bc" class=" navbar-form navbar-left   "> 
+
+{BEGIN breadcrumbs}
+<ol class="breadcrumb">
+<li ><a href="{$home_link}"><span class="glyphicon glyphicon-home"></span></a>{$crumb_dropdown}</li>
+{BEGIN crumb}
+  <li class="{$crumb_item_class}">
+{BEGIN crumb_title_link}
+	<a {$crumb_attrs}>{$crumb_title}</a>
+{END crumb_title_link}
+{BEGIN crumb_title_span}
+	<span {$crumb_attrs}>{$crumb_title}</span>
+{END crumb_title_span}	
+	{$crumb_dropdown}
+  </li>
+{END crumb}
+</ol>
+{END breadcrumbs}
+
+
+
+</div>
+{END container_bc}
+
+
+
+
+
+
+{BEGIN container_menu_1}<div {$menu_1_chiddenattr} data-pageid="{$pageid}" data-container="menu_1" class="bs-navform navbar-collapse bs-hidden-xs bs-navcontrolled" aria-expanded="false" >												   
+
+
+
+{BEGIN container_more}
+<div {$more_chiddenattr} data-pageid="{$pageid}" data-container="more" class=" navbar-right navbar-form   "> 
+
+{BEGIN more_list}
+<div {$morebutton_hiddenattr} data-pageid="{$pageid}" data-brick="morebutton" class="btn-group bs-navsection">
+	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		<span class="glyphicon glyphicon-cog"></span>
+		<span class="caret"></span>
+	</button>
+	<ul class="dropdown-menu">
+		
+				
+				
+		
+		
+				
+				
+				
+				
+		
+		
+					<li role="separator" class="divider"></li>
+				{BEGIN EnglishLANGLINK}
+				<li><a href="#" data-lang="English" class="rnr-langlink">
+					{BEGIN EnglishLANGLINK_ACTIVE}<span class="glyphicon glyphicon-ok">&nbsp;</span>{END EnglishLANGLINK_ACTIVE}
+					English</a></li>
+				{END EnglishLANGLINK}
+				{BEGIN JapaneseLANGLINK}
+				<li><a href="#" data-lang="Japanese" class="rnr-langlink">
+					{BEGIN JapaneseLANGLINK_ACTIVE}<span class="glyphicon glyphicon-ok">&nbsp;</span>{END JapaneseLANGLINK_ACTIVE}
+					日本語</a></li>
+				{END JapaneseLANGLINK}
+		
+	</ul>  
+</div>
+
+{END more_list}
+
+
+{BEGIN security_block}
+<span {$loggedas_hiddenattr} data-pageid="{$pageid}" data-brick="loggedas" id="login_block{$id}" class="bs-navsection">
+	{BEGIN guestloginbutton}
+		<button class="btn btn-info" type="button" {$guestloginlink_attrs}>{mlang_message LOGIN}</button>
+	{END guestloginbutton}
+	{BEGIN loggedas_message} 
+		<span class="dropdown">
+			<button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon-user"></span>	{$username}</button>
+			<ul class="dropdown-menu">
+		{BEGIN logoutbutton}
+				<li><a href="#" {$logoutlink_attrs}>{mlang_message LOG_OUT}</a></li>
+		{END logoutbutton}
+		
+		{BEGIN adminarea_link}
+				<li><a href="admin_rights_list.php" {$adminarealink_attrs}>{mlang_message AA_ADMINAREA}</a></li>
+		{END adminarea_link}
+
+
+	{BEGIN changepwd_link}
+				<li><a href="#" {$changepwdlink_attrs}>{mlang_message CHANGE_PASSWORD}</a></li>
+	{END changepwd_link}
+			</ul>
+		</span>
+	{END loggedas_message}
+</span>
+{END security_block}
+
+
+
+</div>
+{END container_more}
+
+
+
+
+
+
+
+
+{BEGIN container_more_1}
+<div {$more_1_chiddenattr} data-pageid="{$pageid}" data-container="more_1" class=" navbar-right navbar-form   "> 
+
+{BEGIN searchform_block}
+<span {$search_hiddenattr} data-pageid="{$pageid}" data-brick="search" class="form-group">
+
+		
+</span>
+{END searchform_block}
+
+
+
+</div>
+{END container_more_1}
+
+
+
+
+												</div>						{END container_menu_1}
+
+
+									</nav>{END container_menu}
+	</div>	
+	<div class="container-fluid bs-underheader bs-fixedsidebarmain" id="underheader{$id}">
+		{$header}
+		<div class="bs-sidebar-screenbound">
+			
+
+
+
+{BEGIN container_messagerow}
+<div {$messagerow_chiddenattr} data-pageid="{$pageid}" data-container="messagerow" class="    "> 
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-12 "> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">{$message}</div>
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+</div>
+{END container_messagerow}
+
+
+
+{BEGIN container_gridcontrols}
+<div {$gridcontrols_chiddenattr} data-pageid="{$pageid}" data-container="gridcontrols" class=" bs-navcontrolled bs-hidden-xs   "> 
+
+
+
+
+{BEGIN container_add_delete}
+<div {$add_delete_chiddenattr} data-pageid="{$pageid}" data-container="add_delete" class=" bottom-margin  col-md-6 "> 
+
+{BEGIN newrecord_controls_block}
+	
+	
+{END newrecord_controls_block}
+
+
+{BEGIN record_controls_block}
+<span {$recordcontrol_hiddenattr} data-pageid="{$pageid}" data-brick="recordcontrol">
+			</span>
+
+{END record_controls_block}
+
+
+
+</div>
+{END container_add_delete}
+
+
+
+
+
+
+
+
+{BEGIN container_gridinfo}
+<div {$gridinfo_chiddenattr} data-pageid="{$pageid}" data-container="gridinfo" class=" bottom-margin text-right col-md-6 "> 
+
+{BEGIN details_found}
+<span {$details_found_hiddenattr} data-pageid="{$pageid}" data-brick="details_found" class="form-inline form-inline-always">
+	{$records_indicator}
+	<span>
+	{BEGIN recordspp_block}
+			{$recsPerPage}
+	{END recordspp_block}
+	</span>
+</span>
+{END details_found}
+
+
+
+
+
+</div>
+{END container_gridinfo}
+
+
+
+
+
+
+
+</div>
+{END container_gridcontrols}
+
+
+		</div>
+		<div></div>
+		<div class="bs-sidebar-screenbound bs-minwidth">
+			
+
+{BEGIN container_center}
+<div {$center_chiddenattr} data-pageid="{$pageid}" data-container="center" class="    "> 
+
+
+
+
+{BEGIN container_grid}
+<div {$grid_chiddenattr} data-pageid="{$pageid}" data-container="grid" class="bs-grid    "> 
+
+{BEGIN grid_block}
+	<div class="bs-grid-vertical" {$grid_hiddenattr} data-pageid="{$pageid}" data-brick="grid">
+	{BEGIN grid_row}
+		<div class="bs-grid-vertical-row {$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+			{BEGIN grid_vrecord}
+				<div class="bs-columns-1 bs-grid-vertical-cell panel panel-default" {$recordattrs}>
+					{BEGIN grid_recordheader}
+					<div class="panel-heading">
+												{BEGIN edit_column}
+						{BEGIN edit_link}
+													<a  {$editlink_attrs}>{mlang_message EDIT}</a>
+						{END edit_link}
+						{END edit_column}
+
+						
+						
+						
+						
+						
+			{BEGIN dtables_link}
+		
+				<a {$dtables_link_attrs} class="glyphicon glyphicon-th-list {$dtables_link_class}" title="{mlang_message SHOW_DETAILS}"></a>
+		{END dtables_link}
+	
+
+					</div>
+					{END grid_recordheader}
+					<div class="panel-body form-horizontal">
+							{BEGIN StoreName_fieldcolumn}
+							<div class="bs-viewform-group" data-field=StoreName>
+								<label class="bs-view-label text-right col-md-4 {$StoreName_label_class}">{$label pppaypal_info StoreName}</label>
+								<div class="bs-horizontal-value col-md-8 {$StoreName_class}" {$StoreName_style}>{$StoreName_value}</div>
+							</div>
+							{END StoreName_fieldcolumn}
+							{BEGIN Currency_fieldcolumn}
+							<div class="bs-viewform-group" data-field=Currency>
+								<label class="bs-view-label text-right col-md-4 {$Currency_label_class}">{$label pppaypal_info Currency}</label>
+								<div class="bs-horizontal-value col-md-8 {$Currency_class}" {$Currency_style}>{$Currency_value}</div>
+							</div>
+							{END Currency_fieldcolumn}
+							{BEGIN PayPalEmailAddress_fieldcolumn}
+							<div class="bs-viewform-group" data-field=PayPalEmailAddress>
+								<label class="bs-view-label text-right col-md-4 {$PayPalEmailAddress_label_class}">{$label pppaypal_info PayPalEmailAddress}</label>
+								<div class="bs-horizontal-value col-md-8 {$PayPalEmailAddress_class}" {$PayPalEmailAddress_style}>{$PayPalEmailAddress_value}</div>
+							</div>
+							{END PayPalEmailAddress_fieldcolumn}
+							{BEGIN Logo_fieldcolumn}
+							<div class="bs-viewform-group" data-field=Logo>
+								<label class="bs-view-label text-right col-md-4 {$Logo_label_class}">{$label pppaypal_info Logo}</label>
+								<div class="bs-horizontal-value col-md-8 {$Logo_class}" {$Logo_style}>{$Logo_value}</div>
+							</div>
+							{END Logo_fieldcolumn}
+							{BEGIN IPNPage_fieldcolumn}
+							<div class="bs-viewform-group" data-field=IPNPage>
+								<label class="bs-view-label text-right col-md-4 {$IPNPage_label_class}">{$label pppaypal_info IPNPage}</label>
+								<div class="bs-horizontal-value col-md-8 {$IPNPage_class}" {$IPNPage_style}>{$IPNPage_value}</div>
+							</div>
+							{END IPNPage_fieldcolumn}
+							{BEGIN CancelPage_fieldcolumn}
+							<div class="bs-viewform-group" data-field=CancelPage>
+								<label class="bs-view-label text-right col-md-4 {$CancelPage_label_class}">{$label pppaypal_info CancelPage}</label>
+								<div class="bs-horizontal-value col-md-8 {$CancelPage_class}" {$CancelPage_style}>{$CancelPage_value}</div>
+							</div>
+							{END CancelPage_fieldcolumn}
+							{BEGIN SuccessPage_fieldcolumn}
+							<div class="bs-viewform-group" data-field=SuccessPage>
+								<label class="bs-view-label text-right col-md-4 {$SuccessPage_label_class}">{$label pppaypal_info SuccessPage}</label>
+								<div class="bs-horizontal-value col-md-8 {$SuccessPage_class}" {$SuccessPage_style}>{$SuccessPage_value}</div>
+							</div>
+							{END SuccessPage_fieldcolumn}
+							{BEGIN PayPalServer_fieldcolumn}
+							<div class="bs-viewform-group" data-field=PayPalServer>
+								<label class="bs-view-label text-right col-md-4 {$PayPalServer_label_class}">{$label pppaypal_info PayPalServer}</label>
+								<div class="bs-horizontal-value col-md-8 {$PayPalServer_class}" {$PayPalServer_style}>{$PayPalServer_value}</div>
+							</div>
+							{END PayPalServer_fieldcolumn}
+							{BEGIN SMSEmailAddress_fieldcolumn}
+							<div class="bs-viewform-group" data-field=SMSEmailAddress>
+								<label class="bs-view-label text-right col-md-4 {$SMSEmailAddress_label_class}">{$label pppaypal_info SMSEmailAddress}</label>
+								<div class="bs-horizontal-value col-md-8 {$SMSEmailAddress_class}" {$SMSEmailAddress_style}>{$SMSEmailAddress_value}</div>
+							</div>
+							{END SMSEmailAddress_fieldcolumn}
+					</div>
+				</div>
+			{END grid_vrecord}
+			{END grid_record}
+		</div>
+	{END grid_row}
+</div>
+
+				
+
+
+
+{END grid_block}
+
+
+
+</div>
+{END container_grid}
+
+
+
+
+
+
+</div>
+{END container_center}
+
+
+
+{BEGIN container_pagination}
+<div {$pagination_chiddenattr} data-pageid="{$pageid}" data-container="pagination" class="  text-center col-md-12 "> 
+
+{BEGIN pagination_block}
+<div {$pagination_hiddenattr} data-pageid="{$pageid}" data-brick="pagination">
+{$pagination}
+</div>
+{END pagination_block}
+
+
+
+</div>
+{END container_pagination}
+
+
+		</div>
+	</div>
+</div>
+	
+
+		{$footer}
+	{END body}
+	</body>
+</html>

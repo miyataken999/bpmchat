@@ -1,0 +1,382 @@
+<!doctype html>
+<html  {$html_attrs}>
+  <head>asdfsfs
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      {$pagetitle}
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link REL="stylesheet" href="styles/default.css" type="text/css">
+    {BEGIN rtlCSS}
+      <link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+    {END rtlCSS}
+    {BEGIN styleCSSFiles}
+      <link REL="stylesheet" href="{$stylepath}" type="text/css">
+    {END styleCSSFiles}
+  </head>
+  <BODY class="{$stylename} function-print" {$bodyattrs}>
+    {BEGIN body}
+      {$header}
+      <style>
+        {$containerCss}
+      </style>
+      <DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel PMT_TEST_BUSINESS print}</h2>
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>{mlang_message PAGE1} <span class="rp-pageno">{$pageno}</span> {mlang_message PAGE2} <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="table table-bordered rp-maintable" {$printgrid_hiddenattr} data-pageid="{$pageid}" data-brick="printgrid" >
+	<thead>
+	{BEGIN grid_header}
+		<tr class="{$gridHeader_class}" >
+		{BEGIN record_header}
+			{BEGIN APP_UID_fieldheadercolumn}
+			<th class="{$APP_UID_class}" {$APP_UID_style}  data-field="APP_UID">
+				{$label PMT_TEST_BUSINESS APP_UID}
+			</th>
+			{END APP_UID_fieldheadercolumn}
+			{BEGIN APP_NUMBER_fieldheadercolumn}
+			<th class="{$APP_NUMBER_class}" {$APP_NUMBER_style}  data-field="APP_NUMBER">
+				{$label PMT_TEST_BUSINESS APP_NUMBER}
+			</th>
+			{END APP_NUMBER_fieldheadercolumn}
+			{BEGIN APP_STATUS_fieldheadercolumn}
+			<th class="{$APP_STATUS_class}" {$APP_STATUS_style}  data-field="APP_STATUS">
+				{$label PMT_TEST_BUSINESS APP_STATUS}
+			</th>
+			{END APP_STATUS_fieldheadercolumn}
+			{BEGIN ROW_fieldheadercolumn}
+			<th class="{$ROW_class}" {$ROW_style}  data-field="ROW">
+				{$label PMT_TEST_BUSINESS ROW}
+			</th>
+			{END ROW_fieldheadercolumn}
+			{BEGIN EMPLOYEE_NO_fieldheadercolumn}
+			<th class="{$EMPLOYEE_NO_class}" {$EMPLOYEE_NO_style}  data-field="EMPLOYEE_NO">
+				{$label PMT_TEST_BUSINESS EMPLOYEE_NO}
+			</th>
+			{END EMPLOYEE_NO_fieldheadercolumn}
+			{BEGIN TIME_fieldheadercolumn}
+			<th class="{$TIME_class}" {$TIME_style}  data-field="TIME">
+				{$label PMT_TEST_BUSINESS TIME}
+			</th>
+			{END TIME_fieldheadercolumn}
+			{BEGIN MONTHLY_REPORT_fieldheadercolumn}
+			<th class="{$MONTHLY_REPORT_class}" {$MONTHLY_REPORT_style}  data-field="MONTHLY_REPORT">
+				{$label PMT_TEST_BUSINESS MONTHLY_REPORT}
+			</th>
+			{END MONTHLY_REPORT_fieldheadercolumn}
+			{BEGIN PSEUDONYM_NAME_fieldheadercolumn}
+			<th class="{$PSEUDONYM_NAME_class}" {$PSEUDONYM_NAME_style}  data-field="PSEUDONYM_NAME">
+				{$label PMT_TEST_BUSINESS PSEUDONYM_NAME}
+			</th>
+			{END PSEUDONYM_NAME_fieldheadercolumn}
+			{BEGIN KANJI_NAME_fieldheadercolumn}
+			<th class="{$KANJI_NAME_class}" {$KANJI_NAME_style}  data-field="KANJI_NAME">
+				{$label PMT_TEST_BUSINESS KANJI_NAME}
+			</th>
+			{END KANJI_NAME_fieldheadercolumn}
+			{BEGIN EMPLOYMENT_CLASSIFICATION_fieldheadercolumn}
+			<th class="{$EMPLOYMENT_CLASSIFICATION_class}" {$EMPLOYMENT_CLASSIFICATION_style}  data-field="EMPLOYMENT_CLASSIFICATION">
+				{$label PMT_TEST_BUSINESS EMPLOYMENT_CLASSIFICATION}
+			</th>
+			{END EMPLOYMENT_CLASSIFICATION_fieldheadercolumn}
+			{BEGIN ORDERING_fieldheadercolumn}
+			<th class="{$ORDERING_class}" {$ORDERING_style}  data-field="ORDERING">
+				{$label PMT_TEST_BUSINESS ORDERING}
+			</th>
+			{END ORDERING_fieldheadercolumn}
+			{BEGIN VENDOR_IDSAMPLE_fieldheadercolumn}
+			<th class="{$VENDOR_IDSAMPLE_class}" {$VENDOR_IDSAMPLE_style}  data-field="VENDOR_IDSAMPLE">
+				{$label PMT_TEST_BUSINESS VENDOR_IDSAMPLE}
+			</th>
+			{END VENDOR_IDSAMPLE_fieldheadercolumn}
+			{BEGIN ORDER_DATE_fieldheadercolumn}
+			<th class="{$ORDER_DATE_class}" {$ORDER_DATE_style}  data-field="ORDER_DATE">
+				{$label PMT_TEST_BUSINESS ORDER_DATE}
+			</th>
+			{END ORDER_DATE_fieldheadercolumn}
+			{BEGIN DESIRED_DELIVERY_DATE_fieldheadercolumn}
+			<th class="{$DESIRED_DELIVERY_DATE_class}" {$DESIRED_DELIVERY_DATE_style}  data-field="DESIRED_DELIVERY_DATE">
+				{$label PMT_TEST_BUSINESS DESIRED_DELIVERY_DATE}
+			</th>
+			{END DESIRED_DELIVERY_DATE_fieldheadercolumn}
+			{BEGIN REGISTRATION_DATE_fieldheadercolumn}
+			<th class="{$REGISTRATION_DATE_class}" {$REGISTRATION_DATE_style}  data-field="REGISTRATION_DATE">
+				{$label PMT_TEST_BUSINESS REGISTRATION_DATE}
+			</th>
+			{END REGISTRATION_DATE_fieldheadercolumn}
+			{BEGIN WAREHOUSE_C_fieldheadercolumn}
+			<th class="{$WAREHOUSE_C_class}" {$WAREHOUSE_C_style}  data-field="WAREHOUSE_C">
+				{$label PMT_TEST_BUSINESS WAREHOUSE_C}
+			</th>
+			{END WAREHOUSE_C_fieldheadercolumn}
+			{BEGIN SUMMARY_fieldheadercolumn}
+			<th class="{$SUMMARY_class}" {$SUMMARY_style}  data-field="SUMMARY">
+				{$label PMT_TEST_BUSINESS SUMMARY}
+			</th>
+			{END SUMMARY_fieldheadercolumn}
+			{BEGIN OTHER6_fieldheadercolumn}
+			<th class="{$OTHER6_class}" {$OTHER6_style}  data-field="OTHER6">
+				{$label PMT_TEST_BUSINESS OTHER6}
+			</th>
+			{END OTHER6_fieldheadercolumn}
+			{BEGIN OTHER7_fieldheadercolumn}
+			<th class="{$OTHER7_class}" {$OTHER7_style}  data-field="OTHER7">
+				{$label PMT_TEST_BUSINESS OTHER7}
+			</th>
+			{END OTHER7_fieldheadercolumn}
+			{BEGIN OTHER8_fieldheadercolumn}
+			<th class="{$OTHER8_class}" {$OTHER8_style}  data-field="OTHER8">
+				{$label PMT_TEST_BUSINESS OTHER8}
+			</th>
+			{END OTHER8_fieldheadercolumn}
+			{BEGIN OTHER9_fieldheadercolumn}
+			<th class="{$OTHER9_class}" {$OTHER9_style}  data-field="OTHER9">
+				{$label PMT_TEST_BUSINESS OTHER9}
+			</th>
+			{END OTHER9_fieldheadercolumn}
+			{BEGIN OTHER10_fieldheadercolumn}
+			<th class="{$OTHER10_class}" {$OTHER10_style}  data-field="OTHER10">
+				{$label PMT_TEST_BUSINESS OTHER10}
+			</th>
+			{END OTHER10_fieldheadercolumn}
+			{BEGIN OTHER11_fieldheadercolumn}
+			<th class="{$OTHER11_class}" {$OTHER11_style}  data-field="OTHER11">
+				{$label PMT_TEST_BUSINESS OTHER11}
+			</th>
+			{END OTHER11_fieldheadercolumn}
+			{BEGIN OTHER12_fieldheadercolumn}
+			<th class="{$OTHER12_class}" {$OTHER12_style}  data-field="OTHER12">
+				{$label PMT_TEST_BUSINESS OTHER12}
+			</th>
+			{END OTHER12_fieldheadercolumn}
+			{BEGIN OTHER13_fieldheadercolumn}
+			<th class="{$OTHER13_class}" {$OTHER13_style}  data-field="OTHER13">
+				{$label PMT_TEST_BUSINESS OTHER13}
+			</th>
+			{END OTHER13_fieldheadercolumn}
+			{BEGIN OTHER14_fieldheadercolumn}
+			<th class="{$OTHER14_class}" {$OTHER14_style}  data-field="OTHER14">
+				{$label PMT_TEST_BUSINESS OTHER14}
+			</th>
+			{END OTHER14_fieldheadercolumn}
+			{BEGIN endrecordheader_block}
+			<th class="rnr-cs">&nbsp;</th>
+			{END endrecordheader_block}
+		{END record_header}
+		</tr>
+	{END grid_header}
+	</thead>
+	
+	<tbody>	
+	{BEGIN grid_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+			{BEGIN APP_UID_fieldcolumn}
+			<td  class="{$APP_UID_class}" {$APP_UID_style} {$recordattrs}>
+				{$APP_UID_value}
+			</td>
+			{END APP_UID_fieldcolumn}
+			{BEGIN APP_NUMBER_fieldcolumn}
+			<td  class="{$APP_NUMBER_class}" {$APP_NUMBER_style} {$recordattrs}>
+				{$APP_NUMBER_value}
+			</td>
+			{END APP_NUMBER_fieldcolumn}
+			{BEGIN APP_STATUS_fieldcolumn}
+			<td  class="{$APP_STATUS_class}" {$APP_STATUS_style} {$recordattrs}>
+				{$APP_STATUS_value}
+			</td>
+			{END APP_STATUS_fieldcolumn}
+			{BEGIN ROW_fieldcolumn}
+			<td  class="{$ROW_class}" {$ROW_style} {$recordattrs}>
+				{$ROW_value}
+			</td>
+			{END ROW_fieldcolumn}
+			{BEGIN EMPLOYEE_NO_fieldcolumn}
+			<td  class="{$EMPLOYEE_NO_class}" {$EMPLOYEE_NO_style} {$recordattrs}>
+				{$EMPLOYEE_NO_value}
+			</td>
+			{END EMPLOYEE_NO_fieldcolumn}
+			{BEGIN TIME_fieldcolumn}
+			<td  class="{$TIME_class}" {$TIME_style} {$recordattrs}>
+				{$TIME_value}
+			</td>
+			{END TIME_fieldcolumn}
+			{BEGIN MONTHLY_REPORT_fieldcolumn}
+			<td  class="{$MONTHLY_REPORT_class}" {$MONTHLY_REPORT_style} {$recordattrs}>
+				{$MONTHLY_REPORT_value}
+			</td>
+			{END MONTHLY_REPORT_fieldcolumn}
+			{BEGIN PSEUDONYM_NAME_fieldcolumn}
+			<td  class="{$PSEUDONYM_NAME_class}" {$PSEUDONYM_NAME_style} {$recordattrs}>
+				{$PSEUDONYM_NAME_value}
+			</td>
+			{END PSEUDONYM_NAME_fieldcolumn}
+			{BEGIN KANJI_NAME_fieldcolumn}
+			<td  class="{$KANJI_NAME_class}" {$KANJI_NAME_style} {$recordattrs}>
+				{$KANJI_NAME_value}
+			</td>
+			{END KANJI_NAME_fieldcolumn}
+			{BEGIN EMPLOYMENT_CLASSIFICATION_fieldcolumn}
+			<td  class="{$EMPLOYMENT_CLASSIFICATION_class}" {$EMPLOYMENT_CLASSIFICATION_style} {$recordattrs}>
+				{$EMPLOYMENT_CLASSIFICATION_value}
+			</td>
+			{END EMPLOYMENT_CLASSIFICATION_fieldcolumn}
+			{BEGIN ORDERING_fieldcolumn}
+			<td  class="{$ORDERING_class}" {$ORDERING_style} {$recordattrs}>
+				{$ORDERING_value}
+			</td>
+			{END ORDERING_fieldcolumn}
+			{BEGIN VENDOR_IDSAMPLE_fieldcolumn}
+			<td  class="{$VENDOR_IDSAMPLE_class}" {$VENDOR_IDSAMPLE_style} {$recordattrs}>
+				{$VENDOR_IDSAMPLE_value}
+			</td>
+			{END VENDOR_IDSAMPLE_fieldcolumn}
+			{BEGIN ORDER_DATE_fieldcolumn}
+			<td  class="{$ORDER_DATE_class}" {$ORDER_DATE_style} {$recordattrs}>
+				{$ORDER_DATE_value}
+			</td>
+			{END ORDER_DATE_fieldcolumn}
+			{BEGIN DESIRED_DELIVERY_DATE_fieldcolumn}
+			<td  class="{$DESIRED_DELIVERY_DATE_class}" {$DESIRED_DELIVERY_DATE_style} {$recordattrs}>
+				{$DESIRED_DELIVERY_DATE_value}
+			</td>
+			{END DESIRED_DELIVERY_DATE_fieldcolumn}
+			{BEGIN REGISTRATION_DATE_fieldcolumn}
+			<td  class="{$REGISTRATION_DATE_class}" {$REGISTRATION_DATE_style} {$recordattrs}>
+				{$REGISTRATION_DATE_value}
+			</td>
+			{END REGISTRATION_DATE_fieldcolumn}
+			{BEGIN WAREHOUSE_C_fieldcolumn}
+			<td  class="{$WAREHOUSE_C_class}" {$WAREHOUSE_C_style} {$recordattrs}>
+				{$WAREHOUSE_C_value}
+			</td>
+			{END WAREHOUSE_C_fieldcolumn}
+			{BEGIN SUMMARY_fieldcolumn}
+			<td  class="{$SUMMARY_class}" {$SUMMARY_style} {$recordattrs}>
+				{$SUMMARY_value}
+			</td>
+			{END SUMMARY_fieldcolumn}
+			{BEGIN OTHER6_fieldcolumn}
+			<td  class="{$OTHER6_class}" {$OTHER6_style} {$recordattrs}>
+				{$OTHER6_value}
+			</td>
+			{END OTHER6_fieldcolumn}
+			{BEGIN OTHER7_fieldcolumn}
+			<td  class="{$OTHER7_class}" {$OTHER7_style} {$recordattrs}>
+				{$OTHER7_value}
+			</td>
+			{END OTHER7_fieldcolumn}
+			{BEGIN OTHER8_fieldcolumn}
+			<td  class="{$OTHER8_class}" {$OTHER8_style} {$recordattrs}>
+				{$OTHER8_value}
+			</td>
+			{END OTHER8_fieldcolumn}
+			{BEGIN OTHER9_fieldcolumn}
+			<td  class="{$OTHER9_class}" {$OTHER9_style} {$recordattrs}>
+				{$OTHER9_value}
+			</td>
+			{END OTHER9_fieldcolumn}
+			{BEGIN OTHER10_fieldcolumn}
+			<td  class="{$OTHER10_class}" {$OTHER10_style} {$recordattrs}>
+				{$OTHER10_value}
+			</td>
+			{END OTHER10_fieldcolumn}
+			{BEGIN OTHER11_fieldcolumn}
+			<td  class="{$OTHER11_class}" {$OTHER11_style} {$recordattrs}>
+				{$OTHER11_value}
+			</td>
+			{END OTHER11_fieldcolumn}
+			{BEGIN OTHER12_fieldcolumn}
+			<td  class="{$OTHER12_class}" {$OTHER12_style} {$recordattrs}>
+				{$OTHER12_value}
+			</td>
+			{END OTHER12_fieldcolumn}
+			{BEGIN OTHER13_fieldcolumn}
+			<td  class="{$OTHER13_class}" {$OTHER13_style} {$recordattrs}>
+				{$OTHER13_value}
+			</td>
+			{END OTHER13_fieldcolumn}
+			{BEGIN OTHER14_fieldcolumn}
+			<td  class="{$OTHER14_class}" {$OTHER14_style} {$recordattrs}>
+				{$OTHER14_value}
+			</td>
+			{END OTHER14_fieldcolumn}
+			{BEGIN endrecord_block}
+			<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+			{END endrecord_block}
+		{END grid_record}
+		</tr>
+{END grid_row}
+	</tbody>
+
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+      </div>
+      <DIV class="bs-middle ">
+        <DIV class="bs-topmiddle">
+          
+        </div>
+        <DIV class="bs-left" {$blockattr_left}>
+          
+        </div>
+        <DIV class="bs-center">
+          
+        </div>
+        <DIV class="bs-right">
+          
+        </div>
+      </div>
+      <DIV class="bs-bottom">
+        
+      </div>
+      {$footer}
+    {END body}
+  </body>
+</html>

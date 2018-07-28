@@ -1,0 +1,465 @@
+<!doctype html>
+<html  {$html_attrs}>
+  <head>asdfsfs
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      {$pagetitle}
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link REL="stylesheet" href="styles/default.css" type="text/css">
+    {BEGIN rtlCSS}
+      <link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+    {END rtlCSS}
+    {BEGIN styleCSSFiles}
+      <link REL="stylesheet" href="{$stylepath}" type="text/css">
+    {END styleCSSFiles}
+  </head>
+  <BODY class="{$stylename} function-add" {$bodyattrs}>
+    {BEGIN body}
+      {$header}
+      <style>
+        {$containerCss}
+      </style>
+      <DIV class="bs-top">
+        
+
+{BEGIN container_editpage}
+<div {$editpage_chiddenattr} data-pageid="{$pageid}" data-container="editpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN addheader}
+	<h2 {$addheader_hiddenattr} data-pageid="{$pageid}" data-brick="addheader" >{$pagetitlelabel PMT_MITUMORI1 add}</h2>
+
+{END addheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+		<button class="btn btn-sm btn-default" {$backbutton_attrs}>{mlang_message BACK_TO_LIST}</button>
+{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>{mlang_message VIEW}</button>
+{END view_page_button}
+{BEGIN edit_page_button}
+	<button class="btn btn-sm btn-default" {$edit_page_button_attrs}>{mlang_message EDIT}</button>
+{END edit_page_button}
+</div>
+</div>
+
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+
+</div>
+{END container_editpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$addfields_hiddenattr} data-pageid="{$pageid}" data-brick="addfields" class="form-horizontal" role="form">
+			{BEGIN APP_UID_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_APP_UID}" data-fieldname="APP_UID" data-signal-error-for="APP_UID{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_APP_UID}">
+		{BEGIN APP_UID_label}{$label PMT_MITUMORI1 APP_UID}{END APP_UID_label}
+	</label>
+	<div class="col-md-6" >
+		{$APP_UID_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="APP_UID">
+		<div class="text-muted" >
+		{$tooltip PMT_MITUMORI1 APP_UID}
+		</div>
+	</div>
+</div>
+</div>
+{END APP_UID_fieldblock}
+
+			{BEGIN A_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_A}" data-fieldname="A" data-signal-error-for="A{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_A}">
+		{BEGIN A_label}{$label PMT_MITUMORI1 A}{END A_label}
+	</label>
+	<div class="col-md-6" >
+		{$A_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="A">
+		<div class="text-muted" >
+		{$tooltip PMT_MITUMORI1 A}
+		</div>
+	</div>
+</div>
+</div>
+{END A_fieldblock}
+
+			{BEGIN B_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_B}" data-fieldname="B" data-signal-error-for="B{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_B}">
+		{BEGIN B_label}{$label PMT_MITUMORI1 B}{END B_label}
+	</label>
+	<div class="col-md-6" >
+		{$B_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="B">
+		<div class="text-muted" >
+		{$tooltip PMT_MITUMORI1 B}
+		</div>
+	</div>
+</div>
+</div>
+{END B_fieldblock}
+
+			{BEGIN C_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_C}" data-fieldname="C" data-signal-error-for="C{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_C}">
+		{BEGIN C_label}{$label PMT_MITUMORI1 C}{END C_label}
+	</label>
+	<div class="col-md-6" >
+		{$C_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="C">
+		<div class="text-muted" >
+		{$tooltip PMT_MITUMORI1 C}
+		</div>
+	</div>
+</div>
+</div>
+{END C_fieldblock}
+
+			{BEGIN D_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_D}" data-fieldname="D" data-signal-error-for="D{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_D}">
+		{BEGIN D_label}{$label PMT_MITUMORI1 D}{END D_label}
+	</label>
+	<div class="col-md-6" >
+		{$D_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="D">
+		<div class="text-muted" >
+		{$tooltip PMT_MITUMORI1 D}
+		</div>
+	</div>
+</div>
+</div>
+{END D_fieldblock}
+
+			{BEGIN E_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_E}" data-fieldname="E" data-signal-error-for="E{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_E}">
+		{BEGIN E_label}{$label PMT_MITUMORI1 E}{END E_label}
+	</label>
+	<div class="col-md-6" >
+		{$E_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="E">
+		<div class="text-muted" >
+		{$tooltip PMT_MITUMORI1 E}
+		</div>
+	</div>
+</div>
+</div>
+{END E_fieldblock}
+
+			{BEGIN F_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_F}" data-fieldname="F" data-signal-error-for="F{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_F}">
+		{BEGIN F_label}{$label PMT_MITUMORI1 F}{END F_label}
+	</label>
+	<div class="col-md-6" >
+		{$F_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="F">
+		<div class="text-muted" >
+		{$tooltip PMT_MITUMORI1 F}
+		</div>
+	</div>
+</div>
+</div>
+{END F_fieldblock}
+
+			{BEGIN G_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_G}" data-fieldname="G" data-signal-error-for="G{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_G}">
+		{BEGIN G_label}{$label PMT_MITUMORI1 G}{END G_label}
+	</label>
+	<div class="col-md-6" >
+		{$G_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="G">
+		<div class="text-muted" >
+		{$tooltip PMT_MITUMORI1 G}
+		</div>
+	</div>
+</div>
+</div>
+{END G_fieldblock}
+
+			{BEGIN H_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_H}" data-fieldname="H" data-signal-error-for="H{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_H}">
+		{BEGIN H_label}{$label PMT_MITUMORI1 H}{END H_label}
+	</label>
+	<div class="col-md-6" >
+		{$H_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="H">
+		<div class="text-muted" >
+		{$tooltip PMT_MITUMORI1 H}
+		</div>
+	</div>
+</div>
+</div>
+{END H_fieldblock}
+
+			{BEGIN I_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_I}" data-fieldname="I" data-signal-error-for="I{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_I}">
+		{BEGIN I_label}{$label PMT_MITUMORI1 I}{END I_label}
+	</label>
+	<div class="col-md-6" >
+		{$I_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="I">
+		<div class="text-muted" >
+		{$tooltip PMT_MITUMORI1 I}
+		</div>
+	</div>
+</div>
+</div>
+{END I_fieldblock}
+
+			{BEGIN J_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_J}" data-fieldname="J" data-signal-error-for="J{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_J}">
+		{BEGIN J_label}{$label PMT_MITUMORI1 J}{END J_label}
+	</label>
+	<div class="col-md-6" >
+		{$J_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="J">
+		<div class="text-muted" >
+		{$tooltip PMT_MITUMORI1 J}
+		</div>
+	</div>
+</div>
+</div>
+{END J_fieldblock}
+
+			{BEGIN APP_STATUS_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_APP_STATUS}" data-fieldname="APP_STATUS" data-signal-error-for="APP_STATUS{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_APP_STATUS}">
+		{BEGIN APP_STATUS_label}{$label PMT_MITUMORI1 APP_STATUS}{END APP_STATUS_label}
+	</label>
+	<div class="col-md-6" >
+		{$APP_STATUS_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="APP_STATUS">
+		<div class="text-muted" >
+		{$tooltip PMT_MITUMORI1 APP_STATUS}
+		</div>
+	</div>
+</div>
+</div>
+{END APP_STATUS_fieldblock}
+
+			{BEGIN APP_NUMBER_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_APP_NUMBER}" data-fieldname="APP_NUMBER" data-signal-error-for="APP_NUMBER{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_APP_NUMBER}">
+		{BEGIN APP_NUMBER_label}{$label PMT_MITUMORI1 APP_NUMBER}{END APP_NUMBER_label}
+	</label>
+	<div class="col-md-6" >
+		{$APP_NUMBER_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="APP_NUMBER">
+		<div class="text-muted" >
+		{$tooltip PMT_MITUMORI1 APP_NUMBER}
+		</div>
+	</div>
+</div>
+</div>
+{END APP_NUMBER_fieldblock}
+
+			
+		
+
+
+
+
+
+{BEGIN details_PMT_SUBCONTRACTORS}
+<div data-pageid="1" class="bs-details"> 
+<div class="panel panel-info details-grid">
+
+<div class="panel-heading">
+	<h4 class="panel-title">{$caption PMT_SUBCONTRACTORS}
+		<span>
+{BEGIN details_inlineadd_PMT_SUBCONTRACTORS_link}
+			<button type="button" class="btn btn-xs btn-info" {$details_inlineadd_PMT_SUBCONTRACTORS_attrs}>{mlang_message INLINE_ADD}</button>
+{END details_inlineadd_PMT_SUBCONTRACTORS_link}		
+{BEGIN details_add_PMT_SUBCONTRACTORS_link}
+			<button type="button" class="btn btn-xs btn-info" {$details_add_PMT_SUBCONTRACTORS_attrs}>{mlang_message ADD_NEW}</button>
+{END details_add_PMT_SUBCONTRACTORS_link}
+{BEGIN details_edit_PMT_SUBCONTRACTORS_link}
+			<button type="button" class="btn btn-xs btn-info" disabled {$details_edit_PMT_SUBCONTRACTORS_attrs}>{mlang_message EDIT}</button>
+{END details_edit_PMT_SUBCONTRACTORS_link}
+{BEGIN details_updateselected_PMT_SUBCONTRACTORS_link}
+			<button type="button" class="btn btn-xs btn-info" disabled {$details_updateselected_PMT_SUBCONTRACTORS_attrs}>{mlang_message UPDATE_SELECTED}</button>
+{END details_updateselected_PMT_SUBCONTRACTORS_link}
+
+
+{BEGIN details_delete_PMT_SUBCONTRACTORS_link}
+			<button type="button" class="btn btn-xs btn-info " disabled {$details_delete_PMT_SUBCONTRACTORS_attrs}>{mlang_message DELETE}</button>
+{END details_delete_PMT_SUBCONTRACTORS_link}
+
+{BEGIN saveall_PMT_SUBCONTRACTORS_link}
+			<button type="button" class="btn btn-xs btn-info" {$savealllink_PMT_SUBCONTRACTORS_attrs} {$savealllink_PMT_SUBCONTRACTORS_span}>{mlang_message SAVE_ALL}</button>
+{END saveall_PMT_SUBCONTRACTORS_link}
+{BEGIN cancelall_PMT_SUBCONTRACTORS_link}
+			<button type="button" class="btn btn-xs btn-info" {$cancelalllink_PMT_SUBCONTRACTORS_attrs} {$cancelalllink_PMT_SUBCONTRACTORS_span}>{mlang_message CANCEL_ALL}</button>
+{END cancelall_PMT_SUBCONTRACTORS_link}
+		</span>
+	</h4>
+</div>
+<div class="panel-body">
+	{$displayDetailTable_PMT_SUBCONTRACTORS}
+</div>
+</div>
+</div>
+{END details_PMT_SUBCONTRACTORS}
+	
+	
+	
+
+
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN addbuttons}
+	{BEGIN save_button}
+	<button class="btn btn-primary" {$savebutton_attrs}>{mlang_message SAVE}</button>
+	{END save_button}
+	{BEGIN reset_button}
+	<button class="btn btn-default" id="resetButton{$id}">{mlang_message RESET}</button>
+	{END reset_button}
+	{BEGIN back_button}
+		<button class="btn btn-default" id="backButton{$id}">{mlang_message BACK_TO_LIST}</button>
+	{END back_button}
+	{BEGIN cancel_button}
+	<a href="#" class="btn btn-default" id="cancelButton{$id}">{mlang_message CANCEL}</a>
+	{END cancel_button}
+
+{END addbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+      </div>
+      <DIV class="bs-middle ">
+        <DIV class="bs-topmiddle">
+          
+        </div>
+        <DIV class="bs-left" {$blockattr_left}>
+          
+        </div>
+        <DIV class="bs-center">
+          
+        </div>
+        <DIV class="bs-right">
+          
+        </div>
+      </div>
+      <DIV class="bs-bottom">
+        
+      </div>
+      {$footer}
+    {END body}
+  </body>
+</html>

@@ -1,0 +1,605 @@
+<!doctype html>
+<html  {$html_attrs}>
+  <head>asdfsfs
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      {$pagetitle}
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link REL="stylesheet" href="styles/default.css" type="text/css">
+    {BEGIN rtlCSS}
+      <link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+    {END rtlCSS}
+    {BEGIN styleCSSFiles}
+      <link REL="stylesheet" href="{$stylepath}" type="text/css">
+    {END styleCSSFiles}
+  </head>
+  <BODY class="{$stylename} function-print" {$bodyattrs}>
+    {BEGIN body}
+      {$header}
+      <style>
+        {$containerCss}
+      </style>
+      <DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+{BEGIN pdflink_block}
+<a href="#" class="pdflink btn btn-default" {$pdflink_attrs}>{mlang_message PDF_VIEW}</a>
+{END pdflink_block}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel PMT_PROGRAM_LIST print}</h2>
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>{mlang_message PAGE1} <span class="rp-pageno">{$pageno}</span> {mlang_message PAGE2} <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="table table-bordered rp-maintable" {$printgrid_hiddenattr} data-pageid="{$pageid}" data-brick="printgrid" >
+	<thead>
+	{BEGIN grid_header}
+		<tr class="{$gridHeader_class}" >
+		{BEGIN record_header}
+			{BEGIN APP_UID_fieldheadercolumn}
+			<th class="{$APP_UID_class}" {$APP_UID_style}  data-field="APP_UID">
+				{$label PMT_PROGRAM_LIST APP_UID}
+			</th>
+			{END APP_UID_fieldheadercolumn}
+			{BEGIN APP_NUMBER_fieldheadercolumn}
+			<th class="{$APP_NUMBER_class}" {$APP_NUMBER_style}  data-field="APP_NUMBER">
+				{$label PMT_PROGRAM_LIST APP_NUMBER}
+			</th>
+			{END APP_NUMBER_fieldheadercolumn}
+			{BEGIN APP_STATUS_fieldheadercolumn}
+			<th class="{$APP_STATUS_class}" {$APP_STATUS_style}  data-field="APP_STATUS">
+				{$label PMT_PROGRAM_LIST APP_STATUS}
+			</th>
+			{END APP_STATUS_fieldheadercolumn}
+			{BEGIN ROW_fieldheadercolumn}
+			<th class="{$ROW_class}" {$ROW_style}  data-field="ROW">
+				{$label PMT_PROGRAM_LIST ROW}
+			</th>
+			{END ROW_fieldheadercolumn}
+			{BEGIN N1_fieldheadercolumn}
+			<th class="{$N1_class}" {$N1_style}  data-field="N1">
+				{$label PMT_PROGRAM_LIST N1}
+			</th>
+			{END N1_fieldheadercolumn}
+			{BEGIN P1_fieldheadercolumn}
+			<th class="{$P1_class}" {$P1_style}  data-field="P1">
+				{$label PMT_PROGRAM_LIST P1}
+			</th>
+			{END P1_fieldheadercolumn}
+			{BEGIN F25_fieldheadercolumn}
+			<th class="{$F25_class}" {$F25_style}  data-field="F25">
+				{$label PMT_PROGRAM_LIST F25}
+			</th>
+			{END F25_fieldheadercolumn}
+			{BEGIN K80_fieldheadercolumn}
+			<th class="{$K80_class}" {$K80_style}  data-field="K80">
+				{$label PMT_PROGRAM_LIST K80}
+			</th>
+			{END K80_fieldheadercolumn}
+			{BEGIN F26_fieldheadercolumn}
+			<th class="{$F26_class}" {$F26_style}  data-field="F26">
+				{$label PMT_PROGRAM_LIST F26}
+			</th>
+			{END F26_fieldheadercolumn}
+			{BEGIN E27_fieldheadercolumn}
+			<th class="{$E27_class}" {$E27_style}  data-field="E27">
+				{$label PMT_PROGRAM_LIST E27}
+			</th>
+			{END E27_fieldheadercolumn}
+			{BEGIN K27_fieldheadercolumn}
+			<th class="{$K27_class}" {$K27_style}  data-field="K27">
+				{$label PMT_PROGRAM_LIST K27}
+			</th>
+			{END K27_fieldheadercolumn}
+			{BEGIN K25_fieldheadercolumn}
+			<th class="{$K25_class}" {$K25_style}  data-field="K25">
+				{$label PMT_PROGRAM_LIST K25}
+			</th>
+			{END K25_fieldheadercolumn}
+			{BEGIN A30_fieldheadercolumn}
+			<th class="{$A30_class}" {$A30_style}  data-field="A30">
+				{$label PMT_PROGRAM_LIST A30}
+			</th>
+			{END A30_fieldheadercolumn}
+			{BEGIN A31_fieldheadercolumn}
+			<th class="{$A31_class}" {$A31_style}  data-field="A31">
+				{$label PMT_PROGRAM_LIST A31}
+			</th>
+			{END A31_fieldheadercolumn}
+			{BEGIN A32_fieldheadercolumn}
+			<th class="{$A32_class}" {$A32_style}  data-field="A32">
+				{$label PMT_PROGRAM_LIST A32}
+			</th>
+			{END A32_fieldheadercolumn}
+			{BEGIN D35_fieldheadercolumn}
+			<th class="{$D35_class}" {$D35_style}  data-field="D35">
+				{$label PMT_PROGRAM_LIST D35}
+			</th>
+			{END D35_fieldheadercolumn}
+			{BEGIN F35_fieldheadercolumn}
+			<th class="{$F35_class}" {$F35_style}  data-field="F35">
+				{$label PMT_PROGRAM_LIST F35}
+			</th>
+			{END F35_fieldheadercolumn}
+			{BEGIN M35_fieldheadercolumn}
+			<th class="{$M35_class}" {$M35_style}  data-field="M35">
+				{$label PMT_PROGRAM_LIST M35}
+			</th>
+			{END M35_fieldheadercolumn}
+			{BEGIN D36_fieldheadercolumn}
+			<th class="{$D36_class}" {$D36_style}  data-field="D36">
+				{$label PMT_PROGRAM_LIST D36}
+			</th>
+			{END D36_fieldheadercolumn}
+			{BEGIN F36_fieldheadercolumn}
+			<th class="{$F36_class}" {$F36_style}  data-field="F36">
+				{$label PMT_PROGRAM_LIST F36}
+			</th>
+			{END F36_fieldheadercolumn}
+			{BEGIN J36_fieldheadercolumn}
+			<th class="{$J36_class}" {$J36_style}  data-field="J36">
+				{$label PMT_PROGRAM_LIST J36}
+			</th>
+			{END J36_fieldheadercolumn}
+			{BEGIN D38_fieldheadercolumn}
+			<th class="{$D38_class}" {$D38_style}  data-field="D38">
+				{$label PMT_PROGRAM_LIST D38}
+			</th>
+			{END D38_fieldheadercolumn}
+			{BEGIN F38_fieldheadercolumn}
+			<th class="{$F38_class}" {$F38_style}  data-field="F38">
+				{$label PMT_PROGRAM_LIST F38}
+			</th>
+			{END F38_fieldheadercolumn}
+			{BEGIN D39_fieldheadercolumn}
+			<th class="{$D39_class}" {$D39_style}  data-field="D39">
+				{$label PMT_PROGRAM_LIST D39}
+			</th>
+			{END D39_fieldheadercolumn}
+			{BEGIN TIME_fieldheadercolumn}
+			<th class="{$TIME_class}" {$TIME_style}  data-field="TIME">
+				{$label PMT_PROGRAM_LIST TIME}
+			</th>
+			{END TIME_fieldheadercolumn}
+			{BEGIN MONTHLY_REPORT_fieldheadercolumn}
+			<th class="{$MONTHLY_REPORT_class}" {$MONTHLY_REPORT_style}  data-field="MONTHLY_REPORT">
+				{$label PMT_PROGRAM_LIST MONTHLY_REPORT}
+			</th>
+			{END MONTHLY_REPORT_fieldheadercolumn}
+			{BEGIN M39_fieldheadercolumn}
+			<th class="{$M39_class}" {$M39_style}  data-field="M39">
+				{$label PMT_PROGRAM_LIST M39}
+			</th>
+			{END M39_fieldheadercolumn}
+			{BEGIN D40_fieldheadercolumn}
+			<th class="{$D40_class}" {$D40_style}  data-field="D40">
+				{$label PMT_PROGRAM_LIST D40}
+			</th>
+			{END D40_fieldheadercolumn}
+			{BEGIN D41_fieldheadercolumn}
+			<th class="{$D41_class}" {$D41_style}  data-field="D41">
+				{$label PMT_PROGRAM_LIST D41}
+			</th>
+			{END D41_fieldheadercolumn}
+			{BEGIN D42_fieldheadercolumn}
+			<th class="{$D42_class}" {$D42_style}  data-field="D42">
+				{$label PMT_PROGRAM_LIST D42}
+			</th>
+			{END D42_fieldheadercolumn}
+			{BEGIN D43_fieldheadercolumn}
+			<th class="{$D43_class}" {$D43_style}  data-field="D43">
+				{$label PMT_PROGRAM_LIST D43}
+			</th>
+			{END D43_fieldheadercolumn}
+			{BEGIN M43_fieldheadercolumn}
+			<th class="{$M43_class}" {$M43_style}  data-field="M43">
+				{$label PMT_PROGRAM_LIST M43}
+			</th>
+			{END M43_fieldheadercolumn}
+			{BEGIN F43_fieldheadercolumn}
+			<th class="{$F43_class}" {$F43_style}  data-field="F43">
+				{$label PMT_PROGRAM_LIST F43}
+			</th>
+			{END F43_fieldheadercolumn}
+			{BEGIN D44_fieldheadercolumn}
+			<th class="{$D44_class}" {$D44_style}  data-field="D44">
+				{$label PMT_PROGRAM_LIST D44}
+			</th>
+			{END D44_fieldheadercolumn}
+			{BEGIN F44_fieldheadercolumn}
+			<th class="{$F44_class}" {$F44_style}  data-field="F44">
+				{$label PMT_PROGRAM_LIST F44}
+			</th>
+			{END F44_fieldheadercolumn}
+			{BEGIN D45_fieldheadercolumn}
+			<th class="{$D45_class}" {$D45_style}  data-field="D45">
+				{$label PMT_PROGRAM_LIST D45}
+			</th>
+			{END D45_fieldheadercolumn}
+			{BEGIN M45_fieldheadercolumn}
+			<th class="{$M45_class}" {$M45_style}  data-field="M45">
+				{$label PMT_PROGRAM_LIST M45}
+			</th>
+			{END M45_fieldheadercolumn}
+			{BEGIN D48_fieldheadercolumn}
+			<th class="{$D48_class}" {$D48_style}  data-field="D48">
+				{$label PMT_PROGRAM_LIST D48}
+			</th>
+			{END D48_fieldheadercolumn}
+			{BEGIN F48_fieldheadercolumn}
+			<th class="{$F48_class}" {$F48_style}  data-field="F48">
+				{$label PMT_PROGRAM_LIST F48}
+			</th>
+			{END F48_fieldheadercolumn}
+			{BEGIN D49_fieldheadercolumn}
+			<th class="{$D49_class}" {$D49_style}  data-field="D49">
+				{$label PMT_PROGRAM_LIST D49}
+			</th>
+			{END D49_fieldheadercolumn}
+			{BEGIN D51_fieldheadercolumn}
+			<th class="{$D51_class}" {$D51_style}  data-field="D51">
+				{$label PMT_PROGRAM_LIST D51}
+			</th>
+			{END D51_fieldheadercolumn}
+			{BEGIN D52_fieldheadercolumn}
+			<th class="{$D52_class}" {$D52_style}  data-field="D52">
+				{$label PMT_PROGRAM_LIST D52}
+			</th>
+			{END D52_fieldheadercolumn}
+			{BEGIN K50_fieldheadercolumn}
+			<th class="{$K50_class}" {$K50_style}  data-field="K50">
+				{$label PMT_PROGRAM_LIST K50}
+			</th>
+			{END K50_fieldheadercolumn}
+			{BEGIN P48_fieldheadercolumn}
+			<th class="{$P48_class}" {$P48_style}  data-field="P48">
+				{$label PMT_PROGRAM_LIST P48}
+			</th>
+			{END P48_fieldheadercolumn}
+			{BEGIN P49_fieldheadercolumn}
+			<th class="{$P49_class}" {$P49_style}  data-field="P49">
+				{$label PMT_PROGRAM_LIST P49}
+			</th>
+			{END P49_fieldheadercolumn}
+			{BEGIN P50_fieldheadercolumn}
+			<th class="{$P50_class}" {$P50_style}  data-field="P50">
+				{$label PMT_PROGRAM_LIST P50}
+			</th>
+			{END P50_fieldheadercolumn}
+			{BEGIN P51_fieldheadercolumn}
+			<th class="{$P51_class}" {$P51_style}  data-field="P51">
+				{$label PMT_PROGRAM_LIST P51}
+			</th>
+			{END P51_fieldheadercolumn}
+			{BEGIN P52_fieldheadercolumn}
+			<th class="{$P52_class}" {$P52_style}  data-field="P52">
+				{$label PMT_PROGRAM_LIST P52}
+			</th>
+			{END P52_fieldheadercolumn}
+			{BEGIN endrecordheader_block}
+			<th class="rnr-cs">&nbsp;</th>
+			{END endrecordheader_block}
+		{END record_header}
+		</tr>
+	{END grid_header}
+	</thead>
+	
+	<tbody>	
+	{BEGIN grid_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+			{BEGIN APP_UID_fieldcolumn}
+			<td  class="{$APP_UID_class}" {$APP_UID_style} {$recordattrs}>
+				{$APP_UID_value}
+			</td>
+			{END APP_UID_fieldcolumn}
+			{BEGIN APP_NUMBER_fieldcolumn}
+			<td  class="{$APP_NUMBER_class}" {$APP_NUMBER_style} {$recordattrs}>
+				{$APP_NUMBER_value}
+			</td>
+			{END APP_NUMBER_fieldcolumn}
+			{BEGIN APP_STATUS_fieldcolumn}
+			<td  class="{$APP_STATUS_class}" {$APP_STATUS_style} {$recordattrs}>
+				{$APP_STATUS_value}
+			</td>
+			{END APP_STATUS_fieldcolumn}
+			{BEGIN ROW_fieldcolumn}
+			<td  class="{$ROW_class}" {$ROW_style} {$recordattrs}>
+				{$ROW_value}
+			</td>
+			{END ROW_fieldcolumn}
+			{BEGIN N1_fieldcolumn}
+			<td  class="{$N1_class}" {$N1_style} {$recordattrs}>
+				{$N1_value}
+			</td>
+			{END N1_fieldcolumn}
+			{BEGIN P1_fieldcolumn}
+			<td  class="{$P1_class}" {$P1_style} {$recordattrs}>
+				{$P1_value}
+			</td>
+			{END P1_fieldcolumn}
+			{BEGIN F25_fieldcolumn}
+			<td  class="{$F25_class}" {$F25_style} {$recordattrs}>
+				{$F25_value}
+			</td>
+			{END F25_fieldcolumn}
+			{BEGIN K80_fieldcolumn}
+			<td  class="{$K80_class}" {$K80_style} {$recordattrs}>
+				{$K80_value}
+			</td>
+			{END K80_fieldcolumn}
+			{BEGIN F26_fieldcolumn}
+			<td  class="{$F26_class}" {$F26_style} {$recordattrs}>
+				{$F26_value}
+			</td>
+			{END F26_fieldcolumn}
+			{BEGIN E27_fieldcolumn}
+			<td  class="{$E27_class}" {$E27_style} {$recordattrs}>
+				{$E27_value}
+			</td>
+			{END E27_fieldcolumn}
+			{BEGIN K27_fieldcolumn}
+			<td  class="{$K27_class}" {$K27_style} {$recordattrs}>
+				{$K27_value}
+			</td>
+			{END K27_fieldcolumn}
+			{BEGIN K25_fieldcolumn}
+			<td  class="{$K25_class}" {$K25_style} {$recordattrs}>
+				{$K25_value}
+			</td>
+			{END K25_fieldcolumn}
+			{BEGIN A30_fieldcolumn}
+			<td  class="{$A30_class}" {$A30_style} {$recordattrs}>
+				{$A30_value}
+			</td>
+			{END A30_fieldcolumn}
+			{BEGIN A31_fieldcolumn}
+			<td  class="{$A31_class}" {$A31_style} {$recordattrs}>
+				{$A31_value}
+			</td>
+			{END A31_fieldcolumn}
+			{BEGIN A32_fieldcolumn}
+			<td  class="{$A32_class}" {$A32_style} {$recordattrs}>
+				{$A32_value}
+			</td>
+			{END A32_fieldcolumn}
+			{BEGIN D35_fieldcolumn}
+			<td  class="{$D35_class}" {$D35_style} {$recordattrs}>
+				{$D35_value}
+			</td>
+			{END D35_fieldcolumn}
+			{BEGIN F35_fieldcolumn}
+			<td  class="{$F35_class}" {$F35_style} {$recordattrs}>
+				{$F35_value}
+			</td>
+			{END F35_fieldcolumn}
+			{BEGIN M35_fieldcolumn}
+			<td  class="{$M35_class}" {$M35_style} {$recordattrs}>
+				{$M35_value}
+			</td>
+			{END M35_fieldcolumn}
+			{BEGIN D36_fieldcolumn}
+			<td  class="{$D36_class}" {$D36_style} {$recordattrs}>
+				{$D36_value}
+			</td>
+			{END D36_fieldcolumn}
+			{BEGIN F36_fieldcolumn}
+			<td  class="{$F36_class}" {$F36_style} {$recordattrs}>
+				{$F36_value}
+			</td>
+			{END F36_fieldcolumn}
+			{BEGIN J36_fieldcolumn}
+			<td  class="{$J36_class}" {$J36_style} {$recordattrs}>
+				{$J36_value}
+			</td>
+			{END J36_fieldcolumn}
+			{BEGIN D38_fieldcolumn}
+			<td  class="{$D38_class}" {$D38_style} {$recordattrs}>
+				{$D38_value}
+			</td>
+			{END D38_fieldcolumn}
+			{BEGIN F38_fieldcolumn}
+			<td  class="{$F38_class}" {$F38_style} {$recordattrs}>
+				{$F38_value}
+			</td>
+			{END F38_fieldcolumn}
+			{BEGIN D39_fieldcolumn}
+			<td  class="{$D39_class}" {$D39_style} {$recordattrs}>
+				{$D39_value}
+			</td>
+			{END D39_fieldcolumn}
+			{BEGIN TIME_fieldcolumn}
+			<td  class="{$TIME_class}" {$TIME_style} {$recordattrs}>
+				{$TIME_value}
+			</td>
+			{END TIME_fieldcolumn}
+			{BEGIN MONTHLY_REPORT_fieldcolumn}
+			<td  class="{$MONTHLY_REPORT_class}" {$MONTHLY_REPORT_style} {$recordattrs}>
+				{$MONTHLY_REPORT_value}
+			</td>
+			{END MONTHLY_REPORT_fieldcolumn}
+			{BEGIN M39_fieldcolumn}
+			<td  class="{$M39_class}" {$M39_style} {$recordattrs}>
+				{$M39_value}
+			</td>
+			{END M39_fieldcolumn}
+			{BEGIN D40_fieldcolumn}
+			<td  class="{$D40_class}" {$D40_style} {$recordattrs}>
+				{$D40_value}
+			</td>
+			{END D40_fieldcolumn}
+			{BEGIN D41_fieldcolumn}
+			<td  class="{$D41_class}" {$D41_style} {$recordattrs}>
+				{$D41_value}
+			</td>
+			{END D41_fieldcolumn}
+			{BEGIN D42_fieldcolumn}
+			<td  class="{$D42_class}" {$D42_style} {$recordattrs}>
+				{$D42_value}
+			</td>
+			{END D42_fieldcolumn}
+			{BEGIN D43_fieldcolumn}
+			<td  class="{$D43_class}" {$D43_style} {$recordattrs}>
+				{$D43_value}
+			</td>
+			{END D43_fieldcolumn}
+			{BEGIN M43_fieldcolumn}
+			<td  class="{$M43_class}" {$M43_style} {$recordattrs}>
+				{$M43_value}
+			</td>
+			{END M43_fieldcolumn}
+			{BEGIN F43_fieldcolumn}
+			<td  class="{$F43_class}" {$F43_style} {$recordattrs}>
+				{$F43_value}
+			</td>
+			{END F43_fieldcolumn}
+			{BEGIN D44_fieldcolumn}
+			<td  class="{$D44_class}" {$D44_style} {$recordattrs}>
+				{$D44_value}
+			</td>
+			{END D44_fieldcolumn}
+			{BEGIN F44_fieldcolumn}
+			<td  class="{$F44_class}" {$F44_style} {$recordattrs}>
+				{$F44_value}
+			</td>
+			{END F44_fieldcolumn}
+			{BEGIN D45_fieldcolumn}
+			<td  class="{$D45_class}" {$D45_style} {$recordattrs}>
+				{$D45_value}
+			</td>
+			{END D45_fieldcolumn}
+			{BEGIN M45_fieldcolumn}
+			<td  class="{$M45_class}" {$M45_style} {$recordattrs}>
+				{$M45_value}
+			</td>
+			{END M45_fieldcolumn}
+			{BEGIN D48_fieldcolumn}
+			<td  class="{$D48_class}" {$D48_style} {$recordattrs}>
+				{$D48_value}
+			</td>
+			{END D48_fieldcolumn}
+			{BEGIN F48_fieldcolumn}
+			<td  class="{$F48_class}" {$F48_style} {$recordattrs}>
+				{$F48_value}
+			</td>
+			{END F48_fieldcolumn}
+			{BEGIN D49_fieldcolumn}
+			<td  class="{$D49_class}" {$D49_style} {$recordattrs}>
+				{$D49_value}
+			</td>
+			{END D49_fieldcolumn}
+			{BEGIN D51_fieldcolumn}
+			<td  class="{$D51_class}" {$D51_style} {$recordattrs}>
+				{$D51_value}
+			</td>
+			{END D51_fieldcolumn}
+			{BEGIN D52_fieldcolumn}
+			<td  class="{$D52_class}" {$D52_style} {$recordattrs}>
+				{$D52_value}
+			</td>
+			{END D52_fieldcolumn}
+			{BEGIN K50_fieldcolumn}
+			<td  class="{$K50_class}" {$K50_style} {$recordattrs}>
+				{$K50_value}
+			</td>
+			{END K50_fieldcolumn}
+			{BEGIN P48_fieldcolumn}
+			<td  class="{$P48_class}" {$P48_style} {$recordattrs}>
+				{$P48_value}
+			</td>
+			{END P48_fieldcolumn}
+			{BEGIN P49_fieldcolumn}
+			<td  class="{$P49_class}" {$P49_style} {$recordattrs}>
+				{$P49_value}
+			</td>
+			{END P49_fieldcolumn}
+			{BEGIN P50_fieldcolumn}
+			<td  class="{$P50_class}" {$P50_style} {$recordattrs}>
+				{$P50_value}
+			</td>
+			{END P50_fieldcolumn}
+			{BEGIN P51_fieldcolumn}
+			<td  class="{$P51_class}" {$P51_style} {$recordattrs}>
+				{$P51_value}
+			</td>
+			{END P51_fieldcolumn}
+			{BEGIN P52_fieldcolumn}
+			<td  class="{$P52_class}" {$P52_style} {$recordattrs}>
+				{$P52_value}
+			</td>
+			{END P52_fieldcolumn}
+			{BEGIN endrecord_block}
+			<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+			{END endrecord_block}
+		{END grid_record}
+		</tr>
+{END grid_row}
+	</tbody>
+
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+      </div>
+      <DIV class="bs-middle ">
+        <DIV class="bs-topmiddle">
+          
+        </div>
+        <DIV class="bs-left" {$blockattr_left}>
+          
+        </div>
+        <DIV class="bs-center">
+          
+        </div>
+        <DIV class="bs-right">
+          
+        </div>
+      </div>
+      <DIV class="bs-bottom">
+        
+      </div>
+      {$footer}
+    {END body}
+  </body>
+</html>

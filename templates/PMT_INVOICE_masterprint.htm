@@ -1,0 +1,73 @@
+<div {$pageattrs}>
+
+{BEGIN container_column}
+<div class="rnr-c rnr-ch rnr-c-column">
+
+{BEGIN masterlist_title}
+<div  class="style1 rnr-bl rnr-b-masterprintheader {$brickclass_masterprintheader}"><span>{$pagetitlelabel PMT_INVOICE masterprint}</span></div>
+{END masterlist_title}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_column}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+<table {$bsmasterprintgrid_hiddenattr} data-pageid="{$pageid}" data-brick="bsmasterprintgrid" class="table rnr-b-mastergridfields rnr-gridtable" >
+		<thead>
+		<tr>
+			<th class="{$L50_class}">{$label PMT_INVOICE L50}</th>
+			<th class="{$O48_class}">{$label PMT_INVOICE O48}</th>
+			<th class="{$O49_class}">{$label PMT_INVOICE O49}</th>
+			<th class="{$O50_class}">{$label PMT_INVOICE O50}</th>
+			<th class="{$O51_class}">{$label PMT_INVOICE O51}</th>
+			<th class="{$O52_class}">{$label PMT_INVOICE O52}</th>
+			<th class="{$APP_UID_class}">{$label PMT_INVOICE APP_UID}</th>
+			<th class="{$TOTAL_FEE_class}">{$label PMT_INVOICE TOTAL_FEE}</th>
+			<th class="{$PAYMENT_DEADLINE_class}">{$label PMT_INVOICE PAYMENT_DEADLINE}</th>
+			<th class="{$COMPANY_class}">{$label PMT_INVOICE COMPANY}</th>
+			<th class="{$POSTAL_CODE_class}">{$label PMT_INVOICE POSTAL_CODE}</th>
+			<th class="{$PREFECTURES_class}">{$label PMT_INVOICE PREFECTURES}</th>
+			<th class="{$TOWNS_AND_VILLAGES_class}">{$label PMT_INVOICE TOWNS_AND_VILLAGES}</th>
+			<th class="{$REMARKS_class}">{$label PMT_INVOICE REMARKS}</th>
+			<th class="{$SUBTOTAL_class}">{$label PMT_INVOICE SUBTOTAL}</th>
+			<th class="{$TAX_RATE_class}">{$label PMT_INVOICE TAX_RATE}</th>
+			<th class="{$CONSUMPTION_TAX_class}">{$label PMT_INVOICE CONSUMPTION_TAX}</th>
+			<th class="{$TOTAL_class}">{$label PMT_INVOICE TOTAL}</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="{$L50_class}">{$L50_mastervalue}</td>
+			<td class="{$O48_class}">{$O48_mastervalue}</td>
+			<td class="{$O49_class}">{$O49_mastervalue}</td>
+			<td class="{$O50_class}">{$O50_mastervalue}</td>
+			<td class="{$O51_class}">{$O51_mastervalue}</td>
+			<td class="{$O52_class}">{$O52_mastervalue}</td>
+			<td class="{$APP_UID_class}">{$APP_UID_mastervalue}</td>
+			<td class="{$TOTAL_FEE_class}">{$TOTAL_FEE_mastervalue}</td>
+			<td class="{$PAYMENT_DEADLINE_class}">{$PAYMENT_DEADLINE_mastervalue}</td>
+			<td class="{$COMPANY_class}">{$COMPANY_mastervalue}</td>
+			<td class="{$POSTAL_CODE_class}">{$POSTAL_CODE_mastervalue}</td>
+			<td class="{$PREFECTURES_class}">{$PREFECTURES_mastervalue}</td>
+			<td class="{$TOWNS_AND_VILLAGES_class}">{$TOWNS_AND_VILLAGES_mastervalue}</td>
+			<td class="{$REMARKS_class}">{$REMARKS_mastervalue}</td>
+			<td class="{$SUBTOTAL_class}">{$SUBTOTAL_mastervalue}</td>
+			<td class="{$TAX_RATE_class}">{$TAX_RATE_mastervalue}</td>
+			<td class="{$CONSUMPTION_TAX_class}">{$CONSUMPTION_TAX_mastervalue}</td>
+			<td class="{$TOTAL_class}">{$TOTAL_mastervalue}</td>
+		</tr>
+	</tbody>
+
+</table> 
+
+
+
+
+{END container_mastergrid}
+
+</div>

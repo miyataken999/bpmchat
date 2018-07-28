@@ -1,0 +1,2087 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-edit" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_editpage}
+<div {$editpage_chiddenattr} data-pageid="{$pageid}" data-container="editpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN editheader}
+	<h2 {$editheader_hiddenattr} data-pageid="{$pageid}" data-brick="editheader" >{$pagetitlelabel retblresults edit}</h2>
+
+{END editheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+		<button class="btn btn-sm btn-default" {$backbutton_attrs}>一覧に戻る</button>
+{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>表示</button>
+{END view_page_button}
+</div>
+</div>
+
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+
+</div>
+{END container_editpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$editfields_hiddenattr} data-pageid="{$pageid}" data-brick="editfields" class="form-horizontal" role="form">
+
+
+
+			{BEGIN Price_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Price}" data-fieldname="Price" data-signal-error-for="Price{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Price}">
+		{BEGIN Price_label}{$label retblresults Price}{END Price_label}
+	</label>
+	<div class="col-md-6" >
+		{$Price_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Price">
+		<div class="text-muted" >
+		{$tooltip retblresults Price}
+		</div>
+	</div>
+</div>
+</div>
+{END Price_fieldblock}
+
+			{BEGIN Tax_Amount_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Tax_Amount}" data-fieldname="Tax_Amount" data-signal-error-for="Tax_Amount{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Tax_Amount}">
+		{BEGIN Tax_Amount_label}{$label retblresults Tax_Amount}{END Tax_Amount_label}
+	</label>
+	<div class="col-md-6" >
+		{$Tax_Amount_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Tax_Amount">
+		<div class="text-muted" >
+		{$tooltip retblresults Tax_Amount}
+		</div>
+	</div>
+</div>
+</div>
+{END Tax_Amount_fieldblock}
+
+			{BEGIN MLS_Number_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_MLS_Number}" data-fieldname="MLS_Number" data-signal-error-for="MLS_Number{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_MLS_Number}">
+		{BEGIN MLS_Number_label}{$label retblresults MLS_Number}{END MLS_Number_label}
+	</label>
+	<div class="col-md-6" >
+		{$MLS_Number_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="MLS_Number">
+		<div class="text-muted" >
+		{$tooltip retblresults MLS_Number}
+		</div>
+	</div>
+</div>
+</div>
+{END MLS_Number_fieldblock}
+
+			{BEGIN House_Number_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_House_Number}" data-fieldname="House_Number" data-signal-error-for="House_Number{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_House_Number}">
+		{BEGIN House_Number_label}{$label retblresults House_Number}{END House_Number_label}
+	</label>
+	<div class="col-md-6" >
+		{$House_Number_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="House_Number">
+		<div class="text-muted" >
+		{$tooltip retblresults House_Number}
+		</div>
+	</div>
+</div>
+</div>
+{END House_Number_fieldblock}
+
+			{BEGIN Street_Name_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Street_Name}" data-fieldname="Street_Name" data-signal-error-for="Street_Name{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Street_Name}">
+		{BEGIN Street_Name_label}{$label retblresults Street_Name}{END Street_Name_label}
+	</label>
+	<div class="col-md-6" >
+		{$Street_Name_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Street_Name">
+		<div class="text-muted" >
+		{$tooltip retblresults Street_Name}
+		</div>
+	</div>
+</div>
+</div>
+{END Street_Name_fieldblock}
+
+			{BEGIN Apartment_Unit_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Apartment_Unit}" data-fieldname="Apartment_Unit" data-signal-error-for="Apartment_Unit{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Apartment_Unit}">
+		{BEGIN Apartment_Unit_label}{$label retblresults Apartment_Unit}{END Apartment_Unit_label}
+	</label>
+	<div class="col-md-6" >
+		{$Apartment_Unit_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Apartment_Unit">
+		<div class="text-muted" >
+		{$tooltip retblresults Apartment_Unit}
+		</div>
+	</div>
+</div>
+</div>
+{END Apartment_Unit_fieldblock}
+
+			{BEGIN City_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_City}" data-fieldname="City" data-signal-error-for="City{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_City}">
+		{BEGIN City_label}{$label retblresults City}{END City_label}
+	</label>
+	<div class="col-md-6" >
+		{$City_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="City">
+		<div class="text-muted" >
+		{$tooltip retblresults City}
+		</div>
+	</div>
+</div>
+</div>
+{END City_fieldblock}
+
+			{BEGIN State_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_State}" data-fieldname="State" data-signal-error-for="State{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_State}">
+		{BEGIN State_label}{$label retblresults State}{END State_label}
+	</label>
+	<div class="col-md-6" >
+		{$State_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="State">
+		<div class="text-muted" >
+		{$tooltip retblresults State}
+		</div>
+	</div>
+</div>
+</div>
+{END State_fieldblock}
+
+			{BEGIN Zip_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Zip}" data-fieldname="Zip" data-signal-error-for="Zip{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Zip}">
+		{BEGIN Zip_label}{$label retblresults Zip}{END Zip_label}
+	</label>
+	<div class="col-md-6" >
+		{$Zip_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Zip">
+		<div class="text-muted" >
+		{$tooltip retblresults Zip}
+		</div>
+	</div>
+</div>
+</div>
+{END Zip_fieldblock}
+
+			{BEGIN Country_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Country}" data-fieldname="Country" data-signal-error-for="Country{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Country}">
+		{BEGIN Country_label}{$label retblresults Country}{END Country_label}
+	</label>
+	<div class="col-md-6" >
+		{$Country_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Country">
+		<div class="text-muted" >
+		{$tooltip retblresults Country}
+		</div>
+	</div>
+</div>
+</div>
+{END Country_fieldblock}
+
+			{BEGIN sType_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_sType}" data-fieldname="sType" data-signal-error-for="sType{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_sType}">
+		{BEGIN sType_label}{$label retblresults sType}{END sType_label}
+	</label>
+	<div class="col-md-6" >
+		{$sType_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="sType">
+		<div class="text-muted" >
+		{$tooltip retblresults sType}
+		</div>
+	</div>
+</div>
+</div>
+{END sType_fieldblock}
+
+			{BEGIN Style_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Style}" data-fieldname="Style" data-signal-error-for="Style{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Style}">
+		{BEGIN Style_label}{$label retblresults Style}{END Style_label}
+	</label>
+	<div class="col-md-6" >
+		{$Style_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Style">
+		<div class="text-muted" >
+		{$tooltip retblresults Style}
+		</div>
+	</div>
+</div>
+</div>
+{END Style_fieldblock}
+
+			{BEGIN Bedrooms_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Bedrooms}" data-fieldname="Bedrooms" data-signal-error-for="Bedrooms{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Bedrooms}">
+		{BEGIN Bedrooms_label}{$label retblresults Bedrooms}{END Bedrooms_label}
+	</label>
+	<div class="col-md-6" >
+		{$Bedrooms_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Bedrooms">
+		<div class="text-muted" >
+		{$tooltip retblresults Bedrooms}
+		</div>
+	</div>
+</div>
+</div>
+{END Bedrooms_fieldblock}
+
+			{BEGIN Bathrooms_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Bathrooms}" data-fieldname="Bathrooms" data-signal-error-for="Bathrooms{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Bathrooms}">
+		{BEGIN Bathrooms_label}{$label retblresults Bathrooms}{END Bathrooms_label}
+	</label>
+	<div class="col-md-6" >
+		{$Bathrooms_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Bathrooms">
+		<div class="text-muted" >
+		{$tooltip retblresults Bathrooms}
+		</div>
+	</div>
+</div>
+</div>
+{END Bathrooms_fieldblock}
+
+			{BEGIN Year_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Year}" data-fieldname="Year" data-signal-error-for="Year{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Year}">
+		{BEGIN Year_label}{$label retblresults Year}{END Year_label}
+	</label>
+	<div class="col-md-6" >
+		{$Year_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Year">
+		<div class="text-muted" >
+		{$tooltip retblresults Year}
+		</div>
+	</div>
+</div>
+</div>
+{END Year_fieldblock}
+
+			{BEGIN Foundation_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Foundation}" data-fieldname="Foundation" data-signal-error-for="Foundation{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Foundation}">
+		{BEGIN Foundation_label}{$label retblresults Foundation}{END Foundation_label}
+	</label>
+	<div class="col-md-6" >
+		{$Foundation_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Foundation">
+		<div class="text-muted" >
+		{$tooltip retblresults Foundation}
+		</div>
+	</div>
+</div>
+</div>
+{END Foundation_fieldblock}
+
+			{BEGIN Sq_Ft_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Sq_Ft}" data-fieldname="Sq_Ft" data-signal-error-for="Sq_Ft{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Sq_Ft}">
+		{BEGIN Sq_Ft_label}{$label retblresults Sq_Ft}{END Sq_Ft_label}
+	</label>
+	<div class="col-md-6" >
+		{$Sq_Ft_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Sq_Ft">
+		<div class="text-muted" >
+		{$tooltip retblresults Sq_Ft}
+		</div>
+	</div>
+</div>
+</div>
+{END Sq_Ft_fieldblock}
+
+			{BEGIN Garage_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Garage}" data-fieldname="Garage" data-signal-error-for="Garage{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Garage}">
+		{BEGIN Garage_label}{$label retblresults Garage}{END Garage_label}
+	</label>
+	<div class="col-md-6" >
+		{$Garage_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Garage">
+		<div class="text-muted" >
+		{$tooltip retblresults Garage}
+		</div>
+	</div>
+</div>
+</div>
+{END Garage_fieldblock}
+
+			{BEGIN Acres_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Acres}" data-fieldname="Acres" data-signal-error-for="Acres{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Acres}">
+		{BEGIN Acres_label}{$label retblresults Acres}{END Acres_label}
+	</label>
+	<div class="col-md-6" >
+		{$Acres_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Acres">
+		<div class="text-muted" >
+		{$tooltip retblresults Acres}
+		</div>
+	</div>
+</div>
+</div>
+{END Acres_fieldblock}
+
+			{BEGIN Kitchen_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Kitchen}" data-fieldname="Kitchen" data-signal-error-for="Kitchen{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Kitchen}">
+		{BEGIN Kitchen_label}{$label retblresults Kitchen}{END Kitchen_label}
+	</label>
+	<div class="col-md-6" >
+		{$Kitchen_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Kitchen">
+		<div class="text-muted" >
+		{$tooltip retblresults Kitchen}
+		</div>
+	</div>
+</div>
+</div>
+{END Kitchen_fieldblock}
+
+			{BEGIN Kitchen_Dimension1_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Kitchen_Dimension1}" data-fieldname="Kitchen_Dimension1" data-signal-error-for="Kitchen_Dimension1{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Kitchen_Dimension1}">
+		{BEGIN Kitchen_Dimension1_label}{$label retblresults Kitchen_Dimension1}{END Kitchen_Dimension1_label}
+	</label>
+	<div class="col-md-6" >
+		{$Kitchen_Dimension1_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Kitchen_Dimension1">
+		<div class="text-muted" >
+		{$tooltip retblresults Kitchen_Dimension1}
+		</div>
+	</div>
+</div>
+</div>
+{END Kitchen_Dimension1_fieldblock}
+
+			{BEGIN Kitchen_Dimension2_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Kitchen_Dimension2}" data-fieldname="Kitchen_Dimension2" data-signal-error-for="Kitchen_Dimension2{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Kitchen_Dimension2}">
+		{BEGIN Kitchen_Dimension2_label}{$label retblresults Kitchen_Dimension2}{END Kitchen_Dimension2_label}
+	</label>
+	<div class="col-md-6" >
+		{$Kitchen_Dimension2_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Kitchen_Dimension2">
+		<div class="text-muted" >
+		{$tooltip retblresults Kitchen_Dimension2}
+		</div>
+	</div>
+</div>
+</div>
+{END Kitchen_Dimension2_fieldblock}
+
+			{BEGIN Living_Room_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Living_Room}" data-fieldname="Living_Room" data-signal-error-for="Living_Room{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Living_Room}">
+		{BEGIN Living_Room_label}{$label retblresults Living_Room}{END Living_Room_label}
+	</label>
+	<div class="col-md-6" >
+		{$Living_Room_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Living_Room">
+		<div class="text-muted" >
+		{$tooltip retblresults Living_Room}
+		</div>
+	</div>
+</div>
+</div>
+{END Living_Room_fieldblock}
+
+			{BEGIN Living_Room_Dimension1_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Living_Room_Dimension1}" data-fieldname="Living_Room_Dimension1" data-signal-error-for="Living_Room_Dimension1{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Living_Room_Dimension1}">
+		{BEGIN Living_Room_Dimension1_label}{$label retblresults Living_Room_Dimension1}{END Living_Room_Dimension1_label}
+	</label>
+	<div class="col-md-6" >
+		{$Living_Room_Dimension1_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Living_Room_Dimension1">
+		<div class="text-muted" >
+		{$tooltip retblresults Living_Room_Dimension1}
+		</div>
+	</div>
+</div>
+</div>
+{END Living_Room_Dimension1_fieldblock}
+
+			{BEGIN Living_Room_Dimension2_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Living_Room_Dimension2}" data-fieldname="Living_Room_Dimension2" data-signal-error-for="Living_Room_Dimension2{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Living_Room_Dimension2}">
+		{BEGIN Living_Room_Dimension2_label}{$label retblresults Living_Room_Dimension2}{END Living_Room_Dimension2_label}
+	</label>
+	<div class="col-md-6" >
+		{$Living_Room_Dimension2_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Living_Room_Dimension2">
+		<div class="text-muted" >
+		{$tooltip retblresults Living_Room_Dimension2}
+		</div>
+	</div>
+</div>
+</div>
+{END Living_Room_Dimension2_fieldblock}
+
+			{BEGIN Family_Room_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Family_Room}" data-fieldname="Family_Room" data-signal-error-for="Family_Room{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Family_Room}">
+		{BEGIN Family_Room_label}{$label retblresults Family_Room}{END Family_Room_label}
+	</label>
+	<div class="col-md-6" >
+		{$Family_Room_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Family_Room">
+		<div class="text-muted" >
+		{$tooltip retblresults Family_Room}
+		</div>
+	</div>
+</div>
+</div>
+{END Family_Room_fieldblock}
+
+			{BEGIN Family_Room_Dimension1_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Family_Room_Dimension1}" data-fieldname="Family_Room_Dimension1" data-signal-error-for="Family_Room_Dimension1{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Family_Room_Dimension1}">
+		{BEGIN Family_Room_Dimension1_label}{$label retblresults Family_Room_Dimension1}{END Family_Room_Dimension1_label}
+	</label>
+	<div class="col-md-6" >
+		{$Family_Room_Dimension1_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Family_Room_Dimension1">
+		<div class="text-muted" >
+		{$tooltip retblresults Family_Room_Dimension1}
+		</div>
+	</div>
+</div>
+</div>
+{END Family_Room_Dimension1_fieldblock}
+
+			{BEGIN Family_Room_Dimension2_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Family_Room_Dimension2}" data-fieldname="Family_Room_Dimension2" data-signal-error-for="Family_Room_Dimension2{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Family_Room_Dimension2}">
+		{BEGIN Family_Room_Dimension2_label}{$label retblresults Family_Room_Dimension2}{END Family_Room_Dimension2_label}
+	</label>
+	<div class="col-md-6" >
+		{$Family_Room_Dimension2_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Family_Room_Dimension2">
+		<div class="text-muted" >
+		{$tooltip retblresults Family_Room_Dimension2}
+		</div>
+	</div>
+</div>
+</div>
+{END Family_Room_Dimension2_fieldblock}
+
+			{BEGIN Rec_Room_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Rec_Room}" data-fieldname="Rec_Room" data-signal-error-for="Rec_Room{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Rec_Room}">
+		{BEGIN Rec_Room_label}{$label retblresults Rec_Room}{END Rec_Room_label}
+	</label>
+	<div class="col-md-6" >
+		{$Rec_Room_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Rec_Room">
+		<div class="text-muted" >
+		{$tooltip retblresults Rec_Room}
+		</div>
+	</div>
+</div>
+</div>
+{END Rec_Room_fieldblock}
+
+			{BEGIN Rec_Room_Dimension1_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Rec_Room_Dimension1}" data-fieldname="Rec_Room_Dimension1" data-signal-error-for="Rec_Room_Dimension1{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Rec_Room_Dimension1}">
+		{BEGIN Rec_Room_Dimension1_label}{$label retblresults Rec_Room_Dimension1}{END Rec_Room_Dimension1_label}
+	</label>
+	<div class="col-md-6" >
+		{$Rec_Room_Dimension1_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Rec_Room_Dimension1">
+		<div class="text-muted" >
+		{$tooltip retblresults Rec_Room_Dimension1}
+		</div>
+	</div>
+</div>
+</div>
+{END Rec_Room_Dimension1_fieldblock}
+
+			{BEGIN Rec_Room_Dimension2_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Rec_Room_Dimension2}" data-fieldname="Rec_Room_Dimension2" data-signal-error-for="Rec_Room_Dimension2{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Rec_Room_Dimension2}">
+		{BEGIN Rec_Room_Dimension2_label}{$label retblresults Rec_Room_Dimension2}{END Rec_Room_Dimension2_label}
+	</label>
+	<div class="col-md-6" >
+		{$Rec_Room_Dimension2_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Rec_Room_Dimension2">
+		<div class="text-muted" >
+		{$tooltip retblresults Rec_Room_Dimension2}
+		</div>
+	</div>
+</div>
+</div>
+{END Rec_Room_Dimension2_fieldblock}
+
+			{BEGIN Study_Room_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Study_Room}" data-fieldname="Study_Room" data-signal-error-for="Study_Room{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Study_Room}">
+		{BEGIN Study_Room_label}{$label retblresults Study_Room}{END Study_Room_label}
+	</label>
+	<div class="col-md-6" >
+		{$Study_Room_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Study_Room">
+		<div class="text-muted" >
+		{$tooltip retblresults Study_Room}
+		</div>
+	</div>
+</div>
+</div>
+{END Study_Room_fieldblock}
+
+			{BEGIN Study_Room_Dimension1_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Study_Room_Dimension1}" data-fieldname="Study_Room_Dimension1" data-signal-error-for="Study_Room_Dimension1{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Study_Room_Dimension1}">
+		{BEGIN Study_Room_Dimension1_label}{$label retblresults Study_Room_Dimension1}{END Study_Room_Dimension1_label}
+	</label>
+	<div class="col-md-6" >
+		{$Study_Room_Dimension1_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Study_Room_Dimension1">
+		<div class="text-muted" >
+		{$tooltip retblresults Study_Room_Dimension1}
+		</div>
+	</div>
+</div>
+</div>
+{END Study_Room_Dimension1_fieldblock}
+
+			{BEGIN Study_Room_Dimension2_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Study_Room_Dimension2}" data-fieldname="Study_Room_Dimension2" data-signal-error-for="Study_Room_Dimension2{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Study_Room_Dimension2}">
+		{BEGIN Study_Room_Dimension2_label}{$label retblresults Study_Room_Dimension2}{END Study_Room_Dimension2_label}
+	</label>
+	<div class="col-md-6" >
+		{$Study_Room_Dimension2_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Study_Room_Dimension2">
+		<div class="text-muted" >
+		{$tooltip retblresults Study_Room_Dimension2}
+		</div>
+	</div>
+</div>
+</div>
+{END Study_Room_Dimension2_fieldblock}
+
+			{BEGIN Sun_Room_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Sun_Room}" data-fieldname="Sun_Room" data-signal-error-for="Sun_Room{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Sun_Room}">
+		{BEGIN Sun_Room_label}{$label retblresults Sun_Room}{END Sun_Room_label}
+	</label>
+	<div class="col-md-6" >
+		{$Sun_Room_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Sun_Room">
+		<div class="text-muted" >
+		{$tooltip retblresults Sun_Room}
+		</div>
+	</div>
+</div>
+</div>
+{END Sun_Room_fieldblock}
+
+			{BEGIN Sun_Room_Dimension1_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Sun_Room_Dimension1}" data-fieldname="Sun_Room_Dimension1" data-signal-error-for="Sun_Room_Dimension1{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Sun_Room_Dimension1}">
+		{BEGIN Sun_Room_Dimension1_label}{$label retblresults Sun_Room_Dimension1}{END Sun_Room_Dimension1_label}
+	</label>
+	<div class="col-md-6" >
+		{$Sun_Room_Dimension1_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Sun_Room_Dimension1">
+		<div class="text-muted" >
+		{$tooltip retblresults Sun_Room_Dimension1}
+		</div>
+	</div>
+</div>
+</div>
+{END Sun_Room_Dimension1_fieldblock}
+
+			{BEGIN Sun_Room_Dimension2_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Sun_Room_Dimension2}" data-fieldname="Sun_Room_Dimension2" data-signal-error-for="Sun_Room_Dimension2{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Sun_Room_Dimension2}">
+		{BEGIN Sun_Room_Dimension2_label}{$label retblresults Sun_Room_Dimension2}{END Sun_Room_Dimension2_label}
+	</label>
+	<div class="col-md-6" >
+		{$Sun_Room_Dimension2_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Sun_Room_Dimension2">
+		<div class="text-muted" >
+		{$tooltip retblresults Sun_Room_Dimension2}
+		</div>
+	</div>
+</div>
+</div>
+{END Sun_Room_Dimension2_fieldblock}
+
+			{BEGIN Loft_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Loft}" data-fieldname="Loft" data-signal-error-for="Loft{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Loft}">
+		{BEGIN Loft_label}{$label retblresults Loft}{END Loft_label}
+	</label>
+	<div class="col-md-6" >
+		{$Loft_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Loft">
+		<div class="text-muted" >
+		{$tooltip retblresults Loft}
+		</div>
+	</div>
+</div>
+</div>
+{END Loft_fieldblock}
+
+			{BEGIN Loft_Dimension1_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Loft_Dimension1}" data-fieldname="Loft_Dimension1" data-signal-error-for="Loft_Dimension1{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Loft_Dimension1}">
+		{BEGIN Loft_Dimension1_label}{$label retblresults Loft_Dimension1}{END Loft_Dimension1_label}
+	</label>
+	<div class="col-md-6" >
+		{$Loft_Dimension1_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Loft_Dimension1">
+		<div class="text-muted" >
+		{$tooltip retblresults Loft_Dimension1}
+		</div>
+	</div>
+</div>
+</div>
+{END Loft_Dimension1_fieldblock}
+
+			{BEGIN Loft_Dimension2_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Loft_Dimension2}" data-fieldname="Loft_Dimension2" data-signal-error-for="Loft_Dimension2{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Loft_Dimension2}">
+		{BEGIN Loft_Dimension2_label}{$label retblresults Loft_Dimension2}{END Loft_Dimension2_label}
+	</label>
+	<div class="col-md-6" >
+		{$Loft_Dimension2_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Loft_Dimension2">
+		<div class="text-muted" >
+		{$tooltip retblresults Loft_Dimension2}
+		</div>
+	</div>
+</div>
+</div>
+{END Loft_Dimension2_fieldblock}
+
+			{BEGIN Dinning_Room_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Dinning_Room}" data-fieldname="Dinning_Room" data-signal-error-for="Dinning_Room{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Dinning_Room}">
+		{BEGIN Dinning_Room_label}{$label retblresults Dinning_Room}{END Dinning_Room_label}
+	</label>
+	<div class="col-md-6" >
+		{$Dinning_Room_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Dinning_Room">
+		<div class="text-muted" >
+		{$tooltip retblresults Dinning_Room}
+		</div>
+	</div>
+</div>
+</div>
+{END Dinning_Room_fieldblock}
+
+			{BEGIN Dinning_Room_Dimension1_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Dinning_Room_Dimension1}" data-fieldname="Dinning_Room_Dimension1" data-signal-error-for="Dinning_Room_Dimension1{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Dinning_Room_Dimension1}">
+		{BEGIN Dinning_Room_Dimension1_label}{$label retblresults Dinning_Room_Dimension1}{END Dinning_Room_Dimension1_label}
+	</label>
+	<div class="col-md-6" >
+		{$Dinning_Room_Dimension1_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Dinning_Room_Dimension1">
+		<div class="text-muted" >
+		{$tooltip retblresults Dinning_Room_Dimension1}
+		</div>
+	</div>
+</div>
+</div>
+{END Dinning_Room_Dimension1_fieldblock}
+
+			{BEGIN Dinning_Room_Dimension2_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Dinning_Room_Dimension2}" data-fieldname="Dinning_Room_Dimension2" data-signal-error-for="Dinning_Room_Dimension2{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Dinning_Room_Dimension2}">
+		{BEGIN Dinning_Room_Dimension2_label}{$label retblresults Dinning_Room_Dimension2}{END Dinning_Room_Dimension2_label}
+	</label>
+	<div class="col-md-6" >
+		{$Dinning_Room_Dimension2_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Dinning_Room_Dimension2">
+		<div class="text-muted" >
+		{$tooltip retblresults Dinning_Room_Dimension2}
+		</div>
+	</div>
+</div>
+</div>
+{END Dinning_Room_Dimension2_fieldblock}
+
+			{BEGIN Amusement_Room_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Amusement_Room}" data-fieldname="Amusement_Room" data-signal-error-for="Amusement_Room{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Amusement_Room}">
+		{BEGIN Amusement_Room_label}{$label retblresults Amusement_Room}{END Amusement_Room_label}
+	</label>
+	<div class="col-md-6" >
+		{$Amusement_Room_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Amusement_Room">
+		<div class="text-muted" >
+		{$tooltip retblresults Amusement_Room}
+		</div>
+	</div>
+</div>
+</div>
+{END Amusement_Room_fieldblock}
+
+			{BEGIN Amusement_Room_Dimension1_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Amusement_Room_Dimension1}" data-fieldname="Amusement_Room_Dimension1" data-signal-error-for="Amusement_Room_Dimension1{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Amusement_Room_Dimension1}">
+		{BEGIN Amusement_Room_Dimension1_label}{$label retblresults Amusement_Room_Dimension1}{END Amusement_Room_Dimension1_label}
+	</label>
+	<div class="col-md-6" >
+		{$Amusement_Room_Dimension1_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Amusement_Room_Dimension1">
+		<div class="text-muted" >
+		{$tooltip retblresults Amusement_Room_Dimension1}
+		</div>
+	</div>
+</div>
+</div>
+{END Amusement_Room_Dimension1_fieldblock}
+
+			{BEGIN Amusement_Room_Dimension2_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Amusement_Room_Dimension2}" data-fieldname="Amusement_Room_Dimension2" data-signal-error-for="Amusement_Room_Dimension2{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Amusement_Room_Dimension2}">
+		{BEGIN Amusement_Room_Dimension2_label}{$label retblresults Amusement_Room_Dimension2}{END Amusement_Room_Dimension2_label}
+	</label>
+	<div class="col-md-6" >
+		{$Amusement_Room_Dimension2_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Amusement_Room_Dimension2">
+		<div class="text-muted" >
+		{$tooltip retblresults Amusement_Room_Dimension2}
+		</div>
+	</div>
+</div>
+</div>
+{END Amusement_Room_Dimension2_fieldblock}
+
+			{BEGIN Foyer_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Foyer}" data-fieldname="Foyer" data-signal-error-for="Foyer{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Foyer}">
+		{BEGIN Foyer_label}{$label retblresults Foyer}{END Foyer_label}
+	</label>
+	<div class="col-md-6" >
+		{$Foyer_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Foyer">
+		<div class="text-muted" >
+		{$tooltip retblresults Foyer}
+		</div>
+	</div>
+</div>
+</div>
+{END Foyer_fieldblock}
+
+			{BEGIN Foyer_Dimension1_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Foyer_Dimension1}" data-fieldname="Foyer_Dimension1" data-signal-error-for="Foyer_Dimension1{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Foyer_Dimension1}">
+		{BEGIN Foyer_Dimension1_label}{$label retblresults Foyer_Dimension1}{END Foyer_Dimension1_label}
+	</label>
+	<div class="col-md-6" >
+		{$Foyer_Dimension1_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Foyer_Dimension1">
+		<div class="text-muted" >
+		{$tooltip retblresults Foyer_Dimension1}
+		</div>
+	</div>
+</div>
+</div>
+{END Foyer_Dimension1_fieldblock}
+
+			{BEGIN Foyer_Dimension2_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Foyer_Dimension2}" data-fieldname="Foyer_Dimension2" data-signal-error-for="Foyer_Dimension2{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Foyer_Dimension2}">
+		{BEGIN Foyer_Dimension2_label}{$label retblresults Foyer_Dimension2}{END Foyer_Dimension2_label}
+	</label>
+	<div class="col-md-6" >
+		{$Foyer_Dimension2_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Foyer_Dimension2">
+		<div class="text-muted" >
+		{$tooltip retblresults Foyer_Dimension2}
+		</div>
+	</div>
+</div>
+</div>
+{END Foyer_Dimension2_fieldblock}
+
+			{BEGIN Office_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Office}" data-fieldname="Office" data-signal-error-for="Office{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Office}">
+		{BEGIN Office_label}{$label retblresults Office}{END Office_label}
+	</label>
+	<div class="col-md-6" >
+		{$Office_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Office">
+		<div class="text-muted" >
+		{$tooltip retblresults Office}
+		</div>
+	</div>
+</div>
+</div>
+{END Office_fieldblock}
+
+			{BEGIN Office_Dimension1_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Office_Dimension1}" data-fieldname="Office_Dimension1" data-signal-error-for="Office_Dimension1{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Office_Dimension1}">
+		{BEGIN Office_Dimension1_label}{$label retblresults Office_Dimension1}{END Office_Dimension1_label}
+	</label>
+	<div class="col-md-6" >
+		{$Office_Dimension1_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Office_Dimension1">
+		<div class="text-muted" >
+		{$tooltip retblresults Office_Dimension1}
+		</div>
+	</div>
+</div>
+</div>
+{END Office_Dimension1_fieldblock}
+
+			{BEGIN Office_Dimension2_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Office_Dimension2}" data-fieldname="Office_Dimension2" data-signal-error-for="Office_Dimension2{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Office_Dimension2}">
+		{BEGIN Office_Dimension2_label}{$label retblresults Office_Dimension2}{END Office_Dimension2_label}
+	</label>
+	<div class="col-md-6" >
+		{$Office_Dimension2_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Office_Dimension2">
+		<div class="text-muted" >
+		{$tooltip retblresults Office_Dimension2}
+		</div>
+	</div>
+</div>
+</div>
+{END Office_Dimension2_fieldblock}
+
+			{BEGIN Den_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Den}" data-fieldname="Den" data-signal-error-for="Den{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Den}">
+		{BEGIN Den_label}{$label retblresults Den}{END Den_label}
+	</label>
+	<div class="col-md-6" >
+		{$Den_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Den">
+		<div class="text-muted" >
+		{$tooltip retblresults Den}
+		</div>
+	</div>
+</div>
+</div>
+{END Den_fieldblock}
+
+			{BEGIN Den_Dimension1_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Den_Dimension1}" data-fieldname="Den_Dimension1" data-signal-error-for="Den_Dimension1{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Den_Dimension1}">
+		{BEGIN Den_Dimension1_label}{$label retblresults Den_Dimension1}{END Den_Dimension1_label}
+	</label>
+	<div class="col-md-6" >
+		{$Den_Dimension1_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Den_Dimension1">
+		<div class="text-muted" >
+		{$tooltip retblresults Den_Dimension1}
+		</div>
+	</div>
+</div>
+</div>
+{END Den_Dimension1_fieldblock}
+
+			{BEGIN Den_Dimension2_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Den_Dimension2}" data-fieldname="Den_Dimension2" data-signal-error-for="Den_Dimension2{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Den_Dimension2}">
+		{BEGIN Den_Dimension2_label}{$label retblresults Den_Dimension2}{END Den_Dimension2_label}
+	</label>
+	<div class="col-md-6" >
+		{$Den_Dimension2_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Den_Dimension2">
+		<div class="text-muted" >
+		{$tooltip retblresults Den_Dimension2}
+		</div>
+	</div>
+</div>
+</div>
+{END Den_Dimension2_fieldblock}
+
+			{BEGIN FullBaths_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_FullBaths}" data-fieldname="FullBaths" data-signal-error-for="FullBaths{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_FullBaths}">
+		{BEGIN FullBaths_label}{$label retblresults FullBaths}{END FullBaths_label}
+	</label>
+	<div class="col-md-6" >
+		{$FullBaths_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="FullBaths">
+		<div class="text-muted" >
+		{$tooltip retblresults FullBaths}
+		</div>
+	</div>
+</div>
+</div>
+{END FullBaths_fieldblock}
+
+			{BEGIN s3_4Baths_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_s3_4Baths}" data-fieldname="s3_4Baths" data-signal-error-for="s3_4Baths{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_s3_4Baths}">
+		{BEGIN s3_4Baths_label}{$label retblresults s3_4Baths}{END s3_4Baths_label}
+	</label>
+	<div class="col-md-6" >
+		{$s3_4Baths_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="s3_4Baths">
+		<div class="text-muted" >
+		{$tooltip retblresults s3_4Baths}
+		</div>
+	</div>
+</div>
+</div>
+{END s3_4Baths_fieldblock}
+
+			{BEGIN s1_2Baths_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_s1_2Baths}" data-fieldname="s1_2Baths" data-signal-error-for="s1_2Baths{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_s1_2Baths}">
+		{BEGIN s1_2Baths_label}{$label retblresults s1_2Baths}{END s1_2Baths_label}
+	</label>
+	<div class="col-md-6" >
+		{$s1_2Baths_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="s1_2Baths">
+		<div class="text-muted" >
+		{$tooltip retblresults s1_2Baths}
+		</div>
+	</div>
+</div>
+</div>
+{END s1_2Baths_fieldblock}
+
+			{BEGIN Fireplaces_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Fireplaces}" data-fieldname="Fireplaces" data-signal-error-for="Fireplaces{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Fireplaces}">
+		{BEGIN Fireplaces_label}{$label retblresults Fireplaces}{END Fireplaces_label}
+	</label>
+	<div class="col-md-6" >
+		{$Fireplaces_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Fireplaces">
+		<div class="text-muted" >
+		{$tooltip retblresults Fireplaces}
+		</div>
+	</div>
+</div>
+</div>
+{END Fireplaces_fieldblock}
+
+			{BEGIN Wood_Burning_Fireplace_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Wood_Burning_Fireplace}" data-fieldname="Wood_Burning_Fireplace" data-signal-error-for="Wood_Burning_Fireplace{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Wood_Burning_Fireplace}">
+		{BEGIN Wood_Burning_Fireplace_label}{$label retblresults Wood_Burning_Fireplace}{END Wood_Burning_Fireplace_label}
+	</label>
+	<div class="col-md-6" >
+		{$Wood_Burning_Fireplace_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Wood_Burning_Fireplace">
+		<div class="text-muted" >
+		{$tooltip retblresults Wood_Burning_Fireplace}
+		</div>
+	</div>
+</div>
+</div>
+{END Wood_Burning_Fireplace_fieldblock}
+
+			{BEGIN Gas_Burning_Fireplace_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Gas_Burning_Fireplace}" data-fieldname="Gas_Burning_Fireplace" data-signal-error-for="Gas_Burning_Fireplace{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Gas_Burning_Fireplace}">
+		{BEGIN Gas_Burning_Fireplace_label}{$label retblresults Gas_Burning_Fireplace}{END Gas_Burning_Fireplace_label}
+	</label>
+	<div class="col-md-6" >
+		{$Gas_Burning_Fireplace_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Gas_Burning_Fireplace">
+		<div class="text-muted" >
+		{$tooltip retblresults Gas_Burning_Fireplace}
+		</div>
+	</div>
+</div>
+</div>
+{END Gas_Burning_Fireplace_fieldblock}
+
+			{BEGIN Range_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Range}" data-fieldname="Range" data-signal-error-for="Range{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Range}">
+		{BEGIN Range_label}{$label retblresults Range}{END Range_label}
+	</label>
+	<div class="col-md-6" >
+		{$Range_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Range">
+		<div class="text-muted" >
+		{$tooltip retblresults Range}
+		</div>
+	</div>
+</div>
+</div>
+{END Range_fieldblock}
+
+			{BEGIN Cooktop_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Cooktop}" data-fieldname="Cooktop" data-signal-error-for="Cooktop{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Cooktop}">
+		{BEGIN Cooktop_label}{$label retblresults Cooktop}{END Cooktop_label}
+	</label>
+	<div class="col-md-6" >
+		{$Cooktop_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Cooktop">
+		<div class="text-muted" >
+		{$tooltip retblresults Cooktop}
+		</div>
+	</div>
+</div>
+</div>
+{END Cooktop_fieldblock}
+
+			{BEGIN Dishwasher_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Dishwasher}" data-fieldname="Dishwasher" data-signal-error-for="Dishwasher{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Dishwasher}">
+		{BEGIN Dishwasher_label}{$label retblresults Dishwasher}{END Dishwasher_label}
+	</label>
+	<div class="col-md-6" >
+		{$Dishwasher_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Dishwasher">
+		<div class="text-muted" >
+		{$tooltip retblresults Dishwasher}
+		</div>
+	</div>
+</div>
+</div>
+{END Dishwasher_fieldblock}
+
+			{BEGIN Disposal_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Disposal}" data-fieldname="Disposal" data-signal-error-for="Disposal{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Disposal}">
+		{BEGIN Disposal_label}{$label retblresults Disposal}{END Disposal_label}
+	</label>
+	<div class="col-md-6" >
+		{$Disposal_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Disposal">
+		<div class="text-muted" >
+		{$tooltip retblresults Disposal}
+		</div>
+	</div>
+</div>
+</div>
+{END Disposal_fieldblock}
+
+			{BEGIN Dryer_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Dryer}" data-fieldname="Dryer" data-signal-error-for="Dryer{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Dryer}">
+		{BEGIN Dryer_label}{$label retblresults Dryer}{END Dryer_label}
+	</label>
+	<div class="col-md-6" >
+		{$Dryer_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Dryer">
+		<div class="text-muted" >
+		{$tooltip retblresults Dryer}
+		</div>
+	</div>
+</div>
+</div>
+{END Dryer_fieldblock}
+
+			{BEGIN Exhaust_Fan_Hood_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Exhaust_Fan_Hood}" data-fieldname="Exhaust_Fan_Hood" data-signal-error-for="Exhaust_Fan_Hood{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Exhaust_Fan_Hood}">
+		{BEGIN Exhaust_Fan_Hood_label}{$label retblresults Exhaust_Fan_Hood}{END Exhaust_Fan_Hood_label}
+	</label>
+	<div class="col-md-6" >
+		{$Exhaust_Fan_Hood_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Exhaust_Fan_Hood">
+		<div class="text-muted" >
+		{$tooltip retblresults Exhaust_Fan_Hood}
+		</div>
+	</div>
+</div>
+</div>
+{END Exhaust_Fan_Hood_fieldblock}
+
+			{BEGIN Microwave_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Microwave}" data-fieldname="Microwave" data-signal-error-for="Microwave{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Microwave}">
+		{BEGIN Microwave_label}{$label retblresults Microwave}{END Microwave_label}
+	</label>
+	<div class="col-md-6" >
+		{$Microwave_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Microwave">
+		<div class="text-muted" >
+		{$tooltip retblresults Microwave}
+		</div>
+	</div>
+</div>
+</div>
+{END Microwave_fieldblock}
+
+			{BEGIN Refrigerator_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Refrigerator}" data-fieldname="Refrigerator" data-signal-error-for="Refrigerator{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Refrigerator}">
+		{BEGIN Refrigerator_label}{$label retblresults Refrigerator}{END Refrigerator_label}
+	</label>
+	<div class="col-md-6" >
+		{$Refrigerator_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Refrigerator">
+		<div class="text-muted" >
+		{$tooltip retblresults Refrigerator}
+		</div>
+	</div>
+</div>
+</div>
+{END Refrigerator_fieldblock}
+
+			{BEGIN Wall_Oven_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Wall_Oven}" data-fieldname="Wall_Oven" data-signal-error-for="Wall_Oven{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Wall_Oven}">
+		{BEGIN Wall_Oven_label}{$label retblresults Wall_Oven}{END Wall_Oven_label}
+	</label>
+	<div class="col-md-6" >
+		{$Wall_Oven_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Wall_Oven">
+		<div class="text-muted" >
+		{$tooltip retblresults Wall_Oven}
+		</div>
+	</div>
+</div>
+</div>
+{END Wall_Oven_fieldblock}
+
+			{BEGIN Water_Softener_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Water_Softener}" data-fieldname="Water_Softener" data-signal-error-for="Water_Softener{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Water_Softener}">
+		{BEGIN Water_Softener_label}{$label retblresults Water_Softener}{END Water_Softener_label}
+	</label>
+	<div class="col-md-6" >
+		{$Water_Softener_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Water_Softener">
+		<div class="text-muted" >
+		{$tooltip retblresults Water_Softener}
+		</div>
+	</div>
+</div>
+</div>
+{END Water_Softener_fieldblock}
+
+			{BEGIN Eat_In_Kitchen_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Eat_In_Kitchen}" data-fieldname="Eat_In_Kitchen" data-signal-error-for="Eat_In_Kitchen{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Eat_In_Kitchen}">
+		{BEGIN Eat_In_Kitchen_label}{$label retblresults Eat_In_Kitchen}{END Eat_In_Kitchen_label}
+	</label>
+	<div class="col-md-6" >
+		{$Eat_In_Kitchen_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Eat_In_Kitchen">
+		<div class="text-muted" >
+		{$tooltip retblresults Eat_In_Kitchen}
+		</div>
+	</div>
+</div>
+</div>
+{END Eat_In_Kitchen_fieldblock}
+
+			{BEGIN Kitchen_Dining_Room_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Kitchen_Dining_Room}" data-fieldname="Kitchen_Dining_Room" data-signal-error-for="Kitchen_Dining_Room{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Kitchen_Dining_Room}">
+		{BEGIN Kitchen_Dining_Room_label}{$label retblresults Kitchen_Dining_Room}{END Kitchen_Dining_Room_label}
+	</label>
+	<div class="col-md-6" >
+		{$Kitchen_Dining_Room_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Kitchen_Dining_Room">
+		<div class="text-muted" >
+		{$tooltip retblresults Kitchen_Dining_Room}
+		</div>
+	</div>
+</div>
+</div>
+{END Kitchen_Dining_Room_fieldblock}
+
+			{BEGIN Separate_Formal_Dining_Room_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Separate_Formal_Dining_Room}" data-fieldname="Separate_Formal_Dining_Room" data-signal-error-for="Separate_Formal_Dining_Room{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Separate_Formal_Dining_Room}">
+		{BEGIN Separate_Formal_Dining_Room_label}{$label retblresults Separate_Formal_Dining_Room}{END Separate_Formal_Dining_Room_label}
+	</label>
+	<div class="col-md-6" >
+		{$Separate_Formal_Dining_Room_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Separate_Formal_Dining_Room">
+		<div class="text-muted" >
+		{$tooltip retblresults Separate_Formal_Dining_Room}
+		</div>
+	</div>
+</div>
+</div>
+{END Separate_Formal_Dining_Room_fieldblock}
+
+			{BEGIN Basement_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Basement}" data-fieldname="Basement" data-signal-error-for="Basement{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Basement}">
+		{BEGIN Basement_label}{$label retblresults Basement}{END Basement_label}
+	</label>
+	<div class="col-md-6" >
+		{$Basement_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Basement">
+		<div class="text-muted" >
+		{$tooltip retblresults Basement}
+		</div>
+	</div>
+</div>
+</div>
+{END Basement_fieldblock}
+
+			{BEGIN Finished_Basement_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Finished_Basement}" data-fieldname="Finished_Basement" data-signal-error-for="Finished_Basement{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Finished_Basement}">
+		{BEGIN Finished_Basement_label}{$label retblresults Finished_Basement}{END Finished_Basement_label}
+	</label>
+	<div class="col-md-6" >
+		{$Finished_Basement_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Finished_Basement">
+		<div class="text-muted" >
+		{$tooltip retblresults Finished_Basement}
+		</div>
+	</div>
+</div>
+</div>
+{END Finished_Basement_fieldblock}
+
+			{BEGIN Drain_Tiled_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Drain_Tiled}" data-fieldname="Drain_Tiled" data-signal-error-for="Drain_Tiled{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Drain_Tiled}">
+		{BEGIN Drain_Tiled_label}{$label retblresults Drain_Tiled}{END Drain_Tiled_label}
+	</label>
+	<div class="col-md-6" >
+		{$Drain_Tiled_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Drain_Tiled">
+		<div class="text-muted" >
+		{$tooltip retblresults Drain_Tiled}
+		</div>
+	</div>
+</div>
+</div>
+{END Drain_Tiled_fieldblock}
+
+			{BEGIN Sum_Pump_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Sum_Pump}" data-fieldname="Sum_Pump" data-signal-error-for="Sum_Pump{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Sum_Pump}">
+		{BEGIN Sum_Pump_label}{$label retblresults Sum_Pump}{END Sum_Pump_label}
+	</label>
+	<div class="col-md-6" >
+		{$Sum_Pump_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Sum_Pump">
+		<div class="text-muted" >
+		{$tooltip retblresults Sum_Pump}
+		</div>
+	</div>
+</div>
+</div>
+{END Sum_Pump_fieldblock}
+
+			{BEGIN Walkout_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Walkout}" data-fieldname="Walkout" data-signal-error-for="Walkout{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Walkout}">
+		{BEGIN Walkout_label}{$label retblresults Walkout}{END Walkout_label}
+	</label>
+	<div class="col-md-6" >
+		{$Walkout_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Walkout">
+		<div class="text-muted" >
+		{$tooltip retblresults Walkout}
+		</div>
+	</div>
+</div>
+</div>
+{END Walkout_fieldblock}
+
+			{BEGIN Daylight_Lookout_Windows_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Daylight_Lookout_Windows}" data-fieldname="Daylight_Lookout_Windows" data-signal-error-for="Daylight_Lookout_Windows{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Daylight_Lookout_Windows}">
+		{BEGIN Daylight_Lookout_Windows_label}{$label retblresults Daylight_Lookout_Windows}{END Daylight_Lookout_Windows_label}
+	</label>
+	<div class="col-md-6" >
+		{$Daylight_Lookout_Windows_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Daylight_Lookout_Windows">
+		<div class="text-muted" >
+		{$tooltip retblresults Daylight_Lookout_Windows}
+		</div>
+	</div>
+</div>
+</div>
+{END Daylight_Lookout_Windows_fieldblock}
+
+			{BEGIN Cooling_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Cooling}" data-fieldname="Cooling" data-signal-error-for="Cooling{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Cooling}">
+		{BEGIN Cooling_label}{$label retblresults Cooling}{END Cooling_label}
+	</label>
+	<div class="col-md-6" >
+		{$Cooling_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Cooling">
+		<div class="text-muted" >
+		{$tooltip retblresults Cooling}
+		</div>
+	</div>
+</div>
+</div>
+{END Cooling_fieldblock}
+
+			{BEGIN Heating_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Heating}" data-fieldname="Heating" data-signal-error-for="Heating{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Heating}">
+		{BEGIN Heating_label}{$label retblresults Heating}{END Heating_label}
+	</label>
+	<div class="col-md-6" >
+		{$Heating_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Heating">
+		<div class="text-muted" >
+		{$tooltip retblresults Heating}
+		</div>
+	</div>
+</div>
+</div>
+{END Heating_fieldblock}
+
+			{BEGIN Lot_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Lot}" data-fieldname="Lot" data-signal-error-for="Lot{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Lot}">
+		{BEGIN Lot_label}{$label retblresults Lot}{END Lot_label}
+	</label>
+	<div class="col-md-6" >
+		{$Lot_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Lot">
+		<div class="text-muted" >
+		{$tooltip retblresults Lot}
+		</div>
+	</div>
+</div>
+</div>
+{END Lot_fieldblock}
+
+			{BEGIN Lot_Dimension1_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Lot_Dimension1}" data-fieldname="Lot_Dimension1" data-signal-error-for="Lot_Dimension1{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Lot_Dimension1}">
+		{BEGIN Lot_Dimension1_label}{$label retblresults Lot_Dimension1}{END Lot_Dimension1_label}
+	</label>
+	<div class="col-md-6" >
+		{$Lot_Dimension1_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Lot_Dimension1">
+		<div class="text-muted" >
+		{$tooltip retblresults Lot_Dimension1}
+		</div>
+	</div>
+</div>
+</div>
+{END Lot_Dimension1_fieldblock}
+
+			{BEGIN Lot_Dimension2_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Lot_Dimension2}" data-fieldname="Lot_Dimension2" data-signal-error-for="Lot_Dimension2{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Lot_Dimension2}">
+		{BEGIN Lot_Dimension2_label}{$label retblresults Lot_Dimension2}{END Lot_Dimension2_label}
+	</label>
+	<div class="col-md-6" >
+		{$Lot_Dimension2_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Lot_Dimension2">
+		<div class="text-muted" >
+		{$tooltip retblresults Lot_Dimension2}
+		</div>
+	</div>
+</div>
+</div>
+{END Lot_Dimension2_fieldblock}
+
+			{BEGIN Lot_Dimension3_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Lot_Dimension3}" data-fieldname="Lot_Dimension3" data-signal-error-for="Lot_Dimension3{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Lot_Dimension3}">
+		{BEGIN Lot_Dimension3_label}{$label retblresults Lot_Dimension3}{END Lot_Dimension3_label}
+	</label>
+	<div class="col-md-6" >
+		{$Lot_Dimension3_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Lot_Dimension3">
+		<div class="text-muted" >
+		{$tooltip retblresults Lot_Dimension3}
+		</div>
+	</div>
+</div>
+</div>
+{END Lot_Dimension3_fieldblock}
+
+			{BEGIN Lot_Dimension4_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Lot_Dimension4}" data-fieldname="Lot_Dimension4" data-signal-error-for="Lot_Dimension4{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Lot_Dimension4}">
+		{BEGIN Lot_Dimension4_label}{$label retblresults Lot_Dimension4}{END Lot_Dimension4_label}
+	</label>
+	<div class="col-md-6" >
+		{$Lot_Dimension4_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Lot_Dimension4">
+		<div class="text-muted" >
+		{$tooltip retblresults Lot_Dimension4}
+		</div>
+	</div>
+</div>
+</div>
+{END Lot_Dimension4_fieldblock}
+
+			{BEGIN Lot_Dimension5_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Lot_Dimension5}" data-fieldname="Lot_Dimension5" data-signal-error-for="Lot_Dimension5{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Lot_Dimension5}">
+		{BEGIN Lot_Dimension5_label}{$label retblresults Lot_Dimension5}{END Lot_Dimension5_label}
+	</label>
+	<div class="col-md-6" >
+		{$Lot_Dimension5_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Lot_Dimension5">
+		<div class="text-muted" >
+		{$tooltip retblresults Lot_Dimension5}
+		</div>
+	</div>
+</div>
+</div>
+{END Lot_Dimension5_fieldblock}
+
+			{BEGIN Lot_Dimension6_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Lot_Dimension6}" data-fieldname="Lot_Dimension6" data-signal-error-for="Lot_Dimension6{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Lot_Dimension6}">
+		{BEGIN Lot_Dimension6_label}{$label retblresults Lot_Dimension6}{END Lot_Dimension6_label}
+	</label>
+	<div class="col-md-6" >
+		{$Lot_Dimension6_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Lot_Dimension6">
+		<div class="text-muted" >
+		{$tooltip retblresults Lot_Dimension6}
+		</div>
+	</div>
+</div>
+</div>
+{END Lot_Dimension6_fieldblock}
+
+			{BEGIN Lot_Dimension7_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Lot_Dimension7}" data-fieldname="Lot_Dimension7" data-signal-error-for="Lot_Dimension7{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Lot_Dimension7}">
+		{BEGIN Lot_Dimension7_label}{$label retblresults Lot_Dimension7}{END Lot_Dimension7_label}
+	</label>
+	<div class="col-md-6" >
+		{$Lot_Dimension7_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Lot_Dimension7">
+		<div class="text-muted" >
+		{$tooltip retblresults Lot_Dimension7}
+		</div>
+	</div>
+</div>
+</div>
+{END Lot_Dimension7_fieldblock}
+
+			{BEGIN Lot_Dimension8_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Lot_Dimension8}" data-fieldname="Lot_Dimension8" data-signal-error-for="Lot_Dimension8{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Lot_Dimension8}">
+		{BEGIN Lot_Dimension8_label}{$label retblresults Lot_Dimension8}{END Lot_Dimension8_label}
+	</label>
+	<div class="col-md-6" >
+		{$Lot_Dimension8_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Lot_Dimension8">
+		<div class="text-muted" >
+		{$tooltip retblresults Lot_Dimension8}
+		</div>
+	</div>
+</div>
+</div>
+{END Lot_Dimension8_fieldblock}
+
+			{BEGIN Tax_Year_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Tax_Year}" data-fieldname="Tax_Year" data-signal-error-for="Tax_Year{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Tax_Year}">
+		{BEGIN Tax_Year_label}{$label retblresults Tax_Year}{END Tax_Year_label}
+	</label>
+	<div class="col-md-6" >
+		{$Tax_Year_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Tax_Year">
+		<div class="text-muted" >
+		{$tooltip retblresults Tax_Year}
+		</div>
+	</div>
+</div>
+</div>
+{END Tax_Year_fieldblock}
+
+			{BEGIN Remarks_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Remarks}" data-fieldname="Remarks" data-signal-error-for="Remarks{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Remarks}">
+		{BEGIN Remarks_label}{$label retblresults Remarks}{END Remarks_label}
+	</label>
+	<div class="col-md-6" >
+		{$Remarks_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Remarks">
+		<div class="text-muted" >
+		{$tooltip retblresults Remarks}
+		</div>
+	</div>
+</div>
+</div>
+{END Remarks_fieldblock}
+
+			{BEGIN PhotoListing_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PhotoListing}" data-fieldname="PhotoListing" data-signal-error-for="PhotoListing{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PhotoListing}">
+		{BEGIN PhotoListing_label}{$label retblresults PhotoListing}{END PhotoListing_label}
+	</label>
+	<div class="col-md-6" >
+		{$PhotoListing_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PhotoListing">
+		<div class="text-muted" >
+		{$tooltip retblresults PhotoListing}
+		</div>
+	</div>
+</div>
+</div>
+{END PhotoListing_fieldblock}
+
+			{BEGIN Photo1_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Photo1}" data-fieldname="Photo1" data-signal-error-for="Photo1{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Photo1}">
+		{BEGIN Photo1_label}{$label retblresults Photo1}{END Photo1_label}
+	</label>
+	<div class="col-md-6" >
+		{$Photo1_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Photo1">
+		<div class="text-muted" >
+		{$tooltip retblresults Photo1}
+		</div>
+	</div>
+</div>
+</div>
+{END Photo1_fieldblock}
+
+			{BEGIN Photo2_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Photo2}" data-fieldname="Photo2" data-signal-error-for="Photo2{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Photo2}">
+		{BEGIN Photo2_label}{$label retblresults Photo2}{END Photo2_label}
+	</label>
+	<div class="col-md-6" >
+		{$Photo2_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Photo2">
+		<div class="text-muted" >
+		{$tooltip retblresults Photo2}
+		</div>
+	</div>
+</div>
+</div>
+{END Photo2_fieldblock}
+
+			{BEGIN Photo3_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Photo3}" data-fieldname="Photo3" data-signal-error-for="Photo3{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Photo3}">
+		{BEGIN Photo3_label}{$label retblresults Photo3}{END Photo3_label}
+	</label>
+	<div class="col-md-6" >
+		{$Photo3_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Photo3">
+		<div class="text-muted" >
+		{$tooltip retblresults Photo3}
+		</div>
+	</div>
+</div>
+</div>
+{END Photo3_fieldblock}
+
+			{BEGIN Photo4_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Photo4}" data-fieldname="Photo4" data-signal-error-for="Photo4{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Photo4}">
+		{BEGIN Photo4_label}{$label retblresults Photo4}{END Photo4_label}
+	</label>
+	<div class="col-md-6" >
+		{$Photo4_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Photo4">
+		<div class="text-muted" >
+		{$tooltip retblresults Photo4}
+		</div>
+	</div>
+</div>
+</div>
+{END Photo4_fieldblock}
+
+			{BEGIN Photo5_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Photo5}" data-fieldname="Photo5" data-signal-error-for="Photo5{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Photo5}">
+		{BEGIN Photo5_label}{$label retblresults Photo5}{END Photo5_label}
+	</label>
+	<div class="col-md-6" >
+		{$Photo5_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Photo5">
+		<div class="text-muted" >
+		{$tooltip retblresults Photo5}
+		</div>
+	</div>
+</div>
+</div>
+{END Photo5_fieldblock}
+
+			{BEGIN Photo6_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Photo6}" data-fieldname="Photo6" data-signal-error-for="Photo6{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Photo6}">
+		{BEGIN Photo6_label}{$label retblresults Photo6}{END Photo6_label}
+	</label>
+	<div class="col-md-6" >
+		{$Photo6_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Photo6">
+		<div class="text-muted" >
+		{$tooltip retblresults Photo6}
+		</div>
+	</div>
+</div>
+</div>
+{END Photo6_fieldblock}
+
+			{BEGIN Photo7_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Photo7}" data-fieldname="Photo7" data-signal-error-for="Photo7{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Photo7}">
+		{BEGIN Photo7_label}{$label retblresults Photo7}{END Photo7_label}
+	</label>
+	<div class="col-md-6" >
+		{$Photo7_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Photo7">
+		<div class="text-muted" >
+		{$tooltip retblresults Photo7}
+		</div>
+	</div>
+</div>
+</div>
+{END Photo7_fieldblock}
+
+			{BEGIN Photo8_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Photo8}" data-fieldname="Photo8" data-signal-error-for="Photo8{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Photo8}">
+		{BEGIN Photo8_label}{$label retblresults Photo8}{END Photo8_label}
+	</label>
+	<div class="col-md-6" >
+		{$Photo8_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Photo8">
+		<div class="text-muted" >
+		{$tooltip retblresults Photo8}
+		</div>
+	</div>
+</div>
+</div>
+{END Photo8_fieldblock}
+
+			{BEGIN Photo9_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Photo9}" data-fieldname="Photo9" data-signal-error-for="Photo9{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Photo9}">
+		{BEGIN Photo9_label}{$label retblresults Photo9}{END Photo9_label}
+	</label>
+	<div class="col-md-6" >
+		{$Photo9_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Photo9">
+		<div class="text-muted" >
+		{$tooltip retblresults Photo9}
+		</div>
+	</div>
+</div>
+</div>
+{END Photo9_fieldblock}
+
+			{BEGIN Photo10_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Photo10}" data-fieldname="Photo10" data-signal-error-for="Photo10{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Photo10}">
+		{BEGIN Photo10_label}{$label retblresults Photo10}{END Photo10_label}
+	</label>
+	<div class="col-md-6" >
+		{$Photo10_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Photo10">
+		<div class="text-muted" >
+		{$tooltip retblresults Photo10}
+		</div>
+	</div>
+</div>
+</div>
+{END Photo10_fieldblock}
+
+
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN editbuttons}
+	{BEGIN save_button}
+	<button class="btn btn-primary" {$savebutton_attrs}>保存</button>
+	{END save_button}
+	{BEGIN back_button}
+		<button class="btn btn-default" {$backbutton_attrs}>一覧に戻る</button>
+	{END back_button}
+	{BEGIN close_button}
+	<a href="#" class="btn btn-default" {$closebutton_attrs}>キャンセル(Cancel)</a>
+	{END close_button}
+
+{END editbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+
+
+{BEGIN container_leftbuttons_1}
+<div {$leftbuttons_1_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons_1" class="  text-right col-md-3 "> 
+
+{BEGIN righteditbuttons}
+<div class="btn-group" role="group">
+
+	{BEGIN prev_button}
+	<button class="btn btn-default {$prevbutton_class}" {$prevbutton_attrs}><span class="glyphicon glyphicon-chevron-left"></span></button>
+	{END prev_button}
+	{BEGIN next_button}
+	<button class="btn btn-default  {$nextbutton_class}" {$nextbutton_attrs}><span class="glyphicon glyphicon-chevron-right"></span></button>
+	{END next_button}
+	<div class="btn-group dropup" role="group">
+		<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+		<ul class="dropdown-menu dropdown-left">
+			{BEGIN reset_button}
+				<li><a href="#" {$resetbutton_attrs}>リセット</a></li>
+			{END reset_button}
+			{BEGIN view_page_button}
+				<li><a href="#" {$view_page_button_attrs}>表示</a></li>
+			{END view_page_button}
+		</ul>
+	</div>
+</div>
+{END righteditbuttons}
+
+
+
+</div>
+{END container_leftbuttons_1}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

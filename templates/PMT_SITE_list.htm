@@ -1,0 +1,1523 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-list" {$bodyattrs}>
+	{BEGIN body}
+<style>
+{$containerCss}
+</style>
+<div class="sidebar bs-fixed clearfix mCustomScrollbar" data-mcs-theme="minimal-dark" {$blockattr_left}>
+	<div class="sidebar-contents mCustomScrollBox mCS-minimal-dark mCSB_vertical mCSB_outside">
+		
+
+{BEGIN container_logo}
+<div {$logo_chiddenattr} data-pageid="{$pageid}" data-container="logo" class=" bs-sidebarlogo   "> 
+
+{BEGIN logo_block}
+<a href="{$home_link}" {$logo_hiddenattr} data-pageid="{$pageid}" data-brick="logo" class="navbar-brand" >{$logo}</a>
+{END logo_block}
+
+
+
+</div>
+{END container_logo}
+
+
+
+{BEGIN container_hdr}
+<div {$hdr_chiddenattr} data-pageid="{$pageid}" data-container="hdr" class=" navbar-default clearfix   "> 
+
+{BEGIN collapse_block}
+<button {$bsnavbarcollapse_hiddenattr} data-pageid="{$pageid}" data-brick="bsnavbarcollapse" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target=".bs-navcontrolled">	
+	<span class="sr-only">Toggle navigation</span>	
+	<span class="icon-bar"></span>					
+</button>												
+
+{END collapse_block}
+
+
+
+</div>
+{END container_hdr}
+
+{BEGIN container_sidemenu}<div {$sidemenu_chiddenattr} data-pageid="{$pageid}" data-container="sidemenu" class="bs-navform navbar-collapse sidebar-menu bs-hidden-xs bs-navcontrolled" aria-expanded="false" >												   
+{BEGIN menu_block}
+{$menu main}
+
+{END menu_block}
+
+												</div>						{END container_sidemenu}
+
+{BEGIN container_left}
+<div {$left_chiddenattr} data-pageid="{$pageid}" data-container="left" class=" sidebar-container   "> 
+
+{BEGIN searchPanel}
+<div {$searchpanel_hiddenattr} data-pageid="{$pageid}" data-brick="searchpanel" class="searchOptions panel panel-primary searchPanelContainer " {$srchOpt_attrs} >
+	<!-- Search panel content -->
+	
+	<div class="panel-heading">
+		<div class="btn-group" id="addSearchFieldButton{$id}">
+			<button id="showHideControlChooseMenu{$id}" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			{mlang_message SEARCH_IN}
+			<span class="caret"></span>
+			</button>
+		</div>
+
+		
+		<div class="btn-group searchpanel-options" id="searchPanelOptions{$id}">
+			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon glyphicon-option-vertical"></span>
+			</button>
+			<ul class="dropdown-menu dropdown-left">
+				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>{mlang_message SEARCH_SHOW_OPTIONS_BUTTON}</a></li>
+				<li role="separator" class="divider"></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>{mlang_message SEARCH_ALL_CONDITIONS}</label></a></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>{mlang_message SEARCH_ANY_CONDITIONS}</label></a></li>
+				<li role="separator" class="divider"></li>
+				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>{mlang_message HIDE}</a></li>
+			</ul>
+		</div>
+	
+		
+		</div>
+	<div class="panel-body controlsBlock" {$bottomSearchButt_attrs} >
+
+
+		
+		{BEGIN searchCtrlBlock}
+		<div class="srchPanelRow form-group" {$filterRow_attrs}>
+			<label>{$fLabel}</label>	{$delCtrlButt}
+				<span class="rnr-searchtype">{$searchtype}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
+		</div>
+		{END searchCtrlBlock}
+
+
+	</div>
+	
+	<div class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
+		<button class="btn btn-primary" id="searchButton{$id}" {$searchbutton_attrs}>{mlang_message SEARCH}</button>
+		<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs}>{mlang_message SHOW_ALL}</button>
+	</div>
+</div>
+
+
+{END searchPanel}
+
+
+
+
+</div>
+{END container_left}
+
+
+	</div>
+</div>	
+<div class="bs-wrapper">
+	<div class="bs-fixedheader" id="fixedheader{$id}">
+		{BEGIN container_menu}<nav {$menu_chiddenattr} data-pageid="{$pageid}" data-container="menu" class="navbar navbar-default bs-fullwidth-navbar">					
+
+
+
+{BEGIN container_bc}
+<div {$bc_chiddenattr} data-pageid="{$pageid}" data-container="bc" class=" navbar-form navbar-left   "> 
+
+{BEGIN breadcrumbs}
+<ol class="breadcrumb">
+<li ><a href="{$home_link}"><span class="glyphicon glyphicon-home"></span></a>{$crumb_dropdown}</li>
+{BEGIN crumb}
+  <li class="{$crumb_item_class}">
+{BEGIN crumb_title_link}
+	<a {$crumb_attrs}>{$crumb_title}</a>
+{END crumb_title_link}
+{BEGIN crumb_title_span}
+	<span {$crumb_attrs}>{$crumb_title}</span>
+{END crumb_title_span}	
+	{$crumb_dropdown}
+  </li>
+{END crumb}
+</ol>
+{END breadcrumbs}
+
+
+
+</div>
+{END container_bc}
+
+
+
+
+
+
+{BEGIN container_menu_1}<div {$menu_1_chiddenattr} data-pageid="{$pageid}" data-container="menu_1" class="bs-navform navbar-collapse bs-hidden-xs bs-navcontrolled" aria-expanded="false" >												   
+
+
+
+{BEGIN container_more}
+<div {$more_chiddenattr} data-pageid="{$pageid}" data-container="more" class=" navbar-right navbar-form   "> 
+
+{BEGIN more_list}
+<div {$morebutton_hiddenattr} data-pageid="{$pageid}" data-brick="morebutton" class="btn-group bs-navsection">
+	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		<span class="glyphicon glyphicon-cog"></span>
+		<span class="caret"></span>
+	</button>
+	<ul class="dropdown-menu">
+				{BEGIN editselected_link}
+		<li class="massButton{$id} disabled"><a href="#" {$editselectedlink_attrs} {$editselectedlink_span} >{mlang_message EDIT_SELECTED}</a></li>
+		{END editselected_link}
+
+				{BEGIN exportselected_link}
+		<li class="massButton{$id} disabled"><a href="#" {$exportselectedlink_attrs} {$exportselectedlink_span} >{mlang_message EXPORT_SELECTED}</a></li>
+		{END exportselected_link}
+		
+				{BEGIN deleteselected_link}
+		<li class="massButton{$id} disabled"><a href="#" {$deleteselectedlink_attrs} {$deleteselectedlink_span}>{mlang_message DELETE_SELECTED}</a></li>
+		{END deleteselected_link}
+		
+				<li role="separator" class="divider"></li>	
+
+				{BEGIN asearch_link}
+		<li><a href="PMT_SITE_search.php" {$advsearchlink_attrs}>{mlang_message ADVANCED_SEARCH}</a></li>
+		{END asearch_link}
+
+				{BEGIN searchPanelTopButtons}
+		<li><a href=# id="showOptPanel{$id}">{mlang_message SHOW_SEARCH_PANEL}</a></li>
+		{END searchPanelTopButtons}	
+		
+				
+				<li role="separator" class="divider"></li>	
+		
+				
+				{BEGIN export_link}
+		<li><a target="_blank" href="PMT_SITE_export.php"  {$exportlink_attrs}>{mlang_message EXPORT_RESULTS}</a></li>
+		{END export_link}
+
+				{BEGIN import_link}
+		<li><a href="PMT_SITE_import.php?{$crosstable_attrs}"  {$importlink_attrs}>{mlang_message IMPORT}</a></li>
+		{END import_link}
+
+					<li role="separator" class="divider"></li>
+				{BEGIN EnglishLANGLINK}
+				<li><a href="#" data-lang="English" class="rnr-langlink">
+					{BEGIN EnglishLANGLINK_ACTIVE}<span class="glyphicon glyphicon-ok">&nbsp;</span>{END EnglishLANGLINK_ACTIVE}
+					English</a></li>
+				{END EnglishLANGLINK}
+				{BEGIN JapaneseLANGLINK}
+				<li><a href="#" data-lang="Japanese" class="rnr-langlink">
+					{BEGIN JapaneseLANGLINK_ACTIVE}<span class="glyphicon glyphicon-ok">&nbsp;</span>{END JapaneseLANGLINK_ACTIVE}
+					日本語</a></li>
+				{END JapaneseLANGLINK}
+		
+	</ul>  
+</div>
+
+{END more_list}
+
+
+{BEGIN security_block}
+<span {$loggedas_hiddenattr} data-pageid="{$pageid}" data-brick="loggedas" id="login_block{$id}" class="bs-navsection">
+	{BEGIN guestloginbutton}
+		<button class="btn btn-info" type="button" {$guestloginlink_attrs}>{mlang_message LOGIN}</button>
+	{END guestloginbutton}
+	{BEGIN loggedas_message} 
+		<span class="dropdown">
+			<button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon-user"></span>	{$username}</button>
+			<ul class="dropdown-menu">
+		{BEGIN logoutbutton}
+				<li><a href="#" {$logoutlink_attrs}>{mlang_message LOG_OUT}</a></li>
+		{END logoutbutton}
+		
+		{BEGIN adminarea_link}
+				<li><a href="admin_rights_list.php" {$adminarealink_attrs}>{mlang_message AA_ADMINAREA}</a></li>
+		{END adminarea_link}
+
+
+	{BEGIN changepwd_link}
+				<li><a href="#" {$changepwdlink_attrs}>{mlang_message CHANGE_PASSWORD}</a></li>
+	{END changepwd_link}
+			</ul>
+		</span>
+	{END loggedas_message}
+</span>
+{END security_block}
+
+
+
+</div>
+{END container_more}
+
+
+
+
+
+
+
+
+{BEGIN container_more_1}
+<div {$more_1_chiddenattr} data-pageid="{$pageid}" data-container="more_1" class=" navbar-right navbar-form   "> 
+
+{BEGIN searchform_block}
+<span {$search_hiddenattr} data-pageid="{$pageid}" data-brick="search" class="form-group">
+
+	{$simpleSearchFieldCombo}
+	
+	{$simpleSearchTypeCombo}
+ <div  class="input-group">
+{BEGIN searchform_text}
+	<input type="search" class="form-control" {$searchfor_attrs} size="25">
+{END searchform_text}
+	<span class="input-group-btn">
+	{BEGIN searchform_showall}
+		<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="{mlang_message SHOW_ALL}">
+			<span class="glyphicon glyphicon-remove"></span>
+		</button>
+	{END searchform_showall}
+	{BEGIN searchform_search}
+	<button {$searchbutton_attrs} class="btn btn-primary" >
+		<span class="glyphicon glyphicon-search"></span>
+	</button>
+	{END searchform_search}
+	</span>
+</div>
+		
+</span>
+{END searchform_block}
+
+
+
+</div>
+{END container_more_1}
+
+
+
+
+												</div>						{END container_menu_1}
+
+
+									</nav>{END container_menu}
+	</div>	
+	<div class="container-fluid bs-underheader bs-fixedsidebarmain" id="underheader{$id}">
+		{$header}
+		<div class="bs-sidebar-screenbound">
+			
+
+
+
+{BEGIN container_messagerow}
+<div {$messagerow_chiddenattr} data-pageid="{$pageid}" data-container="messagerow" class="    "> 
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-12 "> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">{$message}</div>
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+</div>
+{END container_messagerow}
+
+
+
+{BEGIN container_gridcontrols}
+<div {$gridcontrols_chiddenattr} data-pageid="{$pageid}" data-container="gridcontrols" class=" bs-navcontrolled bs-hidden-xs   "> 
+
+
+
+
+{BEGIN container_add_delete}
+<div {$add_delete_chiddenattr} data-pageid="{$pageid}" data-container="add_delete" class=" bottom-margin  col-md-6 "> 
+
+{BEGIN newrecord_controls_block}
+		{BEGIN add_link}
+		<a {$add_hiddenattr} data-pageid="{$pageid}" data-brick="add" type="button" class="btn btn-primary" {$addlink_attrs}>{mlang_message ADD_NEW}</a>
+	{END add_link}
+
+		{BEGIN inlineadd_link}
+		<button {$add_hiddenattr} data-pageid="{$pageid}" data-brick="add" type="button" class="btn btn-primary" {$inlineaddlink_attrs}>{mlang_message INLINE_ADD}</button>
+	{END inlineadd_link}
+
+{END newrecord_controls_block}
+
+
+{BEGIN record_controls_block}
+<span {$recordcontrol_hiddenattr} data-pageid="{$pageid}" data-brick="recordcontrol">
+		{BEGIN deleteselected_link}
+	<button type="button" class="btn btn-default" {$deleteselectedlink_attrs} {$deleteselectedlink_span} disabled>{mlang_message DELETE}</button>
+	{END deleteselected_link}
+		{BEGIN updateselected_link}
+		<button type="button" class="btn btn-default" {$updateselectedlink_attrs} disabled>{mlang_message UPDATE_SELECTED}</button>
+	{END updateselected_link}
+		{BEGIN saveall_link}
+		<button type="button" class="btn btn-primary" {$savealllink_attrs} {$savealllink_span}>{mlang_message SAVE_ALL}</button>
+	{END saveall_link}
+	{BEGIN cancelall_link}
+		<button type="button" class="btn btn-default" {$cancelalllink_attrs} {$cancelalllink_span}>{mlang_message CANCEL_ALL}</button>
+	{END cancelall_link}
+</span>
+
+{END record_controls_block}
+
+
+
+</div>
+{END container_add_delete}
+
+
+
+
+
+
+
+
+{BEGIN container_gridinfo}
+<div {$gridinfo_chiddenattr} data-pageid="{$pageid}" data-container="gridinfo" class=" bottom-margin text-right col-md-6 "> 
+
+{BEGIN details_found}
+<span {$details_found_hiddenattr} data-pageid="{$pageid}" data-brick="details_found" class="form-inline form-inline-always">
+	{$records_indicator}
+	<span>
+	{BEGIN recordspp_block}
+			{$recsPerPage}
+	{END recordspp_block}
+	</span>
+</span>
+{END details_found}
+
+
+{BEGIN print_friendly}
+<span {$printpanel_hiddenattr} data-pageid="{$pageid}" data-brick="printpanel" class="bs-printpanel" id="printpanelblock{$id}">
+	<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" title="{mlang_message WR_PRINT_FRIENDLY}">
+		<span class="glyphicon glyphicon-print" ></span>
+		<span class="caret"></span>
+    </button>
+	<ul class="dropdown-menu pull-right" >
+		<li>
+			<div class="container-fluid" id="print_friendly_scope{$id}">
+				<div class="row">
+					<div class="col-md-4">{mlang_message PPANEL_SCOPE}</div>
+										{BEGIN print_friendly_all}
+					<div class="col-md-8">
+						<label for="printAll{$id}">
+							<input type="radio" id="printAll{$id}" data-href="PMT_SITE_print.php?all=1&amp;{$crosstable_attrs}" name="printScope">
+							{mlang_message PPANEL_ALL_PAGES}
+						</label>
+					</div>
+					{END print_friendly_all}
+				</div>
+				<div class="row">
+					<div class="col-md-4">&nbsp;</div>
+					<div class="col-md-8">
+						<label for="printPage{$id}">
+							<input type="radio" id="printPage{$id}" data-href="PMT_SITE_print.php?{$crosstable_attrs}" name="printScope" checked>
+							{mlang_message PPANEL_THIS_PAGE}
+						</label>
+					</div>
+				</div>
+								<div class="row">
+					<div class="col-md-4">&nbsp;</div>
+					<div class="col-md-8">
+						<label for="printSelection{$id}" style="color: gray;">
+							<input type="radio" id="printSelection{$id}" name="printScope" disabled="disabled">
+							{mlang_message PPANEL_SELECTED}
+						</label>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li class="divider" role="separator"></li>
+
+		
+				<li>	
+			<div class="rnr-printdetails">
+				<label for="printPerPage{$id}">
+											{mlang_message RECORDS_PP}:
+				</label>
+				<input type="number" id="printPerPage{$id}" value="{$print_recspp}" class="rnr-printrecspp">		
+			</div>
+		</li>
+		<li class="divider" role="separator"></li>
+		<li class="rnr-printbutton">				
+			<button type="button" class="btn btn-primary" id="print_friendly_button{$id}" >{mlang_message PPANEL_PRINT}</button>			
+		</li>
+	</ul>	
+</span>
+
+{END print_friendly}
+
+
+{BEGIN field_hide_panel}
+<div {$bsfieldhidepanel_hiddenattr} data-pageid="{$pageid}" data-brick="bsfieldhidepanel" id="fildhidepanel{$id}" class="keep-open btn-group" title="{mlang_message SHOW_HIDE_COLUMNS}">
+	<button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button"><i class="glyphicon glyphicon-th-list"></i> <span class="caret"></span></button>
+	<ul role="menu" class="dropdown-menu dropdown-left">
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_APP_UID" checked="checked" value="1" data-field="APP_UID">
+			  <span>{$label PMT_SITE APP_UID}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_A" checked="checked" value="1" data-field="A">
+			  <span>{$label PMT_SITE A}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_B" checked="checked" value="1" data-field="B">
+			  <span>{$label PMT_SITE B}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_C" checked="checked" value="1" data-field="C">
+			  <span>{$label PMT_SITE C}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_D" checked="checked" value="1" data-field="D">
+			  <span>{$label PMT_SITE D}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_E" checked="checked" value="1" data-field="E">
+			  <span>{$label PMT_SITE E}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_F" checked="checked" value="1" data-field="F">
+			  <span>{$label PMT_SITE F}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_G" checked="checked" value="1" data-field="G">
+			  <span>{$label PMT_SITE G}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_H" checked="checked" value="1" data-field="H">
+			  <span>{$label PMT_SITE H}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_I" checked="checked" value="1" data-field="I">
+			  <span>{$label PMT_SITE I}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_J" checked="checked" value="1" data-field="J">
+			  <span>{$label PMT_SITE J}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_K" checked="checked" value="1" data-field="K">
+			  <span>{$label PMT_SITE K}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_L" checked="checked" value="1" data-field="L">
+			  <span>{$label PMT_SITE L}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_M" checked="checked" value="1" data-field="M">
+			  <span>{$label PMT_SITE M}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_N" checked="checked" value="1" data-field="N">
+			  <span>{$label PMT_SITE N}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_O" checked="checked" value="1" data-field="O">
+			  <span>{$label PMT_SITE O}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_P" checked="checked" value="1" data-field="P">
+			  <span>{$label PMT_SITE P}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_APP_NUMBER" checked="checked" value="1" data-field="APP_NUMBER">
+			  <span>{$label PMT_SITE APP_NUMBER}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_APP_STATUS" checked="checked" value="1" data-field="APP_STATUS">
+			  <span>{$label PMT_SITE APP_STATUS}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_ROW" checked="checked" value="1" data-field="ROW">
+			  <span>{$label PMT_SITE ROW}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_EMPLOYEE_NO" checked="checked" value="1" data-field="EMPLOYEE_NO">
+			  <span>{$label PMT_SITE EMPLOYEE_NO}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_TIME" checked="checked" value="1" data-field="TIME">
+			  <span>{$label PMT_SITE TIME}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_MONTHLY_REPORT" checked="checked" value="1" data-field="MONTHLY_REPORT">
+			  <span>{$label PMT_SITE MONTHLY_REPORT}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_BUSINESS_CONFIRMATION_17" checked="checked" value="1" data-field="BUSINESS_CONFIRMATION_17">
+			  <span>{$label PMT_SITE BUSINESS_CONFIRMATION_17}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_BUSINESS_CONFIRMATION_18" checked="checked" value="1" data-field="BUSINESS_CONFIRMATION_18">
+			  <span>{$label PMT_SITE BUSINESS_CONFIRMATION_18}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+		<li>
+		<a>
+		  <div class="checkbox">
+			<label>
+			  <input type="checkbox" id="hide_BUSINESS_CONFIRMATION_19" checked="checked" value="1" data-field="BUSINESS_CONFIRMATION_19">
+			  <span>{$label PMT_SITE BUSINESS_CONFIRMATION_19}</span>
+			</label>
+		</div>
+		</a>
+		</li>
+	</ul>
+</div>
+
+{END field_hide_panel}
+
+
+
+</div>
+{END container_gridinfo}
+
+
+
+
+
+
+
+
+{BEGIN container_gridinfo_sort}
+<div {$gridinfo_sort_chiddenattr} data-pageid="{$pageid}" data-container="gridinfo_sort" class=" bottom-margin text-right col-md-12 "> 
+
+{BEGIN reorder_records}
+<div {$reorder_records_hiddenattr} data-pageid="{$pageid}" data-brick="reorder_records" class="form-inline sortby-ctrl">
+{mlang_message SORT_BY}&nbsp;{$sortByDropdown}
+</div>
+
+{END reorder_records}
+
+
+
+</div>
+{END container_gridinfo_sort}
+
+
+
+
+
+
+</div>
+{END container_gridcontrols}
+
+
+		</div>
+		<div></div>
+		<div class="bs-sidebar-screenbound bs-minwidth">
+			
+
+{BEGIN container_center}
+<div {$center_chiddenattr} data-pageid="{$pageid}" data-container="center" class="    "> 
+
+
+
+
+{BEGIN container_grid}
+<div {$grid_chiddenattr} data-pageid="{$pageid}" data-container="grid" class="bs-grid    "> 
+
+{BEGIN grid_block}
+	<style>
+	.bs-gridcell[data-field=APP_UID]:before {
+		content: "{$label PMT_SITE APP_UID}";
+	}
+	.bs-gridcell[data-field=A]:before {
+		content: "{$label PMT_SITE A}";
+	}
+	.bs-gridcell[data-field=B]:before {
+		content: "{$label PMT_SITE B}";
+	}
+	.bs-gridcell[data-field=C]:before {
+		content: "{$label PMT_SITE C}";
+	}
+	.bs-gridcell[data-field=D]:before {
+		content: "{$label PMT_SITE D}";
+	}
+	.bs-gridcell[data-field=E]:before {
+		content: "{$label PMT_SITE E}";
+	}
+	.bs-gridcell[data-field=F]:before {
+		content: "{$label PMT_SITE F}";
+	}
+	.bs-gridcell[data-field=G]:before {
+		content: "{$label PMT_SITE G}";
+	}
+	.bs-gridcell[data-field=H]:before {
+		content: "{$label PMT_SITE H}";
+	}
+	.bs-gridcell[data-field=I]:before {
+		content: "{$label PMT_SITE I}";
+	}
+	.bs-gridcell[data-field=J]:before {
+		content: "{$label PMT_SITE J}";
+	}
+	.bs-gridcell[data-field=K]:before {
+		content: "{$label PMT_SITE K}";
+	}
+	.bs-gridcell[data-field=L]:before {
+		content: "{$label PMT_SITE L}";
+	}
+	.bs-gridcell[data-field=M]:before {
+		content: "{$label PMT_SITE M}";
+	}
+	.bs-gridcell[data-field=N]:before {
+		content: "{$label PMT_SITE N}";
+	}
+	.bs-gridcell[data-field=O]:before {
+		content: "{$label PMT_SITE O}";
+	}
+	.bs-gridcell[data-field=P]:before {
+		content: "{$label PMT_SITE P}";
+	}
+	.bs-gridcell[data-field=APP_NUMBER]:before {
+		content: "{$label PMT_SITE APP_NUMBER}";
+	}
+	.bs-gridcell[data-field=APP_STATUS]:before {
+		content: "{$label PMT_SITE APP_STATUS}";
+	}
+	.bs-gridcell[data-field=ROW]:before {
+		content: "{$label PMT_SITE ROW}";
+	}
+	.bs-gridcell[data-field=EMPLOYEE_NO]:before {
+		content: "{$label PMT_SITE EMPLOYEE_NO}";
+	}
+	.bs-gridcell[data-field=TIME]:before {
+		content: "{$label PMT_SITE TIME}";
+	}
+	.bs-gridcell[data-field=MONTHLY_REPORT]:before {
+		content: "{$label PMT_SITE MONTHLY_REPORT}";
+	}
+	.bs-gridcell[data-field=BUSINESS_CONFIRMATION_17]:before {
+		content: "{$label PMT_SITE BUSINESS_CONFIRMATION_17}";
+	}
+	.bs-gridcell[data-field=BUSINESS_CONFIRMATION_18]:before {
+		content: "{$label PMT_SITE BUSINESS_CONFIRMATION_18}";
+	}
+	.bs-gridcell[data-field=BUSINESS_CONFIRMATION_19]:before {
+		content: "{$label PMT_SITE BUSINESS_CONFIRMATION_19}";
+	}
+</style>
+<table {$grid_hiddenattr} data-pageid="{$pageid}" data-brick="grid" class="table {$grid_classes} bs-flexgrid rnr-b-grid rnr-gridtable" cellpadding="0" >
+	<thead>
+										{BEGIN grid_header}
+								<tr class="rnr-toprow {$gridHeader_class}" >
+									{BEGIN record_header}
+									{BEGIN listIcons_column}
+									<th iEditCont="all">&nbsp;</th>
+									{END listIcons_column}	
+
+																		{BEGIN checkbox_column}
+									<th class="">
+										<input type="checkbox" {$checkboxheader_attrs}>
+									</th>
+									{END checkbox_column}
+
+																		
+									{BEGIN APP_UID_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$APP_UID_class}" data-field=APP_UID>
+									{BEGIN APP_UID_fieldheader}
+																				<span {$APP_UID_orderlinkattrs}>
+											{$label PMT_SITE APP_UID}
+										</span>
+									{END APP_UID_fieldheader}
+									</th>
+									{END APP_UID_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN A_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$A_class}" data-field=A>
+									{BEGIN A_fieldheader}
+																				<span {$A_orderlinkattrs}>
+											{$label PMT_SITE A}
+										</span>
+									{END A_fieldheader}
+									</th>
+									{END A_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN B_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$B_class}" data-field=B>
+									{BEGIN B_fieldheader}
+																				<span {$B_orderlinkattrs}>
+											{$label PMT_SITE B}
+										</span>
+									{END B_fieldheader}
+									</th>
+									{END B_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN C_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$C_class}" data-field=C>
+									{BEGIN C_fieldheader}
+																				<span {$C_orderlinkattrs}>
+											{$label PMT_SITE C}
+										</span>
+									{END C_fieldheader}
+									</th>
+									{END C_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN D_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$D_class}" data-field=D>
+									{BEGIN D_fieldheader}
+																				<span {$D_orderlinkattrs}>
+											{$label PMT_SITE D}
+										</span>
+									{END D_fieldheader}
+									</th>
+									{END D_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN E_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$E_class}" data-field=E>
+									{BEGIN E_fieldheader}
+																				<span {$E_orderlinkattrs}>
+											{$label PMT_SITE E}
+										</span>
+									{END E_fieldheader}
+									</th>
+									{END E_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN F_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$F_class}" data-field=F>
+									{BEGIN F_fieldheader}
+																				<span {$F_orderlinkattrs}>
+											{$label PMT_SITE F}
+										</span>
+									{END F_fieldheader}
+									</th>
+									{END F_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN G_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$G_class}" data-field=G>
+									{BEGIN G_fieldheader}
+																				<span {$G_orderlinkattrs}>
+											{$label PMT_SITE G}
+										</span>
+									{END G_fieldheader}
+									</th>
+									{END G_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN H_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$H_class}" data-field=H>
+									{BEGIN H_fieldheader}
+																				<span {$H_orderlinkattrs}>
+											{$label PMT_SITE H}
+										</span>
+									{END H_fieldheader}
+									</th>
+									{END H_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN I_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$I_class}" data-field=I>
+									{BEGIN I_fieldheader}
+																				<span {$I_orderlinkattrs}>
+											{$label PMT_SITE I}
+										</span>
+									{END I_fieldheader}
+									</th>
+									{END I_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN J_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$J_class}" data-field=J>
+									{BEGIN J_fieldheader}
+																				<span {$J_orderlinkattrs}>
+											{$label PMT_SITE J}
+										</span>
+									{END J_fieldheader}
+									</th>
+									{END J_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN K_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$K_class}" data-field=K>
+									{BEGIN K_fieldheader}
+																				<span {$K_orderlinkattrs}>
+											{$label PMT_SITE K}
+										</span>
+									{END K_fieldheader}
+									</th>
+									{END K_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN L_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$L_class}" data-field=L>
+									{BEGIN L_fieldheader}
+																				<span {$L_orderlinkattrs}>
+											{$label PMT_SITE L}
+										</span>
+									{END L_fieldheader}
+									</th>
+									{END L_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN M_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$M_class}" data-field=M>
+									{BEGIN M_fieldheader}
+																				<span {$M_orderlinkattrs}>
+											{$label PMT_SITE M}
+										</span>
+									{END M_fieldheader}
+									</th>
+									{END M_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN N_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$N_class}" data-field=N>
+									{BEGIN N_fieldheader}
+																				<span {$N_orderlinkattrs}>
+											{$label PMT_SITE N}
+										</span>
+									{END N_fieldheader}
+									</th>
+									{END N_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN O_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$O_class}" data-field=O>
+									{BEGIN O_fieldheader}
+																				<span {$O_orderlinkattrs}>
+											{$label PMT_SITE O}
+										</span>
+									{END O_fieldheader}
+									</th>
+									{END O_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN P_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$P_class}" data-field=P>
+									{BEGIN P_fieldheader}
+																				<span {$P_orderlinkattrs}>
+											{$label PMT_SITE P}
+										</span>
+									{END P_fieldheader}
+									</th>
+									{END P_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN APP_NUMBER_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$APP_NUMBER_class}" data-field=APP_NUMBER>
+									{BEGIN APP_NUMBER_fieldheader}
+																				<span {$APP_NUMBER_orderlinkattrs}>
+											{$label PMT_SITE APP_NUMBER}
+										</span>
+									{END APP_NUMBER_fieldheader}
+									</th>
+									{END APP_NUMBER_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN APP_STATUS_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$APP_STATUS_class}" data-field=APP_STATUS>
+									{BEGIN APP_STATUS_fieldheader}
+																				<span {$APP_STATUS_orderlinkattrs}>
+											{$label PMT_SITE APP_STATUS}
+										</span>
+									{END APP_STATUS_fieldheader}
+									</th>
+									{END APP_STATUS_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN ROW_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$ROW_class}" data-field=ROW>
+									{BEGIN ROW_fieldheader}
+																				<span {$ROW_orderlinkattrs}>
+											{$label PMT_SITE ROW}
+										</span>
+									{END ROW_fieldheader}
+									</th>
+									{END ROW_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN EMPLOYEE_NO_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$EMPLOYEE_NO_class}" data-field=EMPLOYEE_NO>
+									{BEGIN EMPLOYEE_NO_fieldheader}
+																				<span {$EMPLOYEE_NO_orderlinkattrs}>
+											{$label PMT_SITE EMPLOYEE_NO}
+										</span>
+									{END EMPLOYEE_NO_fieldheader}
+									</th>
+									{END EMPLOYEE_NO_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN TIME_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$TIME_class}" data-field=TIME>
+									{BEGIN TIME_fieldheader}
+																				<span {$TIME_orderlinkattrs}>
+											{$label PMT_SITE TIME}
+										</span>
+									{END TIME_fieldheader}
+									</th>
+									{END TIME_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN MONTHLY_REPORT_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$MONTHLY_REPORT_class}" data-field=MONTHLY_REPORT>
+									{BEGIN MONTHLY_REPORT_fieldheader}
+																				<span {$MONTHLY_REPORT_orderlinkattrs}>
+											{$label PMT_SITE MONTHLY_REPORT}
+										</span>
+									{END MONTHLY_REPORT_fieldheader}
+									</th>
+									{END MONTHLY_REPORT_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN BUSINESS_CONFIRMATION_17_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$BUSINESS_CONFIRMATION_17_class}" data-field=BUSINESS_CONFIRMATION_17>
+									{BEGIN BUSINESS_CONFIRMATION_17_fieldheader}
+																				<span {$BUSINESS_CONFIRMATION_17_orderlinkattrs}>
+											{$label PMT_SITE BUSINESS_CONFIRMATION_17}
+										</span>
+									{END BUSINESS_CONFIRMATION_17_fieldheader}
+									</th>
+									{END BUSINESS_CONFIRMATION_17_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN BUSINESS_CONFIRMATION_18_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$BUSINESS_CONFIRMATION_18_class}" data-field=BUSINESS_CONFIRMATION_18>
+									{BEGIN BUSINESS_CONFIRMATION_18_fieldheader}
+																				<span {$BUSINESS_CONFIRMATION_18_orderlinkattrs}>
+											{$label PMT_SITE BUSINESS_CONFIRMATION_18}
+										</span>
+									{END BUSINESS_CONFIRMATION_18_fieldheader}
+									</th>
+									{END BUSINESS_CONFIRMATION_18_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN BUSINESS_CONFIRMATION_19_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$BUSINESS_CONFIRMATION_19_class}" data-field=BUSINESS_CONFIRMATION_19>
+									{BEGIN BUSINESS_CONFIRMATION_19_fieldheader}
+																				<span {$BUSINESS_CONFIRMATION_19_orderlinkattrs}>
+											{$label PMT_SITE BUSINESS_CONFIRMATION_19}
+										</span>
+									{END BUSINESS_CONFIRMATION_19_fieldheader}
+									</th>
+									{END BUSINESS_CONFIRMATION_19_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN endrecordheader_block}
+									<th class="rnr-cs">&nbsp;</th>
+									
+									{END endrecordheader_block}
+									
+									{END record_header}
+									
+								</tr>
+								{END grid_header}
+
+	</thead>
+	<tbody>	
+		{BEGIN grid_row}
+<tr class="{$rowclass} bs-gridrow" {$rowattrs} {$rowstyle}>
+	{BEGIN grid_record}
+	{BEGIN listIcons_column}
+	<td class="bs-gridicons" iEditCont="all" {$rowstyle} {$recordattrs}>
+		{BEGIN edit_column}
+	{BEGIN edit_link}
+			<a class="glyphicon glyphicon-pencil" {$editlink_attrs} title="{mlang_message EDIT}"></a>
+	{END edit_link}
+	{END edit_column}
+
+		{BEGIN inlineedit_column}
+	{BEGIN inlineedit_link}
+			<a class="glyphicon glyphicon-edit" {$inlineeditlink_attrs} title="{mlang_message INLINE_EDIT}"></a>
+	{END inlineedit_link}
+	{END inlineedit_column}
+
+		{BEGIN copy_column}
+	{BEGIN copy_link}
+			<a class="glyphicon glyphicon-duplicate" {$copylink_attrs} title="{mlang_message COPY}"></a>
+	{END copy_link}
+	{END copy_column}
+
+		{BEGIN view_column}
+	{BEGIN view_link}
+			<a class="glyphicon glyphicon-search" {$viewlink_attrs} title="{mlang_message VIEW}"></a>
+	{END view_link}
+	{END view_column}
+	</td>	
+	{END listIcons_column}	
+
+		{BEGIN checkbox_column}
+	<td  iEditCont="checkBox" class="bs-gridcheckbox" {$rowstyle} {$recordattrs}>
+	{BEGIN checkbox}
+	<input type="checkbox" {$checkbox_attrs}>
+	{END checkbox}
+	</td>
+	{END checkbox_column}
+
+	
+
+	{BEGIN APP_UID_fieldcolumn}
+	<td class="bs-gridcell {$APP_UID_class}"  data-field=APP_UID {$rowstyle} {$recordattrs}>
+		{$APP_UID_value}
+	</td>
+{END APP_UID_fieldcolumn}
+
+
+	{BEGIN A_fieldcolumn}
+	<td class="bs-gridcell {$A_class}"  data-field=A {$rowstyle} {$recordattrs}>
+		{$A_value}
+	</td>
+{END A_fieldcolumn}
+
+
+	{BEGIN B_fieldcolumn}
+	<td class="bs-gridcell {$B_class}"  data-field=B {$rowstyle} {$recordattrs}>
+		{$B_value}
+	</td>
+{END B_fieldcolumn}
+
+
+	{BEGIN C_fieldcolumn}
+	<td class="bs-gridcell {$C_class}"  data-field=C {$rowstyle} {$recordattrs}>
+		{$C_value}
+	</td>
+{END C_fieldcolumn}
+
+
+	{BEGIN D_fieldcolumn}
+	<td class="bs-gridcell {$D_class}"  data-field=D {$rowstyle} {$recordattrs}>
+		{$D_value}
+	</td>
+{END D_fieldcolumn}
+
+
+	{BEGIN E_fieldcolumn}
+	<td class="bs-gridcell {$E_class}"  data-field=E {$rowstyle} {$recordattrs}>
+		{$E_value}
+	</td>
+{END E_fieldcolumn}
+
+
+	{BEGIN F_fieldcolumn}
+	<td class="bs-gridcell {$F_class}"  data-field=F {$rowstyle} {$recordattrs}>
+		{$F_value}
+	</td>
+{END F_fieldcolumn}
+
+
+	{BEGIN G_fieldcolumn}
+	<td class="bs-gridcell {$G_class}"  data-field=G {$rowstyle} {$recordattrs}>
+		{$G_value}
+	</td>
+{END G_fieldcolumn}
+
+
+	{BEGIN H_fieldcolumn}
+	<td class="bs-gridcell {$H_class}"  data-field=H {$rowstyle} {$recordattrs}>
+		{$H_value}
+	</td>
+{END H_fieldcolumn}
+
+
+	{BEGIN I_fieldcolumn}
+	<td class="bs-gridcell {$I_class}"  data-field=I {$rowstyle} {$recordattrs}>
+		{$I_value}
+	</td>
+{END I_fieldcolumn}
+
+
+	{BEGIN J_fieldcolumn}
+	<td class="bs-gridcell {$J_class}"  data-field=J {$rowstyle} {$recordattrs}>
+		{$J_value}
+	</td>
+{END J_fieldcolumn}
+
+
+	{BEGIN K_fieldcolumn}
+	<td class="bs-gridcell {$K_class}"  data-field=K {$rowstyle} {$recordattrs}>
+		{$K_value}
+	</td>
+{END K_fieldcolumn}
+
+
+	{BEGIN L_fieldcolumn}
+	<td class="bs-gridcell {$L_class}"  data-field=L {$rowstyle} {$recordattrs}>
+		{$L_value}
+	</td>
+{END L_fieldcolumn}
+
+
+	{BEGIN M_fieldcolumn}
+	<td class="bs-gridcell {$M_class}"  data-field=M {$rowstyle} {$recordattrs}>
+		{$M_value}
+	</td>
+{END M_fieldcolumn}
+
+
+	{BEGIN N_fieldcolumn}
+	<td class="bs-gridcell {$N_class}"  data-field=N {$rowstyle} {$recordattrs}>
+		{$N_value}
+	</td>
+{END N_fieldcolumn}
+
+
+	{BEGIN O_fieldcolumn}
+	<td class="bs-gridcell {$O_class}"  data-field=O {$rowstyle} {$recordattrs}>
+		{$O_value}
+	</td>
+{END O_fieldcolumn}
+
+
+	{BEGIN P_fieldcolumn}
+	<td class="bs-gridcell {$P_class}"  data-field=P {$rowstyle} {$recordattrs}>
+		{$P_value}
+	</td>
+{END P_fieldcolumn}
+
+
+	{BEGIN APP_NUMBER_fieldcolumn}
+	<td class="bs-gridcell {$APP_NUMBER_class}"  data-field=APP_NUMBER {$rowstyle} {$recordattrs}>
+		{$APP_NUMBER_value}
+	</td>
+{END APP_NUMBER_fieldcolumn}
+
+
+	{BEGIN APP_STATUS_fieldcolumn}
+	<td class="bs-gridcell {$APP_STATUS_class}"  data-field=APP_STATUS {$rowstyle} {$recordattrs}>
+		{$APP_STATUS_value}
+	</td>
+{END APP_STATUS_fieldcolumn}
+
+
+	{BEGIN ROW_fieldcolumn}
+	<td class="bs-gridcell {$ROW_class}"  data-field=ROW {$rowstyle} {$recordattrs}>
+		{$ROW_value}
+	</td>
+{END ROW_fieldcolumn}
+
+
+	{BEGIN EMPLOYEE_NO_fieldcolumn}
+	<td class="bs-gridcell {$EMPLOYEE_NO_class}"  data-field=EMPLOYEE_NO {$rowstyle} {$recordattrs}>
+		{$EMPLOYEE_NO_value}
+	</td>
+{END EMPLOYEE_NO_fieldcolumn}
+
+
+	{BEGIN TIME_fieldcolumn}
+	<td class="bs-gridcell {$TIME_class}"  data-field=TIME {$rowstyle} {$recordattrs}>
+		{$TIME_value}
+	</td>
+{END TIME_fieldcolumn}
+
+
+	{BEGIN MONTHLY_REPORT_fieldcolumn}
+	<td class="bs-gridcell {$MONTHLY_REPORT_class}"  data-field=MONTHLY_REPORT {$rowstyle} {$recordattrs}>
+		{$MONTHLY_REPORT_value}
+	</td>
+{END MONTHLY_REPORT_fieldcolumn}
+
+
+	{BEGIN BUSINESS_CONFIRMATION_17_fieldcolumn}
+	<td class="bs-gridcell {$BUSINESS_CONFIRMATION_17_class}"  data-field=BUSINESS_CONFIRMATION_17 {$rowstyle} {$recordattrs}>
+		{$BUSINESS_CONFIRMATION_17_value}
+	</td>
+{END BUSINESS_CONFIRMATION_17_fieldcolumn}
+
+
+	{BEGIN BUSINESS_CONFIRMATION_18_fieldcolumn}
+	<td class="bs-gridcell {$BUSINESS_CONFIRMATION_18_class}"  data-field=BUSINESS_CONFIRMATION_18 {$rowstyle} {$recordattrs}>
+		{$BUSINESS_CONFIRMATION_18_value}
+	</td>
+{END BUSINESS_CONFIRMATION_18_fieldcolumn}
+
+
+	{BEGIN BUSINESS_CONFIRMATION_19_fieldcolumn}
+	<td class="bs-gridcell {$BUSINESS_CONFIRMATION_19_class}"  data-field=BUSINESS_CONFIRMATION_19 {$rowstyle} {$recordattrs}>
+		{$BUSINESS_CONFIRMATION_19_value}
+	</td>
+{END BUSINESS_CONFIRMATION_19_fieldcolumn}
+
+	{BEGIN endrecord_block}
+	<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+	{END endrecord_block}
+									
+	{END grid_record}
+
+</tr>
+{END grid_row}
+	</tbody>
+	<tfoot>
+										
+	</tfoot>
+</table>
+
+
+
+{END grid_block}
+
+
+
+</div>
+{END container_grid}
+
+
+
+
+
+
+</div>
+{END container_center}
+
+
+
+{BEGIN container_pagination}
+<div {$pagination_chiddenattr} data-pageid="{$pageid}" data-container="pagination" class="  text-center col-md-12 "> 
+
+{BEGIN pagination_block}
+<div {$pagination_hiddenattr} data-pageid="{$pageid}" data-brick="pagination">
+{$pagination}
+</div>
+{END pagination_block}
+
+
+
+</div>
+{END container_pagination}
+
+
+		</div>
+	</div>
+</div>
+	
+
+		{$footer}
+	{END body}
+	</body>
+</html>

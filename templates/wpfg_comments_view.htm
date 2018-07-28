@@ -1,0 +1,354 @@
+<!doctype html>
+<html  {$html_attrs}>
+  <head>asdfsfs
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      {$pagetitle}
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link REL="stylesheet" href="styles/default.css" type="text/css">
+    {BEGIN rtlCSS}
+      <link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+    {END rtlCSS}
+    {BEGIN styleCSSFiles}
+      <link REL="stylesheet" href="{$stylepath}" type="text/css">
+    {END styleCSSFiles}
+  </head>
+  <BODY class="{$stylename} function-view" {$bodyattrs}>
+    {BEGIN body}
+      {$header}
+      <style>
+        {$containerCss}
+      </style>
+      <DIV class="bs-top">
+        
+
+{BEGIN container_viewpage}
+<div {$viewpage_chiddenattr} data-pageid="{$pageid}" data-container="viewpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN viewheader}
+	<h2 {$viewheader_hiddenattr} data-pageid="{$pageid}" data-brick="viewheader" >{$pagetitlelabel wpfg_comments view}</h2>
+
+{END viewheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_viewpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class=" form-horizontal  col-md-12 "> 
+
+
+<div {$viewfields_hiddenattr} data-pageid="{$pageid}" data-brick="viewfields" >
+	{BEGIN comment_ID_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_comment_ID} bs-viewform-group" data-fieldname="comment_ID">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_comment_ID}">
+			{$label wpfg_comments comment_ID}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$comment_ID_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END comment_ID_fieldblock}
+	{BEGIN comment_post_ID_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_comment_post_ID} bs-viewform-group" data-fieldname="comment_post_ID">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_comment_post_ID}">
+			{$label wpfg_comments comment_post_ID}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$comment_post_ID_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END comment_post_ID_fieldblock}
+	{BEGIN comment_author_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_comment_author} bs-viewform-group" data-fieldname="comment_author">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_comment_author}">
+			{$label wpfg_comments comment_author}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$comment_author_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END comment_author_fieldblock}
+	{BEGIN comment_author_email_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_comment_author_email} bs-viewform-group" data-fieldname="comment_author_email">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_comment_author_email}">
+			{$label wpfg_comments comment_author_email}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$comment_author_email_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END comment_author_email_fieldblock}
+	{BEGIN comment_author_url_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_comment_author_url} bs-viewform-group" data-fieldname="comment_author_url">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_comment_author_url}">
+			{$label wpfg_comments comment_author_url}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$comment_author_url_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END comment_author_url_fieldblock}
+	{BEGIN comment_author_IP_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_comment_author_IP} bs-viewform-group" data-fieldname="comment_author_IP">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_comment_author_IP}">
+			{$label wpfg_comments comment_author_IP}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$comment_author_IP_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END comment_author_IP_fieldblock}
+	{BEGIN comment_date_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_comment_date} bs-viewform-group" data-fieldname="comment_date">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_comment_date}">
+			{$label wpfg_comments comment_date}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$comment_date_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END comment_date_fieldblock}
+	{BEGIN comment_date_gmt_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_comment_date_gmt} bs-viewform-group" data-fieldname="comment_date_gmt">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_comment_date_gmt}">
+			{$label wpfg_comments comment_date_gmt}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$comment_date_gmt_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END comment_date_gmt_fieldblock}
+	{BEGIN comment_content_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_comment_content} bs-viewform-group" data-fieldname="comment_content">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_comment_content}">
+			{$label wpfg_comments comment_content}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$comment_content_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END comment_content_fieldblock}
+	{BEGIN comment_karma_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_comment_karma} bs-viewform-group" data-fieldname="comment_karma">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_comment_karma}">
+			{$label wpfg_comments comment_karma}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$comment_karma_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END comment_karma_fieldblock}
+	{BEGIN comment_approved_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_comment_approved} bs-viewform-group" data-fieldname="comment_approved">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_comment_approved}">
+			{$label wpfg_comments comment_approved}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$comment_approved_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END comment_approved_fieldblock}
+	{BEGIN comment_agent_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_comment_agent} bs-viewform-group" data-fieldname="comment_agent">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_comment_agent}">
+			{$label wpfg_comments comment_agent}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$comment_agent_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END comment_agent_fieldblock}
+	{BEGIN comment_type_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_comment_type} bs-viewform-group" data-fieldname="comment_type">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_comment_type}">
+			{$label wpfg_comments comment_type}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$comment_type_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END comment_type_fieldblock}
+	{BEGIN comment_parent_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_comment_parent} bs-viewform-group" data-fieldname="comment_parent">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_comment_parent}">
+			{$label wpfg_comments comment_parent}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$comment_parent_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END comment_parent_fieldblock}
+	{BEGIN user_id_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_user_id} bs-viewform-group" data-fieldname="user_id">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_user_id}">
+			{$label wpfg_comments user_id}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$user_id_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END user_id_fieldblock}
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN viewbuttons}
+{BEGIN back_button}
+<button class="btn btn-primary" {$backbutton_attrs}>{mlang_message BACK_TO_LIST}</button>
+{END back_button}
+{BEGIN close_button}
+<button href="#" class="btn btn-primary" {$closebutton_attrs}>{mlang_message CLOSE_WINDOW}</button>
+{END close_button}
+{END viewbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+
+
+{BEGIN container_leftbuttons_1}
+<div {$leftbuttons_1_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons_1" class="  text-right col-md-3 "> 
+
+{BEGIN rightviewbuttons}
+<div class="btn-group" role="group">
+		{BEGIN prev_button}
+	<button class="btn btn-default {$prevbutton_class}" {$prevbutton_attrs}><span class="glyphicon glyphicon-chevron-left"></span></button>
+	{END prev_button}
+	{BEGIN next_button}
+	<button class="btn btn-default {$nextbutton_class}" {$nextbutton_attrs}><span class="glyphicon glyphicon-chevron-right"></span></button>
+	{END next_button}
+		{BEGIN view_menu_button}
+	<div class="btn-group dropup" role="group">
+		<button class="btn btn-default dropdown-toggle {$groupbutton_class}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+		<ul class="dropdown-menu dropdown-left">
+									{BEGIN edit_page_button}
+				<li><a href=# {$edit_page_button_attrs}>{mlang_message EDIT}</a></li>
+			{END edit_page_button}
+		</ul>
+	</div>
+	{END view_menu_button}
+</div>
+{END rightviewbuttons}
+
+
+
+</div>
+{END container_leftbuttons_1}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+      </div>
+      <DIV class="bs-middle ">
+        <DIV class="bs-topmiddle">
+          
+        </div>
+        <DIV class="bs-left" {$blockattr_left}>
+          
+        </div>
+        <DIV class="bs-center">
+          
+        </div>
+        <DIV class="bs-right">
+          
+        </div>
+      </div>
+      <DIV class="bs-bottom">
+        
+      </div>
+      {$footer}
+    {END body}
+  </body>
+</html>

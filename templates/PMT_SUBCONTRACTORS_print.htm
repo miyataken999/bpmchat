@@ -1,0 +1,233 @@
+<!doctype html>
+<html  {$html_attrs}>
+  <head>asdfsfs
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      {$pagetitle}
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link REL="stylesheet" href="styles/default.css" type="text/css">
+    {BEGIN rtlCSS}
+      <link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+    {END rtlCSS}
+    {BEGIN styleCSSFiles}
+      <link REL="stylesheet" href="{$stylepath}" type="text/css">
+    {END styleCSSFiles}
+  </head>
+  <BODY class="{$stylename} function-print" {$bodyattrs}>
+    {BEGIN body}
+      {$header}
+      <style>
+        {$containerCss}
+      </style>
+      <DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+{BEGIN container_master}
+<div {$master_chiddenattr} data-pageid="{$pageid}" data-container="master" class="    "> 
+
+{BEGIN mastertable_block}
+<div class="panel panel-info table-panel">
+	<div class="panel-heading">
+		{$master_heading}
+	</div>
+	<div class="panel-body">
+		{$showmasterfile}
+		
+	</div>
+</div>
+
+{END mastertable_block}
+
+
+
+</div>
+{END container_master}
+
+
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel PMT_SUBCONTRACTORS print}</h2>
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>{mlang_message PAGE1} <span class="rp-pageno">{$pageno}</span> {mlang_message PAGE2} <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="table table-bordered rp-maintable" {$printgrid_hiddenattr} data-pageid="{$pageid}" data-brick="printgrid" >
+	<thead>
+	{BEGIN grid_header}
+		<tr class="{$gridHeader_class}" >
+		{BEGIN record_header}
+			{BEGIN APP_UID_fieldheadercolumn}
+			<th class="{$APP_UID_class}" {$APP_UID_style}  data-field="APP_UID">
+				{$label PMT_SUBCONTRACTORS APP_UID}
+			</th>
+			{END APP_UID_fieldheadercolumn}
+			{BEGIN APP_NUMBER_fieldheadercolumn}
+			<th class="{$APP_NUMBER_class}" {$APP_NUMBER_style}  data-field="APP_NUMBER">
+				{$label PMT_SUBCONTRACTORS APP_NUMBER}
+			</th>
+			{END APP_NUMBER_fieldheadercolumn}
+			{BEGIN APP_STATUS_fieldheadercolumn}
+			<th class="{$APP_STATUS_class}" {$APP_STATUS_style}  data-field="APP_STATUS">
+				{$label PMT_SUBCONTRACTORS APP_STATUS}
+			</th>
+			{END APP_STATUS_fieldheadercolumn}
+			{BEGIN ROW_fieldheadercolumn}
+			<th class="{$ROW_class}" {$ROW_style}  data-field="ROW">
+				{$label PMT_SUBCONTRACTORS ROW}
+			</th>
+			{END ROW_fieldheadercolumn}
+			{BEGIN HASCONTRACT_fieldheadercolumn}
+			<th class="{$HASCONTRACT_class}" {$HASCONTRACT_style}  data-field="HASCONTRACT">
+				{$label PMT_SUBCONTRACTORS HASCONTRACT}
+			</th>
+			{END HASCONTRACT_fieldheadercolumn}
+			{BEGIN NAME_fieldheadercolumn}
+			<th class="{$NAME_class}" {$NAME_style}  data-field="NAME">
+				{$label PMT_SUBCONTRACTORS NAME}
+			</th>
+			{END NAME_fieldheadercolumn}
+			{BEGIN TEXT0000000001_fieldheadercolumn}
+			<th class="{$TEXT0000000001_class}" {$TEXT0000000001_style}  data-field="TEXT0000000001">
+				{$label PMT_SUBCONTRACTORS TEXT0000000001}
+			</th>
+			{END TEXT0000000001_fieldheadercolumn}
+			{BEGIN TEXT0000000002_fieldheadercolumn}
+			<th class="{$TEXT0000000002_class}" {$TEXT0000000002_style}  data-field="TEXT0000000002">
+				{$label PMT_SUBCONTRACTORS TEXT0000000002}
+			</th>
+			{END TEXT0000000002_fieldheadercolumn}
+			{BEGIN TEXT0000000003_fieldheadercolumn}
+			<th class="{$TEXT0000000003_class}" {$TEXT0000000003_style}  data-field="TEXT0000000003">
+				{$label PMT_SUBCONTRACTORS TEXT0000000003}
+			</th>
+			{END TEXT0000000003_fieldheadercolumn}
+			{BEGIN endrecordheader_block}
+			<th class="rnr-cs">&nbsp;</th>
+			{END endrecordheader_block}
+		{END record_header}
+		</tr>
+	{END grid_header}
+	</thead>
+	
+	<tbody>	
+	{BEGIN grid_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+			{BEGIN APP_UID_fieldcolumn}
+			<td  class="{$APP_UID_class}" {$APP_UID_style} {$recordattrs}>
+				{$APP_UID_value}
+			</td>
+			{END APP_UID_fieldcolumn}
+			{BEGIN APP_NUMBER_fieldcolumn}
+			<td  class="{$APP_NUMBER_class}" {$APP_NUMBER_style} {$recordattrs}>
+				{$APP_NUMBER_value}
+			</td>
+			{END APP_NUMBER_fieldcolumn}
+			{BEGIN APP_STATUS_fieldcolumn}
+			<td  class="{$APP_STATUS_class}" {$APP_STATUS_style} {$recordattrs}>
+				{$APP_STATUS_value}
+			</td>
+			{END APP_STATUS_fieldcolumn}
+			{BEGIN ROW_fieldcolumn}
+			<td  class="{$ROW_class}" {$ROW_style} {$recordattrs}>
+				{$ROW_value}
+			</td>
+			{END ROW_fieldcolumn}
+			{BEGIN HASCONTRACT_fieldcolumn}
+			<td  class="{$HASCONTRACT_class}" {$HASCONTRACT_style} {$recordattrs}>
+				{$HASCONTRACT_value}
+			</td>
+			{END HASCONTRACT_fieldcolumn}
+			{BEGIN NAME_fieldcolumn}
+			<td  class="{$NAME_class}" {$NAME_style} {$recordattrs}>
+				{$NAME_value}
+			</td>
+			{END NAME_fieldcolumn}
+			{BEGIN TEXT0000000001_fieldcolumn}
+			<td  class="{$TEXT0000000001_class}" {$TEXT0000000001_style} {$recordattrs}>
+				{$TEXT0000000001_value}
+			</td>
+			{END TEXT0000000001_fieldcolumn}
+			{BEGIN TEXT0000000002_fieldcolumn}
+			<td  class="{$TEXT0000000002_class}" {$TEXT0000000002_style} {$recordattrs}>
+				{$TEXT0000000002_value}
+			</td>
+			{END TEXT0000000002_fieldcolumn}
+			{BEGIN TEXT0000000003_fieldcolumn}
+			<td  class="{$TEXT0000000003_class}" {$TEXT0000000003_style} {$recordattrs}>
+				{$TEXT0000000003_value}
+			</td>
+			{END TEXT0000000003_fieldcolumn}
+			{BEGIN endrecord_block}
+			<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+			{END endrecord_block}
+		{END grid_record}
+		</tr>
+{END grid_row}
+	</tbody>
+
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+      </div>
+      <DIV class="bs-middle ">
+        <DIV class="bs-topmiddle">
+          
+        </div>
+        <DIV class="bs-left" {$blockattr_left}>
+          
+        </div>
+        <DIV class="bs-center">
+          
+        </div>
+        <DIV class="bs-right">
+          
+        </div>
+      </div>
+      <DIV class="bs-bottom">
+        
+      </div>
+      {$footer}
+    {END body}
+  </body>
+</html>

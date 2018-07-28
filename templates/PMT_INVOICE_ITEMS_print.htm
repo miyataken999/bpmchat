@@ -1,0 +1,353 @@
+<!doctype html>
+<html  {$html_attrs}>
+  <head>asdfsfs
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      {$pagetitle}
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link REL="stylesheet" href="styles/default.css" type="text/css">
+    {BEGIN rtlCSS}
+      <link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+    {END rtlCSS}
+    {BEGIN styleCSSFiles}
+      <link REL="stylesheet" href="{$stylepath}" type="text/css">
+    {END styleCSSFiles}
+  </head>
+  <BODY class="{$stylename} function-print" {$bodyattrs}>
+    {BEGIN body}
+      {$header}
+      <style>
+        {$containerCss}
+      </style>
+      <DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+{BEGIN container_master}
+<div {$master_chiddenattr} data-pageid="{$pageid}" data-container="master" class="    "> 
+
+{BEGIN mastertable_block}
+<div class="panel panel-info table-panel">
+	<div class="panel-heading">
+		{$master_heading}
+	</div>
+	<div class="panel-body">
+		{$showmasterfile}
+		
+	</div>
+</div>
+
+{END mastertable_block}
+
+
+
+</div>
+{END container_master}
+
+
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel PMT_INVOICE_ITEMS print}</h2>
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>{mlang_message PAGE1} <span class="rp-pageno">{$pageno}</span> {mlang_message PAGE2} <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="table table-bordered rp-maintable" {$printgrid_hiddenattr} data-pageid="{$pageid}" data-brick="printgrid" >
+	<thead>
+	{BEGIN grid_header}
+		<tr class="{$gridHeader_class}" >
+		{BEGIN record_header}
+			{BEGIN APP_UID_fieldheadercolumn}
+			<th class="{$APP_UID_class}" {$APP_UID_style}  data-field="APP_UID">
+				{$label PMT_INVOICE_ITEMS APP_UID}
+			</th>
+			{END APP_UID_fieldheadercolumn}
+			{BEGIN A_fieldheadercolumn}
+			<th class="{$A_class}" {$A_style}  data-field="A">
+				{$label PMT_INVOICE_ITEMS A}
+			</th>
+			{END A_fieldheadercolumn}
+			{BEGIN B_fieldheadercolumn}
+			<th class="{$B_class}" {$B_style}  data-field="B">
+				{$label PMT_INVOICE_ITEMS B}
+			</th>
+			{END B_fieldheadercolumn}
+			{BEGIN C_fieldheadercolumn}
+			<th class="{$C_class}" {$C_style}  data-field="C">
+				{$label PMT_INVOICE_ITEMS C}
+			</th>
+			{END C_fieldheadercolumn}
+			{BEGIN D_fieldheadercolumn}
+			<th class="{$D_class}" {$D_style}  data-field="D">
+				{$label PMT_INVOICE_ITEMS D}
+			</th>
+			{END D_fieldheadercolumn}
+			{BEGIN E_fieldheadercolumn}
+			<th class="{$E_class}" {$E_style}  data-field="E">
+				{$label PMT_INVOICE_ITEMS E}
+			</th>
+			{END E_fieldheadercolumn}
+			{BEGIN F_fieldheadercolumn}
+			<th class="{$F_class}" {$F_style}  data-field="F">
+				{$label PMT_INVOICE_ITEMS F}
+			</th>
+			{END F_fieldheadercolumn}
+			{BEGIN G_fieldheadercolumn}
+			<th class="{$G_class}" {$G_style}  data-field="G">
+				{$label PMT_INVOICE_ITEMS G}
+			</th>
+			{END G_fieldheadercolumn}
+			{BEGIN H_fieldheadercolumn}
+			<th class="{$H_class}" {$H_style}  data-field="H">
+				{$label PMT_INVOICE_ITEMS H}
+			</th>
+			{END H_fieldheadercolumn}
+			{BEGIN I_fieldheadercolumn}
+			<th class="{$I_class}" {$I_style}  data-field="I">
+				{$label PMT_INVOICE_ITEMS I}
+			</th>
+			{END I_fieldheadercolumn}
+			{BEGIN J_fieldheadercolumn}
+			<th class="{$J_class}" {$J_style}  data-field="J">
+				{$label PMT_INVOICE_ITEMS J}
+			</th>
+			{END J_fieldheadercolumn}
+			{BEGIN K_fieldheadercolumn}
+			<th class="{$K_class}" {$K_style}  data-field="K">
+				{$label PMT_INVOICE_ITEMS K}
+			</th>
+			{END K_fieldheadercolumn}
+			{BEGIN L_fieldheadercolumn}
+			<th class="{$L_class}" {$L_style}  data-field="L">
+				{$label PMT_INVOICE_ITEMS L}
+			</th>
+			{END L_fieldheadercolumn}
+			{BEGIN M_fieldheadercolumn}
+			<th class="{$M_class}" {$M_style}  data-field="M">
+				{$label PMT_INVOICE_ITEMS M}
+			</th>
+			{END M_fieldheadercolumn}
+			{BEGIN N_fieldheadercolumn}
+			<th class="{$N_class}" {$N_style}  data-field="N">
+				{$label PMT_INVOICE_ITEMS N}
+			</th>
+			{END N_fieldheadercolumn}
+			{BEGIN O_fieldheadercolumn}
+			<th class="{$O_class}" {$O_style}  data-field="O">
+				{$label PMT_INVOICE_ITEMS O}
+			</th>
+			{END O_fieldheadercolumn}
+			{BEGIN P_fieldheadercolumn}
+			<th class="{$P_class}" {$P_style}  data-field="P">
+				{$label PMT_INVOICE_ITEMS P}
+			</th>
+			{END P_fieldheadercolumn}
+			{BEGIN Q_fieldheadercolumn}
+			<th class="{$Q_class}" {$Q_style}  data-field="Q">
+				{$label PMT_INVOICE_ITEMS Q}
+			</th>
+			{END Q_fieldheadercolumn}
+			{BEGIN R_fieldheadercolumn}
+			<th class="{$R_class}" {$R_style}  data-field="R">
+				{$label PMT_INVOICE_ITEMS R}
+			</th>
+			{END R_fieldheadercolumn}
+			{BEGIN S_fieldheadercolumn}
+			<th class="{$S_class}" {$S_style}  data-field="S">
+				{$label PMT_INVOICE_ITEMS S}
+			</th>
+			{END S_fieldheadercolumn}
+			{BEGIN T_fieldheadercolumn}
+			<th class="{$T_class}" {$T_style}  data-field="T">
+				{$label PMT_INVOICE_ITEMS T}
+			</th>
+			{END T_fieldheadercolumn}
+			{BEGIN endrecordheader_block}
+			<th class="rnr-cs">&nbsp;</th>
+			{END endrecordheader_block}
+		{END record_header}
+		</tr>
+	{END grid_header}
+	</thead>
+	
+	<tbody>	
+	{BEGIN grid_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+			{BEGIN APP_UID_fieldcolumn}
+			<td  class="{$APP_UID_class}" {$APP_UID_style} {$recordattrs}>
+				{$APP_UID_value}
+			</td>
+			{END APP_UID_fieldcolumn}
+			{BEGIN A_fieldcolumn}
+			<td  class="{$A_class}" {$A_style} {$recordattrs}>
+				{$A_value}
+			</td>
+			{END A_fieldcolumn}
+			{BEGIN B_fieldcolumn}
+			<td  class="{$B_class}" {$B_style} {$recordattrs}>
+				{$B_value}
+			</td>
+			{END B_fieldcolumn}
+			{BEGIN C_fieldcolumn}
+			<td  class="{$C_class}" {$C_style} {$recordattrs}>
+				{$C_value}
+			</td>
+			{END C_fieldcolumn}
+			{BEGIN D_fieldcolumn}
+			<td  class="{$D_class}" {$D_style} {$recordattrs}>
+				{$D_value}
+			</td>
+			{END D_fieldcolumn}
+			{BEGIN E_fieldcolumn}
+			<td  class="{$E_class}" {$E_style} {$recordattrs}>
+				{$E_value}
+			</td>
+			{END E_fieldcolumn}
+			{BEGIN F_fieldcolumn}
+			<td  class="{$F_class}" {$F_style} {$recordattrs}>
+				{$F_value}
+			</td>
+			{END F_fieldcolumn}
+			{BEGIN G_fieldcolumn}
+			<td  class="{$G_class}" {$G_style} {$recordattrs}>
+				{$G_value}
+			</td>
+			{END G_fieldcolumn}
+			{BEGIN H_fieldcolumn}
+			<td  class="{$H_class}" {$H_style} {$recordattrs}>
+				{$H_value}
+			</td>
+			{END H_fieldcolumn}
+			{BEGIN I_fieldcolumn}
+			<td  class="{$I_class}" {$I_style} {$recordattrs}>
+				{$I_value}
+			</td>
+			{END I_fieldcolumn}
+			{BEGIN J_fieldcolumn}
+			<td  class="{$J_class}" {$J_style} {$recordattrs}>
+				{$J_value}
+			</td>
+			{END J_fieldcolumn}
+			{BEGIN K_fieldcolumn}
+			<td  class="{$K_class}" {$K_style} {$recordattrs}>
+				{$K_value}
+			</td>
+			{END K_fieldcolumn}
+			{BEGIN L_fieldcolumn}
+			<td  class="{$L_class}" {$L_style} {$recordattrs}>
+				{$L_value}
+			</td>
+			{END L_fieldcolumn}
+			{BEGIN M_fieldcolumn}
+			<td  class="{$M_class}" {$M_style} {$recordattrs}>
+				{$M_value}
+			</td>
+			{END M_fieldcolumn}
+			{BEGIN N_fieldcolumn}
+			<td  class="{$N_class}" {$N_style} {$recordattrs}>
+				{$N_value}
+			</td>
+			{END N_fieldcolumn}
+			{BEGIN O_fieldcolumn}
+			<td  class="{$O_class}" {$O_style} {$recordattrs}>
+				{$O_value}
+			</td>
+			{END O_fieldcolumn}
+			{BEGIN P_fieldcolumn}
+			<td  class="{$P_class}" {$P_style} {$recordattrs}>
+				{$P_value}
+			</td>
+			{END P_fieldcolumn}
+			{BEGIN Q_fieldcolumn}
+			<td  class="{$Q_class}" {$Q_style} {$recordattrs}>
+				{$Q_value}
+			</td>
+			{END Q_fieldcolumn}
+			{BEGIN R_fieldcolumn}
+			<td  class="{$R_class}" {$R_style} {$recordattrs}>
+				{$R_value}
+			</td>
+			{END R_fieldcolumn}
+			{BEGIN S_fieldcolumn}
+			<td  class="{$S_class}" {$S_style} {$recordattrs}>
+				{$S_value}
+			</td>
+			{END S_fieldcolumn}
+			{BEGIN T_fieldcolumn}
+			<td  class="{$T_class}" {$T_style} {$recordattrs}>
+				{$T_value}
+			</td>
+			{END T_fieldcolumn}
+			{BEGIN endrecord_block}
+			<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+			{END endrecord_block}
+		{END grid_record}
+		</tr>
+{END grid_row}
+	</tbody>
+
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+      </div>
+      <DIV class="bs-middle ">
+        <DIV class="bs-topmiddle">
+          
+        </div>
+        <DIV class="bs-left" {$blockattr_left}>
+          
+        </div>
+        <DIV class="bs-center">
+          
+        </div>
+        <DIV class="bs-right">
+          
+        </div>
+      </div>
+      <DIV class="bs-bottom">
+        
+      </div>
+      {$footer}
+    {END body}
+  </body>
+</html>

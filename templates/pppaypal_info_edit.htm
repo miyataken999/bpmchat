@@ -1,0 +1,377 @@
+<!doctype html>
+<html  {$html_attrs}>
+  <head>asdfsfs
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      {$pagetitle}
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link REL="stylesheet" href="styles/default.css" type="text/css">
+    {BEGIN rtlCSS}
+      <link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+    {END rtlCSS}
+    {BEGIN styleCSSFiles}
+      <link REL="stylesheet" href="{$stylepath}" type="text/css">
+    {END styleCSSFiles}
+  </head>
+  <BODY class="{$stylename} function-edit" {$bodyattrs}>
+    {BEGIN body}
+      {$header}
+      <style>
+        {$containerCss}
+      </style>
+      <DIV class="bs-top">
+        
+
+{BEGIN container_editpage}
+<div {$editpage_chiddenattr} data-pageid="{$pageid}" data-container="editpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-9 col-md-offset-3"> 
+
+{BEGIN editheader}
+	<h2 {$editheader_hiddenattr} data-pageid="{$pageid}" data-brick="editheader" >{$pagetitlelabel pppaypal_info edit}</h2>
+
+{END editheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+		<button class="btn btn-sm btn-default" {$backbutton_attrs}>{mlang_message BACK_TO_LIST}</button>
+{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>{mlang_message VIEW}</button>
+{END view_page_button}
+</div>
+</div>
+
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+
+</div>
+{END container_editpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$editfields_hiddenattr} data-pageid="{$pageid}" data-brick="editfields" class="form-horizontal" role="form">
+
+
+
+			{BEGIN StoreName_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_StoreName}" data-fieldname="StoreName" data-signal-error-for="StoreName{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_StoreName}">
+		{BEGIN StoreName_label}{$label pppaypal_info StoreName}{END StoreName_label}
+	</label>
+	<div class="col-md-6" >
+		{$StoreName_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="StoreName">
+		<div class="text-muted" >
+		{$tooltip pppaypal_info StoreName}
+		</div>
+	</div>
+</div>
+</div>
+{END StoreName_fieldblock}
+
+			{BEGIN Currency_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Currency}" data-fieldname="Currency" data-signal-error-for="Currency{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Currency}">
+		{BEGIN Currency_label}{$label pppaypal_info Currency}{END Currency_label}
+	</label>
+	<div class="col-md-6" >
+		{$Currency_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Currency">
+		<div class="text-muted" >
+		{$tooltip pppaypal_info Currency}
+		</div>
+	</div>
+</div>
+</div>
+{END Currency_fieldblock}
+
+			{BEGIN PayPalEmailAddress_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PayPalEmailAddress}" data-fieldname="PayPalEmailAddress" data-signal-error-for="PayPalEmailAddress{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PayPalEmailAddress}">
+		{BEGIN PayPalEmailAddress_label}{$label pppaypal_info PayPalEmailAddress}{END PayPalEmailAddress_label}
+	</label>
+	<div class="col-md-6" >
+		{$PayPalEmailAddress_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PayPalEmailAddress">
+		<div class="text-muted" >
+		{$tooltip pppaypal_info PayPalEmailAddress}
+		</div>
+	</div>
+</div>
+</div>
+{END PayPalEmailAddress_fieldblock}
+
+			{BEGIN Logo_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_Logo}" data-fieldname="Logo" data-signal-error-for="Logo{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_Logo}">
+		{BEGIN Logo_label}{$label pppaypal_info Logo}{END Logo_label}
+	</label>
+	<div class="col-md-6" >
+		{$Logo_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="Logo">
+		<div class="text-muted" >
+		{$tooltip pppaypal_info Logo}
+		</div>
+	</div>
+</div>
+</div>
+{END Logo_fieldblock}
+
+			{BEGIN IPNPage_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_IPNPage}" data-fieldname="IPNPage" data-signal-error-for="IPNPage{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_IPNPage}">
+		{BEGIN IPNPage_label}{$label pppaypal_info IPNPage}{END IPNPage_label}
+	</label>
+	<div class="col-md-6" >
+		{$IPNPage_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="IPNPage">
+		<div class="text-muted" >
+		{$tooltip pppaypal_info IPNPage}
+		</div>
+	</div>
+</div>
+</div>
+{END IPNPage_fieldblock}
+
+			{BEGIN CancelPage_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_CancelPage}" data-fieldname="CancelPage" data-signal-error-for="CancelPage{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_CancelPage}">
+		{BEGIN CancelPage_label}{$label pppaypal_info CancelPage}{END CancelPage_label}
+	</label>
+	<div class="col-md-6" >
+		{$CancelPage_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="CancelPage">
+		<div class="text-muted" >
+		{$tooltip pppaypal_info CancelPage}
+		</div>
+	</div>
+</div>
+</div>
+{END CancelPage_fieldblock}
+
+			{BEGIN SuccessPage_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_SuccessPage}" data-fieldname="SuccessPage" data-signal-error-for="SuccessPage{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_SuccessPage}">
+		{BEGIN SuccessPage_label}{$label pppaypal_info SuccessPage}{END SuccessPage_label}
+	</label>
+	<div class="col-md-6" >
+		{$SuccessPage_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="SuccessPage">
+		<div class="text-muted" >
+		{$tooltip pppaypal_info SuccessPage}
+		</div>
+	</div>
+</div>
+</div>
+{END SuccessPage_fieldblock}
+
+			{BEGIN PayPalServer_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_PayPalServer}" data-fieldname="PayPalServer" data-signal-error-for="PayPalServer{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_PayPalServer}">
+		{BEGIN PayPalServer_label}{$label pppaypal_info PayPalServer}{END PayPalServer_label}
+	</label>
+	<div class="col-md-6" >
+		{$PayPalServer_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="PayPalServer">
+		<div class="text-muted" >
+		{$tooltip pppaypal_info PayPalServer}
+		</div>
+	</div>
+</div>
+</div>
+{END PayPalServer_fieldblock}
+
+			{BEGIN SMSEmailAddress_fieldblock}
+<div class=container>
+<div class="form-group {$fielddispclass_SMSEmailAddress}" data-fieldname="SMSEmailAddress" data-signal-error-for="SMSEmailAddress{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_SMSEmailAddress}">
+		{BEGIN SMSEmailAddress_label}{$label pppaypal_info SMSEmailAddress}{END SMSEmailAddress_label}
+	</label>
+	<div class="col-md-6" >
+		{$SMSEmailAddress_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="SMSEmailAddress">
+		<div class="text-muted" >
+		{$tooltip pppaypal_info SMSEmailAddress}
+		</div>
+	</div>
+</div>
+</div>
+{END SMSEmailAddress_fieldblock}
+
+
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_buttons}
+<div {$buttons_chiddenattr} data-pageid="{$pageid}" data-container="buttons" class=" form-group   "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-3"> 
+
+{BEGIN editbuttons}
+	{BEGIN save_button}
+	<button class="btn btn-primary" {$savebutton_attrs}>{mlang_message SAVE}</button>
+	{END save_button}
+	{BEGIN back_button}
+		<button class="btn btn-default" {$backbutton_attrs}>{mlang_message BACK_TO_LIST}</button>
+	{END back_button}
+	{BEGIN close_button}
+	<a href="#" class="btn btn-default" {$closebutton_attrs}>{mlang_message CANCEL}</a>
+	{END close_button}
+
+{END editbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+
+
+{BEGIN container_leftbuttons_1}
+<div {$leftbuttons_1_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons_1" class="  text-right col-md-3 "> 
+
+{BEGIN righteditbuttons}
+<div class="btn-group" role="group">
+
+	{BEGIN prev_button}
+	<button class="btn btn-default {$prevbutton_class}" {$prevbutton_attrs}><span class="glyphicon glyphicon-chevron-left"></span></button>
+	{END prev_button}
+	{BEGIN next_button}
+	<button class="btn btn-default  {$nextbutton_class}" {$nextbutton_attrs}><span class="glyphicon glyphicon-chevron-right"></span></button>
+	{END next_button}
+	<div class="btn-group dropup" role="group">
+		<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+		<ul class="dropdown-menu dropdown-left">
+			{BEGIN reset_button}
+				<li><a href="#" {$resetbutton_attrs}>{mlang_message RESET}</a></li>
+			{END reset_button}
+			{BEGIN view_page_button}
+				<li><a href="#" {$view_page_button_attrs}>{mlang_message VIEW}</a></li>
+			{END view_page_button}
+		</ul>
+	</div>
+</div>
+{END righteditbuttons}
+
+
+
+</div>
+{END container_leftbuttons_1}
+
+
+
+
+
+
+</div>
+{END container_buttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+      </div>
+      <DIV class="bs-middle ">
+        <DIV class="bs-topmiddle">
+          
+        </div>
+        <DIV class="bs-left" {$blockattr_left}>
+          
+        </div>
+        <DIV class="bs-center">
+          
+        </div>
+        <DIV class="bs-right">
+          
+        </div>
+      </div>
+      <DIV class="bs-bottom">
+        
+      </div>
+      {$footer}
+    {END body}
+  </body>
+</html>

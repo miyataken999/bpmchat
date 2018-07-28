@@ -1,0 +1,1136 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-list" {$bodyattrs}>
+	{BEGIN body}
+<style>
+{$containerCss}
+</style>
+<div class="sidebar bs-fixed clearfix mCustomScrollbar" data-mcs-theme="minimal-dark" {$blockattr_left}>
+	<div class="sidebar-contents mCustomScrollBox mCS-minimal-dark mCSB_vertical mCSB_outside">
+		
+
+{BEGIN container_logo}
+<div {$logo_chiddenattr} data-pageid="{$pageid}" data-container="logo" class=" bs-sidebarlogo   "> 
+
+{BEGIN logo_block}
+<a href="{$home_link}" {$logo_hiddenattr} data-pageid="{$pageid}" data-brick="logo" class="navbar-brand" >{$logo}</a>
+{END logo_block}
+
+
+
+</div>
+{END container_logo}
+
+
+
+{BEGIN container_hdr}
+<div {$hdr_chiddenattr} data-pageid="{$pageid}" data-container="hdr" class=" navbar-default clearfix   "> 
+
+{BEGIN collapse_block}
+<button {$bsnavbarcollapse_hiddenattr} data-pageid="{$pageid}" data-brick="bsnavbarcollapse" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target=".bs-navcontrolled">	
+	<span class="sr-only">Toggle navigation</span>	
+	<span class="icon-bar"></span>					
+</button>												
+
+{END collapse_block}
+
+
+
+</div>
+{END container_hdr}
+
+{BEGIN container_sidemenu}<div {$sidemenu_chiddenattr} data-pageid="{$pageid}" data-container="sidemenu" class="bs-navform navbar-collapse sidebar-menu bs-hidden-xs bs-navcontrolled" aria-expanded="false" >												   
+{BEGIN menu_block}
+{$menu main}
+
+{END menu_block}
+
+												</div>						{END container_sidemenu}
+
+{BEGIN container_left}
+<div {$left_chiddenattr} data-pageid="{$pageid}" data-container="left" class=" sidebar-container   "> 
+
+{BEGIN searchPanel}
+<div {$searchpanel_hiddenattr} data-pageid="{$pageid}" data-brick="searchpanel" class="searchOptions panel panel-primary searchPanelContainer " {$srchOpt_attrs} >
+	<!-- Search panel content -->
+	
+	<div class="panel-heading">
+		<div class="btn-group" id="addSearchFieldButton{$id}">
+			<button id="showHideControlChooseMenu{$id}" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			{mlang_message SEARCH_IN}
+			<span class="caret"></span>
+			</button>
+		</div>
+
+		
+		<div class="btn-group searchpanel-options" id="searchPanelOptions{$id}">
+			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon glyphicon-option-vertical"></span>
+			</button>
+			<ul class="dropdown-menu dropdown-left">
+				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>{mlang_message SEARCH_SHOW_OPTIONS_BUTTON}</a></li>
+				<li role="separator" class="divider"></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>{mlang_message SEARCH_ALL_CONDITIONS}</label></a></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>{mlang_message SEARCH_ANY_CONDITIONS}</label></a></li>
+				<li role="separator" class="divider"></li>
+				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>{mlang_message HIDE}</a></li>
+			</ul>
+		</div>
+	
+		
+		</div>
+	<div class="panel-body controlsBlock" {$bottomSearchButt_attrs} >
+
+
+		
+		{BEGIN searchCtrlBlock}
+		<div class="srchPanelRow form-group" {$filterRow_attrs}>
+			<label>{$fLabel}</label>	{$delCtrlButt}
+				<span class="rnr-searchtype">{$searchtype}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
+		</div>
+		{END searchCtrlBlock}
+
+
+	</div>
+	
+	<div class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
+		<button class="btn btn-primary" id="searchButton{$id}" {$searchbutton_attrs}>{mlang_message SEARCH}</button>
+		<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs}>{mlang_message SHOW_ALL}</button>
+	</div>
+</div>
+
+
+{END searchPanel}
+
+
+
+
+</div>
+{END container_left}
+
+
+	</div>
+</div>	
+<div class="bs-wrapper">
+	<div class="bs-fixedheader" id="fixedheader{$id}">
+		{BEGIN container_menu}<nav {$menu_chiddenattr} data-pageid="{$pageid}" data-container="menu" class="navbar navbar-default bs-fullwidth-navbar">					
+
+
+
+{BEGIN container_bc}
+<div {$bc_chiddenattr} data-pageid="{$pageid}" data-container="bc" class=" navbar-form navbar-left   "> 
+
+{BEGIN breadcrumbs}
+<ol class="breadcrumb">
+<li ><a href="{$home_link}"><span class="glyphicon glyphicon-home"></span></a>{$crumb_dropdown}</li>
+{BEGIN crumb}
+  <li class="{$crumb_item_class}">
+{BEGIN crumb_title_link}
+	<a {$crumb_attrs}>{$crumb_title}</a>
+{END crumb_title_link}
+{BEGIN crumb_title_span}
+	<span {$crumb_attrs}>{$crumb_title}</span>
+{END crumb_title_span}	
+	{$crumb_dropdown}
+  </li>
+{END crumb}
+</ol>
+{END breadcrumbs}
+
+
+
+</div>
+{END container_bc}
+
+
+
+
+
+
+{BEGIN container_menu_1}<div {$menu_1_chiddenattr} data-pageid="{$pageid}" data-container="menu_1" class="bs-navform navbar-collapse bs-hidden-xs bs-navcontrolled" aria-expanded="false" >												   
+
+
+
+{BEGIN container_more}
+<div {$more_chiddenattr} data-pageid="{$pageid}" data-container="more" class=" navbar-right navbar-form   "> 
+
+{BEGIN more_list}
+<div {$morebutton_hiddenattr} data-pageid="{$pageid}" data-brick="morebutton" class="btn-group bs-navsection">
+	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		<span class="glyphicon glyphicon-cog"></span>
+		<span class="caret"></span>
+	</button>
+	<ul class="dropdown-menu">
+		
+				{BEGIN exportselected_link}
+		<li class="massButton{$id} disabled"><a href="#" {$exportselectedlink_attrs} {$exportselectedlink_span} >{mlang_message EXPORT_SELECTED}</a></li>
+		{END exportselected_link}
+		
+				{BEGIN deleteselected_link}
+		<li class="massButton{$id} disabled"><a href="#" {$deleteselectedlink_attrs} {$deleteselectedlink_span}>{mlang_message DELETE_SELECTED}</a></li>
+		{END deleteselected_link}
+		
+				<li role="separator" class="divider"></li>	
+
+				{BEGIN asearch_link}
+		<li><a href="wpfg_posts_search.php" {$advsearchlink_attrs}>{mlang_message ADVANCED_SEARCH}</a></li>
+		{END asearch_link}
+
+				{BEGIN searchPanelTopButtons}
+		<li><a href=# id="showOptPanel{$id}">{mlang_message SHOW_SEARCH_PANEL}</a></li>
+		{END searchPanelTopButtons}	
+		
+				
+				<li role="separator" class="divider"></li>	
+		
+				
+				{BEGIN export_link}
+		<li><a target="_blank" href="wpfg_posts_export.php"  {$exportlink_attrs}>{mlang_message EXPORT_RESULTS}</a></li>
+		{END export_link}
+
+				{BEGIN import_link}
+		<li><a href="wpfg_posts_import.php?{$crosstable_attrs}"  {$importlink_attrs}>{mlang_message IMPORT}</a></li>
+		{END import_link}
+
+					<li role="separator" class="divider"></li>
+				{BEGIN EnglishLANGLINK}
+				<li><a href="#" data-lang="English" class="rnr-langlink">
+					{BEGIN EnglishLANGLINK_ACTIVE}<span class="glyphicon glyphicon-ok">&nbsp;</span>{END EnglishLANGLINK_ACTIVE}
+					English</a></li>
+				{END EnglishLANGLINK}
+				{BEGIN JapaneseLANGLINK}
+				<li><a href="#" data-lang="Japanese" class="rnr-langlink">
+					{BEGIN JapaneseLANGLINK_ACTIVE}<span class="glyphicon glyphicon-ok">&nbsp;</span>{END JapaneseLANGLINK_ACTIVE}
+					日本語</a></li>
+				{END JapaneseLANGLINK}
+		
+	</ul>  
+</div>
+
+{END more_list}
+
+
+{BEGIN security_block}
+<span {$loggedas_hiddenattr} data-pageid="{$pageid}" data-brick="loggedas" id="login_block{$id}" class="bs-navsection">
+	{BEGIN guestloginbutton}
+		<button class="btn btn-info" type="button" {$guestloginlink_attrs}>{mlang_message LOGIN}</button>
+	{END guestloginbutton}
+	{BEGIN loggedas_message} 
+		<span class="dropdown">
+			<button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon-user"></span>	{$username}</button>
+			<ul class="dropdown-menu">
+		{BEGIN logoutbutton}
+				<li><a href="#" {$logoutlink_attrs}>{mlang_message LOG_OUT}</a></li>
+		{END logoutbutton}
+		
+		{BEGIN adminarea_link}
+				<li><a href="admin_rights_list.php" {$adminarealink_attrs}>{mlang_message AA_ADMINAREA}</a></li>
+		{END adminarea_link}
+
+
+	{BEGIN changepwd_link}
+				<li><a href="#" {$changepwdlink_attrs}>{mlang_message CHANGE_PASSWORD}</a></li>
+	{END changepwd_link}
+			</ul>
+		</span>
+	{END loggedas_message}
+</span>
+{END security_block}
+
+
+
+</div>
+{END container_more}
+
+
+
+
+
+
+
+
+{BEGIN container_more_1}
+<div {$more_1_chiddenattr} data-pageid="{$pageid}" data-container="more_1" class=" navbar-right navbar-form   "> 
+
+{BEGIN searchform_block}
+<span {$search_hiddenattr} data-pageid="{$pageid}" data-brick="search" class="form-group">
+
+ <div  class="input-group">
+{BEGIN searchform_text}
+	<input type="search" class="form-control" {$searchfor_attrs} size="25">
+{END searchform_text}
+	<span class="input-group-btn">
+	{BEGIN searchform_showall}
+		<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="{mlang_message SHOW_ALL}">
+			<span class="glyphicon glyphicon-remove"></span>
+		</button>
+	{END searchform_showall}
+	{BEGIN searchform_search}
+	<button {$searchbutton_attrs} class="btn btn-primary" >
+		<span class="glyphicon glyphicon-search"></span>
+	</button>
+	{END searchform_search}
+	</span>
+</div>
+		
+</span>
+{END searchform_block}
+
+
+
+</div>
+{END container_more_1}
+
+
+
+
+												</div>						{END container_menu_1}
+
+
+									</nav>{END container_menu}
+	</div>	
+	<div class="container-fluid bs-underheader bs-fixedsidebarmain" id="underheader{$id}">
+		{$header}
+		<div class="bs-sidebar-screenbound">
+			
+
+
+
+{BEGIN container_messagerow}
+<div {$messagerow_chiddenattr} data-pageid="{$pageid}" data-container="messagerow" class="    "> 
+
+
+
+
+{BEGIN container_message}
+<div {$message_chiddenattr} data-pageid="{$pageid}" data-container="message" class="   col-md-12 "> 
+
+{BEGIN message_block}
+<div {$message_hiddenattr} data-pageid="{$pageid}" data-brick="message" class="alert {$message_class}" role="alert">{$message}</div>
+{END message_block}
+
+
+
+</div>
+{END container_message}
+
+
+
+
+
+
+</div>
+{END container_messagerow}
+
+
+
+{BEGIN container_gridcontrols}
+<div {$gridcontrols_chiddenattr} data-pageid="{$pageid}" data-container="gridcontrols" class=" bs-navcontrolled bs-hidden-xs   "> 
+
+
+
+
+{BEGIN container_add_delete}
+<div {$add_delete_chiddenattr} data-pageid="{$pageid}" data-container="add_delete" class=" bottom-margin  col-md-6 "> 
+
+{BEGIN newrecord_controls_block}
+		{BEGIN add_link}
+		<a {$add_hiddenattr} data-pageid="{$pageid}" data-brick="add" type="button" class="btn btn-primary" {$addlink_attrs}>{mlang_message ADD_NEW}</a>
+	{END add_link}
+
+	
+{END newrecord_controls_block}
+
+
+{BEGIN record_controls_block}
+<span {$recordcontrol_hiddenattr} data-pageid="{$pageid}" data-brick="recordcontrol">
+		{BEGIN deleteselected_link}
+	<button type="button" class="btn btn-default" {$deleteselectedlink_attrs} {$deleteselectedlink_span} disabled>{mlang_message DELETE}</button>
+	{END deleteselected_link}
+		</span>
+
+{END record_controls_block}
+
+
+
+</div>
+{END container_add_delete}
+
+
+
+
+
+
+
+
+{BEGIN container_gridinfo}
+<div {$gridinfo_chiddenattr} data-pageid="{$pageid}" data-container="gridinfo" class=" bottom-margin text-right col-md-6 "> 
+
+{BEGIN details_found}
+<span {$details_found_hiddenattr} data-pageid="{$pageid}" data-brick="details_found" class="form-inline form-inline-always">
+	{$records_indicator}
+	<span>
+	{BEGIN recordspp_block}
+			{$recsPerPage}
+	{END recordspp_block}
+	</span>
+</span>
+{END details_found}
+
+
+{BEGIN print_friendly}
+<span {$printpanel_hiddenattr} data-pageid="{$pageid}" data-brick="printpanel" class="bs-printpanel" id="printpanelblock{$id}">
+	<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" title="{mlang_message WR_PRINT_FRIENDLY}">
+		<span class="glyphicon glyphicon-print" ></span>
+		<span class="caret"></span>
+    </button>
+	<ul class="dropdown-menu pull-right" >
+		<li>
+			<div class="container-fluid" id="print_friendly_scope{$id}">
+				<div class="row">
+					<div class="col-md-4">{mlang_message PPANEL_SCOPE}</div>
+										{BEGIN print_friendly_all}
+					<div class="col-md-8">
+						<label for="printAll{$id}">
+							<input type="radio" id="printAll{$id}" data-href="wpfg_posts_print.php?all=1&amp;{$crosstable_attrs}" name="printScope">
+							{mlang_message PPANEL_ALL_PAGES}
+						</label>
+					</div>
+					{END print_friendly_all}
+				</div>
+				<div class="row">
+					<div class="col-md-4">&nbsp;</div>
+					<div class="col-md-8">
+						<label for="printPage{$id}">
+							<input type="radio" id="printPage{$id}" data-href="wpfg_posts_print.php?{$crosstable_attrs}" name="printScope" checked>
+							{mlang_message PPANEL_THIS_PAGE}
+						</label>
+					</div>
+				</div>
+								<div class="row">
+					<div class="col-md-4">&nbsp;</div>
+					<div class="col-md-8">
+						<label for="printSelection{$id}" style="color: gray;">
+							<input type="radio" id="printSelection{$id}" name="printScope" disabled="disabled">
+							{mlang_message PPANEL_SELECTED}
+						</label>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li class="divider" role="separator"></li>
+
+		
+				<li>	
+			<div class="rnr-printdetails">
+				<label for="printPerPage{$id}">
+											{mlang_message RECORDS_PP}:
+				</label>
+				<input type="number" id="printPerPage{$id}" value="{$print_recspp}" class="rnr-printrecspp">		
+			</div>
+		</li>
+		<li class="divider" role="separator"></li>
+		<li class="rnr-printbutton">				
+			<button type="button" class="btn btn-primary" id="print_friendly_button{$id}" >{mlang_message PPANEL_PRINT}</button>			
+		</li>
+	</ul>	
+</span>
+
+{END print_friendly}
+
+
+
+
+</div>
+{END container_gridinfo}
+
+
+
+
+
+
+
+</div>
+{END container_gridcontrols}
+
+
+		</div>
+		<div></div>
+		<div class="bs-sidebar-screenbound bs-minwidth">
+			
+
+{BEGIN container_center}
+<div {$center_chiddenattr} data-pageid="{$pageid}" data-container="center" class="    "> 
+
+
+
+
+{BEGIN container_grid}
+<div {$grid_chiddenattr} data-pageid="{$pageid}" data-container="grid" class="bs-grid    "> 
+
+{BEGIN grid_block}
+	<style>
+	.bs-gridcell[data-field=ID]:before {
+		content: "{$label wpfg_posts ID}";
+	}
+	.bs-gridcell[data-field=post_author]:before {
+		content: "{$label wpfg_posts post_author}";
+	}
+	.bs-gridcell[data-field=post_date]:before {
+		content: "{$label wpfg_posts post_date}";
+	}
+	.bs-gridcell[data-field=post_date_gmt]:before {
+		content: "{$label wpfg_posts post_date_gmt}";
+	}
+	.bs-gridcell[data-field=post_content]:before {
+		content: "{$label wpfg_posts post_content}";
+	}
+	.bs-gridcell[data-field=post_title]:before {
+		content: "{$label wpfg_posts post_title}";
+	}
+	.bs-gridcell[data-field=post_excerpt]:before {
+		content: "{$label wpfg_posts post_excerpt}";
+	}
+	.bs-gridcell[data-field=post_status]:before {
+		content: "{$label wpfg_posts post_status}";
+	}
+	.bs-gridcell[data-field=comment_status]:before {
+		content: "{$label wpfg_posts comment_status}";
+	}
+	.bs-gridcell[data-field=ping_status]:before {
+		content: "{$label wpfg_posts ping_status}";
+	}
+	.bs-gridcell[data-field=post_password]:before {
+		content: "{$label wpfg_posts post_password}";
+	}
+	.bs-gridcell[data-field=post_name]:before {
+		content: "{$label wpfg_posts post_name}";
+	}
+	.bs-gridcell[data-field=to_ping]:before {
+		content: "{$label wpfg_posts to_ping}";
+	}
+	.bs-gridcell[data-field=pinged]:before {
+		content: "{$label wpfg_posts pinged}";
+	}
+	.bs-gridcell[data-field=post_modified]:before {
+		content: "{$label wpfg_posts post_modified}";
+	}
+	.bs-gridcell[data-field=post_modified_gmt]:before {
+		content: "{$label wpfg_posts post_modified_gmt}";
+	}
+	.bs-gridcell[data-field=post_content_filtered]:before {
+		content: "{$label wpfg_posts post_content_filtered}";
+	}
+	.bs-gridcell[data-field=post_parent]:before {
+		content: "{$label wpfg_posts post_parent}";
+	}
+	.bs-gridcell[data-field=guid]:before {
+		content: "{$label wpfg_posts guid}";
+	}
+	.bs-gridcell[data-field=menu_order]:before {
+		content: "{$label wpfg_posts menu_order}";
+	}
+	.bs-gridcell[data-field=post_type]:before {
+		content: "{$label wpfg_posts post_type}";
+	}
+	.bs-gridcell[data-field=post_mime_type]:before {
+		content: "{$label wpfg_posts post_mime_type}";
+	}
+	.bs-gridcell[data-field=comment_count]:before {
+		content: "{$label wpfg_posts comment_count}";
+	}
+</style>
+<table {$grid_hiddenattr} data-pageid="{$pageid}" data-brick="grid" class="table {$grid_classes} bs-flexgrid rnr-b-grid rnr-gridtable" cellpadding="0" >
+	<thead>
+										{BEGIN grid_header}
+								<tr class="rnr-toprow {$gridHeader_class}" >
+									{BEGIN record_header}
+									{BEGIN listIcons_column}
+									<th iEditCont="all">&nbsp;</th>
+									{END listIcons_column}	
+
+																		{BEGIN checkbox_column}
+									<th class="">
+										<input type="checkbox" {$checkboxheader_attrs}>
+									</th>
+									{END checkbox_column}
+
+																		
+									{BEGIN ID_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$ID_class}" data-field=ID>
+									{BEGIN ID_fieldheader}
+																				<span {$ID_orderlinkattrs}>
+											{$label wpfg_posts ID}
+										</span>
+									{END ID_fieldheader}
+									</th>
+									{END ID_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN post_author_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$post_author_class}" data-field=post_author>
+									{BEGIN post_author_fieldheader}
+																				<span {$post_author_orderlinkattrs}>
+											{$label wpfg_posts post_author}
+										</span>
+									{END post_author_fieldheader}
+									</th>
+									{END post_author_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN post_date_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$post_date_class}" data-field=post_date>
+									{BEGIN post_date_fieldheader}
+																				<span {$post_date_orderlinkattrs}>
+											{$label wpfg_posts post_date}
+										</span>
+									{END post_date_fieldheader}
+									</th>
+									{END post_date_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN post_date_gmt_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$post_date_gmt_class}" data-field=post_date_gmt>
+									{BEGIN post_date_gmt_fieldheader}
+																				<span {$post_date_gmt_orderlinkattrs}>
+											{$label wpfg_posts post_date_gmt}
+										</span>
+									{END post_date_gmt_fieldheader}
+									</th>
+									{END post_date_gmt_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN post_content_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$post_content_class}" data-field=post_content>
+									{BEGIN post_content_fieldheader}
+																				<span {$post_content_orderlinkattrs}>
+											{$label wpfg_posts post_content}
+										</span>
+									{END post_content_fieldheader}
+									</th>
+									{END post_content_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN post_title_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$post_title_class}" data-field=post_title>
+									{BEGIN post_title_fieldheader}
+																				<span {$post_title_orderlinkattrs}>
+											{$label wpfg_posts post_title}
+										</span>
+									{END post_title_fieldheader}
+									</th>
+									{END post_title_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN post_excerpt_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$post_excerpt_class}" data-field=post_excerpt>
+									{BEGIN post_excerpt_fieldheader}
+																				<span {$post_excerpt_orderlinkattrs}>
+											{$label wpfg_posts post_excerpt}
+										</span>
+									{END post_excerpt_fieldheader}
+									</th>
+									{END post_excerpt_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN post_status_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$post_status_class}" data-field=post_status>
+									{BEGIN post_status_fieldheader}
+																				<span {$post_status_orderlinkattrs}>
+											{$label wpfg_posts post_status}
+										</span>
+									{END post_status_fieldheader}
+									</th>
+									{END post_status_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN comment_status_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$comment_status_class}" data-field=comment_status>
+									{BEGIN comment_status_fieldheader}
+																				<span {$comment_status_orderlinkattrs}>
+											{$label wpfg_posts comment_status}
+										</span>
+									{END comment_status_fieldheader}
+									</th>
+									{END comment_status_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN ping_status_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$ping_status_class}" data-field=ping_status>
+									{BEGIN ping_status_fieldheader}
+																				<span {$ping_status_orderlinkattrs}>
+											{$label wpfg_posts ping_status}
+										</span>
+									{END ping_status_fieldheader}
+									</th>
+									{END ping_status_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN post_password_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$post_password_class}" data-field=post_password>
+									{BEGIN post_password_fieldheader}
+																				<span {$post_password_orderlinkattrs}>
+											{$label wpfg_posts post_password}
+										</span>
+									{END post_password_fieldheader}
+									</th>
+									{END post_password_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN post_name_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$post_name_class}" data-field=post_name>
+									{BEGIN post_name_fieldheader}
+																				<span {$post_name_orderlinkattrs}>
+											{$label wpfg_posts post_name}
+										</span>
+									{END post_name_fieldheader}
+									</th>
+									{END post_name_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN to_ping_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$to_ping_class}" data-field=to_ping>
+									{BEGIN to_ping_fieldheader}
+																				<span {$to_ping_orderlinkattrs}>
+											{$label wpfg_posts to_ping}
+										</span>
+									{END to_ping_fieldheader}
+									</th>
+									{END to_ping_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN pinged_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$pinged_class}" data-field=pinged>
+									{BEGIN pinged_fieldheader}
+																				<span {$pinged_orderlinkattrs}>
+											{$label wpfg_posts pinged}
+										</span>
+									{END pinged_fieldheader}
+									</th>
+									{END pinged_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN post_modified_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$post_modified_class}" data-field=post_modified>
+									{BEGIN post_modified_fieldheader}
+																				<span {$post_modified_orderlinkattrs}>
+											{$label wpfg_posts post_modified}
+										</span>
+									{END post_modified_fieldheader}
+									</th>
+									{END post_modified_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN post_modified_gmt_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$post_modified_gmt_class}" data-field=post_modified_gmt>
+									{BEGIN post_modified_gmt_fieldheader}
+																				<span {$post_modified_gmt_orderlinkattrs}>
+											{$label wpfg_posts post_modified_gmt}
+										</span>
+									{END post_modified_gmt_fieldheader}
+									</th>
+									{END post_modified_gmt_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN post_content_filtered_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$post_content_filtered_class}" data-field=post_content_filtered>
+									{BEGIN post_content_filtered_fieldheader}
+																				<span {$post_content_filtered_orderlinkattrs}>
+											{$label wpfg_posts post_content_filtered}
+										</span>
+									{END post_content_filtered_fieldheader}
+									</th>
+									{END post_content_filtered_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN post_parent_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$post_parent_class}" data-field=post_parent>
+									{BEGIN post_parent_fieldheader}
+																				<span {$post_parent_orderlinkattrs}>
+											{$label wpfg_posts post_parent}
+										</span>
+									{END post_parent_fieldheader}
+									</th>
+									{END post_parent_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN guid_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$guid_class}" data-field=guid>
+									{BEGIN guid_fieldheader}
+																				<span {$guid_orderlinkattrs}>
+											{$label wpfg_posts guid}
+										</span>
+									{END guid_fieldheader}
+									</th>
+									{END guid_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN menu_order_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$menu_order_class}" data-field=menu_order>
+									{BEGIN menu_order_fieldheader}
+																				<span {$menu_order_orderlinkattrs}>
+											{$label wpfg_posts menu_order}
+										</span>
+									{END menu_order_fieldheader}
+									</th>
+									{END menu_order_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN post_type_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$post_type_class}" data-field=post_type>
+									{BEGIN post_type_fieldheader}
+																				<span {$post_type_orderlinkattrs}>
+											{$label wpfg_posts post_type}
+										</span>
+									{END post_type_fieldheader}
+									</th>
+									{END post_type_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN post_mime_type_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$post_mime_type_class}" data-field=post_mime_type>
+									{BEGIN post_mime_type_fieldheader}
+																				<span {$post_mime_type_orderlinkattrs}>
+											{$label wpfg_posts post_mime_type}
+										</span>
+									{END post_mime_type_fieldheader}
+									</th>
+									{END post_mime_type_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN comment_count_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$comment_count_class}" data-field=comment_count>
+									{BEGIN comment_count_fieldheader}
+																				<span {$comment_count_orderlinkattrs}>
+											{$label wpfg_posts comment_count}
+										</span>
+									{END comment_count_fieldheader}
+									</th>
+									{END comment_count_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN endrecordheader_block}
+									<th class="rnr-cs">&nbsp;</th>
+									
+									{END endrecordheader_block}
+									
+									{END record_header}
+									
+								</tr>
+								{END grid_header}
+
+	</thead>
+	<tbody>	
+		{BEGIN grid_row}
+<tr class="{$rowclass} bs-gridrow" {$rowattrs} {$rowstyle}>
+	{BEGIN grid_record}
+	{BEGIN listIcons_column}
+	<td class="bs-gridicons" iEditCont="all" {$rowstyle} {$recordattrs}>
+		{BEGIN edit_column}
+	{BEGIN edit_link}
+			<a class="glyphicon glyphicon-pencil" {$editlink_attrs} title="{mlang_message EDIT}"></a>
+	{END edit_link}
+	{END edit_column}
+
+	
+	
+		{BEGIN view_column}
+	{BEGIN view_link}
+			<a class="glyphicon glyphicon-search" {$viewlink_attrs} title="{mlang_message VIEW}"></a>
+	{END view_link}
+	{END view_column}
+	</td>	
+	{END listIcons_column}	
+
+		{BEGIN checkbox_column}
+	<td  iEditCont="checkBox" class="bs-gridcheckbox" {$rowstyle} {$recordattrs}>
+	{BEGIN checkbox}
+	<input type="checkbox" {$checkbox_attrs}>
+	{END checkbox}
+	</td>
+	{END checkbox_column}
+
+	
+
+	{BEGIN ID_fieldcolumn}
+	<td class="bs-gridcell {$ID_class}"  data-field=ID {$rowstyle} {$recordattrs}>
+		{$ID_value}
+	</td>
+{END ID_fieldcolumn}
+
+
+	{BEGIN post_author_fieldcolumn}
+	<td class="bs-gridcell {$post_author_class}"  data-field=post_author {$rowstyle} {$recordattrs}>
+		{$post_author_value}
+	</td>
+{END post_author_fieldcolumn}
+
+
+	{BEGIN post_date_fieldcolumn}
+	<td class="bs-gridcell {$post_date_class}"  data-field=post_date {$rowstyle} {$recordattrs}>
+		{$post_date_value}
+	</td>
+{END post_date_fieldcolumn}
+
+
+	{BEGIN post_date_gmt_fieldcolumn}
+	<td class="bs-gridcell {$post_date_gmt_class}"  data-field=post_date_gmt {$rowstyle} {$recordattrs}>
+		{$post_date_gmt_value}
+	</td>
+{END post_date_gmt_fieldcolumn}
+
+
+	{BEGIN post_content_fieldcolumn}
+	<td class="bs-gridcell {$post_content_class}"  data-field=post_content {$rowstyle} {$recordattrs}>
+		{$post_content_value}
+	</td>
+{END post_content_fieldcolumn}
+
+
+	{BEGIN post_title_fieldcolumn}
+	<td class="bs-gridcell {$post_title_class}"  data-field=post_title {$rowstyle} {$recordattrs}>
+		{$post_title_value}
+	</td>
+{END post_title_fieldcolumn}
+
+
+	{BEGIN post_excerpt_fieldcolumn}
+	<td class="bs-gridcell {$post_excerpt_class}"  data-field=post_excerpt {$rowstyle} {$recordattrs}>
+		{$post_excerpt_value}
+	</td>
+{END post_excerpt_fieldcolumn}
+
+
+	{BEGIN post_status_fieldcolumn}
+	<td class="bs-gridcell {$post_status_class}"  data-field=post_status {$rowstyle} {$recordattrs}>
+		{$post_status_value}
+	</td>
+{END post_status_fieldcolumn}
+
+
+	{BEGIN comment_status_fieldcolumn}
+	<td class="bs-gridcell {$comment_status_class}"  data-field=comment_status {$rowstyle} {$recordattrs}>
+		{$comment_status_value}
+	</td>
+{END comment_status_fieldcolumn}
+
+
+	{BEGIN ping_status_fieldcolumn}
+	<td class="bs-gridcell {$ping_status_class}"  data-field=ping_status {$rowstyle} {$recordattrs}>
+		{$ping_status_value}
+	</td>
+{END ping_status_fieldcolumn}
+
+
+	{BEGIN post_password_fieldcolumn}
+	<td class="bs-gridcell {$post_password_class}"  data-field=post_password {$rowstyle} {$recordattrs}>
+		{$post_password_value}
+	</td>
+{END post_password_fieldcolumn}
+
+
+	{BEGIN post_name_fieldcolumn}
+	<td class="bs-gridcell {$post_name_class}"  data-field=post_name {$rowstyle} {$recordattrs}>
+		{$post_name_value}
+	</td>
+{END post_name_fieldcolumn}
+
+
+	{BEGIN to_ping_fieldcolumn}
+	<td class="bs-gridcell {$to_ping_class}"  data-field=to_ping {$rowstyle} {$recordattrs}>
+		{$to_ping_value}
+	</td>
+{END to_ping_fieldcolumn}
+
+
+	{BEGIN pinged_fieldcolumn}
+	<td class="bs-gridcell {$pinged_class}"  data-field=pinged {$rowstyle} {$recordattrs}>
+		{$pinged_value}
+	</td>
+{END pinged_fieldcolumn}
+
+
+	{BEGIN post_modified_fieldcolumn}
+	<td class="bs-gridcell {$post_modified_class}"  data-field=post_modified {$rowstyle} {$recordattrs}>
+		{$post_modified_value}
+	</td>
+{END post_modified_fieldcolumn}
+
+
+	{BEGIN post_modified_gmt_fieldcolumn}
+	<td class="bs-gridcell {$post_modified_gmt_class}"  data-field=post_modified_gmt {$rowstyle} {$recordattrs}>
+		{$post_modified_gmt_value}
+	</td>
+{END post_modified_gmt_fieldcolumn}
+
+
+	{BEGIN post_content_filtered_fieldcolumn}
+	<td class="bs-gridcell {$post_content_filtered_class}"  data-field=post_content_filtered {$rowstyle} {$recordattrs}>
+		{$post_content_filtered_value}
+	</td>
+{END post_content_filtered_fieldcolumn}
+
+
+	{BEGIN post_parent_fieldcolumn}
+	<td class="bs-gridcell {$post_parent_class}"  data-field=post_parent {$rowstyle} {$recordattrs}>
+		{$post_parent_value}
+	</td>
+{END post_parent_fieldcolumn}
+
+
+	{BEGIN guid_fieldcolumn}
+	<td class="bs-gridcell {$guid_class}"  data-field=guid {$rowstyle} {$recordattrs}>
+		{$guid_value}
+	</td>
+{END guid_fieldcolumn}
+
+
+	{BEGIN menu_order_fieldcolumn}
+	<td class="bs-gridcell {$menu_order_class}"  data-field=menu_order {$rowstyle} {$recordattrs}>
+		{$menu_order_value}
+	</td>
+{END menu_order_fieldcolumn}
+
+
+	{BEGIN post_type_fieldcolumn}
+	<td class="bs-gridcell {$post_type_class}"  data-field=post_type {$rowstyle} {$recordattrs}>
+		{$post_type_value}
+	</td>
+{END post_type_fieldcolumn}
+
+
+	{BEGIN post_mime_type_fieldcolumn}
+	<td class="bs-gridcell {$post_mime_type_class}"  data-field=post_mime_type {$rowstyle} {$recordattrs}>
+		{$post_mime_type_value}
+	</td>
+{END post_mime_type_fieldcolumn}
+
+
+	{BEGIN comment_count_fieldcolumn}
+	<td class="bs-gridcell {$comment_count_class}"  data-field=comment_count {$rowstyle} {$recordattrs}>
+		{$comment_count_value}
+	</td>
+{END comment_count_fieldcolumn}
+
+	{BEGIN endrecord_block}
+	<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+	{END endrecord_block}
+									
+	{END grid_record}
+
+</tr>
+{END grid_row}
+	</tbody>
+	<tfoot>
+										
+	</tfoot>
+</table>
+
+
+
+{END grid_block}
+
+
+
+</div>
+{END container_grid}
+
+
+
+
+
+
+</div>
+{END container_center}
+
+
+
+{BEGIN container_pagination}
+<div {$pagination_chiddenattr} data-pageid="{$pageid}" data-container="pagination" class="  text-center col-md-12 "> 
+
+{BEGIN pagination_block}
+<div {$pagination_hiddenattr} data-pageid="{$pageid}" data-brick="pagination">
+{$pagination}
+</div>
+{END pagination_block}
+
+
+
+</div>
+{END container_pagination}
+
+
+		</div>
+	</div>
+</div>
+	
+
+		{$footer}
+	{END body}
+	</body>
+</html>
