@@ -1,0 +1,13 @@
+<?php
+$dalTableCALENDAR_DEFINITION = array();
+$dalTableCALENDAR_DEFINITION["CALENDAR_UID"] = array("type"=>200,"varname"=>"CALENDAR_UID");
+$dalTableCALENDAR_DEFINITION["CALENDAR_NAME"] = array("type"=>200,"varname"=>"CALENDAR_NAME");
+$dalTableCALENDAR_DEFINITION["CALENDAR_CREATE_DATE"] = array("type"=>135,"varname"=>"CALENDAR_CREATE_DATE");
+$dalTableCALENDAR_DEFINITION["CALENDAR_UPDATE_DATE"] = array("type"=>135,"varname"=>"CALENDAR_UPDATE_DATE");
+$dalTableCALENDAR_DEFINITION["CALENDAR_WORK_DAYS"] = array("type"=>200,"varname"=>"CALENDAR_WORK_DAYS");
+$dalTableCALENDAR_DEFINITION["CALENDAR_DESCRIPTION"] = array("type"=>201,"varname"=>"CALENDAR_DESCRIPTION");
+$dalTableCALENDAR_DEFINITION["CALENDAR_STATUS"] = array("type"=>200,"varname"=>"CALENDAR_STATUS");
+	$dalTableCALENDAR_DEFINITION["CALENDAR_UID"]["key"]=true;
+
+$dal_info["Tables__CALENDAR_DEFINITION"] = &$dalTableCALENDAR_DEFINITION;
+?>

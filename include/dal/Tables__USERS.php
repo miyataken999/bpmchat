@@ -1,0 +1,40 @@
+<?php
+$dalTableUSERS = array();
+$dalTableUSERS["USR_UID"] = array("type"=>200,"varname"=>"USR_UID");
+$dalTableUSERS["USR_USERNAME"] = array("type"=>200,"varname"=>"USR_USERNAME");
+$dalTableUSERS["USR_PASSWORD"] = array("type"=>200,"varname"=>"USR_PASSWORD");
+$dalTableUSERS["USR_FIRSTNAME"] = array("type"=>200,"varname"=>"USR_FIRSTNAME");
+$dalTableUSERS["USR_LASTNAME"] = array("type"=>200,"varname"=>"USR_LASTNAME");
+$dalTableUSERS["USR_EMAIL"] = array("type"=>200,"varname"=>"USR_EMAIL");
+$dalTableUSERS["USR_DUE_DATE"] = array("type"=>7,"varname"=>"USR_DUE_DATE");
+$dalTableUSERS["USR_CREATE_DATE"] = array("type"=>135,"varname"=>"USR_CREATE_DATE");
+$dalTableUSERS["USR_UPDATE_DATE"] = array("type"=>135,"varname"=>"USR_UPDATE_DATE");
+$dalTableUSERS["USR_STATUS"] = array("type"=>200,"varname"=>"USR_STATUS");
+$dalTableUSERS["USR_COUNTRY"] = array("type"=>200,"varname"=>"USR_COUNTRY");
+$dalTableUSERS["USR_CITY"] = array("type"=>200,"varname"=>"USR_CITY");
+$dalTableUSERS["USR_LOCATION"] = array("type"=>200,"varname"=>"USR_LOCATION");
+$dalTableUSERS["USR_ADDRESS"] = array("type"=>200,"varname"=>"USR_ADDRESS");
+$dalTableUSERS["USR_PHONE"] = array("type"=>200,"varname"=>"USR_PHONE");
+$dalTableUSERS["USR_FAX"] = array("type"=>200,"varname"=>"USR_FAX");
+$dalTableUSERS["USR_CELLULAR"] = array("type"=>200,"varname"=>"USR_CELLULAR");
+$dalTableUSERS["USR_ZIP_CODE"] = array("type"=>200,"varname"=>"USR_ZIP_CODE");
+$dalTableUSERS["DEP_UID"] = array("type"=>200,"varname"=>"DEP_UID");
+$dalTableUSERS["USR_POSITION"] = array("type"=>200,"varname"=>"USR_POSITION");
+$dalTableUSERS["USR_RESUME"] = array("type"=>200,"varname"=>"USR_RESUME");
+$dalTableUSERS["USR_BIRTHDAY"] = array("type"=>7,"varname"=>"USR_BIRTHDAY");
+$dalTableUSERS["USR_ROLE"] = array("type"=>200,"varname"=>"USR_ROLE");
+$dalTableUSERS["USR_REPORTS_TO"] = array("type"=>200,"varname"=>"USR_REPORTS_TO");
+$dalTableUSERS["USR_REPLACED_BY"] = array("type"=>200,"varname"=>"USR_REPLACED_BY");
+$dalTableUSERS["USR_UX"] = array("type"=>200,"varname"=>"USR_UX");
+$dalTableUSERS["USR_COST_BY_HOUR"] = array("type"=>14,"varname"=>"USR_COST_BY_HOUR");
+$dalTableUSERS["USR_UNIT_COST"] = array("type"=>200,"varname"=>"USR_UNIT_COST");
+$dalTableUSERS["USR_PMDRIVE_FOLDER_UID"] = array("type"=>200,"varname"=>"USR_PMDRIVE_FOLDER_UID");
+$dalTableUSERS["USR_BOOKMARK_START_CASES"] = array("type"=>201,"varname"=>"USR_BOOKMARK_START_CASES");
+$dalTableUSERS["USR_TIME_ZONE"] = array("type"=>200,"varname"=>"USR_TIME_ZONE");
+$dalTableUSERS["USR_DEFAULT_LANG"] = array("type"=>200,"varname"=>"USR_DEFAULT_LANG");
+$dalTableUSERS["USR_LAST_LOGIN"] = array("type"=>135,"varname"=>"USR_LAST_LOGIN");
+$dalTableUSERS["USR_ID"] = array("type"=>3,"varname"=>"USR_ID");
+	$dalTableUSERS["USR_UID"]["key"]=true;
+
+$dal_info["Tables__USERS"] = &$dalTableUSERS;
+?>

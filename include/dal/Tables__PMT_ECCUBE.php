@@ -1,0 +1,42 @@
+<?php
+$dalTablePMT_ECCUBE = array();
+$dalTablePMT_ECCUBE["APP_UID"] = array("type"=>200,"varname"=>"APP_UID");
+$dalTablePMT_ECCUBE["APP_NUMBER"] = array("type"=>3,"varname"=>"APP_NUMBER");
+$dalTablePMT_ECCUBE["APP_STATUS"] = array("type"=>200,"varname"=>"APP_STATUS");
+$dalTablePMT_ECCUBE["APPLICATION"] = array("type"=>200,"varname"=>"APPLICATION");
+$dalTablePMT_ECCUBE["APPLICATION_LABEL"] = array("type"=>200,"varname"=>"APPLICATION_LABEL");
+$dalTablePMT_ECCUBE["ECCTEXTAREAVAR007"] = array("type"=>200,"varname"=>"ECCTEXTAREAVAR007");
+$dalTablePMT_ECCUBE["JPN"] = array("type"=>200,"varname"=>"JPN");
+$dalTablePMT_ECCUBE["JPN_LABEL"] = array("type"=>200,"varname"=>"JPN_LABEL");
+$dalTablePMT_ECCUBE["PROCESS"] = array("type"=>200,"varname"=>"PROCESS");
+$dalTablePMT_ECCUBE["PROCESS_LABEL"] = array("type"=>200,"varname"=>"PROCESS_LABEL");
+$dalTablePMT_ECCUBE["DATETIMEVAR001"] = array("type"=>200,"varname"=>"DATETIMEVAR001");
+$dalTablePMT_ECCUBE["DATETIMEVAR001_LABEL"] = array("type"=>200,"varname"=>"DATETIMEVAR001_LABEL");
+$dalTablePMT_ECCUBE["DATETIMEVAR002"] = array("type"=>200,"varname"=>"DATETIMEVAR002");
+$dalTablePMT_ECCUBE["DATETIMEVAR002_LABEL"] = array("type"=>200,"varname"=>"DATETIMEVAR002_LABEL");
+$dalTablePMT_ECCUBE["SATEI"] = array("type"=>200,"varname"=>"SATEI");
+$dalTablePMT_ECCUBE["SATEI_LABEL"] = array("type"=>200,"varname"=>"SATEI_LABEL");
+$dalTablePMT_ECCUBE["TEXTVAR004"] = array("type"=>200,"varname"=>"TEXTVAR004");
+$dalTablePMT_ECCUBE["TEXTVAR004_LABEL"] = array("type"=>200,"varname"=>"TEXTVAR004_LABEL");
+$dalTablePMT_ECCUBE["TEXTVAR009"] = array("type"=>200,"varname"=>"TEXTVAR009");
+$dalTablePMT_ECCUBE["TEXTVAR009_LABEL"] = array("type"=>200,"varname"=>"TEXTVAR009_LABEL");
+$dalTablePMT_ECCUBE["TEXTVAR011"] = array("type"=>200,"varname"=>"TEXTVAR011");
+$dalTablePMT_ECCUBE["TEXTVAR011_LABEL"] = array("type"=>200,"varname"=>"TEXTVAR011_LABEL");
+$dalTablePMT_ECCUBE["TEXTVAR012"] = array("type"=>200,"varname"=>"TEXTVAR012");
+$dalTablePMT_ECCUBE["TEXTVAR012_LABEL"] = array("type"=>200,"varname"=>"TEXTVAR012_LABEL");
+$dalTablePMT_ECCUBE["TEXTVAR013"] = array("type"=>200,"varname"=>"TEXTVAR013");
+$dalTablePMT_ECCUBE["TEXTVAR013_LABEL"] = array("type"=>200,"varname"=>"TEXTVAR013_LABEL");
+$dalTablePMT_ECCUBE["TEXTAREAVAR003"] = array("type"=>200,"varname"=>"TEXTAREAVAR003");
+$dalTablePMT_ECCUBE["TEXTAREAVAR003_LABEL"] = array("type"=>200,"varname"=>"TEXTAREAVAR003_LABEL");
+$dalTablePMT_ECCUBE["TEXTAREAVAR004"] = array("type"=>200,"varname"=>"TEXTAREAVAR004");
+$dalTablePMT_ECCUBE["TEXTAREAVAR004_LABEL"] = array("type"=>200,"varname"=>"TEXTAREAVAR004_LABEL");
+$dalTablePMT_ECCUBE["TEXTAREAVAR005"] = array("type"=>200,"varname"=>"TEXTAREAVAR005");
+$dalTablePMT_ECCUBE["TEXTAREAVAR005_LABEL"] = array("type"=>200,"varname"=>"TEXTAREAVAR005_LABEL");
+$dalTablePMT_ECCUBE["TEXTAREAVAR006"] = array("type"=>200,"varname"=>"TEXTAREAVAR006");
+$dalTablePMT_ECCUBE["TEXTAREAVAR006_LABEL"] = array("type"=>200,"varname"=>"TEXTAREAVAR006_LABEL");
+$dalTablePMT_ECCUBE["INDEX_LABEL"] = array("type"=>200,"varname"=>"INDEX_LABEL");
+$dalTablePMT_ECCUBE["INDEXA"] = array("type"=>200,"varname"=>"INDEXA");
+	$dalTablePMT_ECCUBE["APP_UID"]["key"]=true;
+
+$dal_info["Tables__PMT_ECCUBE"] = &$dalTablePMT_ECCUBE;
+?>

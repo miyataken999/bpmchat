@@ -1,0 +1,47 @@
+<?php
+$dalTablePROCESS = array();
+$dalTablePROCESS["PRO_UID"] = array("type"=>200,"varname"=>"PRO_UID");
+$dalTablePROCESS["PRO_TITLE"] = array("type"=>201,"varname"=>"PRO_TITLE");
+$dalTablePROCESS["PRO_DESCRIPTION"] = array("type"=>201,"varname"=>"PRO_DESCRIPTION");
+$dalTablePROCESS["PRO_PARENT"] = array("type"=>200,"varname"=>"PRO_PARENT");
+$dalTablePROCESS["PRO_TIME"] = array("type"=>5,"varname"=>"PRO_TIME");
+$dalTablePROCESS["PRO_TIMEUNIT"] = array("type"=>200,"varname"=>"PRO_TIMEUNIT");
+$dalTablePROCESS["PRO_STATUS"] = array("type"=>200,"varname"=>"PRO_STATUS");
+$dalTablePROCESS["PRO_TYPE_DAY"] = array("type"=>200,"varname"=>"PRO_TYPE_DAY");
+$dalTablePROCESS["PRO_TYPE"] = array("type"=>200,"varname"=>"PRO_TYPE");
+$dalTablePROCESS["PRO_ASSIGNMENT"] = array("type"=>200,"varname"=>"PRO_ASSIGNMENT");
+$dalTablePROCESS["PRO_SHOW_MAP"] = array("type"=>16,"varname"=>"PRO_SHOW_MAP");
+$dalTablePROCESS["PRO_SHOW_MESSAGE"] = array("type"=>16,"varname"=>"PRO_SHOW_MESSAGE");
+$dalTablePROCESS["PRO_SUBPROCESS"] = array("type"=>16,"varname"=>"PRO_SUBPROCESS");
+$dalTablePROCESS["PRO_TRI_OPEN"] = array("type"=>200,"varname"=>"PRO_TRI_OPEN");
+$dalTablePROCESS["PRO_TRI_DELETED"] = array("type"=>200,"varname"=>"PRO_TRI_DELETED");
+$dalTablePROCESS["PRO_TRI_CANCELED"] = array("type"=>200,"varname"=>"PRO_TRI_CANCELED");
+$dalTablePROCESS["PRO_TRI_PAUSED"] = array("type"=>200,"varname"=>"PRO_TRI_PAUSED");
+$dalTablePROCESS["PRO_TRI_REASSIGNED"] = array("type"=>200,"varname"=>"PRO_TRI_REASSIGNED");
+$dalTablePROCESS["PRO_TRI_UNPAUSED"] = array("type"=>200,"varname"=>"PRO_TRI_UNPAUSED");
+$dalTablePROCESS["PRO_TYPE_PROCESS"] = array("type"=>200,"varname"=>"PRO_TYPE_PROCESS");
+$dalTablePROCESS["PRO_SHOW_DELEGATE"] = array("type"=>16,"varname"=>"PRO_SHOW_DELEGATE");
+$dalTablePROCESS["PRO_SHOW_DYNAFORM"] = array("type"=>16,"varname"=>"PRO_SHOW_DYNAFORM");
+$dalTablePROCESS["PRO_CATEGORY"] = array("type"=>200,"varname"=>"PRO_CATEGORY");
+$dalTablePROCESS["PRO_SUB_CATEGORY"] = array("type"=>200,"varname"=>"PRO_SUB_CATEGORY");
+$dalTablePROCESS["PRO_INDUSTRY"] = array("type"=>3,"varname"=>"PRO_INDUSTRY");
+$dalTablePROCESS["PRO_UPDATE_DATE"] = array("type"=>135,"varname"=>"PRO_UPDATE_DATE");
+$dalTablePROCESS["PRO_CREATE_DATE"] = array("type"=>135,"varname"=>"PRO_CREATE_DATE");
+$dalTablePROCESS["PRO_CREATE_USER"] = array("type"=>200,"varname"=>"PRO_CREATE_USER");
+$dalTablePROCESS["PRO_HEIGHT"] = array("type"=>3,"varname"=>"PRO_HEIGHT");
+$dalTablePROCESS["PRO_WIDTH"] = array("type"=>3,"varname"=>"PRO_WIDTH");
+$dalTablePROCESS["PRO_TITLE_X"] = array("type"=>3,"varname"=>"PRO_TITLE_X");
+$dalTablePROCESS["PRO_TITLE_Y"] = array("type"=>3,"varname"=>"PRO_TITLE_Y");
+$dalTablePROCESS["PRO_DEBUG"] = array("type"=>3,"varname"=>"PRO_DEBUG");
+$dalTablePROCESS["PRO_DYNAFORMS"] = array("type"=>201,"varname"=>"PRO_DYNAFORMS");
+$dalTablePROCESS["PRO_DERIVATION_SCREEN_TPL"] = array("type"=>200,"varname"=>"PRO_DERIVATION_SCREEN_TPL");
+$dalTablePROCESS["PRO_COST"] = array("type"=>14,"varname"=>"PRO_COST");
+$dalTablePROCESS["PRO_UNIT_COST"] = array("type"=>200,"varname"=>"PRO_UNIT_COST");
+$dalTablePROCESS["PRO_ITEE"] = array("type"=>3,"varname"=>"PRO_ITEE");
+$dalTablePROCESS["PRO_ACTION_DONE"] = array("type"=>201,"varname"=>"PRO_ACTION_DONE");
+$dalTablePROCESS["PRO_ID"] = array("type"=>3,"varname"=>"PRO_ID");
+$dalTablePROCESS["PRO_TRI_CREATE"] = array("type"=>200,"varname"=>"PRO_TRI_CREATE");
+	$dalTablePROCESS["PRO_UID"]["key"]=true;
+
+$dal_info["Tables__PROCESS"] = &$dalTablePROCESS;
+?>
