@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: templates/sheets-import/Server.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: templates/sheets-import/Server.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * Copyright 2015 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/**
+ * @OnlyCurrentDoc  Limits the script to only accessing the current spreadsheet.
+ */
+
+var _ = Underscore.load();
+
+/**
+ * TODO: Replace the following with the name of the service you are importing
+ * from and the name of the add-on you are building, respectively.
+ */
+var DATA_ALIAS = 'MyDataSource';
+var ADDON_NAME = 'YOUR_ADDON_NAME_HERE';
+var SIDEBAR_TITLE = 'Import Control Center';
+var MAX_SCHEDULED_REPORTS = 24;
+var IMPORT_PAGE_SIZE = 30;
+
+/**
+ * Error code enum; this gets passed to the sidebar for use there as well.
+ */
+var ERROR_CODES = {
+  AUTO_UPDATE_LIMIT: 1,
+  ILLEGAL_EDIT: 2,
+  ILLEGAL_DELETE: 3,
+  IMPORT_FAILED: 4,
+};
+
+/**
+ * Adds a custom menu with items to show the sidebar.
+ * @param {Object} e The event parameter for a simple onOpen trigger.
+ */
+function onOpen(e) {
+  SpreadsheetApp.getUi()
+      .createAddonMenu()
+      .addItem('Import control center', 'showSidebar')
+      .addToUi();
+}
+
+/**
+ * Runs when the add-on is installed; calls onOpen() to ensure menu creation and
+ * any other initializion work is done immediately.
+ * @param {Object} e The event parameter for a simple onInstall trigger.
+ */
+function onInstall(e) {
+  onOpen(e);
+}
+
+/**
+ * Opens a sidebar. The sidebar structure is described in the Sidebar.html
+ * project file.
+ */
+function showSidebar() {
+  var service = getService();
+  var template = HtmlService.createTemplateFromFile('Sidebar');
+  template.user = Session.getEffectiveUser().getEmail();
+  template.dataSource = DATA_ALIAS;
+  template.isAuthorized = service.hasAccess();
+  template.authorizationUrl = null;
+  if (!template.isAuthorized) {
+    template.authorizationUrl = service.getAuthorizationUrl();
+  }
+  var page = template.evaluate()
+      .setTitle(SIDEBAR_TITLE)
+      .setSandboxMode(HtmlService.SandboxMode.IFRAME);
+  SpreadsheetApp.getUi().showSidebar(page);
+}
+
+/**
+ * Return data needed to build the sidebar UI: a list of the names of the
+ * currently saved report configurations and the list of potential
+ * column choices.
+ * @return {Object} a collection of saved report data and column options.
+ */
+function getInitialDataForSidebar() {
+  var reportSet = getAllReports();
+  var reportList = [];
+  _.each(reportSet, function(val, key) {
+    reportList.push({'name': val, 'reportId': key});
+  });
+  reportList.sort(function(a, b) {
+    if (a.name > b.name) {
+ return 1;
+}
+    if (a.name &lt; b.name) {
+ return -1;
+}
+    return 0;
+  });
+  return {reports: reportList, columns: getColumnOptions()};
+}
+
+/**
+ * Get the report configuration for the given report and, if a sheet
+ * exists for it, activate that sheet.
+ * @param {String} reportId a report ID.
+ * @return {object} The report config.
+ */
+function switchToReport(reportId) {
+  var config = getReportConfig(reportId);
+  activateById(config.sheetId);
+  return config;
+}
+
+/**
+ * Import data to the spreadsheet according to the given report
+ * configuration.
+ * @param {string} reportId the report identifier.
+ * @return {object} the (possibly updated) report configuration.
+ */
+function runImport(reportId) {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var config = getReportConfig(reportId);
+
+  // Acquire the sheet to place the import results in,
+  // then clear and format it.
+  // Update the saved config with sheet/time information.
+  var sheet = activateReportSheet(config);
+  var columnIds = getColumnIds(config);
+  var lastRun = new Date().toString();
+  config = updateOnImport(config, sheet, lastRun);
+
+  // Call for pages of API information to place in the sheet, one
+  // page at a time.
+  var pageNumber = 0;
+  var firstRow = 2;
+  try {
+    var page;
+    do {
+      page = getDataPage(columnIds, pageNumber, IMPORT_PAGE_SIZE, config);
+      if (page) {
+        sheet.getRange(firstRow, 1, page.length, page[0].length).setValues(page);
+        firstRow += page.length;
+        pageNumber++;
+        SpreadsheetApp.flush();
+      }
+    } while (page != null);
+  } catch (e) {
+    // Ensure a new sheet Id, if created, is preserved.
+    throw ERROR_CODES.IMPORT_FAILED;
+  }
+
+  for (var i = 1; i &lt;= sheet.getLastColumn(); i++) {
+    sheet.autoResizeColumn(i);
+  }
+  ss.toast('Report ' + config.name + ' updated.');
+  return config;
+}
+
+/**
+ * Save the given report configuration.
+ * @param {Object} config a report configuration to save.
+ * @return {Object} the updated report configuration.
+ */
+function saveReport(config) {
+  var existingConfig = getReportConfig(config.reportId);
+  if (existingConfig != null) {
+    activateById(existingConfig.sheetId);
+    // Check: users are not allowed to save edits to reports
+    // created by other users if those reports have been marked
+    // for auto-update.
+    if (!canEditReport(existingConfig)) {
+      throw ERROR_CODES.ILLEGAL_EDIT;
+    }
+  }
+  // Check against max number of scheduled reports.
+  if (isOverScheduleLimit(config)) {
+    throw ERROR_CODES.AUTO_UPDATE_LIMIT;
+  }
+
+  var result = saveReportConfig(config);
+  adjustScheduleTrigger();
+  return result;
+}
+
+/**
+ * Delete the given report configuration.
+ * @param {String} reportId indicates the report to delete.
+ * @return {String} the report ID deleted.
+ */
+function removeReport(reportId) {
+  // Check: users are not allowed to delete reports created by
+  // other users if those reports have been marked for auto-update.
+  if (!canEditReport(getReportConfig(reportId))) {
+    throw ERROR_CODES.ILLEGAL_DELETE;
+  }
+  deleteReportConfig(reportId);
+  adjustScheduleTrigger();
+  return reportId;
+}
+
+/**
+ * Activate, clear, format and return the sheet associated with the
+ * specified report configuration. If the sheet does not exist, create,
+ * format and activate it.
+ * @param {Object} config the report configuration.
+ * @return {Sheet}
+ */
+function activateReportSheet(config) {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var sheet = getSheetById(ss, parseInt(config.sheetId));
+  if (sheet == null) {
+    sheet = ss.insertSheet();
+    sheet.setName(getUniqueSheetName(ss, config.name));
+  }
+  sheet.activate();
+
+  var headers = _.map(config.columns, function(col) {
+    return col.label;
+  });
+  sheet.clear();
+  sheet.clearNotes();
+  sheet.setFrozenRows(1);
+  sheet.getRange('1:1')
+    .setFontWeight('bold')
+    .setBackground('#000000')
+    .setFontColor('#ffffff');
+  sheet.getRange(1, 1, 1, headers.length).setValues([headers]);
+  return sheet;
+}
+
+/**
+ * On an hourly trigger, search through scheduled reports, find one
+ * that hasn't been run in 24 hours or more (or never), and run
+ * an import for that one. With &lt;= 24 scheduled reports, this pattern
+ * ensures that every scheduled report will be updated once a day.
+ */
+function respondToHourlyTrigger() {
+  var authInfo = ScriptApp.getAuthorizationInfo(ScriptApp.AuthMode.FULL);
+  // Check if the actions of the trigger require authorizations that have not
+  // been supplied yet -- if so, warn the active user via email (if possible).
+  // This check is required when using triggers with add-ons to maintain
+  // functional triggers.
+  if (authInfo.getAuthorizationStatus() ==
+      ScriptApp.AuthorizationStatus.REQUIRED) {
+    // Re-authorization is required. In this case, the user needs to be alerted
+    // that they need to reauthorize; the normal trigger action is not
+    // conducted, since it authorization needs to be provided first. Send at
+    // most one 'Authorization Required' email a day, to avoid spamming users
+    // of the add-on.
+    sendReauthorizationRequest();
+  } else {
+    var potentials = getScheduledReports(Session.getEffectiveUser().getEmail());
+    for (var i = 0; i &lt; potentials.length; i++) {
+      var lastRun = potentials[i].lastRun;
+      if (!lastRun || isOlderThanADay(lastRun) ) {
+        runImport(potentials[i].reportId);
+        return;
+      }
+    }
+  }
+}
+
+/**
+ * Called when the user needs to reauthorize. Sends the user of the
+ * add-on an email explaining the need to reauthorize and provides
+ * a link for the user to do so. Capped to send at most one email
+ * a day to prevent spamming the users of the add-on.
+ */
+function sendReauthorizationRequest() {
+  var authInfo = ScriptApp.getAuthorizationInfo(ScriptApp.AuthMode.FULL);
+  var properties = PropertiesService.getUserProperties();
+  var LAST_AUTH_EMAIL_KEY = 'Import.reauth.lastAuthEmailDate';
+  var lastAuthEmailDate = properties.getProperty(LAST_AUTH_EMAIL_KEY);
+  var today = new Date().toDateString();
+  if (lastAuthEmailDate != today) {
+    if (MailApp.getRemainingDailyQuota() > 0) {
+      var template =
+          HtmlService.createTemplateFromFile('AuthorizationEmail');
+      template.url = authInfo.getAuthorizationUrl();
+      template.addonName = ADDON_NAME;
+      var message = template.evaluate();
+      MailApp.sendEmail(Session.getEffectiveUser().getEmail(),
+        'Add-on Authorization Required',
+        message.getContent(), {
+          name: ADDON_NAME,
+          htmlBody: message.getContent(),
+      });
+    }
+    properties.setProperty(LAST_AUTH_EMAIL_KEY, today);
+  }
+}
+
+/**
+ * Turn on the scheduling trigger if scheduled reports owned
+ * by the current user are present; turn it off otherwise.
+ */
+function adjustScheduleTrigger() {
+  var existingTriggerId = getTriggerId();
+  var user = Session.getEffectiveUser().getEmail();
+  var triggerNeeded = getScheduledReports(user).length > 0;
+
+  // Create a new trigger if required; delete existing trigger
+  // if it is not needed.
+  if (triggerNeeded &amp;&amp; existingTriggerId == null) {
+    var trigger = ScriptApp.newTrigger('respondToHourlyTrigger')
+        .timeBased()
+        .everyHours(1)
+        .create();
+    saveTriggerId(trigger);
+  } else if (!triggerNeeded &amp;&amp; existingTriggerId != null) {
+    var existingTrigger = getUserTriggerById(
+        SpreadsheetApp.getActiveSpreadsheet(),
+        existingTriggerId);
+    if (existingTrigger != null) {
+      ScriptApp.deleteTrigger(existingTrigger);
+    }
+    removeTriggerId();
+  }
+}
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#_">_</a></li><li><a href="global.html#activateById">activateById</a></li><li><a href="global.html#activateReportSheet">activateReportSheet</a></li><li><a href="global.html#addCustomProperty">addCustomProperty</a></li><li><a href="global.html#addFormItem">addFormItem</a></li><li><a href="global.html#addGroupMember">addGroupMember</a></li><li><a href="global.html#addImageSlide">addImageSlide</a></li><li><a href="global.html#ADDON_TITLE">ADDON_TITLE</a></li><li><a href="global.html#addPivotTable">addPivotTable</a></li><li><a href="global.html#addSheet">addSheet</a></li><li><a href="global.html#addSubscription">addSubscription</a></li><li><a href="global.html#addTask">addTask</a></li><li><a href="global.html#addTextBox">addTextBox</a></li><li><a href="global.html#addUser">addUser</a></li><li><a href="global.html#adjustFormSubmitTrigger">adjustFormSubmitTrigger</a></li><li><a href="global.html#adjustScheduleTrigger">adjustScheduleTrigger</a></li><li><a href="global.html#analyzeLocations">analyzeLocations</a></li><li><a href="global.html#authCallback">authCallback</a></li><li><a href="global.html#BAR_ID">BAR_ID</a></li><li><a href="global.html#buildAddOn">buildAddOn</a></li><li><a href="global.html#buildRecentThreadCard">buildRecentThreadCard</a></li><li><a href="global.html#canEditReport">canEditReport</a></li><li><a href="global.html#claimYourVideoWithMonetizePolicy">claimYourVideoWithMonetizePolicy</a></li><li><a href="global.html#conditionalFetch">conditionalFetch</a></li><li><a href="global.html#conditionalUpdate">conditionalUpdate</a></li><li><a href="global.html#CONVERT_DURATION_TO_SECONDS">CONVERT_DURATION_TO_SECONDS</a></li><li><a href="global.html#CORNER_SUM">CORNER_SUM</a></li><li><a href="global.html#createAdvertiserAndCampaign">createAdvertiserAndCampaign</a></li><li><a href="global.html#createAlias">createAlias</a></li><li><a href="global.html#createAndReauthorizeUserEnvironment">createAndReauthorizeUserEnvironment</a></li><li><a href="global.html#createAndSendDocument">createAndSendDocument</a></li><li><a href="global.html#createBars">createBars</a></li><li><a href="global.html#createBracket">createBracket</a></li><li><a href="global.html#createCircle">createCircle</a></li><li><a href="global.html#createContainerVersion">createContainerVersion</a></li><li><a href="global.html#createEvent">createEvent</a></li><li><a href="global.html#createNewModel">createNewModel</a></li><li><a href="global.html#createPost">createPost</a></li><li><a href="global.html#createPresentation">createPresentation</a></li><li><a href="global.html#createReport">createReport</a></li><li><a href="global.html#createSlide">createSlide</a></li><li><a href="global.html#custombatch">custombatch</a></li><li><a href="global.html#DATA_ALIAS">DATA_ALIAS</a></li><li><a href="global.html#DATEADD">DATEADD</a></li><li><a href="global.html#DATESUBTRACT">DATESUBTRACT</a></li><li><a href="global.html#DATETEST">DATETEST</a></li><li><a href="global.html#deleteBars">deleteBars</a></li><li><a href="global.html#deleteObjectFromProperties">deleteObjectFromProperties</a></li><li><a href="global.html#deleteReportConfig">deleteReportConfig</a></li><li><a href="global.html#DIALOG_TITLE">DIALOG_TITLE</a></li><li><a href="global.html#doGet">doGet</a></li><li><a href="global.html#drivingDistance">drivingDistance</a></li><li><a href="global.html#ERROR_CODES">ERROR_CODES</a></li><li><a href="global.html#escapeFilterParameter">escapeFilterParameter</a></li><li><a href="global.html#expectToEqual">expectToEqual</a></li><li><a href="global.html#expectToExist">expectToExist</a></li><li><a href="global.html#extractEmailAddress">extractEmailAddress</a></li><li><a href="global.html#extractSenderData">extractSenderData</a></li><li><a href="global.html#filesToDelete">filesToDelete</a></li><li><a href="global.html#fillInTemplateFromObject">fillInTemplateFromObject</a></li><li><a href="global.html#findEvents">findEvents</a></li><li><a href="global.html#formatColumnName">formatColumnName</a></li><li><a href="global.html#formatDate">formatDate</a></li><li><a href="global.html#formatDateString">formatDateString</a></li><li><a href="global.html#formatShapeText">formatShapeText</a></li><li><a href="global.html#generateLoginActivityReport">generateLoginActivityReport</a></li><li><a href="global.html#generateReport">generateReport</a></li><li><a href="global.html#generateStepByStep_">generateStepByStep_</a></li><li><a href="global.html#generateUserUsageReport">generateUserUsageReport</a></li><li><a href="global.html#GET_DAY_OF_YEAR">GET_DAY_OF_YEAR</a></li><li><a href="global.html#getActiveValue">getActiveValue</a></li><li><a href="global.html#getAllReports">getAllReports</a></li><li><a href="global.html#getAuthorizationUrl">getAuthorizationUrl</a></li><li><a href="global.html#getClicks">getClicks</a></li><li><a href="global.html#getColumnIds">getColumnIds</a></li><li><a href="global.html#getColumnOptions">getColumnOptions</a></li><li><a href="global.html#getDataPage">getDataPage</a></li><li><a href="global.html#getDirections_">getDirections_</a></li><li><a href="global.html#getDocTitle">getDocTitle</a></li><li><a href="global.html#getDocumentInfo">getDocumentInfo</a></li><li><a href="global.html#getDomainUsers">getDomainUsers</a></li><li><a href="global.html#getDrivingDirections">getDrivingDirections</a></li><li><a href="global.html#getElementInfo">getElementInfo</a></li><li><a href="global.html#getElementTexts">getElementTexts</a></li><li><a href="global.html#getFolderContents">getFolderContents</a></li><li><a href="global.html#getFooterText">getFooterText</a></li><li><a href="global.html#getGroupSettings">getGroupSettings</a></li><li><a href="global.html#getInitialDataForSidebar">getInitialDataForSidebar</a></li><li><a href="global.html#getLicenseAssignments">getLicenseAssignments</a></li><li><a href="global.html#getObjectFromProperties">getObjectFromProperties</a></li><li><a href="global.html#getParameterValues">getParameterValues</a></li><li><a href="global.html#getPeople">getPeople</a></li><li><a href="global.html#getPosts">getPosts</a></li><li><a href="global.html#getPreferences">getPreferences</a></li><li><a href="global.html#getProfile">getProfile</a></li><li><a href="global.html#getRecentMessagesContent">getRecentMessagesContent</a></li><li><a href="global.html#getRelativeDate">getRelativeDate</a></li><li><a href="global.html#getReportConfig">getReportConfig</a></li><li><a href="global.html#getScheduledReports">getScheduledReports</a></li><li><a href="global.html#getSelectedText">getSelectedText</a></li><li><a href="global.html#getService">getService</a></li><li><a href="global.html#getSettings">getSettings</a></li><li><a href="global.html#getSheetById">getSheetById</a></li><li><a href="global.html#getSubscriptions">getSubscriptions</a></li><li><a href="global.html#getTaskLists">getTaskLists</a></li><li><a href="global.html#getTasks">getTasks</a></li><li><a href="global.html#getTextAndTranslation">getTextAndTranslation</a></li><li><a href="global.html#getTriggerId">getTriggerId</a></li><li><a href="global.html#getTriggerState">getTriggerState</a></li><li><a href="global.html#getUniqueSheetName">getUniqueSheetName</a></li><li><a href="global.html#getUser">getUser</a></li><li><a href="global.html#getUsersActivity">getUsersActivity</a></li><li><a href="global.html#getUserTriggerById">getUserTriggerById</a></li><li><a href="global.html#grabContainerPath">grabContainerPath</a></li><li><a href="global.html#Helpers">Helpers</a></li><li><a href="global.html#include">include</a></li><li><a href="global.html#INCREMENT">INCREMENT</a></li><li><a href="global.html#insertContact">insertContact</a></li><li><a href="global.html#insertLicenseAssignment">insertLicenseAssignment</a></li><li><a href="global.html#insertText">insertText</a></li><li><a href="global.html#insertTimelineItem">insertTimelineItem</a></li><li><a href="global.html#isOlderThanADay">isOlderThanADay</a></li><li><a href="global.html#isOverScheduleLimit">isOverScheduleLimit</a></li><li><a href="global.html#isTimeUp">isTimeUp</a></li><li><a href="global.html#itShouldCopyAPresentation">itShouldCopyAPresentation</a></li><li><a href="global.html#itShouldCreateAnImage">itShouldCreateAnImage</a></li><li><a href="global.html#itShouldCreateAPresentation">itShouldCreateAPresentation</a></li><li><a href="global.html#itShouldCreateASlide">itShouldCreateASlide</a></li><li><a href="global.html#itShouldCreateATextboxWithText">itShouldCreateATextboxWithText</a></li><li><a href="global.html#itShouldCreateBulletedText">itShouldCreateBulletedText</a></li><li><a href="global.html#itShouldCreateSheetsChart">itShouldCreateSheetsChart</a></li><li><a href="global.html#itShouldImageMerge">itShouldImageMerge</a></li><li><a href="global.html#itShouldMergeText">itShouldMergeText</a></li><li><a href="global.html#itShouldRefreshSheetsChart">itShouldRefreshSheetsChart</a></li><li><a href="global.html#itShouldSimpleTextReplace">itShouldSimpleTextReplace</a></li><li><a href="global.html#itShouldTextStyleUpdate">itShouldTextStyleUpdate</a></li><li><a href="global.html#joinDateAndTime_">joinDateAndTime_</a></li><li><a href="global.html#listAccounts">listAccounts</a></li><li><a href="global.html#listActiveCampaigns">listActiveCampaigns</a></li><li><a href="global.html#listActivity">listActivity</a></li><li><a href="global.html#listAdClients">listAdClients</a></li><li><a href="global.html#listAdUnits">listAdUnits</a></li><li><a href="global.html#listAllGroups">listAllGroups</a></li><li><a href="global.html#listAllUsers">listAllUsers</a></li><li><a href="global.html#listCalendars">listCalendars</a></li><li><a href="global.html#listCourses">listCourses</a></li><li><a href="global.html#listFiles">listFiles</a></li><li><a href="global.html#listInboxSnippets">listInboxSnippets</a></li><li><a href="global.html#listLabelInfo">listLabelInfo</a></li><li><a href="global.html#listLabels">listLabels</a></li><li><a href="global.html#listLogins">listLogins</a></li><li><a href="global.html#listNext10Events">listNext10Events</a></li><li><a href="global.html#listProfiles">listProfiles</a></li><li><a href="global.html#listRevisions">listRevisions</a></li><li><a href="global.html#listRootFolders">listRootFolders</a></li><li><a href="global.html#listSubscriptions">listSubscriptions</a></li><li><a href="global.html#listTables">listTables</a></li><li><a href="global.html#listTaskLists">listTaskLists</a></li><li><a href="global.html#listTasks">listTasks</a></li><li><a href="global.html#listUpcomingEvents">listUpcomingEvents</a></li><li><a href="global.html#listUserProfiles">listUserProfiles</a></li><li><a href="global.html#listUsers">listUsers</a></li><li><a href="global.html#listWebProperties">listWebProperties</a></li><li><a href="global.html#loadCsv">loadCsv</a></li><li><a href="global.html#logAllAccountUserPermissionsWithContainerAccess">logAllAccountUserPermissionsWithContainerAccess</a></li><li><a href="global.html#logNamesAndMajors">logNamesAndMajors</a></li><li><a href="global.html#logRecentHistory">logRecentHistory</a></li><li><a href="global.html#logSlidesAndElements">logSlidesAndElements</a></li><li><a href="global.html#logSyncedEvents">logSyncedEvents</a></li><li><a href="global.html#main">main</a></li><li><a href="global.html#metersToMiles">metersToMiles</a></li><li><a href="global.html#migrateMessages">migrateMessages</a></li><li><a href="global.html#modifySheets">modifySheets</a></li><li><a href="global.html#multimap">multimap</a></li><li><a href="global.html#newReportId">newReportId</a></li><li><a href="global.html#NOTICE">NOTICE</a></li><li><a href="global.html#onFormSubmit">onFormSubmit</a></li><li><a href="global.html#onInstall">onInstall</a></li><li><a href="global.html#onOpen">onOpen</a></li><li><a href="global.html#openDialog">openDialog</a></li><li><a href="global.html#POWERS_AND_ROOTS">POWERS_AND_ROOTS</a></li><li><a href="global.html#prepareSheet_">prepareSheet_</a></li><li><a href="global.html#presentationId">presentationId</a></li><li><a href="global.html#printLatestLocation">printLatestLocation</a></li><li><a href="global.html#productInsert">productInsert</a></li><li><a href="global.html#productList">productList</a></li><li><a href="global.html#publishVersionAndQuickPreviewDraft">publishVersionAndQuickPreviewDraft</a></li><li><a href="global.html#queryHostedModel">queryHostedModel</a></li><li><a href="global.html#queryTrainedModel">queryTrainedModel</a></li><li><a href="global.html#queryTrainingStatus">queryTrainingStatus</a></li><li><a href="global.html#readPageElementIds">readPageElementIds</a></li><li><a href="global.html#readRange">readRange</a></li><li><a href="global.html#releaseClaim">releaseClaim</a></li><li><a href="global.html#removeDuplicates">removeDuplicates</a></li><li><a href="global.html#removeReport">removeReport</a></li><li><a href="global.html#removeTriggerId">removeTriggerId</a></li><li><a href="global.html#REPORT_SET_KEY">REPORT_SET_KEY</a></li><li><a href="global.html#respondToFormSubmit">respondToFormSubmit</a></li><li><a href="global.html#respondToHourlyTrigger">respondToHourlyTrigger</a></li><li><a href="global.html#restaurantLocationsMap">restaurantLocationsMap</a></li><li><a href="global.html#retrieveMyUploads">retrieveMyUploads</a></li><li><a href="global.html#RUN_ALL_TESTS">RUN_ALL_TESTS</a></li><li><a href="global.html#runImport">runImport</a></li><li><a href="global.html#runQuery">runQuery</a></li><li><a href="global.html#runReport">runReport</a></li><li><a href="global.html#saveObjectToProperties">saveObjectToProperties</a></li><li><a href="global.html#saveReport">saveReport</a></li><li><a href="global.html#saveReportConfig">saveReportConfig</a></li><li><a href="global.html#saveSettings">saveSettings</a></li><li><a href="global.html#saveTriggerId">saveTriggerId</a></li><li><a href="global.html#SAY_HELLO">SAY_HELLO</a></li><li><a href="global.html#searchByKeyword">searchByKeyword</a></li><li><a href="global.html#sendCreatorNotification">sendCreatorNotification</a></li><li><a href="global.html#sendDoc_">sendDoc_</a></li><li><a href="global.html#sendEmails">sendEmails</a></li><li><a href="global.html#sendEmails2">sendEmails2</a></li><li><a href="global.html#sendInvites_">sendInvites_</a></li><li><a href="global.html#sendReauthorizationRequest">sendReauthorizationRequest</a></li><li><a href="global.html#sendRespondentNotification">sendRespondentNotification</a></li><li><a href="global.html#setActiveValue">setActiveValue</a></li><li><a href="global.html#setAlternatingRowBackgroundColors_">setAlternatingRowBackgroundColors_</a></li><li><a href="global.html#setBracketItem_">setBracketItem_</a></li><li><a href="global.html#setCompleted">setCompleted</a></li><li><a href="global.html#setConnector_">setConnector_</a></li><li><a href="global.html#setDocTitle">setDocTitle</a></li><li><a href="global.html#setFooterText">setFooterText</a></li><li><a href="global.html#setUpCalendar_">setUpCalendar_</a></li><li><a href="global.html#setUpConference_">setUpConference_</a></li><li><a href="global.html#setUpForm_">setUpForm_</a></li><li><a href="global.html#shortenUrl">shortenUrl</a></li><li><a href="global.html#showAbout">showAbout</a></li><li><a href="global.html#showDialog">showDialog</a></li><li><a href="global.html#showSidebar">showSidebar</a></li><li><a href="global.html#signout">signout</a></li><li><a href="global.html#snippets">snippets</a></li><li><a href="global.html#Snippets">Snippets</a></li><li><a href="global.html#spreadsheetId">spreadsheetId</a></li><li><a href="global.html#switchToReport">switchToReport</a></li><li><a href="global.html#syncTeamVacationCalendar">syncTeamVacationCalendar</a></li><li><a href="global.html#title">title</a></li><li><a href="global.html#toArray">toArray</a></li><li><a href="global.html#translateSelectedElements">translateSelectedElements</a></li><li><a href="global.html#translateText">translateText</a></li><li><a href="global.html#UPDATE_TYPE">UPDATE_TYPE</a></li><li><a href="global.html#updateAccountTax">updateAccountTax</a></li><li><a href="global.html#updateAssetOwnership">updateAssetOwnership</a></li><li><a href="global.html#updateGroupSettings">updateGroupSettings</a></li><li><a href="global.html#updateOnImport">updateOnImport</a></li><li><a href="global.html#updateReportSet">updateReportSet</a></li><li><a href="global.html#uploadFile">uploadFile</a></li><li><a href="global.html#use">use</a></li><li><a href="global.html#VALID_UNITS">VALID_UNITS</a></li><li><a href="global.html#validateParameters">validateParameters</a></li><li><a href="global.html#writeToMultipleRanges">writeToMultipleRanges</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.4</a> on Sun Jul 29 2018 17:16:20 GMT+0900 (JST)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
