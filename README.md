@@ -1,2 +1,2 @@
 # bpmchat
-bpmchat
+bpmchat processmaker plugin
