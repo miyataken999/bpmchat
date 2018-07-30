@@ -1,0 +1,22 @@
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #fff;
+}
+
+@media (min-width: 768px)
+.sidebar {
+    width: 100px;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    display: block;
+    padding: 0px;
+    background-color: #fcfcfc;
+    border-right: 1px solid #a0a0a0;
+    overflow: hidden;
+    position: absolute;
+    min-height: 100%;
+}
